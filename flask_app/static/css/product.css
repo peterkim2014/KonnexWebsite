@@ -1,0 +1,299 @@
+#global, body, html {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 155px;
+    width: 100%;
+    /* background-color: red; */
+    gap: 25vw;
+    } .home-name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80%;
+        width: 30%;
+        gap: 2vw;
+        } .logo-lotus {
+            height: 50%;
+            width: 50px;
+        } .name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 90%;
+            height: 100%;
+            } .name-container > h1 {
+                font-size: 3em;
+                height: fit-content;
+                margin: 0;
+            } .name-container > h2 {
+                margin: 0;
+                width: 100%;
+                font-size: 0.8em;
+                font-weight: 100;
+    } .home-routes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 30%;
+        } .route {
+            text-decoration: none;
+            color: black;
+} .product-intro {
+    height: 400px;
+    width: 100%;
+    background-image: url('../media/productBackground.png');
+    background-size: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    } .product-intro-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 100%;
+        margin-left: 7.5%;
+        gap: 4.5vh;
+        } .product-intro-text > h3 {
+            margin: 0;
+            font-size: 1.6em;
+            text-align: left;
+            font-weight: 500;
+        } .product-intro-text > h4 {
+            margin: 0;
+            text-align: left;
+            font-weight: 100;
+} .product-intro-banner {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } .product-intro-banner-text {
+        margin: 0;
+        width: 70%;
+        height: 25%;
+        text-align: center;
+        font-size: 1.1em;
+} .product-description {
+    height: 680px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* background-color: red; */
+    } .product-side-descriptions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 70%;
+        } .product-side-descriptions > img {
+            width: 882px;
+        } .product-side-descriptions > p {
+            margin: 0;
+            height: 22%;
+            margin-top: 4%;
+            width: 88%;
+            font-size: 1.1em;
+    } .product-description-paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 30%;
+        background-image: url('../media/productIntoBackground.png');
+        background-size: contain;
+        background-size: 100%;
+        } .product-description-point {
+            height: 95px;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1.5vw;
+            } .product-description-point > img {
+                width: 18%;
+            } .description-text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                height: 25%;
+                width: 100%;
+                gap: 0.75vh;
+                } .description-text > h5 {
+                    margin: 0;
+                    font-size: 1.6em;
+                } .description-text > p {
+                    margin: 0;
+                    font-size: 0.95em;
+} .banner-points {
+    background-image: url('../media/productBanner2.png');
+    background-size: contain;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    } .single-point {
+        height: 100%;
+        width: 22%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1vw;
+        } .single-point > img {
+            width: 8.5%;
+        } .single-point > p {
+            color: white;
+            margin: 0;
+            width: 90%;
+            font-size: 1.2em;
+} .product-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+    } .overview-text {
+        height: 75%;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        } .overview-text-description {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 2.5vh;
+            width: 80%;
+            height: 75%;
+            } .overview-text-description > h5 {
+                margin: 0;
+                font-size: 1.35em;
+            } .overview-text-description > p {
+                margin: 0;
+                font-size: 1.1em;
+    } .product-overview > img {
+        width: 564px;
+} .benefits-banner {
+    height: 250px;
+    width: 100%;
+    background-image: url('../media/productBanner2.png');
+    background-size: contain;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+    } .benefits-banner > h4 {
+        margin: 0;
+        font-size: 1.2em;
+        color: white;
+        height: 10%;
+    } .benefits-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        height: 60%;
+        } .benefits-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 32%;
+            gap: 1.5vw;
+            } .benefits-container > img {
+                width: 95px;
+            } .benefit-description {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                height: 100%;
+                width: 75%;
+                gap: 1.25vh;
+                } .benefit-description > h5 {
+                    margin: 0;
+                    font-size: 1.2em;
+                    color: white;
+                } .benefit-description > p {
+                    color: white;
+                    margin: 0;
+                    width: 85%;
+                    font-size: 0.9em;
+} .features-container {
+    height: 570px;
+    width: 100%;
+    background-image: url('../media/featureVisual.png');
+    background-size: contain;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    } .left-features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 35%;
+        height: 60%;
+        } .left-features > h4 {
+            margin: 0;
+            font-size: 1.3em;
+        } .left-features-list {
+            height: 60%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            } .left-features-description {
+                height: 40%;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                } .left-features-description > h5 {
+                    margin: 0;
+                    font-size: 1.1em;
+                } .left-features-description > p {
+                    margin: 0;
+    } .right-features-list {
+        height: 75%;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        } .right-features-description {
+            height: 32%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            } .right-features-description > h5 {
+                margin: 0;
+                font-size: 1.1em;
+            } .right-features-description > p {
+                margin: 0;
+            }

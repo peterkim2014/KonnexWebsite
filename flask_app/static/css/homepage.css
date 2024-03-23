@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'FreightSansLight';
+    src: url('/static/font/FreightSansProLight-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansMedium';
+    src: url('/static/font/FreightSansProMedium-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansSemi';
+    src: url('/static/font/FreightSansProSemiBold-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansBold';
+    src: url('/static/font/FreightSansProBold-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansBook';
+    src: url('/static/font/FreightSansProBook-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LTCushion';
+    src: url('/static/font/LTCushion-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LTCushionLight';
+    src: url('/static/font/LTCushion-Light.ttf') format('truetype');
+}
+
+#global, body, html {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    font-family: 'FreightSansLight', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+
+.home-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 155px;
+    width: 100%;
+    /* background-color: red; */
+    gap: 25vw;
+    } .home-name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80%;
+        width: 30%;
+        gap: 1.6vw;
+        } .logo-lotus {
+            height: 52%;
+            width: 42px;
+        } .name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 90%;
+            height: 100%;
+            gap: 0.5vh;
+            margin-top: 1%;
+            } .name-container > h1 {
+                font-size: 3em;
+                height: fit-content;
+                margin: 0;
+                font-family: 'LTCushionLight';
+                letter-spacing: 2px;
+                font-weight: 900;
+            } .name-container > h2 {
+                margin: 0;
+                width: 100%;
+                font-size: 0.7em;
+                font-weight: 100;
+                letter-spacing: 1.25px;
+                font-family: 'LTCushionLight';
+    } .home-routes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 30%;
+        } .route {
+            text-decoration: none;
+            color: black;
+} .intro-container {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    } .intro-text-container {
+        margin-left: 7.5%;
+        width: 47%;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        /* gap: 3vh; */
+        /* background-color: red; */
+        } .intro-text-container > h3 {
+            margin: 0;
+            width: 77%;
+            font-size: 1.7em;
+            text-align: left;
+            font-weight: 400;
+            font-family: 'FreightSansMedium', sans-serif;
+            letter-spacing: 0.5px;
+            line-height: 42px;
+        } .intro-text-container > h4 {
+            margin: 0;
+            width: 75%;
+            text-align: left;
+            font-weight: 100;
+            line-height: 27px;
+            font-size: 1.1em;
+            letter-spacing: 0.7px;
+    } .join-button {
+        margin: 0;
+        } .join-button-icon {
+            width: 32%;
+            margin-left: -1.75%;
+    } .intro-visual-container {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        background-image: url('../media/openPagePhoneBackground.png');
+        background-size: cover;
+        background-size: 80%;
+        } .intro-visual-container > img {
+            width: 510px;
+            height: 370px;
+            margin-left: -12%;
+} .banner-small-container {
+    width: 100%;
+    height: 110px;
+    background-image: url('../media/banner1.png');
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    } .banner-small-container > p {
+        font-size: 1.1em;
+        color: white;
+        letter-spacing: 3.75px;
+        font-family: 'FreightSansMedium', sans-serif;
+    } .diamond-bullet {
+        width: 1.25%;
+} .dependable-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 625px;
+    width: 100%;
+    } .dependable-container > img {
+        width: 625px;
+        height: 625px;
+    } .dependable-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 80%;
+        width: 47%;
+        margin-left: 10%;
+        margin-top: 5%;
+        gap: 2.5vh;
+        } .dependable-text-container > h4 {
+            font-size: 1.75em;
+            font-family: 'FreightSansMedium', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin: 0;
+        } .dependable-paragraph {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 52%;
+            width: 86%;
+            /* gap: 1.75; */
+            } .dependable-paragraph > p {
+                font-size: 1.08em;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 0.5px;
+                line-height: 30px;
+                margin: 0;
+} .purpose-banner {
+    background-image: url('../media/banner2.png');
+    background-size: contain;
+    width: 100%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
+    } .purpose-text-container {
+        width: 35%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        color: white;
+        gap: 1vh;
+        margin-left: 2.5%;
+        } .purpose-text-container > h4 {
+            font-size: 1.75em;
+            margin: 0;
+            font-family: 'FreightSansSemi', sans-serif;
+            letter-spacing: 1.5px;
+        } .purpose-text-container > p {
+            width: 85%;
+            margin: 0;
+            line-height: 30px;
+    } .purpose-banner > img {
+        width: 560px;
+        height: 460px;
+        margin-top: -2.5%;
+        margin-right: -2.5%;
+} .blockchain-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 875px;
+    width: 100%;
+    margin-top: -2.5%;
+    } .blockchain-header-container {
+        height: 130px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 7.5%;
+        } .blockchain-header-container > h4 {
+            margin: 0;
+            font-size: 2.56em;
+            /* font-weight: 400; */
+            font-family: 'FreightSansBook', sans-serif;
+            letter-spacing: 1px;
+            width: 100%;
+    } .blockchain-header {
+        height: 75px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        } .polkadot-nameTag {
+            width: 240px;
+        } .lotus-nameTag {
+            width: 180px;
+        } .blockchain-header > hr {
+            transform: rotate(180);
+            height: 80%;
+            color: black;
+            /* width: 15px; */
+            border: 2.5px solid black;
+            border-radius: 2.5px;
+    } .blockchain-info {
+        height: 125px;
+        width: 76%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* gap: 2.5vh; */
+        } .blockchain-info > p {
+            margin: 0;
+            width: 96%;
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: -2%;
+            line-height: 30px;
+    } .blockchain-features-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 230px;
+        width: 70%;
+        margin-top: 3.2%;
+        } .blockchain-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 90%;
+            width: 30%;
+            /* gap: 2.75vh; */
+            } .blockchain-feature > img {
+                width: 25%;
+            } .blockchain-feature > h5 {
+                font-size: 1.35em;
+                margin: 0;
+                padding-top: 5%;
+                font-weight: 900;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 1px;
+            } .blockchain-feature > p {
+                font-size: 0.95em;
+                width: 85%;
+                margin: 0;
+                text-align: center;
+                line-height: 25px;
+            } .blockchain-feature-last {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 90%;
+                width: 30%;
+                margin-top: 1.95%;
+                } .blockchain-feature-last > img {
+                    width: 25%;
+                    margin-top: -5%;
+                } .blockchain-feature-last > h5 {
+                    font-size: 1.35em;
+                    margin: 0;
+                    padding-top: 8%;
+                    padding-bottom: 2.5%;
+                    font-weight: 700;
+                    font-family: 'FreightSansBook', sans-serif;
+                    letter-spacing: 1px;
+                } .blockchain-feature-last > p {
+                    font-size: 0.95em;
+                    width: 85%;
+                    margin: 0;
+                    text-align: center;
+                    line-height: 25px;
+} .polkadot-support-container {
+    background-image: url('../media/banner3.png');
+    background-size: contain;
+    width: 100%;
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25%;
+    } .polkadot-support-container > h4 {
+        font-size: 1.15em;
+        color: white;
+        } .supported-token-list {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            height: 80px;
+            } .supported-token {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+                width: 12%;
+                } .token-individual {
+                    width: 70%;
+                } .supported-token > p {
+                    color: white;
+                    font-size: 0.85em;
+    } .plus-sign {
+        color: white;
+        height: 15px;
+        font-size: 1.85em;
+        /* margin: 0; */
+    } .many-more {
+        background-image: url('../media/manyMore.png');
+        background-size: cover;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25px;
+        } .many-more > p {
+            color: white;
+    } .polkadot-diagram {
+        width: 575px;
+        height: 305px;
+        margin-top: 2.25%;
+    }
+
+
