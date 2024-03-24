@@ -133,7 +133,7 @@
         font-size: 1.1em;
         line-height: 30px;
 } .product-description {
-    height: 680px;
+    height: 639px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -153,28 +153,29 @@
         } .product-side-descriptions > p {
             margin: 0;
             height: 22%;
-            margin-top: 4%;
+            margin-top: -1.5%;
             width: 88%;
             font-size: 1.1em;
+            line-height: 30px;
     } .product-description-paragraph {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        height: 94%;
-        width: 30%;
+        height: 100%;
+        width: 36%;
         background-image: url('../media/productIntoBackground.png');
         background-size: contain;
         background-size: 100%;
         } .product-description-point {
-            height: 95px;
+            height: 150px;
             width: 70%;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             gap: 1.5vw;
             } .product-description-point > img {
-                width: 18%;
+                width: 45px;
             } .description-text {
                 display: flex;
                 flex-direction: column;
@@ -186,9 +187,11 @@
                 } .description-text > h5 {
                     margin: 0;
                     font-size: 1.6em;
+                    font-family: 'FreightSansMedium', sans-serif;
                 } .description-text > p {
                     margin: 0;
                     font-size: 0.95em;
+                    line-height: 20px;
 } .banner-points {
     background-image: url('../media/productBanner2.png');
     background-size: contain;
@@ -212,6 +215,7 @@
             margin: 0;
             width: 90%;
             font-size: 1.1em;
+            font-family: 'FreightSansMedium', sans-serif;
 } .product-overview {
     display: flex;
     justify-content: space-between;
@@ -219,26 +223,47 @@
     height: 700px;
     width: 100%;
     } .overview-text {
-        height: 75%;
+        height: 80%;
         width: 48%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 3vh;
+        margin-left: 3.25%;
         } .overview-text-description {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            gap: 2.5vh;
-            width: 87%;
-            height: 75%;
+            gap: 0.8vh;
+            width: 95%;
+            height: 90%;
             } .overview-text-description > h5 {
                 margin: 0;
                 font-size: 1.35em;
+                font-family: 'FreightSansBook', sans-serif;
             } .overview-text-description > p {
                 margin: 0;
-                font-size: 1.1em;
+                font-size: 1em;
+                line-height: 25px;
+        } .overview-text-description-last {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0.8vh;
+            width: 95%;
+            height: 90%;
+            /* margin-top: 1.5%; */
+            } .overview-text-description-last > h5 {
+                margin: 0;
+                font-size: 1.35em;
+                font-family: 'FreightSansBook', sans-serif;
+            } .overview-text-description-last > p {
+                margin: 0;
+                font-size: 1em;
+                line-height: 25px;
     } .product-overview > img {
         width: 564px;
 } .benefits-banner {
@@ -256,18 +281,18 @@
         margin: 0;
         font-size: 1.2em;
         color: white;
-        height: 10%;
+        height: 5%;
     } .benefits-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 85%;
-        height: 60%;
+        width: 95%;
+        height: 70%;
         } .benefits-container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            height: 100%;
+            align-items: flex-start;
+            height: 70%;
             width: 32%;
             gap: 1.5vw;
             } .benefits-container > img {
@@ -276,18 +301,19 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                justify-content: center;
+                justify-content: flex-start;
                 height: 100%;
-                width: 75%;
-                gap: 1.25vh;
+                width: 100%;
+                /* gap: 1vh; */
                 } .benefit-description > h5 {
                     margin: 0;
                     font-size: 1.2em;
                     color: white;
+                    font-family: 'FreightSansBook', sans-serif;
                 } .benefit-description > p {
                     color: white;
                     margin: 0;
-                    width: 85%;
+                    /* width: 90%; */
                     font-size: 0.9em;
 } .features-container {
     height: 570px;
@@ -298,52 +324,67 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.75vw;
     } .left-features {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         width: 35%;
-        height: 60%;
+        height: 70%;
+        gap: 10vh;
+        margin-left: 2.5%;
+        margin-top: 2.5%;
         } .left-features > h4 {
             margin: 0;
-            font-size: 1.3em;
+            font-size: 1.45em;
+            font-family: 'FreightSansMedium', sans-serif;
+            margin-left: 4%;
         } .left-features-list {
-            height: 60%;
+            height: 80%;
             width: 80%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            gap: 2.5vh;
+            margin-top: 5%;
             } .left-features-description {
-                height: 40%;
+                height: 50%;
                 width: 90%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                justify-content: space-around;
+                justify-content: flex-start;
+                gap: 0.5vh;
                 } .left-features-description > h5 {
                     margin: 0;
                     font-size: 1.1em;
+                    font-family: 'FreightSansBook', sans-serif;
+                    font-weight: 900;
                 } .left-features-description > p {
                     margin: 0;
     } .right-features-list {
-        height: 75%;
-        width: 35%;
+        height: 70%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-top: 2%;
         } .right-features-description {
-            height: 32%;
+            height: 50%;
             width: 60%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: space-around;
+            justify-content: flex-start;
+            gap: 0.5vh;
+            margin-left: 25%;
             } .right-features-description > h5 {
                 margin: 0;
                 font-size: 1.1em;
+                font-family: 'FreightSansBook', sans-serif;
             } .right-features-description > p {
                 margin: 0;
             }
