@@ -335,55 +335,125 @@
                     margin: 0;
                     text-align: center;
                     line-height: 25px;
-} .polkadot-support-container {
-    background-image: url('../media/banner3.png');
+} .referral-information {
+    background-image: url('../media/referralBanner.png');
     background-size: contain;
     width: 100%;
-    height: 555px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1.25%;
-    } .polkadot-support-container > h4 {
-        font-size: 1.15em;
-        color: white;
-        } .supported-token-list {
-            display: flex;
-            justify-content: space-between;
-            width: 60%;
-            height: 80px;
-            } .supported-token {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                height: 60px;
-                width: 12%;
-                } .token-individual {
-                    width: 70%;
-                } .supported-token > p {
-                    color: white;
-                    font-size: 0.85em;
-    } .plus-sign {
-        color: white;
-        height: 15px;
-        font-size: 1.85em;
-        /* margin: 0; */
-    } .many-more {
-        background-image: url('../media/manyMore.png');
-        background-size: cover;
-        width: 60%;
+    } .referral-steps {
+        width: 100%;
+        height: 150px;
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        height: 25px;
-        } .many-more > p {
-            color: white;
-    } .polkadot-diagram {
-        width: 575px;
-        height: 305px;
-        margin-top: 2.25%;
-    }
+        /* margin-top: 11%; */
+        padding-top: 22%;
+        } .first-referral-step {
+                width: 26%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1vh;
+            } .first-referral-step > h5 {
+                font-size: 1.6em;
+                color: white;
+                opacity: .5;
+                font-weight: 800;
+                }.first-referral-step > h6 {
+                    font-size: 1.5em;
+                    color: white;
+                    opacity: .5;
+        } .second-referral-step {
+            width: 26%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vh;
+            } .second-referral-step > h5 {
+                font-size: 1.6em;
+                color: white;
+                opacity: .5;
+                font-weight: 800;
+                } .second-referral-step > h6 {
+                        font-size: 1.5em;
+                        color: white;
+                        opacity: .5;
+        } .third-referral-step {
+            width: 26%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1vh;
+                } .third-referral-step > h5 {
+                    font-size: 1.6em;
+                    color: white;
+                    opacity: .5;
+                    font-weight: 800;
+                    } .third-referral-step > h6 {
+                        font-size: 1.5em;
+                        color: white;
+                        font-weight: 800;
+        } .referral-explanation {
+            width: 100%;
+            height: 450px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 1vh;
+            } .referral-explanation > img {
+                    padding-top: 3%;
+                    width: 28%;
+                    height: 450px;
+                } .referral-details {
+                    padding-top: 4%;
+                    width: 36%;
+                    height: 70%;
+                    text-align: end;
+                    display: flex;
+                    flex-direction: column;
+                    } .referral-title {
+                        width: 80%;
+                        height: 30%;
+                        } .referral-title > h5 {
+                                font-size: 1.7em;
+                                color: white;
+                                font-weight: 800;
+                                width: 100%;
+                                height: 40%;
+                                margin: 0;
+                            } .referral-title > h6 {
+                                font-size: 1.3em;
+                                color: white;
+                                font-weight: 800;
+                                width: 100%;
+                                height: 30%;
+                                margin: 0;
+                    } .referral-details > p {
+                        width: 80%;
+                        height: 90%;
+                        font-size: 0.9em;
+                        color: white;
+    } .join-the-community {
+        width: 100%;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        } .join-the-community-perks {
+            width: 37%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            }      
 
 
