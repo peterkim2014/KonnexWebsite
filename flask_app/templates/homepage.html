@@ -106,29 +106,17 @@
 
         <div class="referral-information">
            <div class="referral-steps">
-                <div class="first-referral-step">
-                    <h5>
-                        1
-                    </h5>
-                    <h6>
-                        Invite your friends
-                    </h6>
+                <div class="referral-step">
+                    <h5>1</h5>
+                    <h6>Invite your friends</h6>
                 </div>
-                <div class="second-referral-step">
-                    <h5>
-                        2
-                    </h5>
-                    <h6>
-                        Share referral code
-                    </h6>
+                <div class="referral-step">
+                    <h5>2</h5>
+                    <h6>Share referral code</h6>
                 </div>
-                <div class="third-referral-step">
-                    <h5>
-                        3
-                    </h5>
-                    <h6>
-                        Earn money
-                    </h6>
+                <div class="referral-step-last">
+                    <h5>3</h5>
+                    <h6>Earn money</h6>
                 </div>
            </div>
 
@@ -137,35 +125,66 @@
 
                 <div class="referral-details">
                     <div class="referral-title">
-                        <h5>
-                            Referral Program
-                        </h5>
-                        <h6>
-                            Earn money through each referral
-                        </h6>
+                        <h5>Referral Program</h5>
+                        <h6>Earn money through each referral</h6>
                     </div>
                     
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu 
-                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu</p>
                 </div>
 
            </div>
+        </div>
+
 
            <div class="join-the-community">
                 <div class="join-the-community-perks">
-                    <h5>
-                        Perk 1
-                    </h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
-                    </p>
+                    <div class="perk">
+                        <h5>Perk 1</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+                    </div>
+                    <div class="perk">
+                        <h5>Perk 2</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+                    </div>
+                    <div class="perk">
+                        <h5>Perk 3</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+                    </div>
                 </div>
 
                 <div class="join-the-community-form">
-
+                    <div class="join-header">
+                        <h4>Join the community</h4>
+                        <h5>Sign up for any early benefits</h5>
+                    </div>
+                    <div class="perks-visual">
+                        <img src="{{ url_for('static', filename='media/joinTheCommunityPerks.png') }}" class="perks-timeline-visual"/>
+                        <div class="perks-list-visual">
+                            <p>Perks 1</p>
+                            <p>Perks 2</p>
+                            <p>Perks 3</p>
+                        </div>
+                    </div>
+                    <div class="join-form-container">
+                        <form class="join-form">
+                            <label class="join-label">
+                                First Name
+                                <input />
+                            </label>
+                            <label class="join-label">
+                                Last Name
+                                <input />
+                            </label>
+                            <label class="join-label">
+                                Email
+                                <input />
+                            </label>
+                            <button>Sign up</button>
+                        </form>
+                        <p>The information above is going to be stored for early members for the benefit of the perks. Any data supplied will only be used for data collecting purposes.</p>
+                    </div>
                 </div>
-           </div>
+           
 
         </div>
 
