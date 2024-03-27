@@ -235,7 +235,7 @@
                 margin: 0;
                 font-size: 1.05em;
                 font-family: 'FreightSansBook', sans-serif;
-                letter-spacing: 1px;
+                letter-spacing: 0.75px;
                 width: 75%;
                 line-height: 25px;
         } .create-story-upper > img {
