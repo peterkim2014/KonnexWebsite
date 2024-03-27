@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'FreightSansLight';
+    src: url('/static/font/FreightSansProLight-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansMedium';
+    src: url('/static/font/FreightSansProMedium-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansSemi';
+    src: url('/static/font/FreightSansProSemiBold-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansBold';
+    src: url('/static/font/FreightSansProBold-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'FreightSansBook';
+    src: url('/static/font/FreightSansProBook-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LTCushion';
+    src: url('/static/font/LTCushion-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LTCushionLight';
+    src: url('/static/font/LTCushion-Light.ttf') format('truetype');
+}
+
+#global, body, html {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    font-family: 'FreightSansLight', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 155px;
+    width: 100%;
+    /* background-color: red; */
+    gap: 25vw;
+    } .home-name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80%;
+        width: 30%;
+        gap: 1.6vw;
+        } .logo-lotus {
+            height: 52%;
+            width: 42px;
+        } .name-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 90%;
+            height: 100%;
+            gap: 0.5vh;
+            margin-top: 1%;
+            } .name-container > h1 {
+                font-size: 3em;
+                height: fit-content;
+                margin: 0;
+                font-family: 'LTCushionLight';
+                letter-spacing: 2px;
+                font-weight: 900;
+            } .name-container > h2 {
+                margin: 0;
+                width: 100%;
+                font-size: 0.7em;
+                font-weight: 100;
+                letter-spacing: 1.25px;
+                font-family: 'LTCushionLight';
+    } .home-routes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 30%;
+        } .route {
+            text-decoration: none;
+            color: black;
+} .about-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 395px;
+    width: 100%;
+    } .about-Intro-Visual {
+        width: 100%;
+        height: 395px;
+} .about-intro-banner {
+    background-image: url('../media/aboutIntroBanner.png');
+    background-size: contain; 
+    background-size: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    } .about-intro-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+        width: 25%;
+        color: white;
+        gap: 0.85vh;
+        } .about-intro-point-container > h4 {
+            margin: 0;
+            font-size: 1.2em;
+            font-family: 'FreightSansBook', sans-serif;
+            letter-spacing: 1.5px;
+        } .about-intro-point-container > p {
+            margin: 0;
+            font-family: 'FreightSansBook', sans-serif;
+            font-size: 0.9em;
+            line-height: 20px;
+} .about-brand-manifesto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+    width: 100%;
+    gap: 2.5vh;
+    } .about-brand-manifesto > h3 {
+        margin: 0;
+        font-size: 2.25em;
+        font-family: 'FreightSansMedium', sans-serif;
+        letter-spacing: 1.5px;
+    } .brand-manifesto-text {
+        width: 75%;
+        height: 52%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        } .brand-manifesto-text > p {
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 25px;
+            letter-spacing: 1px;
+            text-align: center;
+} .about-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    width: 100%;
+    } .about-story-visual {
+        width: 70%;
+        height: 450px;
+    } .about-story-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 75%;
+        width: 30%;
+        gap: 2vh;
+        } .about-story-text > h4 {
+            margin: 0;
+            width: 75%;
+            font-size: 1.5em;
+            font-family: 'FreightSansMedium', sans-serif;
+            letter-spacing: 1.5px;
+        } .about-story-text > p {
+            margin: 0;
+            font-size: 1.05em;
+            font-family: 'FreightSansBook', sans-serif;
+            letter-spacing: 1px;
+            width: 75%;
+} .statement-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    width: 100%;
+    background-image: url('../media/statementBanner.png');
+    background-size: contain; 
+    background-size: 100%;
+    color: white;
+    gap: 1.75vh;
+    } .statement-banner > h4 {
+        margin: 0;
+        /* width: 75%; */
+        font-size: 1.4em;
+        font-family: 'FreightSansMedium', sans-serif;
+        letter-spacing: 1.75px;
+    } .statement-banner > p {
+        margin: 0;
+        font-size: 1.05em;
+        font-family: 'FreightSansBook', sans-serif;
+        letter-spacing: 1px;
+        width: 75%;
+        text-align: center;
+        line-height: 30px;
+} .create-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 675px;
+    width: 100%;
+    } .create-story-upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 450px;
+        width: 100%;
+        } .create-story-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75%;
+            width: 70%;
+            gap: 2vh;
+            } .create-story-text > h4 {
+                margin: 0;
+                width: 75%;
+                font-size: 1.35em;
+                font-family: 'FreightSansMedium', sans-serif;
+                letter-spacing: 1.5px;
+            } .create-story-text > p {
+                margin: 0;
+                font-size: 1.05em;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 1px;
+                width: 75%;
+                line-height: 25px;
+        } .create-story-upper > img {
+            width: 50%;
+            height: 450px;
+    } .create-story-banner {
+        height: 225px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 5vw;
+        } .create-story-point-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 25%;
+            gap: 0.85vh;
+            } .create-story-point-container > h4 {
+                margin: 0;
+                font-size: 1.3em;
+                font-family: 'FreightSansMedium', sans-serif;
+                letter-spacing: 1.5px;
+                width: 90%;
+                text-align: left;
+            } .create-story-point-container > p {
+                margin: 0;
+                font-family: 'FreightSansBook', sans-serif;
+                font-size: 1.15em;
+                line-height: 27px;
+                width: 90%;
+            }
