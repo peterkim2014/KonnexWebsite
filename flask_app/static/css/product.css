@@ -266,125 +266,99 @@
                 line-height: 25px;
     } .product-overview > img {
         width: 564px;
-} .benefits-banner {
-    height: 250px;
+} .product-features {
     width: 100%;
-    background-image: url('../media/productBanner2.png');
+    height: 420px;
+    background-image: url('../media/productFeaturesBackground.png');
     background-size: contain;
     background-size: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5vh;
-    } .benefits-banner > h4 {
-        margin: 0;
-        font-size: 1.2em;
-        color: white;
-        height: 5%;
-    } .benefits-list {
+    background-repeat: no-repeat;
+    margin: 0;
+    } .product-features-header {
+        width: 90%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 70%;
-        } .benefits-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            height: 70%;
-            width: 32%;
-            gap: 1.5vw;
-            } .benefits-container > img {
-                width: 95px;
-            } .benefit-description {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                height: 100%;
-                width: 100%;
-                /* gap: 1vh; */
-                } .benefit-description > h5 {
-                    margin: 0;
-                    font-size: 1.2em;
-                    color: white;
-                    font-family: 'FreightSansBook', sans-serif;
-                } .benefit-description > p {
-                    color: white;
-                    margin: 0;
-                    /* width: 90%; */
-                    font-size: 0.9em;
-} .features-container {
-    height: 570px;
-    width: 100%;
-    background-image: url('../media/featureVisual.png');
-    background-size: contain;
-    background-size: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.75vw;
-    } .left-features {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 35%;
-        height: 70%;
-        gap: 10vh;
-        margin-left: 2.5%;
-        margin-top: 2.5%;
-        } .left-features > h4 {
-            margin: 0;
-            font-size: 1.45em;
-            font-family: 'FreightSansMedium', sans-serif;
-            margin-left: 4%;
-        } .left-features-list {
-            height: 80%;
-            width: 80%;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 3%;
+        } .product-features-title {
+            width: 40%;
+            height: 50px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2.5vh;
-            margin-top: 5%;
-            } .left-features-description {
-                height: 50%;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 0.5vh;
-                } .left-features-description > h5 {
-                    margin: 0;
-                    font-size: 1.1em;
-                    font-family: 'FreightSansBook', sans-serif;
-                    font-weight: 900;
-                } .left-features-description > p {
-                    margin: 0;
-    } .right-features-list {
-        height: 70%;
-        width: 45%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 2%;
-        } .right-features-description {
-            height: 50%;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
             justify-content: flex-start;
-            gap: 0.5vh;
-            margin-left: 25%;
-            } .right-features-description > h5 {
+            padding-left: 10%;
+            } .product-features-title > h5 {
+                color: white;
+                font-size: 4.1vh;
                 margin: 0;
-                font-size: 1.1em;
-                font-family: 'FreightSansBook', sans-serif;
-            } .right-features-description > p {
+                } .product-features-title-benefit {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 1vw;
+                    align-items: baseline;
+                    } .product-features-title-benefit > h5 {
+                        color: white;
+                        font-size: 6.8vh;
+                        margin: 0;
+                        opacity: .5;
+                        } .product-features-title-benefit > h6 {
+                            color: white;
+                            margin: 0;
+                            opacity: .5;
+                            font-size: 3.1vh;
+        } .product-features-tagline {
+            width: 60%;
+            height: 50px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2em;
+            } .product-features-tagline > h5 {
+                width: 25%;
                 margin: 0;
-            }
+                color: white;
+                font-size: 2.7vh;
+        } .product-features-descriptions {
+            width: 100%;
+            height: 440px;
+            display: flex;
+            padding-top: 3%;
+            justify-content: space-between;
+            gap: 2em;
+            } .product-features-points {
+                width: 30%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: flex-start; */
+                align-items: center;
+
+                /* padding-left: 10%; */
+                gap: 1.3em;
+                } .product-features-points-text {
+                    width: 70%;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.35em;
+                    } .product-features-points-text > h5 {
+                        color: white;
+                        margin: 0;
+                        font-size: 2.7vh;
+                        width: 100%;
+                        } .product-features-points-text > p {
+                            color: white;
+                            margin: 0;
+                            font-size: 2.2vh;
+                            width: 100%;
+            } .product-features-descriptions > img {
+                width: 640px;
+                height: 420px;
+            } .product-features-descriptions > p {
+                width: 30%;
+                height: 200px;
+                color: white;
+                font-size: 1.9vh;
+                }
