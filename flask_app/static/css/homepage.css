@@ -347,13 +347,13 @@
     padding-top: 1.25%;
     } .referral-steps {
         width: 100%;
-        height: 150px;
+        height: 80px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         /* margin-top: 11%; */
-        padding-top: 22%;
-        } .first-referral-step {
+        /* padding-top: 22%; */
+        } .referral-step {
                 width: 26%;
                 height: 50px;
                 display: flex;
@@ -361,16 +361,18 @@
                 justify-content: center;
                 align-items: center;
                 gap: 1vh;
-            } .first-referral-step > h5 {
+            } .referral-step > h5 {
                 font-size: 1.6em;
                 color: white;
                 opacity: .5;
                 font-weight: 800;
-                }.first-referral-step > h6 {
+                margin: 0;
+                }.referral-step > h6 {
                     font-size: 1.5em;
                     color: white;
                     opacity: .5;
-        } .second-referral-step {
+                    margin: 0;
+        } .referral-step-last {
             width: 26%;
             height: 50px;
             display: flex;
@@ -378,82 +380,190 @@
             justify-content: center;
             align-items: center;
             gap: 1vh;
-            } .second-referral-step > h5 {
-                font-size: 1.6em;
-                color: white;
-                opacity: .5;
-                font-weight: 800;
-                } .second-referral-step > h6 {
-                        font-size: 1.5em;
-                        color: white;
-                        opacity: .5;
-        } .third-referral-step {
-            width: 26%;
-            height: 50px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 1vh;
-                } .third-referral-step > h5 {
+                } .referral-step-last > h5 {
                     font-size: 1.6em;
                     color: white;
                     opacity: .5;
                     font-weight: 800;
-                    } .third-referral-step > h6 {
+                    margin: 0;
+                    } .referral-step-last > h6 {
                         font-size: 1.5em;
                         color: white;
                         font-weight: 800;
-        } .referral-explanation {
-            width: 100%;
-            height: 450px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            gap: 1vh;
-            } .referral-explanation > img {
-                    padding-top: 3%;
-                    width: 28%;
-                    height: 450px;
-                } .referral-details {
-                    padding-top: 4%;
-                    width: 36%;
-                    height: 70%;
-                    text-align: end;
-                    display: flex;
-                    flex-direction: column;
-                    } .referral-title {
-                        width: 80%;
-                        height: 30%;
-                        } .referral-title > h5 {
-                                font-size: 1.7em;
-                                color: white;
-                                font-weight: 800;
-                                width: 100%;
-                                height: 40%;
-                                margin: 0;
-                            } .referral-title > h6 {
-                                font-size: 1.3em;
-                                color: white;
-                                font-weight: 800;
-                                width: 100%;
-                                height: 30%;
-                                margin: 0;
-                    } .referral-details > p {
-                        width: 80%;
-                        height: 90%;
-                        font-size: 0.9em;
-                        color: white;
-    } .join-the-community {
-        width: 100%;
-        height: 450px;
+                        margin: 0;
+    } .referral-explanation {
+        width: 95%;
+        height: 325px;
         display: flex;
-        flex-direction: row;
-        } .join-the-community-perks {
-            width: 37%;
-            height: 70%;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1vh;
+        margin-right: 3%;
+        gap: 3vw;
+        } .referral-explanation > img {
+                padding-top: 2%;
+                width: 380px;
+                height: 480px;
+        } .referral-details {
+            padding-top: 3%;
+            width: 45%;
+            height: 68%;
+            text-align: end;
             display: flex;
             flex-direction: column;
-            }      
+            justify-content: space-between;
+            align-items: center;
+            } .referral-title {
+                width: 80%;
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 3vh;
+                } .referral-title > h5 {
+                    font-size: 2em;
+                    color: white;
+                    /* font-weight: 800; */
+                    width: 100%;
+                    height: 40%;
+                    margin: 0;
+                    font-family: 'FreightSansMedium', sans-serif;
+                    } .referral-title > h6 {
+                        font-size: 1.6em;
+                        color: white;
+                        font-weight: 800;
+                        width: 100%;
+                        height: 30%;
+                        margin: 0;
+            } .referral-details > p {
+                width: 80%;
+                font-size: 0.9em;
+                color: white;
+                margin: 0;
+                line-height: 20px;
+} .join-the-community {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } .join-the-community-perks {
+        width: 45%;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: green; */
+        margin-top: 7.5%;
+        } .perk {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            height: 27%;
+            width: 80%;
+            
+            } .perk > h5 {
+                margin: 0;
+                font-family: 'FreightSansBook', sans-serif;
+                font-size: 1.75em;
+                letter-spacing: 1px;
+            } .perk > p {
+                margin: 0;
+                line-height: 20px;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 1px;
+                width: 90%;
+    } .join-the-community-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 70%;
+        width: 55%;
+        margin-top: 6.5%;
+        } .join-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 30px;
+            width: 58%;
+            } .join-header > h4 {
+                margin: 0;
+                font-size: 2.75em;
+                font-family: 'FreightSansMedium', sans-serif;
+                letter-spacing: 1px;
+            } .join-header > h5 {
+                margin: 0;
+                font-size: 1.82em;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 1px;
+
+        } .perks-visual {
+            display: flex;
+            flex-direction: column;
+            width: 38%;
+            height: 25px;
+            } .perks-timeline-visual {
+                padding-top: 5%;
+                width: 230px;
+                height: 22px;
+                margin-left: 3%;
+            } .perks-list-visual {
+                
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                } .perks-list-visual > p {
+                    margin: 0;
+                    margin-top: 1.5%;
+        } .join-form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 325px;
+            width: 100%;
+            } .join-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 70%;
+                width: 55%;
+                } .join-label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    height: 30%;
+                    /* background-color: green; */
+                    } .join-label > input {
+                        width: 100%;
+                        height: 27px;
+                        border: none;
+                        background-color: #EEEEEE;
+                        border-radius: 4px;
+                } .join-form > button { 
+                    width: 102.5%;
+                    height: 30px;
+                    margin-left: 2.5%;
+                    border: none;
+                    background-color: #003F4A;
+                    border-radius: 4px;
+                    color: white;
+                    margin-top: 3.8%;
+            } .join-form-container > p {
+                width: 56%;
+                margin-left: 1%;
+                text-align: center;
+                font-size: 0.78em;
+                line-height: 15px;
+                /* margin-top: 2.5%; */
+            }
 
 
