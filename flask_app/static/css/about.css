@@ -128,7 +128,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 420px;
+    height: 380px;
     width: 100%;
     gap: 2.5vh;
     } .about-brand-manifesto > h3 {
@@ -152,44 +152,45 @@
 } .about-story {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 450px;
+    align-items: flex-start;
+    height: 410px;
     width: 100%;
     } .about-story-visual {
-        width: 70%;
-        height: 450px;
+        width: 60%;
+        height: 410px;
     } .about-story-text {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        margin-top: 1.25%;
         height: 75%;
-        width: 30%;
+        width: 40%;
         gap: 2vh;
         } .about-story-text > h4 {
             margin: 0;
-            width: 75%;
+            width: 76%;
             font-size: 1.5em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1.5px;
         } .about-story-text > p {
             margin: 0;
             font-size: 1.05em;
-            font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
-            width: 75%;
+            line-height: 23px;
+            width: 76%;
 } .statement-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 190px;
+    height: 178px;
     width: 100%;
     background-image: url('../media/statementBanner.png');
     background-size: contain; 
     background-size: 100%;
     color: white;
-    gap: 1.75vh;
+    gap: 1.5vh;
     } .statement-banner > h4 {
         margin: 0;
         /* width: 75%; */
@@ -198,12 +199,13 @@
         letter-spacing: 1.75px;
     } .statement-banner > p {
         margin: 0;
-        font-size: 1.05em;
+        font-size: 1.08em;
         font-family: 'FreightSansBook', sans-serif;
         letter-spacing: 1px;
         width: 75%;
         text-align: center;
-        line-height: 30px;
+        line-height: 28px;
+        margin-bottom: 1.2%;
 } .create-story {
     display: flex;
     flex-direction: column;
@@ -214,7 +216,7 @@
     } .create-story-upper {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         height: 450px;
         width: 100%;
         } .create-story-text {
@@ -222,32 +224,32 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 75%;
+            height: 100%;
             width: 70%;
             gap: 2vh;
             } .create-story-text > h4 {
                 margin: 0;
-                width: 75%;
+                width: 76%;
                 font-size: 1.35em;
                 font-family: 'FreightSansMedium', sans-serif;
                 letter-spacing: 1.5px;
             } .create-story-text > p {
                 margin: 0;
                 font-size: 1.05em;
-                font-family: 'FreightSansBook', sans-serif;
+                /* font-family: 'FreightSansBook', sans-serif; */
                 letter-spacing: 0.75px;
-                width: 75%;
+                width: 76%;
                 line-height: 25px;
         } .create-story-upper > img {
             width: 50%;
-            height: 450px;
+            height: 430px;
     } .create-story-banner {
         height: 225px;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        gap: 5vw;
+        gap: 7.5vw;
         } .create-story-point-container {
             display: flex;
             flex-direction: column;
@@ -265,7 +267,7 @@
                 text-align: left;
             } .create-story-point-container > p {
                 margin: 0;
-                font-family: 'FreightSansBook', sans-serif;
+                /* font-family: 'FreightSansBook', sans-serif; */
                 font-size: 1.15em;
                 line-height: 27px;
                 width: 90%;
