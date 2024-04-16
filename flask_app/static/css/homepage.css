@@ -162,11 +162,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 625px;
+    height: 585px;
     width: 100%;
     } .dependable-container > img {
-        width: 625px;
-        height: 625px;
+        width: 585px;
+        height: 585px;
+        margin: 0;
     } .dependable-text-container {
         display: flex;
         flex-direction: column;
@@ -259,9 +260,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 1vh;
         } .polkadot-nameTag {
             width: 240px;
-        } .lotus-nameTag {
+        } .lotus-nameTag-header {
             width: 180px;
         } .blockchain-header > hr {
             transform: rotate(180);
@@ -299,13 +301,48 @@
             justify-content: space-around;
             height: 90%;
             width: 30%;
-            /* gap: 2.75vh; */
-            } .blockchain-feature > img {
-                width: 25%;
+            gap: 1.2vh;
+            } .blockchain-feature-images {
+                width: 75px;
+                height: 75px;
+                align-items: center;
+                justify-content: center;
+                /* padding-bottom: 5%; */
+                background-image: url('../media/blueBox.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 6px;
+            } .lotus-nameTag {
+                width: 100%;
+            } .blockchain-feature-images > img {
+                width: 78%;
+                padding-top: 10%;
+                padding-left: 11%;
+                justify-content: center;
+                align-items: center;
+
+                /* bottom: 10%; */
+            } .blockchain-feature-images-2 {
+                width: 75px;
+                height: 75px;
+                align-items: center;
+                justify-content: center;
+                /* padding-bottom: 5%; */
+                background-image: url('../media/blueBox.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 6px;
+            } .blockchain-feature-images-2 > img {
+                width: 80%;
+                /* height: 30%; */
+                padding-top: 17%;
+                padding-left: 10%;
+                justify-content: center;
+                align-items: center;
             } .blockchain-feature > h5 {
                 font-size: 1.35em;
                 margin: 0;
-                padding-top: 5%;
+                padding-top: 3.6%;
                 font-weight: 900;
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 1px;
@@ -322,10 +359,27 @@
                 justify-content: space-around;
                 height: 90%;
                 width: 30%;
-                margin-top: 1.95%;
-                } .blockchain-feature-last > img {
-                    width: 25%;
-                    margin-top: -5%;
+                gap: 1.2vh;
+                padding-top: 2.3%;
+                } .blockchain-feature-last-images {
+                    width: 75px;
+                    height: 75px;
+                    align-items: center;
+                    justify-content: center;
+                    /* padding-bottom: 5%; */
+                    background-image: url('../media/blueBox.png');
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 6px;
+                } .blockchain-feature-last-images > img {
+                    width: 78%;
+                    /* height: 30%; */
+                    /* margin-top: 12%; */
+                    padding-top: 9%;
+                    padding-left: 10%;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 9%;
                 } .blockchain-feature-last > h5 {
                     font-size: 1.35em;
                     margin: 0;
@@ -450,20 +504,83 @@
                 margin: 0;
                 line-height: 23px;
 } .join-the-community {
-    width: 100%;
+    width: 98%;
     height: 730px;
     display: flex;
     justify-content: center;
     align-items: center;
     } .join-the-community-perks {
-        width: 45%;
+        width: 40%;
         height: 55%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        /* justify-content: space-between; */
+        justify-content: flex-start;
+        margin-left: 10%;
         /* background-color: green; */
-        margin-top: 7.5%;
+        margin-top: 6.6%;
+        } .join-the-community-perks-headline {
+            width: 94%;
+            height: 180px;
+            margin: 0;
+        } .join-the-community-perks-headline > h4 {
+            font-size: 1.6em;
+            margin: 0;
+        } .join-the-community-perks-headline > p {
+            font-size: 0.91em;
+            margin: 0;
+            padding-top: 1.4%;
+        } .join-the-community-perks-description {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            /* padding-bottom: 14%; */
+            padding-left: 6%;
+        } .join-the-community-perks-description-first {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            gap: 1vh;
+        } .join-the-community-perks-description-first > img {
+            width: 11px;
+            height: 11px;
+            margin: 0;
+        } .join-the-community-perks-description-first > h4 {
+            width: 100%;
+            font-size: 1.06em;
+            margin: 0;
+            margin-top: -0.5%;
+        } .join-the-community-perks-description > p {
+            width: 90%;
+            font-size: .91em;
+            margin: 0;
+            padding-top: 1.5%;
+            padding-left: 3.75%;
+        } .join-the-community-perks-description-second {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            padding-top: 5%;
+            gap: 1vh;
+        } .join-the-community-perks-description-second > img {
+            width: 11px;
+            height: 11px;
+            margin: 0;
+        } .join-the-community-perks-description-second > h4 {
+            width: 100%;
+            font-size: 1.06em;
+            margin: 0;
+            margin-top: -0.5%;
+        } .join-the-community-perks-description-second > p {
+            width: 100%;
+            font-size: .91em;
+            margin: 0;
+            padding-top: 1.5%;
+            padding-left: 3.75%;
         } .perk {
             display: flex;
             flex-direction: column;
@@ -499,7 +616,7 @@
             align-items: center;
             justify-content: flex-start;
             height: 30px;
-            width: 58%;
+            width: 60%;
             } .join-header > h4 {
                 margin: 0;
                 font-size: 2.75em;

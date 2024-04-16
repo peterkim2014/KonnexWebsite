@@ -49,7 +49,7 @@
 
 
         <div class="dependable-container">
-            <img src="{{ url_for('static', filename='media/builtToBeDependableReplace.png') }}"/>
+            <img src="{{ url_for('static', filename='media/dependableImage.png') }}"/>
             <div class="dependable-text-container">
                 <h4>Built to be dependable</h4>
                 <div class="dependable-paragraph">
@@ -74,7 +74,7 @@
                 <div class="blockchain-header">
                     <img src="{{ url_for('static', filename='media/polkadotNameTag.png') }}" class="polkadot-nameTag"/>
                     <hr/>
-                    <img src="{{ url_for('static', filename='media/lotusNameTag.png') }}" class="lotus-nameTag"/>
+                    <img src="{{ url_for('static', filename='media/lotusNameTag.png') }}" class="lotus-nameTag-header"/>
                 </div>
                 <h4>Bridging innovation with trust</h4>
             </div>
@@ -87,17 +87,23 @@
 
             <div class="blockchain-features-list">
                 <div class="blockchain-feature">
-                    <img src="{{ url_for('static', filename='media/blueBox.png') }}" class="lotus-nameTag"/>
+                    <div class="blockchain-feature-images">
+                        <img src="{{ url_for('static', filename='media/securityIcon.png') }}"/>
+                    </div>
                     <h5>Secure Networking</h5>
                     <p>Availability and validity scheme allow chains to interact with each other in a meaningful way.</p>
                 </div>
                 <div class="blockchain-feature">
-                    <img src="{{ url_for('static', filename='media/blueBox.png') }}" class="lotus-nameTag"/>
+                    <div class="blockchain-feature-images-2">
+                        <img src="{{ url_for('static', filename='media/interoperabilityIcon1.png') }}" class="interoperability-Icon-1"/>
+                    </div>
                     <h5>Interoperability</h5>
                     <p>Polkadot enables cross-blockchain transfers of any type of data or asset, not just tokens.</p>
                 </div>
                 <div class="blockchain-feature-last">
-                    <img src="{{ url_for('static', filename='media/blueBox.png') }}" class="lotus-nameTag"/>
+                    <div class="blockchain-feature-last-images">
+                        <img src="{{ url_for('static', filename='media/energyEfficiencyIcon.png') }}"/>
+                    </div>
                     <h5>High Energy Efficiency</h5>
                     <p>Using the equivalent of ~6.6 US households worth of energy per year, Polkadot has the lowest carbon footprint.</p>
                 </div>
@@ -138,17 +144,42 @@
 
            <div class="join-the-community">
                 <div class="join-the-community-perks">
-                    <div class="perk">
-                        <h5>Perk 1</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+                    <div class="join-the-community-perks-headline">
+                        <h4>
+                            Pioneers: Unlock Exclusive Early Access
+                        </h4>
+                        <p>
+                            Step into the future with us and secure your spot on the waitlist for the Pioneers. By joining the Pioneers, you’re not just signing up for a service; you’re embracing a lifestyle where you are provided the tools and insights to navigate the blockchain realm. Together, let's transform every transaction from a routine task into an enriching experience.
+                        </p>
                     </div>
-                    <div class="perk">
-                        <h5>Perk 2</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
-                    </div>
-                    <div class="perk">
-                        <h5>Perk 3</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci</p>
+                    <div class="join-the-community-perks-description">
+                        <div class="join-the-community-perks-description-first">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Accelerate with 45% Faster Transaction Finalization
+                            </h4>
+                        </div>
+                        <p>
+                            Benefit from a 45% increase in transaction speeds, ensuring your operations are faster and more responsive. 
+                        </p>
+                        <div class="join-the-community-perks-description-second">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Enjoy Exclusive 15% Discount on Transaction Fees
+                            </h4>
+                        </div>
+                        <p>
+                            Gain an exclusive 15% discount on transaction fees, directly impacting your bottom line. 
+                        </p>
+                        <div class="join-the-community-perks-description-second">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Gain Early Access to Promotional and Seasonal Discounts
+                            </h4>
+                        </div>
+                        <p>
+                            As a Pioneer, enjoy early access to select promotional and seasonal discounts, designed to provide savings and unique opportunities.
+                        </p>
                     </div>
                 </div>
 
