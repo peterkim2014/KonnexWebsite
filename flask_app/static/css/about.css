@@ -187,7 +187,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 178px;
+    height: 198px;
     width: 100%;
     background-image: url('../media/statementBanner.png');
     background-size: contain; 
@@ -291,7 +291,7 @@
                             text-align: left;
         } .our-promise {
             width: 100%;
-            height: 150px;
+            height: 198px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -304,15 +304,95 @@
                 font-size: 1.5em;
                 color: white;
                 margin: 0;
+                font-family: 'FreightSansMedium', sans-serif;
                 } .our-promise > p {
                     font-size: 1em;
                     color: white;
                     width: 65%;
                     text-align: center;
                     margin: 0;
+                    line-height: 28px;
         } .brand-identity {
             width: 100%;
-            height: 355px;
+            height: 605px;
+            } .brand-statement {
+                padding-top: 6.5%;
+                width: 100%;
+                height: 160px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            } .brand-statement > h4 {
+                font-size: 1.6em;
+                color: black;
+                margin: 0;
+                height: 60px;
+                font-family: 'FreightSansMedium', sans-serif;
+                font-weight: 800;
+            } .brand-statement > p {
+                font-size: 1em;
+                color: black;
+                margin: 0;
+                width: 67%;
+                height: 110px;
+                text-align: center;
+                line-height: 28px;
+            } .brand-statement-points {
+                width: 100%;
+                height: 305px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 12vh;
+                padding-top: 3%;
+            } .brand-statement-points-first {
+                width: 240px;
+                height: 305px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2vh;
+                /* justify-content: center; */
+            } .brand-statement-points-first > img {
+                width: 80px;
+                height: 80px;
+            } .brand-statement-points-text {
+                width: 100%;
+                height: 130px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5vh;
+            } .brand-statement-points-text > h4 {
+                font-size: 1.25em;
+                margin: 0;
+                font-family: 'FreightSansMedium', sans-serif;
+            } .brand-statement-points-text > p {
+                font-size: 0.9em;
+                margin: 0;
+                line-height: 28px;
+            } .brand-statement-points-second {
+                width: 240px;
+                height: 305px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2vh;
+            } .brand-statement-points-second > img {
+                width: 80px;
+                height: 80px;
+            } .brand-statement-points-third {
+                width: 240px;
+                height: 305px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2vh;
+            } .brand-statement-points-third > img {
+                width: 80px;
+                height: 80px;
             } .footer {
                 width: 100%;
                 height: 150px;
