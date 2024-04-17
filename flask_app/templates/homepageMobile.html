@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus - Cryptocurrency Wallet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homepagePhone.css') }}">
+</head>
+<body>
+    
+    <div id="global">
+
+        <div class="home-header">
+            <div class="home-name">
+                <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
+                <div class="name-container">
+                    <h1>Lotus</h1>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
+                </div>
+            </div>
+            <div class="home-routes">
+                <a href="/" class="route">Home</a>
+                <a href="/product" class="route">Product</a>
+                <a href="/about" class="route">About</a>
+                <div class="dropdown">
+                    <a href="#contact" class="route contact">Contact us</a>
+                    <div class="dropdown-content">
+                        <a href="/contact_form">Contact Form</a>
+                        <a href="/join_the_team">Join the team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-container">
+            <div class="intro-text-container">
+                <h3>"Your guide to a new era of financial interactions with blockchain, using the state-of-the-art, Polkadot Technology, to instill confidence with engagements."</h3>
+                <h4>Committed to bridging people and blockchain, we bring clarity and drive toward an accessible and trusted journey
+                </h4>
+                <a class="join-button"><img src="{{ url_for('static', filename='media/joinButton.png') }}" class="join-button-icon"/></a>
+            </div>
+
+            <div class="intro-visual-container">
+                <img src="{{ url_for('static', filename='media/openPageVisual.png') }}"/>
+            </div>
+        </div>
+
+        <div class="banner-small-container">
+            <p>SECURE NETWORKING</p>
+            <img src="{{ url_for('static', filename='media/diamondBullet.png') }}" class="diamond-bullet"/>
+            <p>EASIER ACCESSIBILITY</p>
+            <img src="{{ url_for('static', filename='media/diamondBullet.png') }}" class="diamond-bullet"/>
+            <p>QUICKER SERVICE</p>
+        </div>
+
+
+        <div class="dependable-container">
+            <img src="{{ url_for('static', filename='media/dependableImage.png') }}"/>
+            <div class="dependable-text-container">
+                <h4>Built to be dependable</h4>
+                <div class="dependable-paragraph">
+                    <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.</p>
+                    <p>Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="purpose-banner">
+            <div class="purpose-text-container">
+                <h4>Purpose</h4>
+                <p>To craft an immersive experience that weaves integrity into every interaction, enabling you to forge a life story of purpose and connection in the digital frontier.</p>
+            </div>
+            <img src="{{ url_for('static', filename='media/purposeVisual.png') }}"/>
+        </div>
+
+        <div class="blockchain-container">
+
+            <div class="blockchain-header-container">
+                <div class="blockchain-header">
+                    <img src="{{ url_for('static', filename='media/polkadotNameTag.png') }}" class="polkadot-nameTag"/>
+                    <hr/>
+                    <img src="{{ url_for('static', filename='media/lotusNameTag.png') }}" class="lotus-nameTag-header"/>
+                </div>
+                <h4>Bridging innovation with trust</h4>
+            </div>
+
+
+            <div class="blockchain-info">
+                <p>Polkadot redefines digital connectivity, seamlessly linking diverse blockchain networks to enable secure and efficient communication, fostering a unified and accessible digital ecosystem. Its architecture promises enhanced scalibility and speed, ensuring quick transaction times and lower fees, while its robust security model provides peace of mind through a collective security system.
+                Polkadot's Relay Chain is the central hub that connects different blockchains, ensuring security and consensus across the network.Parachains are individual blockchains that run parallel within the Polkadot network, benefitting from the Relay Chain's security and interoperability features.Together, they form a scalable, decentralized network that enables different blockchains to transfer messages and value seamlessly, fostering a connected and versatile ecosystem.</p>
+            </div>
+
+            <div class="blockchain-features-list">
+                <div class="blockchain-feature">
+                    <div class="blockchain-feature-images">
+                        <img src="{{ url_for('static', filename='media/securityIcon.png') }}"/>
+                    </div>
+                    <h5>Secure Networking</h5>
+                    <p>Availability and validity scheme allow chains to interact with each other in a meaningful way.</p>
+                </div>
+                <div class="blockchain-feature">
+                    <div class="blockchain-feature-images-2">
+                        <img src="{{ url_for('static', filename='media/interoperabilityIcon1.png') }}" class="interoperability-Icon-1"/>
+                    </div>
+                    <h5>Interoperability</h5>
+                    <p>Polkadot enables cross-blockchain transfers of any type of data or asset, not just tokens.</p>
+                </div>
+                <div class="blockchain-feature-last">
+                    <div class="blockchain-feature-last-images">
+                        <img src="{{ url_for('static', filename='media/energyEfficiencyIcon.png') }}"/>
+                    </div>
+                    <h5>High Energy Efficiency</h5>
+                    <p>Using the equivalent of ~6.6 US households worth of energy per year, Polkadot has the lowest carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="referral-information">
+           <div class="referral-steps">
+                <div class="referral-step">
+                    <h5>1</h5>
+                    <h6>Invite your friends</h6>
+                </div>
+                <div class="referral-step">
+                    <h5>2</h5>
+                    <h6>Share referral code</h6>
+                </div>
+                <div class="referral-step-last">
+                    <h5>3</h5>
+                    <h6>Earn money</h6>
+                </div>
+           </div>
+
+           <div class="referral-explanation">
+                <img src="{{ url_for('static', filename='media/referralMockup.png') }}"/>
+
+                <div class="referral-details">
+                    <div class="referral-title">
+                        <h5>Referral Program</h5>
+                        <h6>Where your influence brings rewards</h6>
+                    </div>
+                    
+                    <p>At Lotus, we're excited to introduce our brand-new Referral Program, designed to reward our most passionate users for sharing the Lotus experience with their communities. We believe in growing together and creating an inclusive environment where everyone benefits. That's why we're inviting you to be a part of this journey, bringing your friends, family, and colleagues into the Lotus fold. Becoming a Lotus referrer is easy. Just log in to your account, sign up for the Referral Program, and start sharing your unique code. Let's grow the Lotus community together, creating a more inclusive experience for everyone.</p>
+                </div>
+
+           </div>
+        </div>
+
+
+           <div class="join-the-community">
+                <div class="join-the-community-perks">
+                    <div class="join-the-community-perks-headline">
+                        <h4>
+                            Pioneers: Unlock Exclusive Early Access
+                        </h4>
+                        <p>
+                            Step into the future with us and secure your spot on the waitlist for the Pioneers. By joining the Pioneers, you’re not just signing up for a service; you’re embracing a lifestyle where you are provided the tools and insights to navigate the blockchain realm. Together, let's transform every transaction from a routine task into an enriching experience.
+                        </p>
+                    </div>
+                    <div class="join-the-community-perks-description">
+                        <div class="join-the-community-perks-description-first">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Accelerate with 45% Faster Transaction Finalization
+                            </h4>
+                        </div>
+                        <p>
+                            Benefit from a 45% increase in transaction speeds, ensuring your operations are faster and more responsive. 
+                        </p>
+                        <div class="join-the-community-perks-description-second">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Enjoy Exclusive 15% Discount on Transaction Fees
+                            </h4>
+                        </div>
+                        <p>
+                            Gain an exclusive 15% discount on transaction fees, directly impacting your bottom line. 
+                        </p>
+                        <div class="join-the-community-perks-description-second">
+                            <img src="{{ url_for('static', filename='media/bulletPointIcon.png') }}"/>
+                            <h4>
+                                Gain Early Access to Promotional and Seasonal Discounts
+                            </h4>
+                        </div>
+                        <p>
+                            As a Pioneer, enjoy early access to select promotional and seasonal discounts, designed to provide savings and unique opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="join-the-community-form">
+                    <div class="join-header">
+                        <h4>Join the community</h4>
+                        <h5>Sign up for any early benefits</h5>
+                    </div>
+                    <div class="perks-visual">
+                        <img src="{{ url_for('static', filename='media/joinTheCommunityPerks.png') }}" class="perks-timeline-visual"/>
+                        <div class="perks-list-visual">
+                            <p>Perks 1</p>
+                            <p>Perks 2</p>
+                            <p>Perks 3</p>
+                        </div>
+                    </div>
+                    <div class="join-form-container">
+                        <form class="join-form">
+                            <label class="join-label">
+                                First Name
+                                <input />
+                            </label>
+                            <label class="join-label">
+                                Last Name
+                                <input />
+                            </label>
+                            <label class="join-label">
+                                Email
+                                <input />
+                            </label>
+                            <button>Sign up</button>
+                        </form>
+                        <p>The information above is going to be stored for early members for the benefit of the perks. Any data supplied will only be used for data collecting purposes.</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-top">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}"/>
+                    <h5>
+                        Lotus Cryptocurrency Wallet
+                    </h5>
+                </div>
+                <h6>
+                    Est 2024
+                </h6>
+                <div class="footer-left-socials">
+                    <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-routes">
+                    <a href="/" class="footer-single-route">Home</a>
+                    <hr/>
+                    <a href="/product" class="footer-single-route">Product</a>
+                    <hr/>
+                    <a href="/about" class="footer-single-route">About</a>
+                    <hr/>
+                    <a href="#" class="footer-single-route">Contact us</a>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
