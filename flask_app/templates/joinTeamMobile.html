@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus - Cryptocurrency Wallet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/joinTeamMobile.css') }}">
+    <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
+</head>
+<body>
+
+    <div id="global">
+
+        <div class="home-header">
+            <div class="home-name">
+                <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
+                <div class="name-container">
+                    <h1>Lotus</h1>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
+                </div>
+            </div>
+            <div class="home-routes">
+                <a href="/" class="route">Home</a>
+                <a href="/product" class="route">Product</a>
+                <a href="/about" class="route">About</a>
+                <div class="dropdown">
+                    <a href="#contact" class="route contact">Contact us</a>
+                    <div class="dropdown-content">
+                        <a href="/contact_form">Contact Form</a>
+                        <a href="/join_the_team">Join the team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="join-intro-header">
+            <div class="join-intro-content">
+                <h3>Join the Team</h3>
+                <a class="applyLink"><img class="applyButton" src="{{ url_for('static', filename='media/applyButton.png') }}"/></a>
+            </div>
+        </div>
+
+
+        <div class="join-information">
+            <div class="join-detail">
+                <h4>Introduction</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+            </div>
+            <div class="join-detail">
+                <h4>What to expect</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+            </div>
+            <div class="join-detail">
+                <h4>What you'll need</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction. In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+            </div>
+        </div>
+
+
+        <div class="empty-banner"></div>
+
+        <form class="join-form" action="/join_form" method="POST">
+            <div class="personal-container">
+                <h5>Personal Information</h5>
+                <div class="personal-form">
+                    <div class="form-split">
+                        <label class="label">
+                            Legal First Name
+                            <input name="first_name" />
+                        </label>
+                        <label class="label">
+                            Legal Last Name
+                            <input name="last_name" />
+                        </label>
+                    </div>
+                    <label class="label-single">
+                        Email
+                        <input name="email" />
+                    </label>
+                    <div class="form-split">
+                        <label class="label">
+                            Contact Phone Type
+                            <select class="select-options" name="phone_type">
+                                <option value="null"  disabled>Choose one...</option>
+                                <option value="home">Home</option>
+                                <option value="work">Work</option>
+                                <option value="cell">Cell</option>
+                            </select>
+                        </label>
+                        <label class="label">
+                            Phone Number
+                            <input name="phone_number" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-container">
+                <h5>Resume Information</h5>
+                <div class="resume-form">
+                    <div class="form-split">
+                        <label class="label">
+                            Position
+                            <input name="position" />
+                        </label>
+                        <label class="label">
+                            Years of experience
+                            <input name="years_of_experience" />
+                        </label>
+                    </div>
+                    <label class="label-paragraph">
+                        Reason for applying
+                        <textarea name="reason_for_apply"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="portfolio-container">
+                <h5>Portfolio <i>(optional)</i></h5>
+                <div class="portfolio-form">
+                    <label class="label-single">
+                        Website
+                        <input name="website" />
+                    </label>
+                    <label class="label-single">
+                        Github
+                        <input name="github" />
+                    </label>
+                    <label class="label-single">
+                        Behance
+                        <input name="behance" />
+                    </label>
+                    <label class="label-single">
+                        Other
+                        <input name="other" />
+                    </label>
+                </div>
+            </div>
+            <div class="upload-container">
+                <h5>Upload Documents</h5>
+                <div class="upload-form">
+                    <div class="upload-button">
+                        <img class="add-icon-circle" src="{{ url_for('static', filename='media/addIconCircle.png') }}"/>
+                        <p>New Upload</p>
+                    </div>
+                    <div class="upload-details-container">
+                        <div class="upload-visual"></div>
+                        <div class="upload-details">
+                            <div class="upload-info">
+                                <h6>Document Name:</h6>
+                                <p></p>
+                            </div>
+                            <div class="upload-info">
+                                <h6>Document Size:</h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="check-consent">
+                <input type="checkbox" />
+                <p>Check here to agree and consent that the information provided is the truth.</p>
+            </div>
+
+            <button class="submit-button-tag"><img class="submit-button" src="{{ url_for('static', filename='media/submitButton.png') }}"/></button>
+        </form>
+
+
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-top">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}"/>
+                    <h5>
+                        Lotus Cryptocurrency Wallet
+                    </h5>
+                </div>
+                <h6>
+                    Est 2024
+                </h6>
+                <div class="footer-left-socials">
+                    <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-routes">
+                    <a href="/" class="footer-single-route">Home</a>
+                    <hr/>
+                    <a href="/product" class="footer-single-route">Product</a>
+                    <hr/>
+                    <a href="/about" class="footer-single-route">About</a>
+                    <hr/>
+                    <a href="#" class="footer-single-route">Contact us</a>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                </p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
