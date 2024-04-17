@@ -381,7 +381,7 @@
                 height: 90%;
                 width: 30%;
                 gap: 1.2vh;
-                padding-top: 2.3%;
+                /* padding-top: 2.3%; */
                 } .blockchain-feature-last-images {
                     width: 75px;
                     height: 75px;
@@ -393,18 +393,18 @@
                     background-position: center;
                     border-radius: 6px;
                 } .blockchain-feature-last-images > img {
-                    width: 78%;
+                    width: 72%;
                     /* height: 30%; */
                     /* margin-top: 12%; */
-                    padding-top: 9%;
-                    padding-left: 10%;
+                    padding-top: 8%;
+                    padding-left: 14%;
                     justify-content: center;
                     align-items: center;
                     margin-bottom: 9%;
                 } .blockchain-feature-last > h5 {
                     font-size: 1.35em;
                     margin: 0;
-                    padding-top: 8%;
+                    padding-top: 4%;
                     padding-bottom: 2.5%;
                     font-weight: 700;
                     font-family: 'FreightSansBook', sans-serif;
@@ -415,6 +415,7 @@
                     margin: 0;
                     text-align: center;
                     line-height: 25px;
+                    margin-top: -2%;
 } .referral-information {
     background-image: url('../media/referralBanner.png');
     background-size: contain;
@@ -497,7 +498,7 @@
             align-items: flex-end;
             } .referral-title {
                 width: 100%;
-                height: 15%;
+                height: 18%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
