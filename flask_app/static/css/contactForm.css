@@ -196,6 +196,13 @@
                         border: none;
                         background-color: #EEEEEE;
                         border-radius: 4px;
+                    } .contact-body-label > textarea {
+                        width: 70%;
+                        height: 100px;
+                        border: none;
+                        background-color: #EEEEEE;
+                        border-radius: 4px;
+                        resize: none;
         } .contact-body-label > h4 {
             font-size: 0.9em;
             text-align: start;

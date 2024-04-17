@@ -48,30 +48,30 @@
                         Any questions or concerns
                     </h4>
                     
-                    <form class="contact-form">
+                    <form class="contact-form" action="/contact_form" method="POST">
                         <label class="contact-label">
                             <h4>
                                 Name
                             </h4>
-                            <input />
+                            <input name="name" />
                         </label>
                         <label class="contact-label">
                             <h4>
                                 Subject
                             </h4>
-                            <input />
+                            <input name="subject" />
                         </label>
                         <label class="contact-label">
                             <h4>
                                 Email
                             </h4>
-                            <input />
+                            <input name="email" />
                         </label>
                         <label class="contact-body-label">
                             <h4>
                                 Body
                             </h4>
-                            <input />
+                            <textarea name="body"></textarea>
                         </label>
                         <button>Sign up</button>
                     </form>
