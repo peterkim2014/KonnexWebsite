@@ -2,6 +2,22 @@ from flask import render_template, redirect, request, flash, session
 from flask_app import app
 from flask_app.models.team import Team
 from flask_app.models.contact import Contact
+import re
+
+def is_mobile(user_agent):
+    # Regular expressions for common mobile device strings
+    mobile_patterns = [
+        "iphone", "ipod", "ipad", "android", "blackberry",
+        "windows phone", "nokia", "samsung", "mobile"
+    ]
+    for pattern in mobile_patterns:
+        if re.search(pattern, user_agent):
+            print(f"Detected mobile device: {user_agent}")
+            return True
+    print(f"Not a mobile device: {user_agent}")
+    return False
+
+
 
 @app.route('/contact_form')
 def contact_form_page():
@@ -9,7 +25,13 @@ def contact_form_page():
 
 @app.route('/join_the_team')
 def join_team_page():
-    return render_template("joinTeam.html")
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+
+    if is_mobile(user_agent):
+        return render_template('joinTeamMobile.html')
+    else:
+        return render_template("joinTeam.html")
 
 
 @app.route('/contact_form', methods=["POST"])
