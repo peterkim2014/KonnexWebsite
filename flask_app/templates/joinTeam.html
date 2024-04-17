@@ -64,36 +64,37 @@
 
         <div class="empty-banner"></div>
 
-        <form class="join-form">
+        <form class="join-form" action="/join_form" method="POST">
             <div class="personal-container">
                 <h5>Personal Information</h5>
                 <div class="personal-form">
                     <div class="form-split">
                         <label class="label">
                             Legal First Name
-                            <input />
+                            <input name="first_name" />
                         </label>
                         <label class="label">
                             Legal Last Name
-                            <input />
+                            <input name="last_name" />
                         </label>
                     </div>
                     <label class="label-single">
                         Email
-                        <input />
+                        <input name="email" />
                     </label>
                     <div class="form-split">
                         <label class="label">
                             Contact Phone Type
-                            <select class="select-options">
-                                <option>Home</option>
-                                <option>Work</option>
-                                <option>Cell</option>
+                            <select class="select-options" name="phone_type">
+                                <option value="null"  disabled>Choose one...</option>
+                                <option value="home">Home</option>
+                                <option value="work">Work</option>
+                                <option value="cell">Cell</option>
                             </select>
                         </label>
                         <label class="label">
                             Phone Number
-                            <input />
+                            <input name="phone_number" />
                         </label>
                     </div>
                 </div>
@@ -104,16 +105,16 @@
                     <div class="form-split">
                         <label class="label">
                             Position
-                            <input />
+                            <input name="position" />
                         </label>
                         <label class="label">
                             Years of experience
-                            <input />
+                            <input name="years_of_experience" />
                         </label>
                     </div>
                     <label class="label-paragraph">
                         Reason for applying
-                        <input />
+                        <input name="reason_for_apply" />
                     </label>
                 </div>
             </div>
@@ -122,19 +123,19 @@
                 <div class="portfolio-form">
                     <label class="label-single">
                         Website
-                        <input />
+                        <input name="website" />
                     </label>
                     <label class="label-single">
                         Github
-                        <input />
+                        <input name="github" />
                     </label>
                     <label class="label-single">
                         Behance
-                        <input />
+                        <input name="behance" />
                     </label>
                     <label class="label-single">
                         Other
-                        <input />
+                        <input name="other" />
                     </label>
                 </div>
             </div>
