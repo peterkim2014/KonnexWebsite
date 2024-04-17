@@ -1,6 +1,7 @@
 from flask import render_template, redirect, request, flash, session
 from flask_app import app
 import re
+from flask_app.models.waitlist import Waitlist
 
 
 def is_mobile(user_agent):
@@ -29,3 +30,13 @@ def landing_page():
     else:
         return render_template("homepage.html")
     
+
+@app.route('/waitlist_form', methods=["POST"])
+def waitlist_form():
+    data = {
+            "first_name": request.form["first_name"],
+            "last_name": request.form["last_name"],
+            "email": request.form["email"]
+    }
+    Waitlist.create(data)
+    return redirect("/")
