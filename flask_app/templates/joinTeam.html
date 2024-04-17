@@ -35,23 +35,29 @@
 
 
         <div class="join-intro-header">
-            <h3>Join the Team</h3>
-            <a>Apply now</a>
+            <div class="join-intro-content">
+                <h3>Join the Team</h3>
+                <a class="applyLink"><img class="applyButton" src="{{ url_for('static', filename='media/applyButton.png') }}"/></a>
+            </div>
         </div>
 
 
         <div class="join-information">
             <div class="join-detail">
                 <h4>Introduction</h4>
-                <p></p>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
             </div>
             <div class="join-detail">
                 <h4>What to expect</h4>
-                <p></p>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
             </div>
             <div class="join-detail">
                 <h4>What you'll need</h4>
-                <p></p>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction. In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
             </div>
         </div>
 
@@ -59,31 +65,143 @@
         <div class="empty-banner"></div>
 
         <form class="join-form">
-            <div class="personal-form">
+            <div class="personal-container">
                 <h5>Personal Information</h5>
-                <div>
+                <div class="personal-form">
+                    <div class="form-split">
+                        <label class="label">
+                            Legal First Name
+                            <input />
+                        </label>
+                        <label class="label">
+                            Legal Last Name
+                            <input />
+                        </label>
+                    </div>
+                    <label class="label-single">
+                        Email
+                        <input />
+                    </label>
+                    <div class="form-split">
+                        <label class="label">
+                            Contact Phone Type
+                            <select class="select-options">
+                                <option>Home</option>
+                                <option>Work</option>
+                                <option>Cell</option>
+                            </select>
+                        </label>
+                        <label class="label">
+                            Phone Number
+                            <input />
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div class="resume-form">
+            <div class="resume-container">
                 <h5>Resume Information</h5>
-                <div>
+                <div class="resume-form">
+                    <div class="form-split">
+                        <label class="label">
+                            Position
+                            <input />
+                        </label>
+                        <label class="label">
+                            Years of experience
+                            <input />
+                        </label>
+                    </div>
+                    <label class="label-paragraph">
+                        Reason for applying
+                        <input />
+                    </label>
                 </div>
             </div>
-            <div class="portfolio-form">
+            <div class="portfolio-container">
                 <h5>Portfolio <i>(optional)</i></h5>
-                <div>
+                <div class="portfolio-form">
+                    <label class="label-single">
+                        Website
+                        <input />
+                    </label>
+                    <label class="label-single">
+                        Github
+                        <input />
+                    </label>
+                    <label class="label-single">
+                        Behance
+                        <input />
+                    </label>
+                    <label class="label-single">
+                        Other
+                        <input />
+                    </label>
                 </div>
             </div>
-            <div class="upload-form">
+            <div class="upload-container">
                 <h5>Upload Documents</h5>
-                <div>
+                <div class="upload-form">
+                    <div class="upload-button">
+                        <img class="add-icon-circle" src="{{ url_for('static', filename='media/addIconCircle.png') }}"/>
+                        <p>New Upload</p>
+                    </div>
+                    <div class="upload-details-container">
+                        <div class="upload-visual"></div>
+                        <div class="upload-details">
+                            <div class="upload-info">
+                                <h6>Document Name:</h6>
+                                <p></p>
+                            </div>
+                            <div class="upload-info">
+                                <h6>Document Size:</h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="check-consent">
+                <input type="checkbox" />
+                <p>Check here to agree and consent that the information provided is the truth.</p>
+            </div>
 
-
+            <button class="submit-button-tag"><img class="submit-button" src="{{ url_for('static', filename='media/submitButton.png') }}"/></button>
         </form>
 
+
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-top">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}"/>
+                    <h5>
+                        Lotus Cryptocurrency Wallet
+                    </h5>
+                </div>
+                <h6>
+                    Est 2024
+                </h6>
+                <div class="footer-left-socials">
+                    <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-routes">
+                    <a href="/" class="footer-single-route">Home</a>
+                    <hr/>
+                    <a href="/product" class="footer-single-route">Product</a>
+                    <hr/>
+                    <a href="/about" class="footer-single-route">About</a>
+                    <hr/>
+                    <a href="#" class="footer-single-route">Contact us</a>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                </p>
+            </div>
+        </div>
 
     </div>
     
