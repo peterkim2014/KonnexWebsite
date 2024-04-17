@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotus - Cryptocurrency Wallet</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
+    <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
 </head>
 <body>
 
@@ -22,7 +23,13 @@
                 <a href="/" class="route">Home</a>
                 <a href="/product" class="route">Product</a>
                 <a href="/about" class="route">About</a>
-                <a href="#" class="route">Contact us</a>
+                <div class="dropdown">
+                    <a href="#contact" class="route contact">Contact us</a>
+                    <div class="dropdown-content">
+                        <a href="/contact_form">Contact Form</a>
+                        <a href="/join_the_team">Join the team</a>
+                    </div>
+                </div>
             </div>
         </div>
 
