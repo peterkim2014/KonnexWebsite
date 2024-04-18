@@ -21,7 +21,14 @@ def is_mobile(user_agent):
 
 @app.route('/contact_form')
 def contact_form_page():
-    return render_template("contactForm.html")
+    user_agent = request.headers.get('User-Agent')
+    user_agent = user_agent.lower()
+
+    if is_mobile(user_agent):
+        return render_template("contactFormMobile.html")
+    else:
+        return render_template("contactForm.html")
+    
 
 @app.route('/join_the_team')
 def join_team_page():

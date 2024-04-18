@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotus - Cryptocurrency Wallet</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
-    <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/aboutMobile.css') }}">
+    <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
 </head>
 <body>
 
@@ -13,11 +13,11 @@
 
         <div class="home-header">
             <div class="home-name">
-                <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
                 <div class="name-container">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
                     <h1>Lotus</h1>
-                    <h2>CRYPTOCURRENCY WALLET</h2>
                 </div>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
             <div class="home-routes">
                 <a href="/" class="route">Home</a>

@@ -63,69 +63,89 @@
 
 .home-header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
     align-items: center;
-    height: 155px;
+    height: 130px;
     width: 100%;
     /* background-color: red; */
-    gap: 25vw;
+    flex-direction: column;
+    padding-top: 3%;
+
+    /* gap: 5vw; */
     } .home-name {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: 80%;
-        width: 30%;
-        gap: 1.6vw;
-        } .logo-lotus {
-            height: 52%;
-            width: 42px;
-        } .name-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            width: 90%;
-            height: 100%;
-            gap: 0.5vh;
-            margin-top: 1%;
-            } .name-container > h1 {
-                font-size: 3em;
-                height: fit-content;
-                margin: 0;
-                font-family: 'LTCushionLight';
-                letter-spacing: 2px;
-                font-weight: 900;
-            } .name-container > h2 {
-                margin: 0;
-                width: 100%;
-                font-size: 0.7em;
-                font-weight: 100;
-                letter-spacing: 1.25px;
-                font-family: 'LTCushionLight';
+        height: 60%;
+        width: 50%;
+        /* gap: 3vw; */
+        padding-top: 1.5%;
+        /* background-color: blue; */
+    } .logo-lotus {
+        height: 38px;
+        width: 24px;
+    } .name-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-end;
+        justify-content: center;
+        width: 90%;
+        height: 44%;
+        gap: 1vh;
+        margin-top: 1%;
+        /* background-color: red; */
+    } .name-container > h1 {
+        font-size: 2.45em;
+        /* background-color: red; */
+        height: fit-content;
+        margin: 0;
+        /* background-color: red; */
+        height: 100%;
+        font-family: 'LTCushionLight';
+        letter-spacing: 2px;
+        font-weight: 900;
+    } .home-name > h2 {
+        padding-top: 2.6%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        font-size: 0.65em;
+        font-weight: 100;
+        letter-spacing: 0.7px;
+        font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 30%;
-        padding-right: 2.5%;
+        height: 20%;
+        width: 80%;
+        /* padding-right: 1.5%; */
+        gap: 5vh;
+        /* background-color: red; */
         } .route {
             text-decoration: none;
             color: black;
-    } .customer-service-png {
+            margin: 0;
+            font-size: 0.8em;
+            /* margin-top: -2%; */
+    }  .customer-service-png {
+        padding-top: 7%;
         width: 100%;
-        height: 250px;
+        height: 100px;
         display: flex;
         justify-content: center;
     } .customer-service-image {
-        width: 60%;
+        width: 80%;
         } .contact-us {
             width: 100%;
             height: 600px;
             display: flex;
             flex-direction: column;
         } .contact-us > h4 {
-            font-size: 1.8em;
+            font-size: 1.6em;
             text-align: center;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1.5px;
@@ -134,10 +154,15 @@
             width: 100%;
             display: flex;
             padding-top: 2%;
-            /* align-items: center; */
+            flex-direction: column;
+            align-items: center;
+            
         }  .contact-us-form {
-            width: 45%;
+            width: 80%;
             height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             /* padding-left: 5%; */
         } .contact-us-form > h4 {
             font-size: 1.2em;
@@ -150,19 +175,22 @@
             align-items: flex-end;
             height: 80%;
             width: 100%;
+            gap: 2vh;
+            margin-top: 5%;
 
         } .contact-form > label {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            align-items: flex-end;
+            align-items: flex-start;
             /* padding-left: 20%; */
             width: 100%;
             height: 30%;
-            
+            /* background-color: red; */
+            /* margin-left: 5.5%; */
         } .contact-label > input {
-                width: 70%;
-                height: 25px;
+                width: 97%;
+                height: 22px;
                 border: none;
                 background-color: #EEEEEE;
                 border-radius: 4px;
@@ -171,9 +199,10 @@
                     text-align: start;
                     width: 70%;
                     margin: 0;
+                    margin-left: 2%;
                 } .contact-form> button { 
-                    width: 71%;
-                    height: 30px;
+                    width: 100%;
+                    height: 65px;
                     /* margin-left: 2.5%; */
                     border: none;
                     background-color: #003F4A;
@@ -197,7 +226,7 @@
                         background-color: #EEEEEE;
                         border-radius: 4px;
                     } .contact-body-label > textarea {
-                        width: 70%;
+                        width: 97%;
                         height: 100px;
                         border: none;
                         background-color: #EEEEEE;
@@ -208,22 +237,35 @@
             text-align: start;
             width: 70%;
             margin: 0;
+            margin-left: 2%;
         }.faq {
-            width: 50%;
-            height: 500px;
-            padding-left: 9%;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 17%;
+            /* background-color: red; */
+            /* padding-left: 9%; */
             } .faq > h4 {
                 font-size: 1.2em;
                 margin: 0;
             } .faq-questions {
                 width: 100%;
-                height: 400px;
-                padding-top: 3%;
+                height: 600px;
+                padding-top: 5%;
+                /* background-color: red; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
                 } .faq-text {
                     width: 85%;
                     display: flex;
                     flex-direction: column;
-                    height: 80px;
+                    align-items: center;
+                    height: 120px;
                     } .faq-text > h4 {
                         font-size: 1.1em;
                         margin: 0;
