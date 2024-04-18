@@ -57,56 +57,74 @@
 .home-header {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 1vh;
+    justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 130px;
     width: 100%;
-    padding-top: 1.5%;
+    /* background-color: red; */
+    flex-direction: column;
+    padding-top: 3%;
+
+    /* gap: 5vw; */
     } .home-name {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: 80%;
-        width: 60%;
-        gap: 1.6vw;
-        } .logo-lotus {
-            height: 60px;
-            width: 42px;
-        } .name-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            width: 90%;
-            height: 100%;
-            gap: 0.5vh;
-            margin-top: 1%;
-            } .name-container > h1 {
-                font-size: 3em;
-                height: fit-content;
-                margin: 0;
-                font-family: 'LTCushionLight';
-                letter-spacing: 2px;
-                font-weight: 900;
-            } .name-container > h2 {
-                margin: 0;
-                width: 100%;
-                font-size: 0.7em;
-                font-weight: 100;
-                letter-spacing: 1.25px;
-                font-family: 'LTCushionLight';
+        height: 60%;
+        width: 50%;
+        /* gap: 3vw; */
+        padding-top: 1.5%;
+        /* background-color: blue; */
+    } .logo-lotus {
+        height: 38px;
+        width: 24px;
+    } .name-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-end;
+        justify-content: center;
+        width: 90%;
+        height: 44%;
+        gap: 1vh;
+        margin-top: 1%;
+        /* background-color: red; */
+    } .name-container > h1 {
+        font-size: 2.45em;
+        /* background-color: red; */
+        height: fit-content;
+        margin: 0;
+        /* background-color: red; */
+        height: 100%;
+        font-family: 'LTCushionLight';
+        letter-spacing: 2px;
+        font-weight: 900;
+    } .home-name > h2 {
+        padding-top: 2.6%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        font-size: 0.65em;
+        font-weight: 100;
+        letter-spacing: 0.7px;
+        font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         height: 20%;
         width: 80%;
-        padding-right: 2.5%;
+        /* padding-right: 1.5%; */
+        gap: 5vh;
+        /* background-color: red; */
         } .route {
             text-decoration: none;
             color: black;
             margin: 0;
-        } .join-intro-header {
+            font-size: 0.8em;
+            /* margin-top: -2%; */
+    }  .join-intro-header {
             height: 250px;
             width: 100%;
             background-image: url('../media/joinIntroVisual.png');
