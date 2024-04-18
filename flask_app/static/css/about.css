@@ -64,70 +64,90 @@
 
 .home-header {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
     align-items: center;
-    height: 155px;
+    height: 130px;
     width: 100%;
     /* background-color: red; */
-    gap: 25vw;
+    flex-direction: column;
+    padding-top: 3%;
+
+    /* gap: 5vw; */
     } .home-name {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        height: 80%;
-        width: 30%;
-        gap: 1.6vw;
-        } .logo-lotus {
-            height: 52%;
-            width: 42px;
-        } .name-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            width: 90%;
-            height: 100%;
-            gap: 0.5vh;
-            margin-top: 1%;
-            } .name-container > h1 {
-                font-size: 3em;
-                height: fit-content;
-                margin: 0;
-                font-family: 'LTCushionLight';
-                letter-spacing: 2px;
-                font-weight: 900;
-            } .name-container > h2 {
-                margin: 0;
-                width: 100%;
-                font-size: 0.7em;
-                font-weight: 100;
-                letter-spacing: 1.25px;
-                font-family: 'LTCushionLight';
+        height: 60%;
+        width: 50%;
+        /* gap: 3vw; */
+        padding-top: 1.5%;
+        /* background-color: blue; */
+    } .logo-lotus {
+        height: 38px;
+        width: 24px;
+    } .name-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-end;
+        justify-content: center;
+        width: 90%;
+        height: 44%;
+        gap: 1vh;
+        margin-top: 1%;
+        /* background-color: red; */
+    } .name-container > h1 {
+        font-size: 2.45em;
+        /* background-color: red; */
+        height: fit-content;
+        margin: 0;
+        /* background-color: red; */
+        height: 100%;
+        font-family: 'LTCushionLight';
+        letter-spacing: 2px;
+        font-weight: 900;
+    } .home-name > h2 {
+        padding-top: 2.6%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        font-size: 0.65em;
+        font-weight: 100;
+        letter-spacing: 0.7px;
+        font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 100%;
-        width: 30%;
-        padding-right: 2.5%;
+        height: 20%;
+        width: 80%;
+        /* padding-right: 1.5%; */
+        gap: 5vh;
+        /* background-color: red; */
         } .route {
             text-decoration: none;
             color: black;
-} .about-intro {
+            margin: 0;
+            font-size: 0.8em;
+            /* margin-top: -2%; */
+    } .about-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    height: 395px;
+    justify-content: flex-start;
+    height: 120px;
     width: 100%;
+    padding-top: 10%;
     } .about-Intro-Visual {
         width: 100%;
-        height: 395px;
+        height: 120px;
 } .about-intro-banner {
     background-image: url('../media/aboutIntroBanner.png');
     background-size: contain; 
     background-size: 100%;
-    height: 130px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,13 +166,13 @@
         margin: 0;
         } .about-intro-point-container > h4 {
             margin: 0;
-            font-size: 1.6em;
+            font-size: 1.1em;
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1.5px;
         } .about-intro-point-container > p {
             margin: 0;
             font-family: 'FreightSansBook', sans-serif;
-            font-size: 1em;
+            font-size: 0.88em;
             line-height: 20px;
 } .about-brand-manifesto {
     display: flex;
