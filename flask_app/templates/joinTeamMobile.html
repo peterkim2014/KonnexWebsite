@@ -70,21 +70,29 @@
                 <div class="personal-form">
                     <div class="form-split">
                         <label class="label">
-                            Legal First Name
+                            <h7>
+                                Legal First Name
+                            </h7>
                             <input name="first_name" />
                         </label>
                         <label class="label">
-                            Legal Last Name
+                            <h7>
+                                Legal Last Name
+                            </h7>   
                             <input name="last_name" />
                         </label>
                     </div>
                     <label class="label-single">
-                        Email
+                        <h7>
+                            Email
+                        </h7>
                         <input name="email" />
                     </label>
                     <div class="form-split">
                         <label class="label">
-                            Contact Phone Type
+                            <h7>
+                                Contact Type
+                            </h7>
                             <select class="select-options" name="phone_type">
                                 <option value="null"  disabled>Choose one...</option>
                                 <option value="home">Home</option>
@@ -93,7 +101,9 @@
                             </select>
                         </label>
                         <label class="label">
-                            Phone Number
+                            <h7>
+                                Phone Number
+                            </h7>
                             <input name="phone_number" />
                         </label>
                     </div>
@@ -104,37 +114,51 @@
                 <div class="resume-form">
                     <div class="form-split">
                         <label class="label">
-                            Position
+                            <h7>
+                                Position
+                            </h7>
                             <input name="position" />
                         </label>
                         <label class="label">
-                            Years of experience
+                            <h7>
+                                Years of experience
+                            </h7>
                             <input name="years_of_experience" />
                         </label>
                     </div>
                     <label class="label-paragraph">
-                        Reason for applying
+                        <h7>
+                            Reason for applying
+                        </h7>
                         <textarea name="reason_for_apply"></textarea>
                     </label>
                 </div>
             </div>
             <div class="portfolio-container">
-                <h5>Portfolio <i>(optional)</i></h5>
+                <h5>Portfolio (optional)</h5>
                 <div class="portfolio-form">
                     <label class="label-single">
-                        Website
+                        <h7>
+                            Website
+                        </h7>
                         <input name="website" />
                     </label>
                     <label class="label-single">
-                        Github
+                        <h7>
+                            Github
+                        </h7>
                         <input name="github" />
                     </label>
                     <label class="label-single">
-                        Behance
+                        <h7>
+                            Behance
+                        </h7>
                         <input name="behance" />
                     </label>
                     <label class="label-single">
-                        Other
+                        <h7>
+                            Other
+                        </h7>
                         <input name="other" />
                     </label>
                 </div>
@@ -167,7 +191,12 @@
                 <p>Check here to agree and consent that the information provided is the truth.</p>
             </div>
 
-            <button class="submit-button-tag"><img class="submit-button" src="{{ url_for('static', filename='media/submitButton.png') }}"/></button>
+            <button class="submit-button-tag">
+                <!-- <img class="submit-button" src="{{ url_for('static', filename='media/submitButton1.png') }}"/> -->
+                <h7>
+                    Submit
+                </h7>
+            </button>
         </form>
 
 

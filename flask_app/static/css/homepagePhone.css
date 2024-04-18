@@ -216,7 +216,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    height: 580px;
+    height: 460px;
     width: 100%;
     gap: 0.5vh;
     } .dependable-container > img {
@@ -233,8 +233,8 @@
         /* margin-left: 10%; */
         margin-top: 5%;
         gap: 2.5vh;
-        } .dependable-text-container > h4 {
-            font-size: 1.75em;
+        } .dependable-paragraph > h7 {
+            font-size: 1.2em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
@@ -243,10 +243,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            height: 52%;
+            justify-content: center;
+            height: 72%;
             width: 86%;
-            /* gap: 1.75; */
+            gap: 2vh;
             } .dependable-paragraph > p {
                 font-size: 0.92em;
                 font-family: 'FreightSansBook', sans-serif;
@@ -255,6 +255,7 @@
                 margin: 0;
                 width: 100%;
                 text-align: center;
+                
 } .purpose-banner {
     background-image: url('../media/banner2.png');
     background-size: contain;
@@ -296,7 +297,7 @@
     align-items: center;
     justify-content: flex-start;
     gap: 4.5vh;
-    height: 1100px;
+    height: 1160px;
     width: 100%;
     margin-top: 18%;
     } .blockchain-header-container {

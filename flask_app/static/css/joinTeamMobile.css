@@ -135,28 +135,33 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            margin-top: 7.5%;
+            /* padding-top: 3%; */
             }.join-intro-content {
                 width: 60%;
-                height: 5%;
+                height: 30%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 2.75vh;
-                } .join-intro-content > h3 {
-                    font-size: 1.5em;
+                gap: 2.1vh;
+                margin-top: -4%;
+            } .join-intro-content > h3 {
+                    /* background-color: red; */
+                    font-size: 1.3em;
                     font-family: 'FreightSansBook', sans-serif;
                     letter-spacing: 0.7px;
                     margin: 0;
-                    width: 90%;
+                    width: 80%;
                     text-align: center;
+                    height: 20px;
                 } .applyLink {
                     margin: 0;
                     height: 28px;
-                    width: 175px;
+                    width: 145px;
                 } .applyButton {
-                    width: 175px;
-                    height: 28px;
+                    width: 145px;
+                    height: 23px;
 } .join-information {
     height: 1575px;
     width: 100%;
@@ -165,7 +170,7 @@
     align-items: center;
     justify-content: space-evenly;
     } .join-detail {
-        width: 75%;
+        width: 80%;
         height: max-content;
         display: flex;
         flex-direction: column;
@@ -176,9 +181,13 @@
             height: 40px;
             font-size: 1.35em;
             font-family: 'FreightSansBook', sans-serif;
+            text-align: center;
+            /* background-color: red; */
+            width: 100%;
         } .join-detail > p {
             margin: 0;
             line-height: 27.5px;
+            text-align: center;
 } .empty-banner {
     height: 130px;
     width: 100%;
@@ -207,6 +216,7 @@
         } .personal-container > h5 {
             font-size: 1.3em;
             margin: 0;
+            font-family: 'FreightSansLight', sans-serif;
         } .personal-form {
             width: 100%;
             height: 88%;
@@ -214,6 +224,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            /* gap: 2vh; */
+            /* background-color: red; */
             } .form-split {
                 display: flex;
                 justify-content: center;
@@ -221,28 +233,35 @@
                 width: 100%;
                 height: 50%;
                 gap: 2.5vw;
+                } .label > h7 {
+                    font-size: 0.78em;
+                    font-family: 'FreightSansLight', sans-serif;
                 } .label > input {
-                    width: 125px;
-                    height: 25px;
+                    width: 140px;
+                    height: 20px;
                     border: none;
                     background-color: #EEEEEE;
                     border-radius: 4px;
                 } .select-options {
-                    width: 120px;
-                    height: 30px;
+                    width: 150px;
+                    height: 26px;
                     border: none;
                     background-color: #EEEEEE;
                     border-radius: 4px;
             } .label-single {
                 margin-left: 5%;
-                width: 80%;
+                width: 88%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 /* gap: 1.25vh; */
+                } .label-single > h7 {
+                    font-size: 0.78em;
+                    font-family: 'FreightSansLight', sans-serif;
+                    padding-bottom: 2%;
                 } .label-single > input {
-                    height: 25px;
-                    width: 90%;
+                    height: 20px;
+                    width: 91%;
                     border: none;
                     background-color: #EEEEEE;
                     border-radius: 4px;
@@ -253,9 +272,11 @@
             justify-content: space-around;
             height: 275px;
             width: 100%;
+            margin-top: -5%;
             } .resume-container > h5 {
                 font-size: 1.3em;
                 margin: 0;
+                font-family: 'FreightSansLight', sans-serif;
             } .resume-form {
                 width: 100%;
                 height: 88%;
@@ -265,11 +286,14 @@
                 justify-content: space-between;
             } .label-paragraph {
                 margin-left: 5%;
-                width: 80%;
+                width: 89%;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1.25vh;
+                } .label-paragraph > h7 {
+                    font-size: 0.78em;
+                    font-family: 'FreightSansLight', sans-serif;
                 } .label-paragraph > textarea {
                     height: 120px;
                     width: 90%;
@@ -287,6 +311,7 @@
             } .portfolio-container > h5 {
                 font-size: 1.3em;
                 margin: 0;
+                font-family: 'FreightSansLight', sans-serif;
             } .portfolio-form {
                 margin-top: 2.5%;
                 width: 100%;
@@ -303,24 +328,27 @@
             justify-content: space-around;
             width: 100%;
             height: 200px;
+            margin-top: -5%;
             } .upload-container > h5 {
                 font-size: 1.3em;
                 margin: 0;
             } .upload-form {
                 display: flex;
-                justify-content: space-between;
+                /* justify-content: space-between; */
+                gap: 4vh;
                 align-items: center;
                 height: 80%;
-                width: 70%;
-                gap: 1.5vw;
-                margin-left: 3.75%;
-                margin-top: -2%;
+                width: 80%;
+                /* gap: 1vw; */
+                /* margin-left: 2.75%; */
+                margin-top: -7%;
+                /* background-color: red; */
                 } .upload-button {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    height: 57%;
+                    height: 54%;
                     width: 30%;
                     border: 1.5px dashed grey;
                     border-radius: 8px;
@@ -339,32 +367,48 @@
                     align-items: center;
                     height: 80%;
                     width: 52%;
-                    gap: 1.25vw;
-                    } .upload-visual {
-                        background-color: #EEEEEE;
-                        height: 90px;
-                        width: 115px;
-                        border-radius: 6px;
-            } .check-consent {
+                    gap: 2.5vw;
+                } .upload-visual {
+                    background-color: #EEEEEE;
+                    height: 90px;
+                    width: 115px;
+                    border-radius: 6px;
+                } .upload-info {
+                    width: 100%;
+                    /* background-color: red; */
+                } .check-consent {
+                /* background-color: red; */
                 display: flex;
                 justify-content: flex-start;
-                align-items: center;
+                align-items: flex-start;
                 width: 80%;
                 gap: 1vw;
                 height: 30px;
                 margin: 0;
-                margin-top: -2%;
+                margin-top: -12%;
+                } .check-consent > p {
+                    width: 100%;
+                    font-size: 0.9em;
+                    margin: 0;
                 } .check-consent > input {
                     height: 20px;
                     width: 50px;
             } .submit-button-tag {
-                background-color: white;
-                border: none;
-            } .submit-button {
-                height: 30px;
+                /* background-color: white; */
+                /* border: none; */
+                border-radius: 6px;
                 width: 85%;
-                /* margin-top: -2%; */
-                padding-bottom: 15%;
+                height: 27px;
+                background-color: #003F4A;
+                margin-top: -6%;
+            } .submit-button {
+                /* padding-bottom: 20%; */
+                height: 27px;
+                width: 85%;
+} .submit-button-tag > h7 {
+    color: white;
+    font-size: 1em;
+    text-align: center;
 } .footer {
     width: 100%;
     height: 275px;
