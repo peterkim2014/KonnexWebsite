@@ -64,7 +64,7 @@
 
         <div class="empty-banner"></div>
 
-        <form class="join-form" action="/join_form" method="POST">
+        <form class="join-form" action="/join_form" method="POST" enctype="multipart/form-data">
             <div class="personal-container">
                 <h5>Personal Information</h5>
                 <div class="personal-form">
@@ -94,7 +94,7 @@
                         </label>
                         <label class="label">
                             Phone Number
-                            <input name="phone_number" />
+                            <input type="number" name="phone_number" />
                         </label>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         </label>
                         <label class="label">
                             Years of experience
-                            <input name="years_of_experience" />
+                            <input name="years_of_experience" type="number"/>
                         </label>
                     </div>
                     <label class="label-paragraph">
@@ -143,19 +143,22 @@
                 <h5>Upload Documents</h5>
                 <div class="upload-form">
                     <div class="upload-button">
-                        <img class="add-icon-circle" src="{{ url_for('static', filename='media/addIconCircle.png') }}"/>
-                        <p>New Upload</p>
+                        <label class="upload-label">
+                            <img class="add-icon-circle" src="{{ url_for('static', filename='media/addIconCircle.png') }}"/>
+                            <p>New Upload</p>
+                            <input id="file-upload" type="file" name="document" style="display: none;" accept=".pdf,.doc,.docx,.txt,.js,.py, .png">
+                        </label>
                     </div>
                     <div class="upload-details-container">
                         <div class="upload-visual"></div>
                         <div class="upload-details">
                             <div class="upload-info">
                                 <h6>Document Name:</h6>
-                                <p></p>
+                                <p id="document-name"></p>
                             </div>
                             <div class="upload-info">
                                 <h6>Document Size:</h6>
-                                <p></p>
+                                <p id="document-size"></p>
                             </div>
                         </div>
                     </div>

@@ -67,6 +67,7 @@ def join_form():
             "website": request.form["website"],
             "github": request.form["github"],
             "behance": request.form["behance"],
+            "document": request.files['document'],
             "other": request.form["other"],
         }
     Team.create(data)

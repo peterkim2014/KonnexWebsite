@@ -300,10 +300,13 @@
                     border-radius: 8px;
                     gap: 2vh;
                     /* margin-top: 2%; */
-                    } .add-icon-circle {
-                        height: 30px;
-                        width: 30px;
-                        margin-top: 4%;
+                    } .upload-label {
+                        width: 100%;
+                        text-align: center;
+                        } .add-icon-circle {
+                            height: 30px;
+                            width: 30px;
+                            margin-top: 4%;
                 } .upload-button > p {
                     font-size: 0.8em;
                     margin: 0;
@@ -312,13 +315,38 @@
                     justify-content: space-between;
                     align-items: center;
                     height: 80%;
-                    width: 52%;
+                    width: 55%;
                     gap: 1.25vw;
                     } .upload-visual {
                         background-color: #EEEEEE;
                         height: 90px;
                         width: 115px;
                         border-radius: 6px;
+                        } .upload-details {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: space-around;
+                            height: 75%;
+                            width: 60%;
+                            } .upload-info {
+                                height: 100%;
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                            } .upload-info > h6 {
+                                margin: 0;
+                                height: 15%;
+                            } #document-name {
+                                margin: 0;
+                                height: 25%;
+                                font-size: 0.9em;
+                            } #document-size {
+                                font-size: 0.9em;
+                                margin: 0;
+                                height: 25%;
             } .check-consent {
                 display: flex;
                 justify-content: flex-start;
