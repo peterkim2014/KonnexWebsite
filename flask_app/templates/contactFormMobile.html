@@ -41,7 +41,13 @@
             <h4>
                 Contact Us
             </h4>
-
+            {% if error_message %}
+                <div class="error-message">
+                    {% for error in error_message %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
             <div class="contact-us-bottom">
                 <div class="contact-us-form">
                     <h4>

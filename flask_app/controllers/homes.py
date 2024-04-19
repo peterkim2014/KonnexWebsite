@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, flash, session
+from flask import render_template, redirect, request, flash, session, url_for
 from flask_app import app
 import re
 from flask_app.models.waitlist import Waitlist
@@ -26,17 +26,27 @@ def landing_page():
     user_agent = user_agent.lower()
 
     if is_mobile(user_agent):
-        return render_template('homepageMobile.html')
+        error_message = session.pop('error_message', None)
+        return render_template("homepageMobile.html", error_message=error_message)
     else:
-        return render_template("homepage.html")
+        error_message = session.pop('error_message', None)
+        return render_template("homepage.html", error_message=error_message)
+
     
 
 @app.route('/waitlist_form', methods=["POST"])
 def waitlist_form():
     data = {
-            "first_name": request.form["first_name"],
-            "last_name": request.form["last_name"],
-            "email": request.form["email"]
+        "first_name": request.form["first_name"],
+        "last_name": request.form["last_name"],
+        "email": request.form["email"]
     }
-    Waitlist.create(data)
-    return redirect("/")
+
+    errors = Waitlist.validate_inputs(data)
+    if errors:
+        # If there are errors, store them in the session and redirect
+        session['error_message'] = errors
+        return redirect(url_for("landing_page", _anchor="join_waitlist"))
+    else:
+        Waitlist.create(data)
+        return redirect("/")

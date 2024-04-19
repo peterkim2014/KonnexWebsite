@@ -56,3 +56,23 @@ class Contact:
         result = MySQLConnection(cls.dB).query_db(query, {"email": email})
         print(cls(result[0]) if result else None)
         return cls(result[0]) if result else None
+    
+
+    @staticmethod
+    def validate_inputs(data):
+        errors = []
+
+        # Validate first name
+        if len(data['name']) < 2 or any(char.isdigit() for char in data['name']):
+            errors.append("First name should be greater than 1 character and contain no numbers")
+
+        # Validate email
+        valid_domains = ['yahoo.com', 'gmail.com', 'hotmail.com', 'icloud.com', 'outlook.com']
+        if '@' not in data['email'] or not any(domain in data['email'] for domain in valid_domains):
+            errors.append("Invalid email format or domain")
+
+        # Validate last name
+        if len(data['body']) < 2:
+            errors.append("Body should be filled.")
+
+        return errors

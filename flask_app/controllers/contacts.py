@@ -1,4 +1,4 @@
-from flask import render_template, redirect, request, flash, session
+from flask import render_template, redirect, request, flash, session, url_for
 from flask_app import app
 from flask_app.models.team import Team
 from flask_app.models.contact import Contact
@@ -25,9 +25,11 @@ def contact_form_page():
     user_agent = user_agent.lower()
 
     if is_mobile(user_agent):
-        return render_template("contactFormMobile.html")
+        error_message = session.pop('error_message', None)
+        return render_template("contactFormMobile.html", error_message=error_message)
     else:
-        return render_template("contactForm.html")
+        error_message = session.pop('error_message', None)
+        return render_template("contactForm.html", error_message=error_message)
     
 
 @app.route('/join_the_team')
@@ -36,9 +38,11 @@ def join_team_page():
     user_agent = user_agent.lower()
 
     if is_mobile(user_agent):
-        return render_template('joinTeamMobile.html')
+        error_message = session.pop('error_message', None)
+        return render_template('joinTeamMobile.html', error_message=error_message)
     else:
-        return render_template("joinTeam.html")
+        error_message = session.pop('error_message', None)
+        return render_template("joinTeam.html", error_message=error_message)
 
 
 @app.route('/contact_form', methods=["POST"])
@@ -49,8 +53,16 @@ def contact_form():
         'email': request.form['email'],
         'body': request.form['body'],
     }
-    Contact.create(data)
-    return redirect("/contact_form")
+    
+
+    errors = Contact.validate_inputs(data)
+    if errors:
+        # If there are errors, store them in the session and redirect
+        session['error_message'] = errors
+        return redirect(url_for("contact_form_page", _anchor="contact_form"))
+    else:
+        Contact.create(data)
+        return redirect("/contact_form")
 
 
 @app.route('/join_form', methods=["POST"])
@@ -70,6 +82,14 @@ def join_form():
             "document": request.files['document'],
             "other": request.form["other"],
         }
-    Team.create(data)
 
-    return redirect("/join_the_team")
+
+    
+    errors = Team.validate_inputs(data)
+    if errors:
+        # If there are errors, store them in the session and redirect
+        session['error_message'] = errors
+        return redirect(url_for("join_team_page", _anchor="apply_form"))
+    else:
+        Team.create(data)
+        return redirect("/join_the_team")
