@@ -64,7 +64,14 @@
 
         <div class="empty-banner"></div>
 
-        <form class="join-form" action="/join_form" method="POST" enctype="multipart/form-data">
+        <form id="apply_form" class="join-form" action="/join_form" method="POST" enctype="multipart/form-data">
+            {% if error_message %}
+                <div class="error-message">
+                    {% for error in error_message %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
             <div class="personal-container">
                 <h5>Personal Information</h5>
                 <div class="personal-form">

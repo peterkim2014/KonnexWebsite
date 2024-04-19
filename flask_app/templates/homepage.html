@@ -203,6 +203,13 @@
                             <p>Perks 3</p>
                         </div>
                     </div>
+                    {% if error_message %}
+                        <div class="error-message">
+                            {% for error in error_message %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
                     <div class="join-form-container">
                         <form class="join-form" action="/waitlist_form" method="POST">
                             <label class="join-label">

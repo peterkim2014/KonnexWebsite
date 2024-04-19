@@ -51,7 +51,12 @@
 } .dropdown-content a:hover {
     background-color: #f1f1f1;
     border: none;
-} 
+} .error-message {
+    font-size: 0.85em;
+    width: 90%;
+    height: 40px;
+    
+}
 
 #global, body, html {
     margin: 0 auto;
