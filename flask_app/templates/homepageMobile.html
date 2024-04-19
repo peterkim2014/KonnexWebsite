@@ -72,7 +72,7 @@
         <div class="purpose-banner">
             <div class="purpose-text-container">
                 <h4>Purpose</h4>
-                <p>To craft an immersive experience that weaves integrity into every interaction</p>
+                <p>To craft an immersive experience that weaves integrity into every interaction, enabling you to forge a life story of purpose and connection in the digital frontier.</p>
             </div>
             <img src="{{ url_for('static', filename='media/purposeVisual.png') }}"/>
         </div>
@@ -121,26 +121,27 @@
 
 
         <div class="referral-information">
-            <div class="referral-steps">
-                 <div class="referral-step">
-                     <h5>1</h5>
-                     <h6>Invite your friends</h6>
-                 </div>
-                 <div class="referral-step">
-                     <h5>2</h5>
-                     <h6>Share referral code</h6>
-                 </div>
-                 <div class="referral-step-last">
-                     <h5>3</h5>
-                     <h6>Earn money</h6>
-                 </div>
-            </div>
  
             <div class="referral-explanation">
                 <div class="referral-title">
                     <h5>Referral Program</h5>
                     <h6>Where your influence brings rewards</h6>
                 </div>
+
+                <div class="referral-steps">
+                    <div class="referral-step">
+                        <h5>1</h5>
+                        <h6>Invite your friends</h6>
+                    </div>
+                    <div class="referral-step">
+                        <h5>2</h5>
+                        <h6>Share referral code</h6>
+                    </div>
+                    <div class="referral-step-last">
+                        <h5>3</h5>
+                        <h6>Earn money</h6>
+                    </div>
+               </div>
                 
                 <div class="referral-details">
                      <img src="{{ url_for('static', filename='media/referralMockup.png') }}"/>
@@ -166,28 +167,28 @@
                 <div class="join-the-community-perks-description">
                     <div class="join-the-community-perks-description-first">
                         <h4>
-                            Accelerate with 45% Faster Transaction Finalization
+                            Accelerate with 45% Faster <br/>Transaction Finalization
                         </h4>
+                        <p>
+                            Benefit from a 45% increase in transaction speeds, ensuring your operations are faster and more responsive. 
+                        </p>
                     </div>
-                    <p>
-                        Benefit from a 45% increase in transaction speeds, ensuring your operations are faster and more responsive. 
-                    </p>
                     <div class="join-the-community-perks-description-second">
                         <h4>
-                            Enjoy Exclusive 15% Discount on Transaction Fees
+                            Enjoy Exclusive 15% Discount <br/> on Transaction Fees
                         </h4>
+                        <p>
+                            Gain an exclusive 15% discount on transaction <br/> fees, directly impacting your bottom line. 
+                        </p>
                     </div>
-                    <p>
-                        Gain an exclusive 15% discount on transaction fees, directly impacting your bottom line. 
-                    </p>
-                    <div class="join-the-community-perks-description-second">
+                    <div class="join-the-community-perks-description-third">
                         <h4>
-                            Gain Early Access to Promotional and Seasonal Discounts
+                            Gain Early Access to Promotional <br/> and Seasonal Discounts
                         </h4>
+                        <p>
+                            As a Pioneer, enjoy early access to select promotional and seasonal discounts, designed to provide savings and unique opportunities.
+                        </p>
                     </div>
-                    <p>
-                        As a Pioneer, enjoy early access to select promotional and seasonal discounts, designed to provide savings and unique opportunities.
-                    </p>
                 </div>
             </div>
 
@@ -207,15 +208,21 @@
                 <div class="join-form-container">
                     <form class="join-form" action="/waitlist_form" method="POST">
                         <label class="join-label">
-                            First Name
+                            <h7>
+                                First Name
+                            </h7>
                             <input name="first_name" />
                         </label>
                         <label class="join-label">
-                            Last Name
+                            <h7>
+                                Last Name
+                            </h7>
                             <input name="last_name" />
                         </label>
                         <label class="join-label">
-                            Email
+                            <h7>
+                                Email
+                            </h7>
                             <input name="email" />
                         </label>
                         <button>Sign up</button>
