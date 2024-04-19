@@ -241,7 +241,7 @@
         margin-top: 5%;
         gap: 2.5vh;
         } .dependable-paragraph > h7 {
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
@@ -276,7 +276,7 @@
     padding-top: 8%;
 } .purpose-text-container {
         /* background-color: red; */
-        width: 90%;
+        width: 88%;
         height: 40%;
         display: flex;
         flex-direction: column;
@@ -288,9 +288,10 @@
         margin-bottom: 1%;
         margin-top: 28%;
         } .purpose-text-container > h4 {
-            font-size: 1em;
+            font-size: 1.3em;
             margin: 0;
-            font-family: 'FreightSansSemi', sans-serif;
+            font-family: 'FreightSansMedium';
+
             letter-spacing: 1px;
             text-align: center;
             padding-bottom: 2%;
@@ -325,7 +326,7 @@
         } .blockchain-header-container > h4 {
             margin: 0;
             text-align: center;
-            font-size: 1.35em;
+            font-size: 1.27em;
             /* font-weight: 400; */
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
@@ -333,13 +334,14 @@
             height: 20%;
     } .blockchain-header {
         height: 75px;
-        width: 85%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1vh;
+        /* background-color: red; */
+        /* gap: 0.vh; */
         } .polkadot-nameTag {
-            width: 150px;
+            width: 140px;
         } .lotus-nameTag-header {
             width: 120px;
         } .blockchain-header > hr {
@@ -347,7 +349,7 @@
             height: 40%;
             color: black;
             /* width: 15px; */
-            border: 2px solid black;
+            border: 1px solid black;
             border-radius: 2.5px;
     } .blockchain-info {
         height: 300px;
@@ -511,7 +513,8 @@
                 font-weight: 800;
                 width: 10%;
                 margin: 0;
-                font-family: 'FreightSansLight', sans-serif;
+                font-family: 'FreightSansMedium';
+
                 }.referral-step > h6 {
                     font-size: 1em;
                     color: white;
@@ -576,7 +579,7 @@
                 /* justify-content: space-between; */
                 gap: 1vh;
                 } .referral-title > h5 {
-                    font-size: 1.2em;
+                    font-size: 1.4em;
                     color: white;
                     /* font-weight: 800; */
                     width: 90%;
@@ -586,8 +589,9 @@
                     text-align: center;
                     } .referral-title > h6 {
                         font-size: 1em;
+                        padding-top: 1%;
                         color: white;
-                        font-weight: 800;
+                        /* font-weight: 800; */
                         width: 90%;
                         height: 30%;
                         margin: 0;
@@ -632,9 +636,10 @@
             justify-content: center;
             text-align: center;
         } .join-the-community-perks-headline > h4 {
-            font-size: 1.3em;
+            font-size: 1.5em;
             margin: 0;
-            width: 70%;
+            width: 80%;
+            font-family: 'FreightSansMedium';
         } .join-the-community-perks-headline > p {
             font-size: 0.91em;
             margin: 0;
@@ -651,10 +656,12 @@
             /* padding-bottom: 14%; */
             /* padding-left: 6%; */
         } .join-the-community-perks-description-first {
-            width: 90%;
-            height: 120px;
+            width: 80%;
+            height: 100px;
             display: flex;
             flex-direction: column;
+            /* background-color: red; */
+            gap: 2vh;
             /* background-color: red; */
             /* gap: 1vh; */
             font-family: 'FreightSansBook', 'san-serif';
@@ -664,26 +671,29 @@
             margin: 0;
         } .join-the-community-perks-description-first > h4 {
             width: 100%;
-            font-size: 1em;
+            font-size: 0.95em;
             margin: 0;
             margin-top: -0.5%;
             text-align: center;
             height: 30%;
-        } .join-the-community-perks-description > p {
+            
+        } .join-the-community-perks-description-first > p {
             width: 100%;
             font-size: .88em;
             margin: 0;
             height: 70%;
             font-family: 'FreightSansLight';
+            padding-top: 1.5%;
             /* padding-top: 2%; */
             /* padding-left: 3.75%; */
         } .join-the-community-perks-description-second {
             width: 100%;
-            height: 140px;
+            height: 100px;
             display: flex;
             flex-direction: column;
             padding-top: 2%;
-            /* gap: 1vh; */
+            /* background-color: red; */
+            gap: 1.4vh;
         } .join-the-community-perks-description-second > img {
             width: 11px;
             height: 11px;
@@ -691,7 +701,7 @@
         } .join-the-community-perks-description-second > h4 {
             /* background-color: red; */
             width: 100%;
-            font-size: 1em;
+            font-size: 0.95em;
             margin: 0;
             margin-top: -0.5%;
             text-align: center;
@@ -709,7 +719,7 @@
             height: 140px;
             display: flex;
             flex-direction: column;
-            margin-top: -10%;
+            /* margin-top: -10%; */
             align-items: center;
             /* background-color: red; */
             /* gap: 1vh; */
@@ -720,14 +730,14 @@
         } .join-the-community-perks-description-third > h4 {
             /* background-color: red; */
             width: 100%;
-            font-size: 1em;
+            font-size: 0.95em;
             margin: 0;
             margin-top: -0.5%;
             text-align: center;
             height: 30%;
         } .join-the-community-perks-description-third > p {
             /* background-color: red; */
-            width: 90%;
+            width: 83%;
             font-size: .88em;
             font-family: 'FreightSansLight';
             margin: 0;
