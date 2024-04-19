@@ -31,20 +31,27 @@
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 100px;
+    min-width: 90px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    } .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        border: none;
-    } .dropdown-content a:hover {
-        background-color: #f1f1f1;
-        border: none;
-}
+    right: 20px;
+    padding-top: 0.6%;
+    top: 134px;
+} .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+    /* width: 80%; */
+} .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border: none;
+} 
 
 #global, body, html {
     margin: 0 auto;
@@ -354,10 +361,13 @@
                     border-radius: 8px;
                     gap: 2vh;
                     /* margin-top: 2%; */
-                    } .add-icon-circle {
-                        height: 30px;
-                        width: 30px;
-                        margin-top: 4%;
+                    } .upload-label {
+                        width: 100%;
+                        text-align: center;
+                        } .add-icon-circle {
+                            height: 30px;
+                            width: 30px;
+                            margin-top: 4%;
                 } .upload-button > p {
                     font-size: 0.8em;
                     margin: 0;
@@ -373,9 +383,31 @@
                     height: 90px;
                     width: 115px;
                     border-radius: 6px;
-                } .upload-info {
-                    width: 100%;
-                    /* background-color: red; */
+                } .upload-details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    height: 75%;
+                    width: 60%;
+                    } .upload-info {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                    } .upload-info > h6 {
+                        margin: 0;
+                        height: 15%;
+                    } #document-name {
+                        margin: 0;
+                        height: 25%;
+                        font-size: 0.9em;
+                    } #document-size {
+                        font-size: 0.9em;
+                        margin: 0;
+                        height: 25%;
                 } .check-consent {
                 /* background-color: red; */
                 display: flex;

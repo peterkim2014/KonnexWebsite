@@ -30,7 +30,7 @@ class Team:
     @classmethod
     def save(cls, data):
         query = """
-            INSERT INTO teams (first_name, last_name, email, phone_type, phone_number, position, years_of_experience, reason_for_apply, website, github, behance, other) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(phone_type)s, %(phone_number)s, %(position)s, %(years_of_experience)s, %(reason_for_apply)s, %(website)s, %(github)s, %(behance)s, %(other)s);
+            INSERT INTO teams (first_name, last_name, email, phone_type, phone_number, position, years_of_experience, reason_for_apply, website, github, behance, document, other) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(phone_type)s, %(phone_number)s, %(position)s, %(years_of_experience)s, %(reason_for_apply)s, %(website)s, %(github)s, %(behance)s, %(document)s, %(other)s);
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
 
