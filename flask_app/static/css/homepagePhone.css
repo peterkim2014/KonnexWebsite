@@ -32,6 +32,10 @@
     src: url('/static/font/Garet-Book.ttf') format('truetype');
 }
 
+
+
+
+@media (orientation: portrait) {
 .dropdown-content {
     display: none;
     position: absolute;
@@ -89,7 +93,7 @@
     border-bottom: 2px solid black;
     /* margin-top: -2%; */
 }
-@media (orientation: portrait) {
+
 #global, body, html {
     margin: 0 auto;
     height: auto;
@@ -1015,6 +1019,66 @@
 
 
 @media (orientation: landscape) {
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 90px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border: none;
+        right: 20px;
+        padding-top: 0.6%;
+        top: 134px;
+    } .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border: none;
+        font-size: 0.9em;
+        text-align: center;
+        justify-content: center;
+        /* width: 80%; */
+    } .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        border: none;
+    } .error-message {
+        font-size: 0.85em;
+        width: 90%;
+        height: 40px;
+        
+    } #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 27px;
+        z-index: 99;
+        background-color: transparent;
+        color: white;
+        border: none;
+        /* border-radius: 50%; */
+        /* padding: 15px; */
+        cursor: pointer;
+        transition: opacity 0.3s, visibility 0.3s;
+        width: 45px;
+        height: 45px;
+    } .scrollTopIcon {
+        width: 40px;
+        height: 40px;
+        opacity: 0.6;
+    } .route-selected {
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+        font-size: 0.8em;
+        border-bottom: 2px solid black;
+        /* margin-top: -2%; */
+}
+
+
+
 #global, body, html {
     margin: 0 auto;
     height: auto;
@@ -1270,10 +1334,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 4.5vh;
-    height: 1220px;
+    gap: 2.5vh;
+    height: 1120px;
     width: 100%;
-    margin-top: 32%;
+    margin-top: 22%;
     } .blockchain-header-container {
         height: 70px;
         width: 100%;
@@ -1289,18 +1353,18 @@
             /* font-weight: 400; */
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
-            width: 100%;
+            width: 50%;
             height: 20%;
             margin-top: -3%;
             /* background-color: red; */
     } .blockchain-header {
-        height: 75px;
-        width: 80%;
+        height: 175px;
+        width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         /* background-color: red; */
-        /* gap: 0.vh; */
+        gap: 2vh;
         } .polkadot-nameTag {
             width: 140px;
         } .lotus-nameTag-header {
@@ -1313,11 +1377,12 @@
             border: 1px solid black;
             border-radius: 2.5px;
     } .blockchain-info {
-        height: 300px;
-        width: 100%;
+        height: 325px;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 5%;
         } .blockchain-info > p {
             margin: 0;
             width: 80%;
@@ -1330,10 +1395,10 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        height: 300px;
+        height: 350px;
         width: 100%;
-        margin-top: 3.2%;
-        gap: 5vh;
+        /* margin-top: 3.2%; */
+        gap: 8vh;
         } .blockchain-feature {
             display: flex;
             flex-direction: column;
@@ -1341,7 +1406,7 @@
             justify-content: flex-start;
             height: 90%;
             width: 75%;
-            gap: 1.2vh;
+            gap: 1.75vh;
             } .blockchain-feature-images {
                 width: 50px;
                 height: 50px;
@@ -1388,7 +1453,7 @@
                 letter-spacing: 1px;
             } .blockchain-feature > p {
                 font-size: 0.88em;
-                width: 85%;
+                width: 65%;
                 margin: 0;
                 text-align: center;
                 line-height: 25px;
@@ -1432,7 +1497,7 @@
                     text-align: center;
                 } .blockchain-feature-last > p {
                     font-size: 0.88em;
-                    width: 85%;
+                    width: 65%;
                     margin: 0;
                     text-align: center;
                     line-height: 25px;
@@ -1442,12 +1507,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 450px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top: 8%;
+    /* padding-top: 4%; */
     /* gap: 1vh; */
     } .referral-steps {
         width: 70%;
@@ -1505,7 +1570,7 @@
                         margin: 0;
     } .referral-explanation {
         width: 100%;
-        height: 400px;
+        height: 410px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1514,7 +1579,7 @@
         /* gap: 1vh; */
         /* margin-right: 7.5%; */
         } .referral-details {
-            width: 100%;
+            width: 80%;
             height: 300px;
             margin-top: 3%;
             /* background-color: red; */
@@ -1526,7 +1591,7 @@
                 margin-left: -5%;
         } .referral-details {
             padding-top: 1.5%;
-            width: 90%;
+            width: 80%;
             height: 70%;
             display: flex;
             /* flex-direction: column; */
@@ -1560,7 +1625,7 @@
                         margin: 0;
                         text-align: center;
             } .referral-details > p {
-                width: 95%;
+                width: 85%;
                 height: 88%;
                 font-size: 0.88em;
                 color: white;
@@ -1607,8 +1672,9 @@
             font-size: 0.91em;
             margin: 0;
             padding-top: 3%;
+            width: 80%;
         } .join-the-community-perks-description {
-            width: 100%;
+            width: 80%;
             height: 390px;
             display: flex;
             flex-direction: column;
@@ -1619,11 +1685,12 @@
             /* padding-bottom: 14%; */
             /* padding-left: 6%; */
         } .join-the-community-perks-description-first {
-            width: 80%;
+            width: 70%;
             height: 100px;
             display: flex;
             flex-direction: column;
             /* background-color: red; */
+            align-items: center;
             gap: 2vh;
             /* background-color: red; */
             /* gap: 1vh; */
@@ -1641,7 +1708,7 @@
             height: 30%;
             
         } .join-the-community-perks-description-first > p {
-            width: 100%;
+            width: 80%;
             font-size: .88em;
             margin: 0;
             height: 70%;
@@ -1655,6 +1722,7 @@
             display: flex;
             flex-direction: column;
             padding-top: 2%;
+            align-items: center;
             /* background-color: red; */
             gap: 1.4vh;
         } .join-the-community-perks-description-second > img {
@@ -1670,7 +1738,7 @@
             text-align: center;
             height: 30%;
         } .join-the-community-perks-description-second > p {
-            width: 100%;
+            width: 80%;
             font-size: .88em;
             margin: 0;
             padding-top: 1.5%;
@@ -1678,7 +1746,7 @@
             font-family: 'FreightSansLight';
             /* padding-left: 3.75%; */
         } .join-the-community-perks-description-third {
-            width: 100%;
+            width: 70%;
             height: 140px;
             display: flex;
             flex-direction: column;
@@ -1700,7 +1768,7 @@
             height: 30%;
         } .join-the-community-perks-description-third > p {
             /* background-color: red; */
-            width: 83%;
+            width: 80%;
             font-size: .88em;
             font-family: 'FreightSansLight';
             margin: 0;
@@ -1761,23 +1829,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 82%;
+            width: 310px;
             height: 105px;
             justify-content: center;
             } .perks-timeline-visual {
                 /* padding-top: 3%; */
                 width: 235px;
                 height: 22px;
-                margin-left: 3%;
+                /* margin-left: 3%; */
                 padding-bottom: 2%;
             } .perks-list-visual {
-                width: 99%;
-                /* margin-left: 4%; */
+                width: 100%;
+                margin-left: 15%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 } .perks-list-visual > p {
                     margin: 0;
+                    width: 30%;
                     margin-top: 1.5%;
                     font-size: 0.9em;
                     font-family: 'FreightSansLight', sans-serif;
@@ -1788,7 +1857,7 @@
             align-items: center;
             /* justify-content: flex-start */
             height: 325px;
-            width: 100%;
+            width: 350px;
 
             } .join-form {
                 display: flex;
