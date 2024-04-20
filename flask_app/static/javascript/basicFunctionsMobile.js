@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
     const contactLink = document.querySelector(".contact");
     const dropdownContent = document.querySelector(".dropdown-content");
+    contactLink.classList.remove("route-selected");
 
     // Show dropdown content on touchstart (tap) event
     contactLink.addEventListener("touchstart", function() {
         dropdownContent.style.display = "block";
+        contactLink.classList.remove("route-selected");
     });
 
     // Hide dropdown content when touching outside the box or "Contact us" again
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Check if the touch event target is outside the bounds of the contact link or dropdown content
         if (!contactLink.contains(event.target) && !dropdownContent.contains(event.target)) {
             dropdownContent.style.display = "none";
+            contactLink.classList.remove("route-selected");
         }
     });
 });
@@ -142,3 +145,24 @@ function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+
+// Function to add bottom border to the selected route
+function addBottomBorder() {
+    // Remove "route-selected" class from all route links
+    var routeLinks = document.querySelectorAll(".route");
+    routeLinks.forEach(function(link) {
+        link.classList.remove("route-selected");
+    });
+
+    // Add "route-selected" class to the clicked link, except for "Contact us"
+    if (!this.classList.contains("contact")) {
+        this.classList.add("route-selected");
+    }
+}
+
+// Add click event listeners to all route links
+var routeLinks = document.querySelectorAll(".route");
+routeLinks.forEach(function(link) {
+    link.addEventListener("click", addBottomBorder);
+});

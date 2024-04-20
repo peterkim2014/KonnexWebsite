@@ -80,6 +80,14 @@
     width: 40px;
     height: 40px;
     opacity: 0.6;
+} .route-selected {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    font-size: 0.8em;
+    border-bottom: 2px solid black;
+    /* margin-top: -2%; */
 }
 
 
