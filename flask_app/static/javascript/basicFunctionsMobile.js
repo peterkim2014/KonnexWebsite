@@ -100,3 +100,45 @@ document.addEventListener("DOMContentLoaded", function() {
         return size.toFixed(2) + ' ' + units[unitIndex];
     }
 });
+
+// Function to handle scroll-to-top button click
+document.getElementById("scrollToTopBtn").addEventListener("touchstart", function() {
+    scrollAnimation();
+});
+
+// Function to scroll back to the top of the page with smooth animation
+function scrollAnimation() {
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0) {
+        // Calculate scroll speed (quadratic function for a smooth transition)
+        var scrollSpeed = Math.sqrt(currentScroll);
+
+        // Scroll the page up by a certain amount with smooth behavior
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+}
+
+// Function to show/hide scroll-to-top button based on scroll position
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+
+
+// Function to scroll back to the top of the page when button is clicked
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}

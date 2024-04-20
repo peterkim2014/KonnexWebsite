@@ -51,7 +51,25 @@
 } .dropdown-content a:hover {
     background-color: #f1f1f1;
     border: none;
-} 
+} #scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
+
 
 
 #global, body, html {
@@ -188,7 +206,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 605px;
+    height: 400px;
     width: 100%;
     gap: 2.5vh;
     margin-top: 15%;
@@ -200,13 +218,12 @@
         font-family: 'FreightSansMedium', sans-serif;
         letter-spacing: 1.5px;
     } .brand-manifesto-text {
-        width: 80%;
-        height: 63%;
+        width: 81%;
+        height: 75%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-       
         } .brand-manifesto-text > p {
             margin: 0;
             font-size: 0.88em;
@@ -311,7 +328,7 @@
                 font-size: 0.88em;
                 /* font-family: 'FreightSansBook', sans-serif; */
                 letter-spacing: 0.6px;
-                width: 82%;
+                width: 78%;
                 line-height: 25px;
         } .create-story-upper > img {
             width: 65%;
