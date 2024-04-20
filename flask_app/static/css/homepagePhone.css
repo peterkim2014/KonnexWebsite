@@ -287,7 +287,8 @@
                 
 } .purpose-banner {
     background-image: url('../media/banner2.png');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 240px;
     display: flex;
@@ -503,7 +504,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -511,14 +512,14 @@
     padding-top: 8%;
     /* gap: 1vh; */
     } .referral-steps {
-        width: 50%;
-        height: 110px;
+        width: 70%;
+        height: 140px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 5%;
-        /* gap: 0.5vw; */
+        gap: 1vw;
         /* background-color: red; */
     } .referral-step {
         width: 95%;
@@ -537,12 +538,13 @@
                 margin: 0;
                 font-family: 'FreightSansMedium';
 
-                }.referral-step > h6 {
-                    font-size: 1em;
+                }.referral-steps > h6 {
+                    font-size: 1.3em;
                     color: white;
                     opacity: .5;
                     margin: 0;
-                    width: 90%
+                    width: 90%;
+                    text-align: center;
         } .referral-step-last {
             width: 100%;
             height: 51px;
@@ -559,7 +561,7 @@
                     margin: 0;
                     margin-bottom: 3%;
                     } .referral-step-last > h6 {
-                        font-size: 1em;
+                        font-size: 1.3em;
                         color: white;
                         font-weight: 800;
                         margin: 0;
@@ -570,6 +572,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 8%;
         /* gap: 1vh; */
         /* margin-right: 7.5%; */
         } .referral-details {
@@ -579,7 +582,7 @@
             /* background-color: red; */
             /* margin */
         } .referral-details > img {
-                margin-bottom: -25%;
+                margin-bottom: -21%;
                 width: 300px;
                 height: 255px;
                 margin-left: -5%;
@@ -624,18 +627,18 @@
                 font-size: 0.88em;
                 color: white;
                 margin: 0;
-                line-height: 20px;
+                line-height: 21px;
                 text-align: end;
                 /* background-color: red; */
 } .join-the-community {
     margin-top: 20%;
     width: 100%;
-    height: 1300px;
+    height: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
+    /* gap: 1vh; */
     } .join-the-community-perks {
         width: 95%;
         height: 65%;
@@ -646,7 +649,7 @@
         justify-content: flex-start;
         /* margin-left: 10%; */
         /* background-color: green; */
-        margin-top: 6.6%;
+        margin-top: 12.6%;
         gap: 3vh;
         } .join-the-community-perks-headline {
             width: 90%;
