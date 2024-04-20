@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+    var myScreenOrientation = window.screen.orientation;
+    // alert(`The orientation of the screen is: ${myScreenOrientation.type}`);
+
+    window.screen.orientation.addEventListener("change", () => {
+        // alert(`The orientation of the screen is: ${myScreenOrientation.type}`);
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
     const contactLink = document.querySelector(".contact");
     const dropdownContent = document.querySelector(".dropdown-content");
     contactLink.classList.remove("route-selected");
@@ -166,3 +177,5 @@ var routeLinks = document.querySelectorAll(".route");
 routeLinks.forEach(function(link) {
     link.addEventListener("click", addBottomBorder);
 });
+
+

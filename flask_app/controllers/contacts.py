@@ -36,6 +36,7 @@ def contact_form_page():
 def join_team_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
+    
 
     if is_mobile(user_agent):
         error_message = session.pop('error_message', None)
