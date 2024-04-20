@@ -162,7 +162,7 @@
             text-decoration: none;
             color: black;
             margin: 0;
-            font-size: 0.8em;
+            font-size: 0.85em;
             /* margin-top: -2%; */
     } .intro-visual-container {
         width: 100%;
@@ -324,7 +324,7 @@
         } .purpose-text-container > p {
             width: 98%;
             margin: 0;
-            font-size: 0.84em;
+            font-size: 0.88em;
             line-height: 26px;
             text-align: center;
     } .purpose-banner > img {
@@ -352,12 +352,14 @@
         } .blockchain-header-container > h4 {
             margin: 0;
             text-align: center;
-            font-size: 1.27em;
+            font-size: 1.35em;
             /* font-weight: 400; */
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
             width: 100%;
             height: 20%;
+            margin-top: -3%;
+            /* background-color: red; */
     } .blockchain-header {
         height: 75px;
         width: 80%;
@@ -452,7 +454,7 @@
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 1px;
             } .blockchain-feature > p {
-                font-size: 0.86em;
+                font-size: 0.88em;
                 width: 85%;
                 margin: 0;
                 text-align: center;
@@ -496,7 +498,7 @@
                     letter-spacing: 1px;
                     text-align: center;
                 } .blockchain-feature-last > p {
-                    font-size: 0.86em;
+                    font-size: 0.88em;
                     width: 85%;
                     margin: 0;
                     text-align: center;
@@ -636,7 +638,7 @@
 } .join-the-community {
     margin-top: 20%;
     width: 100%;
-    height: 1400px;
+    height: 1300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -813,12 +815,12 @@
             width: 100%;
         } .join-header > h4 {
             margin: 0;
-            font-size: 1.75em;
+            font-size: 1.59em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
         } .join-header > h5 {
             margin: 0;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
         } .perks-visual {
@@ -899,7 +901,7 @@
                 /* margin-top: 2.5%; */
 } .footer {
     width: 100%;
-    height: 335px;
+    height: 305px;
     background-image: url('../media/websiteFooterBackground.png');
     background-size: contain;
     display: flex;
@@ -992,8 +994,8 @@
                     font-size: 0.7em;
                     padding-top: 1%;
                     text-align: center;
-                    } .footer-single-route > h7 {
-                        font-size: 0.9em;
+                    } .footer > h6 {
+                        font-size: 0.7em;
                         margin: 0;
-
+                        padding-top: 3%;
                     }
