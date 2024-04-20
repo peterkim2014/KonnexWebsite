@@ -253,8 +253,8 @@
     height: 700px;
     width: 100%;
     } .about-story-visual {
-        width: 400px;
-        height: 240px;
+        width: 380px;
+        height: 230px;
         /* padding-bottom: 3%; */
     } .about-story-text {
         display: flex;
