@@ -158,7 +158,7 @@
             text-decoration: none;
             color: black;
             margin: 0;
-            font-size: 0.8em;
+            font-size: 0.85em;
             /* margin-top: -2%; */
 } .product-intro {
     margin-top: 9%;
@@ -661,7 +661,7 @@
                         
 } .footer {
     width: 100%;
-    height: 355px;
+    height: 385px;
     background-image: url('../media/websiteFooterBackground.png');
     background-size: contain;
     display: flex;
@@ -677,7 +677,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 2.5%;
+        margin-top: -4%;
         /* background-color: red; */
         /* padding-left: 7%; */
         /* gap: 1.25vh; */
@@ -754,9 +754,9 @@
                     font-size: 0.7em;
                     padding-top: 1%;
                     text-align: center;
-                    } .footer-single-route > h7 {
-                        font-size: 0.9em;
+                    } .footer > h6 {
+                        font-size: 0.7em;
                         margin: 0;
-
+                        padding-top: 3%;
                     }
     
