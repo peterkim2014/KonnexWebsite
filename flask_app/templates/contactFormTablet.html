@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus - Cryptocurrency Wallet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contactFormTablet.css') }}">
+    <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
+</head>
+<body>
+    
+    <div id="global">
+        <div class="home-header">
+            <div class="home-name">
+                <div class="name-container">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
+                    <h1>Lotus</h1>
+                </div>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
+            </div>
+            <div class="home-routes">
+                <a href="/" class="route">Home</a>
+                <a href="/product" class="route">Product</a>
+                <a href="/about" class="route">About</a>
+                <div class="dropdown">
+                    <a href="#contact" class="route-selected contact">Contact us</a>
+                    <div class="dropdown-content">
+                        <a href="/contact_form">Contact Form</a>
+                        <a href="/join_the_team">Join the team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-service-png">
+            <img src="{{ url_for('static', filename='media/customerServiceImage.png') }}" class="customer-service-image"/>
+        </div>
+
+        <div class="contact-us">
+            <h4>
+                Contact Us
+            </h4>
+            {% if error_message %}
+                <div class="error-message">
+                    {% for error in error_message %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="contact-us-bottom">
+                <div class="contact-us-form">
+                    <h4>
+                        Any questions or concerns
+                    </h4>
+                    
+                    <form class="contact-form" action="/contact_form" method="POST">
+                        <label class="contact-label">
+                            <h4>
+                                Name
+                            </h4>
+                            <input name="name" />
+                        </label>
+                        <label class="contact-label">
+                            <h4>
+                                Subject
+                            </h4>
+                            <input name="subject" />
+                        </label>
+                        <label class="contact-label">
+                            <h4>
+                                Email
+                            </h4>
+                            <input name="email" />
+                        </label>
+                        <label class="contact-body-label">
+                            <h4>
+                                Body
+                            </h4>
+                            <textarea name="body"></textarea>
+                        </label>
+                        <button>Sign up</button>
+                    </form>
+                    
+                </div>
+                <div class="faq">
+                    <h4>
+                        Frequently asked questions
+                    </h4>
+                    <div class="faq-questions">
+                        <div class="faq-text">
+                            <h4>
+                                How do I make a transaction with this application?
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+                            </p>
+                        </div>
+                        <div class="faq-text">
+                            <h4>
+                                How do I make a transaction with this application?
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+                            </p>
+                        </div>
+                        <div class="faq-text">
+                            <h4>
+                                How do I make a transaction with this application?
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+                            </p>
+                        </div>
+                        <div class="faq-text">
+                            <h4>
+                                How do I make a transaction with this application?
+                            </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="footer-left">
+                        <div class="footer-left-top">
+                            <img src="{{ url_for('static', filename='media/lotusLogo.png') }}"/>
+                            <h5>
+                                Lotus Cryptocurrency Wallet
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-routes">
+                            <a href="/" class="footer-single-route">
+                                <h7>
+                                    Home
+                                </h7>
+                            </a>
+                            <hr/>
+                            <a href="/product" class="footer-single-route">
+                                <h7>
+                                    Product
+                                </h7>
+                            </a>
+                            <hr/>
+                            <a href="/about" class="footer-single-route">
+                                <h7>
+                                    About
+                                </h7>
+                            </a>
+                            <hr/>
+                            <a href="#" class="footer-single-route">
+                                <h7>
+                                    Contact us
+                                </h7>
+                            </a>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                        </p>
+                    </div>
+                    <div class="footer-left-socials">
+                        <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                        <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                        <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+                    </div>
+                    <h6>
+                        Est 2024
+                    </h6>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>

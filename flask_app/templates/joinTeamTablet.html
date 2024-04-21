@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus - Cryptocurrency Wallet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/joinTeamTablet.css') }}">
+    <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
+</head>
+<body>
+
+    <div id="global">
+        <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="{{ url_for('static', filename='media/backToTopArrow.png') }}" class="scrollTopIcon"/></button>
+
+        <div class="home-header">
+            <div class="home-name">
+                <div class="name-container">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}" class="logo-lotus"/>
+                    <h1>Lotus</h1>
+                </div>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
+            </div>
+            <div class="home-routes">
+                <a href="/" class="route">Home</a>
+                <a href="/product" class="route">Product</a>
+                <a href="/about" class="route">About</a>
+                <div class="dropdown">
+                    <a href="#contact" class="route-selected contact">Contact us</a>
+                    <div class="dropdown-content">
+                        <a href="/contact_form">Contact Form</a>
+                        <a href="/join_the_team">Join the team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="join-intro-header">
+            <div class="join-intro-content">
+                <h3>Join the Team</h3>
+                <a href="#apply_form" class="applyLink"><img class="applyButton" src="{{ url_for('static', filename='media/applyButton.png') }}"/></a>
+            </div>
+        </div>
+
+
+        <div class="join-information">
+            <div class="join-detail">
+                <h4>Introduction</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+            </div>
+            <div class="join-detail">
+                <h4>What to expect</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction.</p>
+            </div>
+            <div class="join-detail">
+                <h4>What you'll need</h4>
+                <p>In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                Every element within Lotus is streamlined to minimize complexity, making it accessible to a wide range of users. This approach not only simplifies the digital journey but also reinforces a sense of stability in every interaction, fostering an environment where users can focus on their goals without distraction. In the realm of digital platforms, Lotus emphasizes on creating a dependable environment. It's designed to offer a straightforward experience, ensuring that users can navigate with ease and clarity.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="empty-banner"></div>
+
+
+        <form id="apply_form" class="join-form" action="/join_form" method="POST" enctype="multipart/form-data">
+            {% if error_message %}
+                <div class="error-message">
+                    {% for error in error_message %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="personal-container">
+                <h5>Personal Information</h5>
+                <div class="personal-form">
+                    <div class="form-split">
+                        <label class="label">
+                            <h7>
+                                Legal First Name
+                            </h7>
+                            <input name="first_name" />
+                        </label>
+                        <label class="label">
+                            <h7>
+                                Legal Last Name
+                            </h7>   
+                            <input name="last_name" />
+                        </label>
+                    </div>
+                    <label class="label-single">
+                        <h7>
+                            Email
+                        </h7>
+                        <input name="email" />
+                    </label>
+                    <div class="form-split">
+                        <label class="label">
+                            <h7>
+                                Contact Type
+                            </h7>
+                            <select class="select-options" name="phone_type">
+                                <option value="null"  disabled>Choose one...</option>
+                                <option value="home">Home</option>
+                                <option value="work">Work</option>
+                                <option value="cell">Cell</option>
+                            </select>
+                        </label>
+                        <label class="label">
+                            <h7>
+                                Phone Number
+                            </h7>
+                            <input name="phone_number" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-container">
+                <h5>Resume Information</h5>
+                <div class="resume-form">
+                    <div class="form-split">
+                        <label class="label">
+                            <h7>
+                                Position
+                            </h7>
+                            <input name="position" />
+                        </label>
+                        <label class="label">
+                            <h7>
+                                Years of experience
+                            </h7>
+                            <input name="years_of_experience" />
+                        </label>
+                    </div>
+                    <label class="label-paragraph">
+                        <h7>
+                            Reason for applying
+                        </h7>
+                        <textarea name="reason_for_apply"></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="portfolio-container">
+                <h5>Portfolio (optional)</h5>
+                <div class="portfolio-form">
+                    <label class="label-single">
+                        <h7>
+                            Website
+                        </h7>
+                        <input name="website" />
+                    </label>
+                    <label class="label-single">
+                        <h7>
+                            Github
+                        </h7>
+                        <input name="github" />
+                    </label>
+                    <label class="label-single">
+                        <h7>
+                            Behance
+                        </h7>
+                        <input name="behance" />
+                    </label>
+                    <label class="label-single">
+                        <h7>
+                            Other
+                        </h7>
+                        <input name="other" />
+                    </label>
+                </div>
+            </div>
+            <div class="upload-container">
+                <h5>Upload Documents</h5>
+                <div class="upload-form">
+                    <div class="upload-button">
+                        <label class="upload-label">
+                            <img class="add-icon-circle" src="{{ url_for('static', filename='media/addIconCircle.png') }}"/>
+                            <p>New Upload</p>
+                            <input id="file-upload" type="file" name="document" style="display: none;" accept=".pdf,.doc,.docx,.txt,.js,.py">
+                        </label>
+                    </div>
+                    <div class="upload-details-container">
+                        <!-- <div class="upload-visual"></div> -->
+                        <div class="upload-details">
+                            <div class="upload-info">
+                                <h6>Document Name:</h6>
+                                <p id="document-name"></p>
+                            </div>
+                            <div class="upload-info">
+                                <h6>Document Size:</h6>
+                                <p id="document-size"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="check-consent">
+                <input type="checkbox" />
+                <p>Check here to agree and consent that the information provided is the truth.</p>
+            </div>
+
+            <button class="submit-button-tag">
+                <!-- <img class="submit-button" src="{{ url_for('static', filename='media/submitButton1.png') }}"/> -->
+                <h7>
+                    Submit
+                </h7>
+            </button>
+        </form>
+
+
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-top">
+                    <img src="{{ url_for('static', filename='media/lotusLogo.png') }}"/>
+                    <h5>
+                        Lotus Cryptocurrency Wallet
+                    </h5>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-routes">
+                    <a href="/" class="footer-single-route">
+                        <h7>
+                            Home
+                        </h7>
+                    </a>
+                    <hr/>
+                    <a href="/product" class="footer-single-route">
+                        <h7>
+                            Product
+                        </h7>
+                    </a>
+                    <hr/>
+                    <a href="/about" class="footer-single-route">
+                        <h7>
+                            About
+                        </h7>
+                    </a>
+                    <hr/>
+                    <a href="#" class="footer-single-route">
+                        <h7>
+                            Contact us
+                        </h7>
+                    </a>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                </p>
+            </div>
+            <div class="footer-left-socials">
+                <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+            </div>
+            <h6>
+                Est 2024
+            </h6>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
