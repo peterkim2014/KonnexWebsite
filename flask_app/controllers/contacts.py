@@ -4,17 +4,17 @@ from flask_app.models.team import Team
 from flask_app.models.contact import Contact
 import re
 
-def is_mobile(user_agent):
-    # Regular expressions for common mobile device strings
+def detect_device(user_agent):
+    # Regular expressions for common mobile and tablet device strings
     mobile_patterns = [
         "iphone", "ipod", "ipad", "android", "blackberry",
-        "windows phone", "nokia", "samsung", "mobile"
+        "windows phone", "nokia", "samsung", "mobile", "tablet"
     ]
     for pattern in mobile_patterns:
-        if re.search(pattern, user_agent):
-            print(f"Detected mobile device: {user_agent}")
+        if re.search(pattern, user_agent, re.IGNORECASE):
+            print(f"Detected mobile or tablet device: {user_agent}")
             return True
-    print(f"Not a mobile device: {user_agent}")
+    print(f"Not a mobile or tablet device: {user_agent}")
     return False
 
 
@@ -23,12 +23,19 @@ def is_mobile(user_agent):
 def contact_form_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
+    device_type = detect_device(user_agent)
 
-    if is_mobile(user_agent):
-        error_message = session.pop('error_message', None)
-        return render_template("contactFormMobile.html", error_message=error_message)
+    error_message = session.pop('error_message', None)
+
+    if device_type == True:
+        if "ipad" in user_agent:
+            print("Ipad")
+            return render_template("contactFormTablet.html", error_message=error_message)
+        else:
+            print("Iphone")
+            return render_template("contactFormMobile.html", error_message=error_message)
     else:
-        error_message = session.pop('error_message', None)
+        print("Desktop")
         return render_template("contactForm.html", error_message=error_message)
     
 
@@ -36,13 +43,19 @@ def contact_form_page():
 def join_team_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
+    device_type = detect_device(user_agent)
     
-
-    if is_mobile(user_agent):
-        error_message = session.pop('error_message', None)
-        return render_template('joinTeamMobile.html', error_message=error_message)
+    error_message = session.pop('error_message', None)
+    
+    if device_type == True:
+        if "ipad" in user_agent:
+            print("Ipad")
+            return render_template("joinTeamTablet.html", error_message=error_message)
+        else:
+            print("Iphone")
+            return render_template("joinTeamMobile.html", error_message=error_message)
     else:
-        error_message = session.pop('error_message', None)
+        print("Desktop")
         return render_template("joinTeam.html", error_message=error_message)
 
 
