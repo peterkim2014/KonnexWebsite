@@ -128,8 +128,9 @@
         justify-content: center;
         width: 90%;
         height: 44%;
-        gap: 1vh;
+        gap: 1.3vh;
         margin-top: 1%;
+        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
         font-size: 2.45em;
@@ -141,6 +142,9 @@
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
+        width: 35%;
+        text-align: center;
+        /* background-color: red; */
     } .home-name > h2 {
         padding-top: 2.6%;
         text-align: center;
@@ -152,30 +156,33 @@
         font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         height: 20%;
-        width: 80%;
+        width: 62%;
+        margin-top: 2%;
         /* padding-right: 1.5%; */
-        gap: 5vh;
-        text-decoration: none;
-        } .route {
+        /* background-color: red; */
+        gap: 1vh;
+    } .route {
             text-decoration: none;
             color: black;
             margin: 0;
             font-size: 0.85em;
+            /* width: 20%; */
             /* margin-top: -2%; */
-} .about-intro {
+    } .about-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 300px;
+    height: 330px;
     width: 100%;
     padding-top: 10%;
+    /* background-color: red; */
     } .about-Intro-Visual {
-        width: 100%;
-        height: 300px;
+        width: 768px;
+        height: 330px;
         size: 'cover';
 } .about-intro-banner {
     background-image: url('../media/aboutIntroBanner.png');
@@ -204,7 +211,7 @@
         margin-right: 2%;
         } .about-intro-point-container > h4 {
             margin: 0;
-            font-size: 0.84em;
+            font-size: 1em;
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1.15px;
             width: 100%;
@@ -221,10 +228,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 275px;
+    height: 305px;
     width: 100%;
     gap: 2.5vh;
-    margin-top: 15%;
+    margin-top: 12%;
+    /* background-color: red; */
     } .about-brand-manifesto > h3 {
         margin: 0;
         width: 85%;
@@ -232,36 +240,42 @@
         text-align: center;
         font-family: 'FreightSansMedium', sans-serif;
         letter-spacing: 1.5px;
+        height: 15%;
     } .brand-manifesto-text {
         width: 81%;
-        height: 65%;
+        height: 74%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        gap: 1vh;
+        /* background-color: red; */
         } .brand-manifesto-text > p {
             margin: 0;
             font-size: 0.88em;
-            line-height: 25px;
+            line-height: 30px;
             letter-spacing: 0.6px;
             text-align: center;
+            width: 80%;
+            /* height: 50%; */
 } .about-story {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 820px;
     width: 100%;
+    margin-top: 7%;
     } .about-story-visual {
-        width: 380px;
-        height: 230px;
+        width: 690px;
+        height: 400px;
         /* padding-bottom: 3%; */
     } .about-story-text {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 8.25%;
+        /* margin-top: 8.25%; */
         height: 55%;
         width: 95%;
         gap: 2vh;
@@ -272,7 +286,7 @@
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1.5px;
             text-align: center;
-            height: 15%;
+            height: 10%;
         } .about-story-text > p {
             margin: 0;
             font-size: 0.88em;
@@ -316,17 +330,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 1320px;
+    height: 1220px;
     width: 100%;
     gap: 1.5vh;
-    } .create-story-upper {
+} .create-story-upper {
+        /* background-color: red; */
         display: flex;
         flex-direction: column;
         /* justify-content: space-between; */
         align-items: center;
-        height: 700px;
+        height: 550px;
         width: 100%;
-        padding-top: 12%;
+        padding-top: 14%;
         /* background-color: red; */
 
         } .create-story-text {
@@ -350,14 +365,15 @@
                 /* font-family: 'FreightSansBook', sans-serif; */
                 letter-spacing: 0.6px;
                 width: 78%;
-                line-height: 25px;
+                line-height: 30px;
+                margin-top: 1.5%;
         } .create-story-upper > img {
-            width: 55%;
+            width: 35%;
             justify-content: center;
             align-items: center;
             /* height: 400px; */
     } .create-story-banner {
-        height: 500px;
+        height: 450px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -389,7 +405,7 @@
                     gap: 1vh;
                     /* padding-bottom: 3%; */
                 } .create-story-point-container-title > img {
-                    width: 8%;
+                    width: 4%;
                     margin-top: -2%;
                     height: 24px;
                 } .create-story-point-container-title > h4 {
@@ -409,7 +425,7 @@
             gap: 1vh;
             /* padding-bottom: 3%; */
         } .create-story-point-container-title-first > img {
-            width: 6.5%;
+            width: 3.5%;
             height: 20px;
         } .create-story-point-container-title-first > h4 {
                     /* background-color: red; */
@@ -428,7 +444,7 @@
             gap: 1vh;
             /* padding-bottom: 3%; */
         } .create-story-point-container-title-second > img {
-            width: 6.5%;
+            width: 3.5%;
             height: 20px;
         } .create-story-point-container-title-second > h4 {
                     /* background-color: red; */
@@ -454,6 +470,8 @@
                 color: white;
                 margin: 0;
                 font-family: 'FreightSansMedium', sans-serif;
+                height: 15%;
+
                 } .our-promise > p {
                     font-size: 0.88em;
                     color: white;
@@ -461,6 +479,7 @@
                     text-align: center;
                     margin: 0;
                     line-height: 26px;
+                    height: 35%;
         } .brand-identity {
             width: 100%;
             height: 950px;
@@ -469,7 +488,7 @@
             align-items: center;
             justify-content: flex-start;
             } .brand-statement {
-                padding-top: 20.5%;
+                padding-top: 14.5%;
                 /* background-color: red; */
                 width: 100%;
                 height: 305px;
@@ -481,7 +500,7 @@
                 font-size: 1.4em;
                 color: black;
                 margin: 0;
-                height: 60px;
+                height: 45px;
                 font-family: 'FreightSansMedium', sans-serif;
                 font-weight: 800;
             } .brand-statement > p {
@@ -489,22 +508,24 @@
                 color: black;
                 margin: 0;
                 width: 80%;
-                height: 200px;
+                height: 100px;
                 text-align: center;
                 line-height: 25px;
+                /* background-color: red; */
             } .brand-statement-points {
                 width: 100%;
-                height: 655px;
+                height: 785px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                /* gap: 1.4vh; */
+                gap: 2vh;
+                margin-top: -5%;
                 /* padding-top: 3%; */
-                /* background-color: red; */
             } .brand-statement-points-first {
+                /* background-color: red; */
                 width: 80%;
-                height: 305px;
+                height: 245px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -521,18 +542,22 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 1vh;
+                padding-top: 2.5%;
             } .brand-statement-points-text > h4 {
                 font-size: 1em;
                 margin: 0;
                 font-family: 'FreightSansMedium', sans-serif;
             } .brand-statement-points-text > p {
+                /* background-color: red; */
                 font-size: 0.88em;
                 margin: 0;
                 line-height: 25px;
-                width: 55%;
+                width: 52%;
+                padding-top: 1%;
+                /* height: 40%; */
             } .brand-statement-points-second {
                 width: 80%;
-                height: 305px;
+                height: 235px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -552,7 +577,7 @@
                 height: 50px;
 } .footer {
     width: 100%;
-    height: 305px;
+    height: 335px;
     background-image: url('../media/websiteFooterBackground.png');
     background-size: contain;
     display: flex;
@@ -568,8 +593,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: -4%;
-        /* background-color: red; */
+        /* margin-top: 2.5%; */
         /* padding-left: 7%; */
         /* gap: 1.25vh; */
     } .footer-left-top {
@@ -581,17 +605,18 @@
         margin-top: -5%;
         /* background-color: red; */
     } .footer-left-top > img {
-        width: 15px;
-        height: 55%;
-        padding-top: 1%;
+        width: 20px;
+        height: 68%;
+        /* padding-top: 1%; */
     } .footer-left-top > h5 {
+        /* background-color: red; */
                     /* background-color: red; */
                     text-align: center;
-                    width: 67%;
+                    width: 33%;
                     height: 40%;
                     /* justify-content: center; */
                     /* padding-top: 5%; */
-                    font-size: 1.1em;
+                    font-size: 1.12em;
                     margin: 0;
                     padding-left: 2.5%;
                     /* font-weight: 800; */
@@ -601,23 +626,24 @@
             width: 14%;
             /* background-color: red; */
             } .footer-left-socials {
-                width: 100%;
+                width: 27%;
                 height: 27px;
                 display: flex;
-                justify-content: center;
-                gap: 1.5em;
+                justify-content: space-evenly;
+                /* gap: 1.5vh; */
+                /* background-color: red; */
                 /* padding-right: 5%; */
                 padding-top: 5%;
                 } .footer-left-socials > img {
-                    width: 6%;
-                    height: 85%;
+                    width: 26px;
+                    height: 26px;
     }.footer-right {
-        width: 90%;
-        height: 100px;
+        width: 60%;
+        height: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-right: 2%;
+        /* padding-right: 2%; */
         /* padding-top: 0.5%; */
         /* background-color: red; */
         } .footer-routes {
@@ -633,7 +659,7 @@
                 font-weight: 700;
                 } .footer-routes > hr {
                     transform: rotate(180);
-                    height: 40%;
+                    height: 50%;
                     color: black;
                     /* width: 15px; */
                     border: 0.6px solid black;
@@ -643,7 +669,7 @@
                     width: 100%;
                     height: 60px;
                     font-size: 0.7em;
-                    padding-top: 1%;
+                    /* padding-top: 1%; */
                     text-align: center;
                     } .footer > h6 {
                         font-size: 0.7em;
