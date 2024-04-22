@@ -60,3 +60,35 @@ document.addEventListener("DOMContentLoaded", function() {
         return size.toFixed(2) + ' ' + units[unitIndex];
     }
 });
+
+
+
+// Add click event listeners to all route links
+var routeLinks = document.querySelectorAll(".route");
+routeLinks.forEach(function(link) {
+    link.addEventListener("mouseover", addBottomBorder);
+});
+routeLinks.forEach(function(link) {
+    link.addEventListener("mouseleave", removeBottomBorder);
+});
+// Function to add bottom border to the selected route
+function addBottomBorder() {
+    // Remove "route-selected" class from all route links
+    var routeLinks = document.querySelectorAll(".route");
+    routeLinks.forEach(function(link) {
+        link.classList.remove("route-selected");
+    });
+
+    // Add "route-selected" class to the clicked link, except for "Contact us"
+    if (!this.classList.contains("contact")) {
+        this.classList.add("route-selected");
+    }
+}
+// Function to add bottom border to the selected route
+function removeBottomBorder() {
+    // Remove "route-selected" class from all route links
+    var routeLinks = document.querySelectorAll(".route");
+    routeLinks.forEach(function(link) {
+        link.classList.remove("route-selected");
+    });
+}
