@@ -6,6 +6,8 @@
     <title>Lotus - Cryptocurrency Wallet</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/homepage.css') }}">
     <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/image-compressor@2/dist/image-compressor.min.js"></script>
+
 </head>
 <body>
     
@@ -42,7 +44,7 @@
             </div>
 
             <div class="intro-visual-container">
-                <img src="{{ url_for('static', filename='media/openPageVisual.png') }}"/>
+                <img src="{{ url_for('static', filename='media/openPageVisual.webp') }}"/>
             </div>
         </div>
 
@@ -56,7 +58,7 @@
 
 
         <div class="dependable-container">
-            <img src="{{ url_for('static', filename='media/dependableImage.png') }}"/>
+            <img src="{{ url_for('static', filename='media/dependableImage.webp') }}"/>
             <div class="dependable-text-container">
                 <h4>Built to be dependable</h4>
                 <div class="dependable-paragraph">
@@ -72,7 +74,7 @@
                 <h4>Purpose</h4>
                 <p>To craft an immersive experience that weaves integrity into every interaction, enabling you to forge a life story of purpose and connection in the digital frontier.</p>
             </div>
-            <img src="{{ url_for('static', filename='media/purposeVisual.png') }}"/>
+            <img src="{{ url_for('static', filename='media/purposeVisual.webp') }}"/>
         </div>
 
         <div class="blockchain-container">
