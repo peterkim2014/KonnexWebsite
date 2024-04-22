@@ -150,20 +150,21 @@
         font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         height: 20%;
-        width: 80%;
+        width: 62%;
         /* padding-right: 1.5%; */
-        gap: 5vh;
         /* background-color: red; */
-        } .route {
+        gap: 1vh;
+    } .route {
             text-decoration: none;
             color: black;
             margin: 0;
             font-size: 0.85em;
+            /* width: 20%; */
             /* margin-top: -2%; */
-} .product-intro {
+    } .product-intro {
     margin-top: 9%;
     height: 600px;
     width: 100%;
