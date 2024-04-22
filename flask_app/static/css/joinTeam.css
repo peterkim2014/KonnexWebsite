@@ -44,6 +44,14 @@
     } .dropdown-content a:hover {
         background-color: #f1f1f1;
         border: none;
+} .route-selected {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    font-size: 0.8em;
+    border-bottom: 2px solid black;
+    /* margin-top: -2%; */
 }
 
 #global, body, html {
