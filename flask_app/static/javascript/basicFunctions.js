@@ -92,3 +92,35 @@ function removeBottomBorder() {
         link.classList.remove("route-selected");
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img[data-src]");
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+
+    const lazyLoad = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute("data-src");
+                observer.unobserve(img);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(lazyLoad, options);
+    images.forEach(image => observer.observe(image));
+});
+
+// Get all img elements in the document
+const imgElements = document.querySelectorAll('img');
+
+// Loop through each img element and add the loading="lazy" attribute
+imgElements.forEach(img => {
+    img.setAttribute('loading', 'lazy');
+});

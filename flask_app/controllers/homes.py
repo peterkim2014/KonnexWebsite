@@ -1,7 +1,10 @@
-from flask import render_template, redirect, request, flash, session, url_for
+from flask import render_template, redirect, request, flash, session, url_for, send_from_directory
 from flask_app import app
 import re
+import os
 from flask_app.models.waitlist import Waitlist
+
+STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'static'))
 
 
 def detect_device(user_agent):
@@ -57,3 +60,8 @@ def waitlist_form():
     else:
         Waitlist.create(data)
         return redirect("/")
+    
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(STATIC_DIR, filename)

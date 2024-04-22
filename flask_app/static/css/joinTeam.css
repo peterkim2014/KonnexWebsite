@@ -49,9 +49,8 @@
     font-weight: 600;
     color: black;
     margin: 0;
-    font-size: 0.8em;
     border-bottom: 2px solid black;
-    /* margin-top: -2%; */
+    margin-bottom: -1%;
 }
 
 #global, body, html {
