@@ -790,8 +790,9 @@
         justify-content: center;
         width: 90%;
         height: 44%;
-        gap: 1vh;
+        gap: 1.3vh;
         margin-top: 1%;
+        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
         font-size: 2.45em;
@@ -803,6 +804,9 @@
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
+        width: 35%;
+        text-align: center;
+        /* background-color: red; */
     } .home-name > h2 {
         padding-top: 2.6%;
         text-align: center;
@@ -814,31 +818,32 @@
         font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         height: 20%;
-        width: 80%;
+        width: 62%;
+        margin-top: 2%;
         /* padding-right: 1.5%; */
-        gap: 10vh;
-        text-decoration: none;
         /* background-color: red; */
-        } .route {
+        gap: 1vh;
+    } .route {
             text-decoration: none;
             color: black;
             margin: 0;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            /* width: 20%; */
             /* margin-top: -2%; */
     } .about-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 270px;
+    height: 320px;
     width: 100%;
     padding-top: 10%;
     } .about-Intro-Visual {
         width: 100%;
-        height: 310px;
+        height: 360px;
         size: 'cover';
 } .about-intro-banner {
     background-image: url('../media/aboutIntroBanner.png');
@@ -899,7 +904,7 @@
         letter-spacing: 1.5px;
     } .brand-manifesto-text {
         width: 81%;
-        height: 70%;
+        height: 65%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -910,16 +915,17 @@
             line-height: 25px;
             letter-spacing: 0.6px;
             text-align: center;
+            width: 70%;
 } .about-story {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 700px;
+    height: 750px;
     width: 100%;
     } .about-story-visual {
-        width: 80%;
-        height: 350px;
+        width: 72%;
+        height: 400px;
         /* padding-bottom: 3%; */
     } .about-story-text {
         display: flex;
@@ -927,7 +933,7 @@
         align-items: center;
         justify-content: flex-start;
         margin-top: 3.25%;
-        height: 40%;
+        height: 75%;
         width: 95%;
         gap: 4vh;
         } .about-story-text > h4 {
@@ -943,7 +949,8 @@
             line-height: 25px;
             letter-spacing: 0.6px;
             text-align: center;
-            width: 80%;
+            height: 30%;
+            width: 60%;
 } .statement-banner {
     display: flex;
     flex-direction: column;
@@ -1009,10 +1016,10 @@
                 font-size: 0.88em;
                 /* font-family: 'FreightSansBook', sans-serif; */
                 letter-spacing: 0.6px;
-                width: 78%;
+                width: 68%;
                 line-height: 25px;
         } .create-story-upper > img {
-            width: 45%;
+            width: 40%;
             justify-content: center;
             align-items: center;
             /* height: 400px; */
@@ -1040,7 +1047,7 @@
                 /* font-family: 'FreightSansBook', sans-serif; */
                 font-size: 0.88em;
                 line-height: 27px;
-                width: 70%;
+                width: 50%;
                 } .create-story-point-container-title {
                     width: 50%;
                     height: 40px;
@@ -1118,10 +1125,11 @@
                 } .our-promise > p {
                     font-size: 0.88em;
                     color: white;
-                    width: 80%;
+                    width: 50%;
                     text-align: center;
                     margin: 0;
                     line-height: 26px;
+                    height: 35%;
         } .brand-identity {
             width: 100%;
             height: 900px;
@@ -1149,7 +1157,7 @@
                 font-size: 0.88em;
                 color: black;
                 margin: 0;
-                width: 80%;
+                width: 60%;
                 height: 150px;
                 text-align: center;
                 line-height: 25px;
@@ -1190,7 +1198,7 @@
                 font-size: 0.88em;
                 margin: 0;
                 line-height: 25px;
-                width: 75%;
+                width: 55%;
             } .brand-statement-points-second {
                 width: 80%;
                 height: 305px;
@@ -1202,7 +1210,7 @@
                 width: 50px;
                 height: 50px;
             } .brand-statement-points-third {
-                width: 80%;
+                width: 70%;
                 height: 305px;
                 display: flex;
                 flex-direction: column;
