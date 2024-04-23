@@ -39,9 +39,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 23.75vw;
     padding-top: 0.6%;
-    top: 134px;
+    top: 17vh;
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -474,32 +474,33 @@
                 } .check-consent {
                     /* background-color: red; */
                     display: flex;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    width: 40%;
-                    gap: 1vw;
+                    justify-content: center;
+                    align-items: center;
+                    width: 67%;
+                    gap: 0.5vw;
                     height: 30px;
                     margin: 0;
-                    margin-top: -12%;
+                    margin-top: -6%;
+                    margin-left: 5%;
                     } .check-consent > p {
                         width: 100%;
                         font-size: 0.9em;
                         margin: 0;
                     } .check-consent > input {
                         height: 20px;
-                        width: 50px;
+                        width: 35px;
             } .submit-button-tag {
                 /* background-color: white; */
                 /* border: none; */
                 border-radius: 6px;
-                width: 40%;
+                width: 500px;
                 height: 27px;
                 background-color: #003F4A;
                 margin-top: -6%;
             } .submit-button {
                 /* padding-bottom: 20%; */
                 height: 27px;
-                width: 85%;
+                width: 500px;
 } .submit-button-tag > h7 {
     color: white;
     font-size: 1em;
@@ -625,9 +626,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 31.5vw;
     padding-top: 0.6%;
-    top: 134px;
+    top: 22vh;
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -980,6 +981,7 @@
             } .upload-container > h5 {
                 font-size: 1.3em;
                 margin: 0;
+                padding-bottom: 6%;
             } .upload-form {
                 display: flex;
                 justify-content: flex-start;
@@ -1057,9 +1059,9 @@
                 } .check-consent {
                     /* background-color: red; */
                     display: flex;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    width: 40%;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
                     gap: 1vw;
                     height: 30px;
                     margin: 0;
@@ -1070,12 +1072,12 @@
                         margin: 0;
                     } .check-consent > input {
                         height: 20px;
-                        width: 50px;
+                        width: 40px;
             } .submit-button-tag {
                 /* background-color: white; */
                 /* border: none; */
                 border-radius: 6px;
-                width: 40%;
+                width: 50%;
                 height: 27px;
                 background-color: #003F4A;
                 margin-top: -6%;
@@ -1083,7 +1085,7 @@
             } .submit-button {
                 /* padding-bottom: 20%; */
                 height: 27px;
-                width: 85%;
+                width: 100%;
 } .submit-button-tag > h7 {
     color: white;
     font-size: 1em;

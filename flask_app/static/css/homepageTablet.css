@@ -44,9 +44,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 23.75vw;
     padding-top: 0.6%;
-    top: 134px;
+    top: 17vh;
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -201,11 +201,11 @@
             /* align-items: center; */
         } .join-button {
             margin: 0;
-            width: 100%;
+            width: 30%;
             padding-top: 3%;
             text-align: center;
             } .join-button-icon {
-                width: 30%;
+                width: 100%;
                 /* margin-left: -1.75%; */
         } .intro-container {
             margin-top: 5.5%;
@@ -1064,15 +1064,15 @@
 @media (orientation: landscape) {
     .dropdown-content {
         display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 90px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        border: none;
-        right: 20px;
-        padding-top: 0.6%;
-        top: 134px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: none;
+    right: 31.5vw;
+    padding-top: 0.6%;
+    top: 22vh;
     } .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -1351,7 +1351,7 @@
     gap: 3vw;
     padding-top: 3%;
 } .purpose-text-container {
-        background-color: red;
+        /* background-color: red; */
         width: 88%;
         height: 40%;
         display: flex;
@@ -1362,7 +1362,8 @@
         gap: 0.5vh;
         margin-left: 1.5%;
         margin-bottom: 1%;
-        margin-top: 13.2%;
+        margin-top: 15.2%;
+        padding-top: 6%;
         } .purpose-text-container > h4 {
             font-size: 1.3em;
             margin: 0;
@@ -1378,8 +1379,8 @@
             line-height: 26px;
             text-align: center;
     } .purpose-banner > img {
-        width: 380px;
-        height: 330px;
+        width: 430px;
+        height: 380px;
         /* margin-top: 2.5%; */
         margin-right: -2.5%;
         margin-top: 12%;
@@ -1389,9 +1390,9 @@
     align-items: center;
     justify-content: flex-start;
     gap: 2.5vh;
-    height: 880px;
+    height: 920px;
     width: 100%;
-    margin-top: 19%;
+    margin-top: 22%;
     } .blockchain-header-container {
         height: 100px;
         width: 100%;

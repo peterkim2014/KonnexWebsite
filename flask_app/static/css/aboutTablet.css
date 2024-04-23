@@ -38,9 +38,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 23.75vw;
     padding-top: 0.6%;
-    top: 134px;
+    top: 17vh;
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -267,7 +267,7 @@
     width: 100%;
     margin-top: 7%;
     } .about-story-visual {
-        width: 690px;
+        width: 660px;
         height: 400px;
         /* padding-bottom: 3%; */
     } .about-story-text {
@@ -700,9 +700,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 31.5vw;
     padding-top: 0.6%;
-    top: 134px;
+    top: 22vh;
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -926,7 +926,7 @@
     height: 780px;
     width: 100%;
     } .about-story-visual {
-        width: 800px;
+        width: 740px;
         height: 450px;
         /* padding-bottom: 3%; */
     } .about-story-text {
