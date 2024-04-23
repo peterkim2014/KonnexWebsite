@@ -455,88 +455,204 @@
 
 
 @media (orientation: landscape) {
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 90px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        border: none;
-        right: 200px;
-        padding-top: 0.6%;
-        top: 150px;
-    } .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        border: none;
-        font-size: 0.9em;
-        text-align: center;
-        justify-content: center;
-        /* width: 80%; */
-    } .dropdown-content a:hover {
-        background-color: #f1f1f1;
-        border: none;
-    } .error-message {
-        font-size: 0.85em;
-        width: 90%;
-        height: 40px;
-    } #scrollToTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 27px;
-        z-index: 99;
-        background-color: transparent;
-        color: white;
-        border: none;
-        /* border-radius: 50%; */
-        /* padding: 15px; */
-        cursor: pointer;
-        transition: opacity 0.3s, visibility 0.3s;
-        width: 45px;
-        height: 45px;
-    } .scrollTopIcon {
-        width: 40px;
-        height: 40px;
-        opacity: 0.6;
-    } .route-selected {
-        text-decoration: none;
-    
-        color: black;
-        margin: 0;
-        font-size: 0.8em;
-        border-bottom: 2px solid black;
-        /* margin-top: -2%; */
-    } .contact {
-        text-decoration: none;
-        border-bottom: 2px solid black;
-        color: black;
-        font-weight: 600;
-        font-size: 0.8em;
-    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: none;
+    right: 200px;
+    padding-top: 0.6%;
+    top: 150px;
+} .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+    /* width: 80%; */
+} .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border: none;
+} .error-message {
+    font-size: 0.85em;
+    width: 90%;
+    height: 40px;
+} #scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 27px;
+    z-index: 99;
+    background-color: transparent;
+    color: white;
+    border: none;
+    /* border-radius: 50%; */
+    /* padding: 15px; */
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 45px;
+    height: 45px;
+} .scrollTopIcon {
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+} .route-selected {
+    text-decoration: none;
+
+    color: black;
+    margin: 0;
+    font-size: 0.8em;
+    border-bottom: 2px solid black;
+    /* margin-top: -2%; */
+} .contact {
+    text-decoration: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 600;
+    font-size: 0.8em;
+}
 
 
 
-    #global, body, html {
-        margin: 0 auto;
-        height: auto;
-        width: 100%;
-        font-family: 'FreightSansLight', sans-serif;
-        letter-spacing: 0.7px;
-    }
-    
-    .home-header {
+#global, body, html {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    font-family: 'FreightSansLight', sans-serif;
+    letter-spacing: 0.7px;
+}
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    /* background-color: red; */
+    flex-direction: column;
+    padding-top: 3%;
+
+    /* gap: 5vw; */
+    } .home-name {
         display: flex;
         flex-direction: column;
-        gap: 1vh;
         justify-content: center;
         align-items: center;
-        height: 130px;
-        width: 100%;
+        height: 60%;
+        width: 50%;
+        /* gap: 3vw; */
+        padding-top: 1.5%;
+        /* background-color: blue; */
+    } .logo-lotus {
+        height: 38px;
+        width: 24px;
+    } .name-container {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-end;
+        justify-content: center;
+        width: 90%;
+        height: 44%;
+        gap: 1.3vh;
+        margin-top: 1%;
+        margin-left: 1.7%;
         /* background-color: red; */
+    } .name-container > h1 {
+        font-size: 2.45em;
+        /* background-color: red; */
+        height: fit-content;
+        margin: 0;
+        /* background-color: red; */
+        height: 100%;
+        font-family: 'LTCushionLight';
+        letter-spacing: 2px;
+        font-weight: 900;
+        width: 35%;
+        text-align: center;
+        /* background-color: red; */
+    } .home-name > h2 {
+        padding-top: 2.6%;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        font-size: 0.65em;
+        font-weight: 100;
+        letter-spacing: 0.7px;
+        font-family: 'LTCushionLight';
+    } .home-routes {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 20%;
+        width: 62%;
+        margin-top: 2%;
+        /* padding-right: 1.5%; */
+        /* background-color: red; */
+        gap: 1vh;
+    } .route {
+        text-decoration: none;
+        color: black;
+        margin: 0;
+        font-size: 0.85em;
+        /* width: 20%; */
+        /* margin-top: -2%; */
+}  .customer-service-png {
+    padding-top: 7%;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+} .customer-service-image {
+    width: 80%;
+    } .contact-us {
+        width: 100%;
+        height: 2500px;
+        display: flex;
+        flex-direction: column;
+    } .contact-us > h4 {
+        font-size: 1.6em;
+        text-align: center;
+        font-family: 'FreightSansMedium', sans-serif;
+        letter-spacing: 1.5px;
+    } .contact-us-bottom {
+        height: 1500px;
+        width: 100%;
+        display: flex;
+        padding-top: 2%;
+        flex-direction: column;
+        align-items: center;
+        
+    }  .contact-us-form {
+        width: 60%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding-left: 5%; */
+    } .contact-us-form > h4 {
+        font-size: 1.2em;
+        margin: 0;
+        width: 98%;
+        text-align: center;
+    } .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 80%;
+        width: 100%;
+        gap: 2vh;
+        margin-top: 5%;
+
+    } .contact-form > label {
+        display: flex;
         flex-direction: column;
         padding-top: 1.5%;
     
@@ -673,7 +789,48 @@
                     border: none;
                     background-color: #EEEEEE;
                     border-radius: 4px;
-                    } .contact-label > h4 {
+                    resize: none;
+    } .contact-body-label > h4 {
+        font-size: 0.9em;
+        text-align: start;
+        width: 70%;
+        margin: 0;
+        margin-left: 2%;
+    }.faq {
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 17%;
+        /* background-color: red; */
+        /* padding-left: 9%; */
+        } .faq > h4 {
+            font-size: 1.2em;
+            margin: 0;
+        } .faq-questions {
+            width: 100%;
+            height: 600px;
+            padding-top: 5%;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            } .faq-text {
+                width: 85%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 120px;
+                } .faq-text > h4 {
+                    font-size: 1.1em;
+                    margin: 0;
+                    width: 100%;
+                    font-family: 'FreightSansMedium', sans-serif;
+                    /* letter-spacing: 1.5px; */
+                    } .faq-text > p {
                         font-size: 0.9em;
                         text-align: start;
                         width: 62%;
@@ -726,15 +883,9 @@
                 justify-content: flex-start;
                 margin-top: 10%;
                 /* background-color: red; */
-                /* padding-left: 9%; */
-                } .faq > h4 {
-                    font-size: 1.2em;
-                    margin: 0;
-                } .faq-questions {
+                } .footer-left-socials {
                     width: 100%;
-                    height: 600px;
-                    padding-top: 5%;
-                    /* background-color: red; */
+                    height: 27px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -765,7 +916,7 @@
                 background-image: url('../media/websiteFooterBackground.png');
                 background-size: contain;
                 display: flex;
-                flex-direction: column;
+                justify-content: space-evenly;
                 align-items: center;
                 justify-content: center;
                 /* padding-top: 2.5%; */
@@ -861,5 +1012,5 @@
                                     margin: 0;
                                     padding-top: 3%;
                                 }
-            
+
 }

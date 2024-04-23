@@ -808,6 +808,7 @@
         text-align: center;
         /* background-color: red; */
         /* background-color: red; */
+
     } .home-name > h2 {
         padding-top: 1.5%;
         text-align: center;
@@ -1134,6 +1135,7 @@
                     text-align: center;
                     margin: 0;
                     line-height: 26px;
+                    height: 35%;
         } .brand-identity {
             width: 100%;
             height: 950px;
@@ -1216,7 +1218,7 @@
                 height: 50px;
                 padding-bottom: 2%;
             } .brand-statement-points-third {
-                width: 80%;
+                width: 70%;
                 height: 305px;
                 display: flex;
                 flex-direction: column;
