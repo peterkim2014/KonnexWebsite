@@ -225,7 +225,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    } .join-detail {
+    } .join-detail-one {
+        width: 80%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 21.2%;
+        justify-content: space-evenly;
+        } .join-detail-one > h4 {
+            margin: 0;
+            height: 40px;
+            font-size: 1.1em;
+            font-family: 'FreightSansBook', sans-serif;
+            text-align: center;
+            /* background-color: red; */
+            width: 100%;
+        } .join-detail-one > p {
+            margin: 0;
+            font-size: 0.9em;
+            line-height: 27.5px;
+            text-align: center;
+            width: 87%;
+} .join-detail {
         width: 80%;
         height: max-content;
         display: flex;
@@ -810,13 +832,39 @@
     /* gap: 5vh; */
     justify-content: space-evenly;
     padding-bottom: 4%;
-    } .join-detail {
+    } .join-detail-one {
         width: 80%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 19%;
+        justify-content: space-evenly;
+        padding-top: 2%;
+        } .join-detail-one > h4 {
+            margin: 0;
+            height: 40px;
+            font-size: 1.35em;
+            font-family: 'FreightSansBook', sans-serif;
+            text-align: center;
+            /* background-color: red; */
+            width: 100%;
+            padding-bottom: 1%;
+        } .join-detail-one > p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 27.5px;
+            text-align: center;
+            width: 87%;
+
+} .join-detail {
+        width: 70%;
         height: max-content;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
+       
         } .join-detail > h4 {
             margin: 0;
             height: 40px;
@@ -825,10 +873,14 @@
             text-align: center;
             /* background-color: red; */
             width: 100%;
+            padding-bottom: 1%;
         } .join-detail > p {
             margin: 0;
+            font-size: 1em;
             line-height: 27.5px;
             text-align: center;
+            /* width: 87%; */
+
 } .empty-banner {
     height: 130px;
     width: 100%;
