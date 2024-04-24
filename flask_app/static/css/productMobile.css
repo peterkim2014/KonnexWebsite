@@ -536,18 +536,20 @@
                 align-items: center;
                 text-align: center;
                 gap: 2vh;
+                padding-bottom: 2%;
                 /* padding-left: 7%; */
                 /* gap: 1.3em; */
-                padding-top: 3%;
+                padding-top: 5%;
+                /* background-color: red; */
             } .product-features-points-text {
                 width: 100%;
-                height: 70%;
+                height: 80%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-bottom: 2%;
                 /* gap: 0.2em; */
-                /* background-color: red; */
             } .product-features-points-text > h5 {
                 color: white;
                 margin: 0;
@@ -556,18 +558,18 @@
                 /* height: 20%; */
             } .features-bullets-points {
                             /* background-color: red; */
-                            width: 100%;
+                            width: 70%;
                             height: 70%;
                         } .features-bullets-points > p {
                             color: white;
                             margin: 0;
                             font-size: 1.8vh;
-                            line-height: 16px;
+                            line-height: 20px;
                             padding-top: 2%;
             } .product-features-descriptions > img {
                 width: 280px;
                 height: 250px;
-                margin-top: 10%;
+                margin-top: 7%;
                 /* padding-right: 3%; */
             } .product-features-descriptions-long-text {
                 width: 90%;
@@ -586,6 +588,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        padding-top: 5%;
         } .product-benefits-header {
             display: flex;
             width: 100%;
