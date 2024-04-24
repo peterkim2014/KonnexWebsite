@@ -209,19 +209,41 @@
                     width: 145px;
                     height: 23px;
 } .join-information {
-    height: 1575px;
+    height: 1975px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    } .join-detail {
+    margin-top: -16%;
+    } .join-detail-one {
+        width: 80%;
+        height: max-content;
+        display: flex;
+        height: 23%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        } .join-detail-one > h4 {
+            margin: 0;
+            height: 10px;
+            font-size: 1.35em;
+            font-family: 'FreightSansBook', sans-serif;
+            text-align: center;
+            /* background-color: red; */
+            width: 100%;
+        } .join-detail-one > p {
+            margin: 0;
+            line-height: 27.5px;
+            text-align: center;
+} .join-detail {
         width: 80%;
         height: max-content;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
+        margin-top: -13%;
         } .join-detail > h4 {
             margin: 0;
             height: 40px;
@@ -781,13 +803,33 @@
                     width: 145px;
                     height: 23px;
 } .join-information {
-    height: 1075px;
+    height: 995px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    } .join-detail {
+    } .join-detail-one {
+        width: 80%;
+        height: max-content;
+        display: flex;
+        height: 23%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        } .join-detail-one > h4 {
+            margin: 0;
+            height: 40px;
+            font-size: 1.35em;
+            font-family: 'FreightSansBook', sans-serif;
+            text-align: center;
+            /* background-color: red; */
+            width: 100%;
+        } .join-detail-one > p {
+            margin: 0;
+            line-height: 27.5px;
+            text-align: center;
+} .join-detail {
         width: 80%;
         height: max-content;
         display: flex;
