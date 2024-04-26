@@ -83,16 +83,22 @@ class Team:
         if '@' not in data['email'] or not any(domain in data['email'] for domain in valid_domains):
             errors.append("Invalid email format or domain")
 
-        # Validate Phone Number
-        if any(char.isdigit() for char in data['phone_number']):
+        if not data['phone_number'].isdigit():
             errors.append("Phone Number should contain only numbers")
 
         # Validate last name
         if len(data['position']) < 2:
             errors.append("Please fill Position")
 
-        # Validate Years of Experience
-        if any(char.isdigit() for char in data['years_of_experience']):
-            errors.append("Years of Experience should contain only numbers")
+        # # Validate Years of Experience
+        # if any(char.isdigit() for char in data['years_of_experience']):
+        #     errors.append("Years of Experience should contain only numbers")
+
+        if not data['years_of_experience'].isdigit():
+            errors.append("Years of experience should contain only numbers")
+
+        # Validate consent checkbox
+        if data.get('checkbox-consent') != 'on':
+            errors.append("Please check the checkbox before submitting the form.")
 
         return errors
