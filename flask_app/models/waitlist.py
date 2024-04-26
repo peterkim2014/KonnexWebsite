@@ -1,8 +1,12 @@
 import re
 from flask_app.config.mysqlconnection import MySQLConnection
-from flask import flash
+from flask import flash, url_for
+from flask_app import app
+from flask_app.models.email import Email
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9,+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
+
+
 
 class Waitlist:
 
@@ -14,6 +18,7 @@ class Waitlist:
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.email = data['email']
+        self.confirmed = data['confirmed']
         
 
 
@@ -76,3 +81,8 @@ class Waitlist:
             errors.append("Invalid email format or domain")
 
         return errors
+    
+    @classmethod
+    def email(cls, data):
+        Email.send(data["first_name"], to_email=data["email"], data=data)
+        return 

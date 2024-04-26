@@ -209,3 +209,96 @@ const imgElements = document.querySelectorAll('img');
 imgElements.forEach(img => {
     img.setAttribute('loading', 'lazy');
 });
+
+
+
+
+
+
+
+
+// Attach event listener to the form submission
+document.getElementById('join-form-function').addEventListener('submit', handleFormSubmit);
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Retrieve form data
+    const formData = event.target;
+    console.log("Form data: ", formData)
+
+
+    fetch('http://localhost:5000/mailchimp', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error signaling Mailchimp API:', error);
+    });
+}
+
+
+// Attach event listener to the form submission
+document.getElementById('submit-join').addEventListener('submit', handleFormSubmit);
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Retrieve form data
+    const formData = event.target;
+    console.log("Form data: ", formData)
+
+
+    fetch('http://localhost:5000/joinTeamEmail', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error signaling Mailchimp API:', error);
+    });
+}
+
+
+// Attach event listener to the form submission
+document.getElementById('contactFormEmail').addEventListener('submit', handleFormSubmit);
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Retrieve form data
+    const formData = event.target;
+    console.log("Form data: ", formData)
+
+
+    fetch('http://localhost:5000/contactUsEmail', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error signaling Mailchimp API:', error);
+    });
+}
