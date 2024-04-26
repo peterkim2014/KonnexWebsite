@@ -881,7 +881,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 82%;
+            width: 52%;
             height: 105px;
             justify-content: center;
             } .perks-timeline-visual {
@@ -891,19 +891,43 @@
                 /* margin-left: 3%; */
                 padding-bottom: 2%;
             } .perks-list-visual {
-                width: 50%;
-                /* background-color: red; */
-                /* margin-left: 4%; */
+                width: 100%;
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                } .perks-list-visual > p {
-                    margin: 0;
-                    margin-top: 1.5%;
-                    font-size: 0.9em;
-                    font-family: 'FreightSansLight', sans-serif;
-                    padding-bottom: 2%;
-        } .join-form-container {
+                justify-content: space-evenly;
+                margin-left: 14%;
+            } .perks-list-visual-text {
+                /* background-color: red; */
+                display: flex;
+                width: 30%;
+                height: 50%;
+                gap: 0.5vw;
+
+            } .perks-list-visual-text > p {
+                margin: 0;
+                margin-top: 1.5%;
+                width: 50%;
+            } .perks-list-visual-text > h7 {
+        /* background-color: blue; */
+        margin: 0;
+        width: 40%;
+        font-size: 1.1em;
+        margin-top: -0.2%;
+        /* padding-left: 1%; */
+            } .perks-list-visual-text-third {
+                display: flex;
+                width: 30%;
+                height: 50%;
+                gap: 0.2vw;
+            } .perks-list-visual-text-third > p {
+                margin: 0;
+                margin-top: 1.5%;
+                width: 50%;
+    } .perks-list-visual-text-third > h7 {
+        margin: 0;
+        width: 40%;
+        font-size: 0.9em;
+        /* padding-left: 1%; */
+    } .join-form-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1916,18 +1940,42 @@
                 padding-bottom: 2%;
             } .perks-list-visual {
                 width: 100%;
-                margin-left: 15%;
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                } .perks-list-visual > p {
-                    margin: 0;
-                    width: 30%;
-                    margin-top: 1.5%;
-                    font-size: 0.9em;
-                    font-family: 'FreightSansLight', sans-serif;
-                    padding-bottom: 2%;
-        } .join-form-container {
+                justify-content: space-evenly;
+                margin-left: 14%;
+            } .perks-list-visual-text {
+                /* background-color: red; */
+                display: flex;
+                width: 30%;
+                height: 50%;
+                gap: 0.5vw;
+
+            } .perks-list-visual-text > p {
+                margin: 0;
+                margin-top: 1.5%;
+                width: 50%;
+            } .perks-list-visual-text > h7 {
+        /* background-color: blue; */
+        margin: 0;
+        width: 40%;
+        font-size: 1.1em;
+        margin-top: -0.2%;
+        /* padding-left: 1%; */
+            } .perks-list-visual-text-third {
+                display: flex;
+                width: 30%;
+                height: 50%;
+                gap: 0.2vw;
+            } .perks-list-visual-text-third > p {
+                margin: 0;
+                margin-top: 1.5%;
+                width: 50%;
+    } .perks-list-visual-text-third > h7 {
+        margin: 0;
+        width: 40%;
+        font-size: 0.9em;
+        /* padding-left: 1%; */
+    } .join-form-container {
             display: flex;
             flex-direction: column;
             align-items: center;
