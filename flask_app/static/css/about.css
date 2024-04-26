@@ -183,7 +183,7 @@
         justify-content: space-between;
         } .brand-manifesto-text > p {
             margin: 0;
-            font-size: 1em;
+            font-size: 0.95em;
             line-height: 25px;
             letter-spacing: 1px;
             text-align: center;
@@ -213,7 +213,7 @@
             letter-spacing: 1.5px;
         } .about-story-text > p {
             margin: 0;
-            font-size: 1em;
+            font-size: 0.95em;
             letter-spacing: 1px;
             line-height: 25px;
             width: 76%;
@@ -237,7 +237,7 @@
         letter-spacing: 1.75px;
     } .statement-banner > p {
         margin: 0;
-        font-size: 1.08em;
+        font-size: 1em;
         font-family: 'FreightSansBook', sans-serif;
         letter-spacing: 1px;
         width: 75%;
@@ -274,7 +274,7 @@
                 letter-spacing: 1.5px;
             } .create-story-text > p {
                 margin: 0;
-                font-size: 1.05em;
+                font-size: 0.95em;
                 /* font-family: 'FreightSansBook', sans-serif; */
                 letter-spacing: 0.75px;
                 width: 70%;
@@ -305,7 +305,7 @@
             } .create-story-point-container > p {
                 margin: 0;
                 /* font-family: 'FreightSansBook', sans-serif; */
-                font-size: 1.1em;
+                font-size: 0.95em;
                 line-height: 27px;
                 width: 90%;
                 } .create-story-point-container-title {
@@ -318,6 +318,23 @@
                         width: 8%;
                         height: 25px;
                         } .create-story-point-container-title > h4 {
+                            margin: 0;
+                            font-size: 1.3em;
+                            font-family: 'FreightSansMedium', sans-serif;
+                            letter-spacing: 1.5px;
+                            width: 90%;
+                            text-align: left;
+                } .create-story-point-container-title-first {
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    gap: 1vh;
+                    margin-top: 8%;
+                    /* padding-bottom: 3%; */
+                    } .create-story-point-container-title-first > img {
+                        width: 8%;
+                        height: 25px;
+                        } .create-story-point-container-title-first > h4 {
                             margin: 0;
                             font-size: 1.3em;
                             font-family: 'FreightSansMedium', sans-serif;
@@ -365,7 +382,7 @@
                 font-family: 'FreightSansMedium', sans-serif;
                 font-weight: 800;
             } .brand-statement > p {
-                font-size: 1em;
+                font-size: 0.95em;
                 color: black;
                 margin: 0;
                 width: 67%;
@@ -405,7 +422,7 @@
                 margin: 0;
                 font-family: 'FreightSansMedium', sans-serif;
             } .brand-statement-points-text > p {
-                font-size: 0.9em;
+                font-size: 0.93em;
                 margin: 0;
                 line-height: 28px;
             } .brand-statement-points-second {

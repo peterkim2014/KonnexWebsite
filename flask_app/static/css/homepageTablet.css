@@ -60,12 +60,7 @@
 } .dropdown-content a:hover {
     background-color: #f1f1f1;
     border: none;
-} .error-message {
-    font-size: 0.85em;
-    width: 90%;
-    height: 40px;
-    
-} #scrollToTopBtn {
+}  #scrollToTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -93,6 +88,15 @@
     border-bottom: 2px solid black;
     /* width: 20%; */
     /* margin-top: -2%; */
+} .error-message {
+    width: 70%;
+    height: 60px;
+    margin-top: -2%;
+    /* margin-left: 2%; */
+} .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
 }
 
 #global, body, html {
@@ -1086,12 +1090,7 @@
     } .dropdown-content a:hover {
         background-color: #f1f1f1;
         border: none;
-    } .error-message {
-        font-size: 0.85em;
-        width: 90%;
-        height: 40px;
-        
-    } #scrollToTopBtn {
+    }  #scrollToTopBtn {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -1118,6 +1117,14 @@
         font-size: 0.8em;
         border-bottom: 2px solid black;
         /* margin-top: -2%; */
+} .error-message {
+    width: 55%;
+    height: 80px;
+    
+} .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
 }
 
 

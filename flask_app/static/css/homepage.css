@@ -57,11 +57,21 @@
     background-color: #f1f1f1;
     border: none;
 } .error-message {
-    font-size: 0.85em;
-    width: 90%;
-    height: 40px;
-    
-} .route-selected {
+    /* font-size: 0.8em; */
+    width: 70%;
+    height: 30px;
+    /* background-color: white; */
+    margin-bottom: -5%;
+    padding-bottom: 2%;
+    margin-left: 8%;
+    /* margin: 0; */
+} .error-message > p {
+    /* padding-bottom: 5%; */
+    margin-top: -8%;
+    font-size: 0.8em;
+    margin: 0;
+    color: blue;
+}.route-selected {
     text-decoration: none;
     font-weight: 600;
     color: black;
@@ -73,7 +83,6 @@
 } img {
     background-color: transparent;
 }
-
 
 
 #global, body, html {
@@ -472,11 +481,14 @@
                 opacity: .5;
                 font-weight: 800;
                 margin: 0;
-                }.referral-step > h6 {
+                font-family: 'FreightSansMedium', sans-serif;
+            }.referral-step > h6 {
+                    margin-top: -1%;
                     font-size: 1.6em;
                     color: white;
                     opacity: .5;
                     margin: 0;
+                    font-family: 'FreightSansMedium', sans-serif;
         } .referral-step-last {
             width: 18%;
             height: 51px;
@@ -491,12 +503,14 @@
                     opacity: .5;
                     font-weight: 800;
                     margin: 0;
-                    margin-bottom: 0.8%;
+                    margin-bottom: 2%;
+                    font-family: 'FreightSansMedium', sans-serif;
                     } .referral-step-last > h6 {
                         font-size: 1.6em;
                         color: white;
                         font-weight: 800;
                         margin: 0;
+                        font-family: 'FreightSansMedium', sans-serif;
     } .referral-explanation {
         width: 90%;
         height: 325px;
@@ -527,6 +541,7 @@
                 flex-direction: column;
                 align-items: flex-end;
                 justify-content: space-between;
+                /* background-color: red; */
                 gap: 2vh;
                 } .referral-title > h5 {
                     font-size: 1.8em;
@@ -564,15 +579,20 @@
         /* justify-content: space-between; */
         justify-content: flex-start;
         margin-left: 10%;
-        /* background-color: green; */
         margin-top: 6.6%;
-        } .join-the-community-perks-headline {
-            width: 94%;
-            height: 180px;
-            margin: 0;
+    } .join-the-community-perks-headline {
+        width: 94%;
+        height: 180px;
+        margin: 0;
+        /* background-color: green; */
         } .join-the-community-perks-headline > h4 {
             font-size: 1.6em;
+            /* color: white; */
+            /* font-weight: 800; */
+            width: 100%;
+            height: 20%;
             margin: 0;
+            font-family: 'FreightSansMedium', sans-serif;
         } .join-the-community-perks-headline > p {
             font-size: 0.91em;
             margin: 0;
@@ -598,7 +618,8 @@
             width: 100%;
             font-size: 1.06em;
             margin: 0;
-            margin-top: -0.5%;
+            margin-top: -1%;
+            font-family: 'FreightSansMedium';
         } .join-the-community-perks-description > p {
             width: 90%;
             font-size: .91em;
@@ -620,7 +641,8 @@
             width: 100%;
             font-size: 1.06em;
             margin: 0;
-            margin-top: -0.5%;
+            margin-top: -1%;
+            font-family: 'FreightSansMedium';
         } .join-the-community-perks-description-second > p {
             width: 100%;
             font-size: .91em;
@@ -665,12 +687,12 @@
             width: 60%;
             } .join-header > h4 {
                 margin: 0;
-                font-size: 2.75em;
+                font-size: 2.6em;
                 font-family: 'FreightSansMedium', sans-serif;
                 letter-spacing: 1px;
             } .join-header > h5 {
                 margin: 0;
-                font-size: 1.82em;
+                font-size: 1.72em;
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 1px;
 

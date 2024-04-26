@@ -88,6 +88,19 @@
     color: black;
     font-weight: 600;
     font-size: 0.8em;
+} .error-message {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+}   .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
+    width: 60%;
 }
 
 
@@ -697,6 +710,20 @@
     color: black;
     font-weight: 600;
     font-size: 0.8em;
+} .error-message {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12%;
+}   .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
+    width: 60%;
 }
 
 
