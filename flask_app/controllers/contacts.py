@@ -1,8 +1,11 @@
-from flask import render_template, redirect, request, flash, session, url_for
+from flask import render_template, redirect, request, flash, session, url_for, jsonify
 from flask_app import app
 from flask_app.models.team import Team
 from flask_app.models.contact import Contact
 import re
+import requests
+import mailchimp_marketing as MailchimpMarketing
+from mailchimp_marketing.api_client import ApiClientError
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
@@ -107,3 +110,77 @@ def join_form():
     else:
         Team.create(data)
         return redirect("/join_the_team")
+
+
+
+@app.route('/contactUsEmail', methods=['POST'])
+def mailchimp_contactUs():
+    try:
+        # Extract email address from the request body
+        email_address = "peterkim2014@gmail.com"
+
+        # Construct the URL for triggering the customer journey
+        url = 'https://us22.api.mailchimp.com/3.0/customer-journeys/journeys/395/steps/1275/actions/trigger'
+
+        # Set the Mailchimp API key
+        api_key = 'Bearer 31156e977e144c2224ed14d96fe11889-us22'
+
+        # Set the headers
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': api_key
+        }
+
+        # Construct the request body
+        body = {
+            'email_address': email_address
+        }
+
+        # Make the POST request to trigger the customer journey
+        response = requests.post(url, headers=headers, json=body)
+
+        # Check the response status code
+        if response.status_code == 204:
+            return jsonify({"message": "Customer journey triggered successfully"}), 200
+        else:
+            return jsonify({"error": "Failed to trigger customer journey"}), response.status_code
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
+@app.route('/joinTeamEmail', methods=['POST'])
+def mailchimp_joinTeam():
+    try:
+        # Extract email address from the request body
+        email_address = "peterkim2014@gmail.com"
+
+        # Construct the URL for triggering the customer journey
+        url = 'https://us22.api.mailchimp.com/3.0/customer-journeys/journeys/396/steps/1277/actions/trigger'
+
+        # Set the Mailchimp API key
+        api_key = 'Bearer 31156e977e144c2224ed14d96fe11889-us22'
+
+        # Set the headers
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': api_key
+        }
+
+        # Construct the request body
+        body = {
+            'email_address': email_address
+        }
+
+        # Make the POST request to trigger the customer journey
+        response = requests.post(url, headers=headers, json=body)
+
+        # Check the response status code
+        if response.status_code == 204:
+            return jsonify({"message": "Customer journey triggered successfully"}), 200
+        else:
+            return jsonify({"error": "Failed to trigger customer journey"}), response.status_code
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500

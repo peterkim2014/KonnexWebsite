@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 flask = "*"
 pymysql = "*"
+flask-mail = "*"
+mailchimp-marketing = "*"
+flask-cors = "*"
 
 [dev-packages]
 
