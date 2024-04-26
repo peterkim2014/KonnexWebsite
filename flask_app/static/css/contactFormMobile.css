@@ -95,6 +95,18 @@
     color: black;
     font-weight: 600;
     font-size: 0.8em;
+} .error-message {
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin-left: 10%;
+} .error-message > p {
+    color: blue;
+    font-size: 0.8em;
+    margin: 0;
+    width: 80;
 }
 
 
@@ -467,11 +479,7 @@
     } .dropdown-content a:hover {
         background-color: #f1f1f1;
         border: none;
-    } .error-message {
-        font-size: 0.85em;
-        width: 90%;
-        height: 40px;
-    } #scrollToTopBtn {
+    }  #scrollToTopBtn {
         display: none;
         position: fixed;
         bottom: 20px;
@@ -504,6 +512,18 @@
         color: black;
         font-weight: 600;
         font-size: 0.8em;
+    } .error-message {
+        width: 85%;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        margin-left: 5%;
+    } .error-message > p {
+        color: blue;
+        font-size: 0.8em;
+        margin: 0;
+        width: 100;
     }
 
 

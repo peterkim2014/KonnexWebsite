@@ -58,10 +58,6 @@
 } .dropdown-content a:hover {
     background-color: #f1f1f1;
     border: none;
-} .error-message {
-    font-size: 0.85em;
-    width: 90%;
-    height: 40px;
 } #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -95,6 +91,23 @@
     color: black;
     font-weight: 600;
     font-size: 0.8em;
+} .error-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: -2%;
+    /* background-color: red; */
+    /* margin-left: 2%; */
+} .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
+    width: 60%;
+
 }
 
 
@@ -467,8 +480,8 @@
     border: none;
     right: 31.5vw;
     padding-top: 0.6%;
-    top: 22vh;
-} .dropdown-content a {
+    top: 24vh;
+    } .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -481,11 +494,7 @@
 } .dropdown-content a:hover {
     background-color: #f1f1f1;
     border: none;
-} .error-message {
-    font-size: 0.85em;
-    width: 90%;
-    height: 40px;
-} #scrollToTopBtn {
+}  #scrollToTopBtn {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -518,6 +527,19 @@
     color: black;
     font-weight: 600;
     font-size: 0.8em;
+} .error-message {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4%;
+    /* justify-content: center; */
+} .error-message > p {
+    font-size: 0.85em;
+    color: blue;
+    margin: 0;
+    width: 50%;
 }
 
 
@@ -838,7 +860,7 @@
             margin-left: 2%;
         } .faq {
         width: 100%;
-        height: 550px;
+        height: 650px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -850,6 +872,7 @@
         } .faq > h4 {
             font-size: 1.2em;
             margin: 0;
+            height: 5%;
         } .faq-questions {
             width: 100%;
             height: 600px;
@@ -859,14 +882,18 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
+            /* gap: 5vh; */
+            /* gap: 3vh; */
             } .faq-text {
                 width: 85%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 120px;
+                height: 90%;
+                gap: 3vh;
+                /* padding-bottom: 5%; */
+                /* background-color: red; */
                 } .faq-text > h4 {
                     font-size: 1.1em;
                     margin: 0;

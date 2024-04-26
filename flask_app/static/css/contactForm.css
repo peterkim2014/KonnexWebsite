@@ -52,11 +52,15 @@
     background-color: #f1f1f1;
     border: none;
 } .error-message {
-    font-size: 0.85em;
-    width: 90%;
+    /* font-size: 0.85em; */
+    width: 35%;
     height: 40px;
-    
-} .route-selected {
+    padding-left: 12.5%;
+} .error-message > p {
+    color: blue;
+    font-size: .8em;
+    margin: 0;
+}.route-selected {
     text-decoration: none;
     font-weight: 600;
     color: black;
