@@ -98,6 +98,7 @@ def join_form():
             "behance": request.form["behance"],
             "document": request.files['document'],
             "other": request.form["other"],
+            "checkbox-consent": request.form.get("checkbox-consent")
         }
 
 

@@ -218,7 +218,7 @@ imgElements.forEach(img => {
 
 
 // Attach event listener to the form submission
-document.getElementById('join-form-function').addEventListener('submit', handleFormSubmit);
+// document.getElementById('join-form-function').addEventListener('submit', handleFormSubmit);
 
 // Function to handle form submission
 function handleFormSubmit(event) {
@@ -247,7 +247,7 @@ function handleFormSubmit(event) {
 
 
 // Attach event listener to the form submission
-document.getElementById('submit-join').addEventListener('submit', handleFormSubmit);
+// document.getElementById('submit-join').addEventListener('submit', handleFormSubmit);
 
 // Function to handle form submission
 function handleFormSubmit(event) {
@@ -276,7 +276,7 @@ function handleFormSubmit(event) {
 
 
 // Attach event listener to the form submission
-document.getElementById('contactFormEmail').addEventListener('submit', handleFormSubmit);
+// document.getElementById('contactFormEmail').addEventListener('submit', handleFormSubmit);
 
 // Function to handle form submission
 function handleFormSubmit(event) {

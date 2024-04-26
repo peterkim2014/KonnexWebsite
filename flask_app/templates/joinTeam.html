@@ -74,21 +74,21 @@
                 <div class="personal-form">
                     <div class="form-split">
                         <label class="label">
-                            Legal First Name
+                            Legal First Name *
                             <input name="first_name" />
                         </label>
                         <label class="label">
-                            Legal Last Name
+                            Legal Last Name *
                             <input name="last_name" />
                         </label>
                     </div>
                     <label class="label-single">
-                        Email
+                        Email *
                         <input name="email" />
                     </label>
                     <div class="form-split">
                         <label class="label">
-                            Contact Phone Type
+                            Contact Phone Type 
                             <select class="select-options" name="phone_type">
                                 <option value="null"  disabled>Choose one...</option>
                                 <option value="home">Home</option>
@@ -98,7 +98,7 @@
                         </label>
                         <label class="label">
                             Phone Number
-                            <input type="number" name="phone_number" />
+                            <input inputmode="numeric" type="number" name="phone_number" />
                         </label>
                     </div>
                 </div>
@@ -108,12 +108,12 @@
                 <div class="resume-form">
                     <div class="form-split">
                         <label class="label">
-                            Position
+                            Position *
                             <input name="position" />
                         </label>
                         <label class="label">
-                            Years of experience
-                            <input name="years_of_experience" type="number"/>
+                            Years of experience *
+                            <input inputmode="numeric" name="years_of_experience" type="number"/>
                         </label>
                     </div>
                     <label class="label-paragraph">
@@ -170,11 +170,11 @@
             </div>
 
             <div class="check-consent">
-                <input type="checkbox" />
-                <p>Check here to agree and consent that the information provided is the truth.</p>
+                <input name="checkbox-consent" type="checkbox" />
+                <p>I certify that all information provided in this application is true and complete to the best of my knowledge. I understand that any false statements or omissions may result in disqualification from employment or termination if already employed.</p>
             </div>
 
-            <button id="submit-join" class="submit-button-tag"><img class="submit-button" src="{{ url_for('static', filename='media/submitButton.png') }}"/></button>
+            <button class="submit-button-tag"><img class="submit-button" src="{{ url_for('static', filename='media/submitButton.png') }}"/></button>
         </form>
 
 
