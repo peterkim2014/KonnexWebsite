@@ -40,7 +40,7 @@
                 <h3>"Your guide to a new era of financial interactions with blockchain, using the state-of-the-art, Polkadot Technology, to instill confidence with engagements."</h3>
                 <h4>Committed to bridging people and blockchain, we bring clarity and drive toward an accessible and trusted journey
                 </h4>
-                <a class="join-button"><img src="{{ url_for('static', filename='media/joinButton.png') }}" class="join-button-icon"/></a>
+                <a href="#join_waitlist" class="join-button"><img src="{{ url_for('static', filename='media/joinButton.png') }}" class="join-button-icon"/></a>
             </div>
 
             <div class="intro-visual-container">
@@ -58,7 +58,9 @@
 
 
         <div class="dependable-container">
-            <img src="{{ url_for('static', filename='media/dependableImage.webp') }}"/>
+            <div class="dependable-visual">
+                <img src="{{ url_for('static', filename='media/dependableImage.webp') }}"/>
+            </div>
             <div class="dependable-text-container">
                 <h4>Built to be dependable</h4>
                 <div class="dependable-paragraph">
@@ -121,18 +123,18 @@
 
         <div class="referral-information">
            <div class="referral-steps">
-                <div class="referral-step">
-                    <h5>1</h5>
+                <!-- <div class="referral-step"> -->
+                    <!-- <h5>1</h5> -->
                     <h6>Invite your friends</h6>
-                </div>
-                <div class="referral-step">
-                    <h5>2</h5>
+                <!-- </div> -->
+                <!-- <div class="referral-step"> -->
+                    <!-- <h5>2</h5> -->
                     <h6>Share referral code</h6>
-                </div>
-                <div class="referral-step-last">
-                    <h5>3</h5>
+                <!-- </div> -->
+                <!-- <div class="referral-step-last"> -->
+                    <!-- <h5>3</h5> -->
                     <h6>Earn money</h6>
-                </div>
+                <!-- </div> -->
            </div>
 
            <div class="referral-explanation">
@@ -192,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="join-the-community-form">
+                <div id="join_waitlist" class="join-the-community-form">
                     <div class="join-header">
                         <h4>Join the community</h4>
                         <h5>Sign up for any early benefits</h5>

@@ -25,6 +25,54 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+    // Get all anchor links with href starting with '#'
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    // Add event listener to each anchor link
+    anchorLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default behavior of anchor links
+            
+            // Get the target section ID from the href attribute
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            // Calculate the distance to scroll
+            const offsetTop = targetSection.offsetTop;
+            
+            // Calculate the scroll position to reach
+            const scrollPosition = offsetTop - window.pageYOffset;
+            
+            // Perform smooth scroll animation
+            smoothScroll(scrollPosition, 500); // Adjust the second parameter for the duration of the animation (in milliseconds)
+        });
+    });
+});
+
+// Function to perform smooth scroll animation
+function smoothScroll(scrollAmount, duration) {
+    const startingY = window.pageYOffset;
+    const diff = scrollAmount;
+    let start;
+
+    // Animation function
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        const time = timestamp - start;
+
+        // Calculate new position
+        const percentage = Math.min(time / duration, 1);
+        window.scrollTo(0, startingY + diff * percentage);
+
+        // Continue animation until duration is reached
+        if (time < duration) {
+            window.requestAnimationFrame(step);
+        }
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
     const fileUploadInput = document.getElementById("file-upload");
     const documentNameElement = document.getElementById("document-name");
     const documentSizeElement = document.getElementById("document-size");
@@ -213,3 +261,6 @@ function handleFormSubmitContact(event) {
         console.error('Error signaling Mailchimp API:', error);
     });
 }
+
+
+
