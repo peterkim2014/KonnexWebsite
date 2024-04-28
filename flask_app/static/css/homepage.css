@@ -986,9 +986,10 @@
             letter-spacing: 0.7px;
     } .join-button {
         margin: 0;
+        width: 25%;
+        margin-left: -1.75%;
         } .join-button-icon {
-            width: 32%;
-            margin-left: -1.75%;
+            width: 100%;
     } .intro-visual-container {
         width: 40%;
         height: 100%;
@@ -1021,15 +1022,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 585px;
+    height: 700px;
     width: 100%;
-    } .dependable-visual {
-        width: 46%;
+    } .dependable-container > img {
+        width: 725px;
         height: 100%;
-        } .dependable-visual > img {
-            width: 585px;
-            max-height: 100%;
-            margin: 0;
+        margin: 0;
     } .dependable-text-container {
         display: flex;
         flex-direction: column;
@@ -1053,11 +1051,11 @@
             justify-content: space-between;
             /* height: 42%; */
             height: auto;
-            width: 80%;
+            width: 65%;
             /* background-color: red; */
-            /* gap: 1.75; */
+            gap: 1.75vh;
             } .dependable-paragraph > p {
-                font-size: 1.08em;
+                font-size: 1.28em;
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 0.5px;
                 line-height: 30px;
