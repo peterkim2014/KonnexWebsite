@@ -60,7 +60,17 @@
     font-size: 0.85em;
     width: 90%;
     height: 40px;
-    
+} .route-selected {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    /* font-size: 0.8em; */
+    border-bottom: 2px solid black;
+    /* margin-top: -2%; */
+    margin-bottom: -1%;
+} img {
+    background-color: transparent;
 }
 
 
@@ -663,70 +673,97 @@
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 1px;
 
-        } .perks-visual {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 38%;
-            height: 25px;
-            } .perks-timeline-visual {
-                padding-top: 5%;
-                width: 235px;
-                height: 22px;
-                margin-left: 3%;
-            } .perks-list-visual {
-                width: 99%;
-                margin-left: 4%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                } .perks-list-visual > p {
-                    margin: 0;
-                    margin-top: 1.5%;
-        } .join-form-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 325px;
-            width: 100%;
-            } .join-form {
+            } .perks-visual {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
-                height: 70%;
-                width: 55%;
-                } .join-label {
+                width: 38%;
+                height: 25px;
+                } .perks-timeline-visual {
+                    padding-top: 5%;
+                    width: 235px;
+                    height: 22px;
+                    margin-left: 3%;
+                } .perks-list-visual {
+                    width: 99%;
+                    margin-left: 4%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 4.5vw;
+                    } .perks-list-visual-text {
+                        display: flex;
+                        width: 90%;
+                        height: 20%;
+                        gap: 0.2vw;
+                    } .perks-list-visual-text > p {
+                        margin: 0;
+                        margin-top: 1.5%;
+                        width: 90%;
+            } .perks-list-visual-text > h7 {
+                margin: 0;
+                width: 40%;
+                font-size: 1.1em;
+                margin-top: -0.2%;
+                /* padding-left: 1%; */
+                    } .perks-list-visual-text-third {
+                        display: flex;
+                        width: 90%;
+                        height: 20%;
+                        gap: 0.2vw;
+                    } .perks-list-visual-text-third > p {
+                        margin: 0;
+                        margin-top: 1.5%;
+                        width: 90%;
+            } .perks-list-visual-text-third > h7 {
+                margin: 0;
+                width: 40%;
+                font-size: 0.9em;
+                /* padding-left: 1%; */
+            } .join-form-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                height: 325px;
+                width: 100%;
+                } .join-form {
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    width: 100%;
-                    height: 30%;
-                    /* background-color: green; */
-                    } .join-label > input {
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 70%;
+                    width: 55%;
+                    } .join-label {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
                         width: 100%;
-                        height: 27px;
+                        height: 30%;
+                        /* background-color: green; */
+                        } .join-label > input {
+                            width: 100%;
+                            height: 27px;
+                            border: none;
+                            background-color: #EEEEEE;
+                            border-radius: 4px;
+                    } .join-form > button { 
+                        width: 102.5%;
+                        height: 30px;
+                        margin-left: 2.5%;
                         border: none;
-                        background-color: #EEEEEE;
+                        background-color: #003F4A;
                         border-radius: 4px;
-                } .join-form > button { 
-                    width: 102.5%;
-                    height: 30px;
-                    margin-left: 2.5%;
-                    border: none;
-                    background-color: #003F4A;
-                    border-radius: 4px;
-                    color: white;
-                    margin-top: 3.8%;
-            } .join-form-container > p {
-                width: 56%;
-                margin-left: 1%;
-                text-align: center;
-                font-size: 0.78em;
-                line-height: 15px;
-                /* margin-top: 2.5%; */
+                        color: white;
+                        margin-top: 3.8%;
+                } .join-form-container > p {
+                    width: 56%;
+                    margin-left: 1%;
+                    text-align: center;
+                    font-size: 0.78em;
+                    line-height: 15px;
+                    /* margin-top: 2.5%; */
     } .footer {
         width: 100%;
         height: 150px;
