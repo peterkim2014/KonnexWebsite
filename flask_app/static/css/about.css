@@ -524,3 +524,518 @@
                                 font-size: 0.7em;
                                 padding-top: 1%;
                                 }
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1440px) { 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 90px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border: none;
+        right: 50px;
+        padding-top: 0.6%;
+        top: 85px;
+    } .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border: none;
+        font-size: 0.9em;
+        text-align: center;
+        justify-content: center;
+        /* width: 80%; */
+    } .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        border: none;
+    } .route-selected {
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+        border-bottom: 2px solid black;
+        margin-bottom: -1%;
+    }
+    
+    
+    #global, body, html {
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        font-family: 'FreightSansLight', sans-serif;
+        letter-spacing: 0.7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    .home-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 155px;
+        width: 90%;
+        padding-top: 1.5%;
+        /* background-color: red; */
+        /* gap: 25vw; */
+        } .home-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80%;
+            width: 30%;
+            gap: 1.6vw;
+            } .logo-lotus {
+                height: 52%;
+                width: 42px;
+            } .name-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                gap: 0.5vh;
+                margin-top: 1%;
+                } .name-container > h1 {
+                    font-size: 3em;
+                    height: fit-content;
+                    margin: 0;
+                    font-family: 'LTCushionLight';
+                    letter-spacing: 2px;
+                    font-weight: 900;
+                } .name-container > h2 {
+                    margin: 0;
+                    width: 100%;
+                    font-size: 0.7em;
+                    font-weight: 100;
+                    letter-spacing: 1.25px;
+                    font-family: 'LTCushionLight';
+        } .home-routes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 30%;
+            padding-right: 2.5%;
+            } .route {
+                text-decoration: none;
+                color: black;
+                font-size: 1.25em;
+    } .about-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 545px;
+        width: 100%;
+        margin-top: 2%;
+        } .about-Intro-Visual {
+            width: 100%;
+            height: 545px;
+    } .about-intro-banner {
+        background-image: url('../media/aboutIntroBanner.png');
+        background-size: contain; 
+        background-size: 100%;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        } .about-intro-point-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100%;
+            width: 20.5%;
+            color: white;
+            gap: 0.85vh;
+            padding-left: 6%;
+            padding-bottom: 0.8%;
+            margin: 0;
+            } .about-intro-point-container > h4 {
+                margin: 0;
+                font-size: 1.6em;
+                font-family: 'FreightSansBook', sans-serif;
+                letter-spacing: 1.5px;
+            } .about-intro-point-container > p {
+                margin: 0;
+                font-family: 'FreightSansBook', sans-serif;
+                font-size: 1.15em;
+                line-height: 20px;
+    } .about-brand-manifesto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 480px;
+        width: 80%;
+        gap: 2.5vh;
+        } .about-brand-manifesto > h3 {
+            margin: 0;
+            font-size: 2.25em;
+            font-family: 'FreightSansMedium', sans-serif;
+            letter-spacing: 1.5px;
+        } .brand-manifesto-text {
+            width: 75%;
+            height: 52%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            } .brand-manifesto-text > p {
+                margin: 0;
+                font-size: 1.15em;
+                line-height: 33px;
+                letter-spacing: 1px;
+                text-align: center;
+    } .about-story {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 530px;
+        width: 100%;
+        } .about-story-visual {
+            width: 45%;
+            height: 500px;
+            margin-left: 8%;
+        } .about-story-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 1.25%;
+            height: 100%;
+            width: 45%;
+            gap: 2vh;
+            } .about-story-text > h4 {
+                margin: 0;
+                width: 60%;
+                font-size: 1.6em;
+                font-family: 'FreightSansMedium', sans-serif;
+                letter-spacing: 1.5px;
+            } .about-story-text > p {
+                margin: 0;
+                font-size: 1.15em;
+                letter-spacing: 1px;
+                line-height: 33px;
+                width: 60%;
+    } .statement-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 198px;
+        width: 100%;
+        background-image: url('../media/statementBanner.png');
+        background-size: contain; 
+        background-size: 100%;
+        color: white;
+        gap: 1.5vh;
+        } .statement-banner > h4 {
+            margin: 0;
+            /* width: 75%; */
+            font-size: 1.4em;
+            font-family: 'FreightSansMedium', sans-serif;
+            letter-spacing: 1.75px;
+        } .statement-banner > p {
+            margin: 0;
+            font-size: 1em;
+            font-family: 'FreightSansBook', sans-serif;
+            letter-spacing: 1px;
+            width: 75%;
+            text-align: center;
+            line-height: 28px;
+            margin-bottom: 1.2%;
+    } .create-story {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 675px;
+        width: 100%;
+        } .create-story-upper {
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            height: 460px;
+            width: 100%;
+            margin-top: 3%;
+            } .create-story-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 61%;
+                gap: 2vh;
+                } .create-story-text > h4 {
+                    margin: 0;
+                    width: 70%;
+                    font-size: 1.35em;
+                    font-family: 'FreightSansMedium', sans-serif;
+                    letter-spacing: 1.5px;
+                } .create-story-text > p {
+                    margin: 0;
+                    font-size: 0.95em;
+                    /* font-family: 'FreightSansBook', sans-serif; */
+                    letter-spacing: 0.75px;
+                    width: 70%;
+                    line-height: 25px;
+            } .create-story-upper > img {
+                width: 26%;
+                justify-content: center;
+                align-items: center;
+                /* height: 400px; */
+        } .create-story-banner {
+            height: 245px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            gap: 3.5vw;
+            /* padding-top: 5%; */
+            /* margin-bottom: 2.6%; */
+        } .create-story-point-container {
+                margin-top: -2%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 25%;
+                gap: 0.85vh;
+                } .create-story-point-container > p {
+                    margin: 0;
+                    /* font-family: 'FreightSansBook', sans-serif; */
+                    font-size: 0.95em;
+                    line-height: 27px;
+                    width: 90%;
+                    } .create-story-point-container-title {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        gap: 1vh;
+                        /* padding-bottom: 3%; */
+                        } .create-story-point-container-title > img {
+                            width: 8%;
+                            height: 25px;
+                            } .create-story-point-container-title > h4 {
+                                margin: 0;
+                                font-size: 1.3em;
+                                font-family: 'FreightSansMedium', sans-serif;
+                                letter-spacing: 1.5px;
+                                width: 90%;
+                                text-align: left;
+                    } .create-story-point-container-title-first {
+                        width: 100%;
+                        height: 40px;
+                        display: flex;
+                        gap: 1vh;
+                        margin-top: 8%;
+                        /* padding-bottom: 3%; */
+                        } .create-story-point-container-title-first > img {
+                            width: 8%;
+                            height: 25px;
+                            } .create-story-point-container-title-first > h4 {
+                                margin: 0;
+                                font-size: 1.3em;
+                                font-family: 'FreightSansMedium', sans-serif;
+                                letter-spacing: 1.5px;
+                                width: 90%;
+                                text-align: left;
+            } .our-promise {
+                width: 100%;
+                height: 198px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-image: url('../media/aboutIntroBanner.png');
+                background-size: cover; 
+                gap: 1.5vh;
+                /* background-size: 100%; */
+                } .our-promise > h4 {
+                    font-size: 1.5em;
+                    color: white;
+                    margin: 0;
+                    font-family: 'FreightSansMedium', sans-serif;
+                    } .our-promise > p {
+                        font-size: 1em;
+                        color: white;
+                        width: 65%;
+                        text-align: center;
+                        margin: 0;
+                        line-height: 28px;
+            } .brand-identity {
+                width: 100%;
+                height: 605px;
+                } .brand-statement {
+                    padding-top: 6.5%;
+                    width: 100%;
+                    height: 160px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                } .brand-statement > h4 {
+                    font-size: 1.6em;
+                    color: black;
+                    margin: 0;
+                    height: 60px;
+                    font-family: 'FreightSansMedium', sans-serif;
+                    font-weight: 800;
+                } .brand-statement > p {
+                    font-size: 0.95em;
+                    color: black;
+                    margin: 0;
+                    width: 67%;
+                    height: 110px;
+                    text-align: center;
+                    line-height: 28px;
+                } .brand-statement-points {
+                    width: 100%;
+                    height: 305px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12vh;
+                    padding-top: 3%;
+                } .brand-statement-points-first {
+                    width: 240px;
+                    height: 305px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2vh;
+                    /* justify-content: center; */
+                } .brand-statement-points-first > img {
+                    width: 80px;
+                    height: 80px;
+                } .brand-statement-points-text {
+                    width: 100%;
+                    height: 130px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.5vh;
+                } .brand-statement-points-text > h4 {
+                    font-size: 1.25em;
+                    margin: 0;
+                    font-family: 'FreightSansMedium', sans-serif;
+                } .brand-statement-points-text > p {
+                    font-size: 0.93em;
+                    margin: 0;
+                    line-height: 28px;
+                } .brand-statement-points-second {
+                    width: 240px;
+                    height: 305px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2vh;
+                } .brand-statement-points-second > img {
+                    width: 80px;
+                    height: 80px;
+                } .brand-statement-points-third {
+                    width: 240px;
+                    height: 305px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2vh;
+                } .brand-statement-points-third > img {
+                    width: 80px;
+                    height: 80px;
+                } .footer {
+                    width: 100%;
+                    height: 150px;
+                    background-image: url('../media/websiteFooterBackground.png');
+                    background-size: contain;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 2.3%;
+                    } .footer-left {
+                        width: 400px;
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        padding-left: 7%;
+                        } .footer-left-top {
+                            width: 100%;
+                            height: 35px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            } .footer-left-top > img {
+                                width: 8;
+                                height: 65%;
+                                padding-top: 1%;
+                                } .footer-left-top > h5 {
+                                    width: 70%;
+                                    height: 50%;
+                                    /* justify-content: center; */
+                                    /* padding-top: 5%; */
+                                    font-size: 1.3em;
+                                    margin: 0;
+                                    padding-left: 2.5%;
+                                    /* font-weight: 800; */
+                        } .footer-left > h6 {
+                            margin: 0;
+                            padding-left: 18%;
+                            } .footer-left-socials {
+                                width: 60%;
+                                height: 50px;
+                                display: flex;
+                                justify-content: flex-start;
+                                gap: 1em;
+                                padding-left: 17.7%;
+                                padding-top: 7%;
+                                } .footer-left-socials > img {
+                                    width: 11%;
+                                    height: 53%;
+                    }.footer-right {
+                        width: 40%;
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        padding-right: 2%;
+                        /* padding-top: 0.5%; */
+                        } .footer-routes {
+                            width: 100%;
+                            height: 40px;
+                            display: flex;
+                            gap: 1.55em;
+                            align-items: center;
+                            } .footer-single-route {
+                                text-decoration: none;
+                                color: black;
+                                font-size: 1.1em;
+                                font-weight: 700;
+                                } .footer-routes > hr {
+                                    transform: rotate(180);
+                                    height: 30%;
+                                    color: black;
+                                    /* width: 15px; */
+                                    border: 0.6px solid black;
+                                    border-radius: 2.5px;
+                                    margin: 0;
+                                 } .footer-right > p {
+                                    width: 400px;
+                                    height: 60px;
+                                    font-size: 0.7em;
+                                    padding-top: 1%;
+                                    }
+}
