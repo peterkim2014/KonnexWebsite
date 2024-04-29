@@ -536,6 +536,7 @@
         margin: 0;
         border-bottom: 2px solid black;
         margin-bottom: -1%;
+        font-size: 1.25em;
     } .error-message {
         /* font-size: 0.8em; */
         width: 70%;

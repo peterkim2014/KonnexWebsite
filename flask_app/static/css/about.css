@@ -562,6 +562,7 @@
         font-weight: 600;
         color: black;
         margin: 0;
+        font-size: 1.25em;
         border-bottom: 2px solid black;
         margin-bottom: -1%;
     }
