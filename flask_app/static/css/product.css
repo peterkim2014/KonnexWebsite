@@ -941,7 +941,7 @@
                 opacity: .5;
                 width: 5%;
             }.product-features-tagline {
-                width: 60%;
+                width: 50%;
                 height: 50px;
                 display: flex;
                 justify-content: flex-end;
@@ -975,36 +975,37 @@
                         height: 200px;
                         display: flex;
                         flex-direction: column;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: center;
-                        gap: 0.2em;
+                        gap: 0.2vh;
                         } .product-features-points-text > h5 {
                             color: white;
                             margin: 0;
-                            font-size: 1.1em;
+                            font-size: 1.35em;
                             width: 100%;
                             } .product-features-points-text > p {
                                 color: white;
                                 margin: 0;
-                                font-size: 0.88em;
-                                width: 100%;
-                                line-height: 20px;
+                                font-size: 1.1em;
+                                width: 76%;
+                                line-height: 24px;
                 } .product-features-descriptions > img {
-                    width: 470px;
-                    height: 420px;
+                    width: 560px;
+                    height: 500px;
                     padding-right: 3%;
                 } .product-features-descriptions > p {
                     width: 30%;
                     height: 200px;
                     color: white;
-                    font-size: 0.88em;
+                    font-size: 1.2em;
                     justify-content: center;
                     padding-right: 7%;
                     /* padding-top: 1%; */
-                    line-height: 30px;
+                    line-height: 42px;
         } .product-benefits {
             width: 100%;
-            height: 660px;
+            height: 850px;
+            margin-top: 7.5%;
             } .product-benefits-header {
                 display: flex;
                 width: 100%;
@@ -1013,28 +1014,28 @@
                 justify-content: center;
                 flex-direction: column;
                 } .product-benefits-header > h4 {
-                    font-size: 1.6em;
+                    font-size: 2.1em;
                     width: 80%;
                     justify-content: flex-start;
                     align-items: center;
                     margin: 0;
                     font-family: 'FreightSansBook', sans-serif;
                 } .product-benefits-header > p {
-                    font-size: 0.9em;
+                    font-size: 1.1em;
                     width: 80%;
                     align-items: center;
                     justify-content: center;
                     margin: 0;
                     padding-top: 1.4%;
-                    line-height: 25px;
+                    line-height: 30px;
                 } .product-benefits-bottom {
                     width: 100%;
-                    height: 470px;
+                    height: 540px;
                     display: flex;
                     padding-top: 7%;
                     } .product-benefits-background {
-                        width: 85%;
-                        height: 85%;
+                        width: 100%;
+                        height: 100%;
                         background-image: url('../media/productBenefitsMockup.png');
                         background-size: cover;
                         /* background-size: 100%; */
@@ -1043,7 +1044,7 @@
     
             } .product-benefits-bottom-descriptions {
                 width: 65%;
-                height: 400px;
+                height: 500px;
                 padding-right: 10%;
                 display: flex;
                 flex-direction: column;
@@ -1054,15 +1055,15 @@
                     width: 100%;
                     height: 100px;
                     } .product-benefits-bottom-descriptions-text > h4 {
-                        font-size: 1.2em;
+                        font-size: 1.5em;
                         margin: 0;
                         font-family: 'FreightSansBook', sans-serif;
                         } .product-benefits-bottom-descriptions-text > p {
-                            font-size: 0.9em;
+                            font-size: 1.1em;
                             margin: 0;
                             padding-top: 1%;
-                            line-height: 25px;
-                            width: 100%;
+                            line-height: 30px;
+                            width: 92%;
                             
         } .footer {
             width: 100%;
