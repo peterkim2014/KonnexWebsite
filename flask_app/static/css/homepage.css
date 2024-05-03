@@ -141,7 +141,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    height: 400px;
+    height: 380px;
     } .intro-text-container {
         margin-left: 7.5%;
         width: 47%;
@@ -188,7 +188,7 @@
             margin-left: -12%;
 } .banner-small-container {
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-image: url('../media/banner1.png');
     background-size: contain;
     display: flex;
@@ -253,7 +253,7 @@
     gap: 2.5vw;
     } .purpose-text-container {
         width: 35%;
-        height: 50%;
+        height: 60%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -450,28 +450,21 @@
     align-items: flex-end;
     padding-top: 1.25%;
     } .referral-steps {
-        width: 94%;
+        width: 74%;
         height: 80px;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        gap: 7vw;
-        margin-right: 12.5%;
-        } .referral-step {
-                width: 26%;
-                height: 50px;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                align-items: flex-end;
-                gap: 1vh;
-            } .referral-step > h5 {
+        justify-content: center;
+        align-items: center;
+        gap: 16vw;
+        margin-right: 11.5%;
+        }  .referral-step > h5 {
                 font-size: 2em;
                 color: white;
                 opacity: .5;
                 font-weight: 800;
                 margin: 0;
-                }.referral-step > h6 {
+                }.referral-steps > h6 {
                     font-size: 1.6em;
                     color: white;
                     opacity: .5;
