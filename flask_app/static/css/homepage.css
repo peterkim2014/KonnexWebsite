@@ -98,10 +98,10 @@
         align-items: center;
         height: 80%;
         width: 30%;
-        gap: 1.6vw;
+        gap: 1.2vw;
         } .logo-lotus {
-            height: 52%;
-            width: 42px;
+            height: 45px;
+            width: 45px;
         } .name-container {
             display: flex;
             flex-direction: column;
@@ -109,10 +109,10 @@
             justify-content: center;
             width: 90%;
             height: 100%;
-            gap: 0.5vh;
+            gap: 0.2vh;
             margin-top: 1%;
             } .name-container > h1 {
-                font-size: 3em;
+                font-size: 2.2em;
                 height: fit-content;
                 margin: 0;
                 font-family: 'LTCushionLight';
@@ -121,7 +121,7 @@
             } .name-container > h2 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.7em;
+                font-size: 0.73em;
                 font-weight: 100;
                 letter-spacing: 1.25px;
                 font-family: 'LTCushionLight';
