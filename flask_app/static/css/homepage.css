@@ -171,8 +171,9 @@
             letter-spacing: 0.7px;
     } .join-button {
         margin: 0;
+        width: 32%;
         } .join-button-icon {
-            width: 32%;
+            width: 100%;
             margin-left: -1.75%;
     } .intro-visual-container {
         width: 45%;
