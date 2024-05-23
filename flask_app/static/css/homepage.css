@@ -182,10 +182,10 @@
         align-items: flex-end;
         background-image: url('../media/openPagePhoneBackground.png');
         background-size: cover;
-        background-size: 80%;
+        background-size: 70%;
         } .intro-visual-container > img {
-            width: 540px;
-            height: 380px;
+            width: 570px;
+            height: 410px;
             margin-left: -12%;
             margin-top: 10%;
 } .banner-small-container {
