@@ -82,7 +82,7 @@
         align-items: center;
         height: 80%;
         width: 30%;
-        gap: 1.6vw;
+        gap: 1.2vw;
         } .logo-lotus {
             height: 45px;
             width: 45px;
@@ -93,7 +93,7 @@
             justify-content: center;
             width: 90%;
             height: 100%;
-            gap: 0.5vh;
+            gap: 0.2vh;
             margin-top: 1%;
             } .name-container > h1 {
                 font-size: 2.2em;
@@ -123,7 +123,7 @@
     margin-top: 1%;
     height: 400px;
     width: 100%;
-    background-image: url('../media/productBackground.png');
+    background-image: url('../media/productBackground3.png');
     background-size: contain;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -276,11 +276,11 @@
         gap: 1.5vh;
         margin-left: 3.25%;
         } .overview-background-image {
-            background-image: url('../media/productDescriptionBackgroundImage.png');
+            background-image: url('../media/productDescriptionBackgroundImage6.png');
             background-size: cover;
             /* background-size: 100%; */
             width: 100%;
-            height: 83%;
+            height: 88%;
             margin: 0;
         } .overview-text > img {
             width: 100%;
@@ -328,7 +328,7 @@
         width: 564px;
 } .product-features {
     width: 100%;
-    height: 420px;
+    height: 450px;
     background-image: url('../media/productFeaturesBackground.png');
     background-size: contain;
     background-size: 100%;
@@ -389,13 +389,14 @@
                 width: 80%;
                 margin: 0;
                 color: white;
-                font-size: 3vh;
+                font-size: 3.5vh;
                 opacity: .6;
+                font-weight: 700;
         } .product-features-descriptions {
             width: 100%;
             height: 440px;
             display: flex;
-            padding-top: 3.6%;
+            padding-top: 5%;
             gap: 2em;
             } .product-features-points {
                 width: 30%;
@@ -427,11 +428,12 @@
                             width: 100%;
                             line-height: 20px;
             } .product-features-descriptions > img {
-                width: 470px;
-                height: 420px;
+                width: 540px;
+                height: 500px;
                 padding-right: 3%;
+                margin-top: -3%;
             } .product-features-descriptions > p {
-                width: 30%;
+                width: 35%;
                 height: 200px;
                 color: white;
                 font-size: 0.88em;
@@ -472,7 +474,7 @@
                 } .product-benefits-background {
                     width: 85%;
                     height: 85%;
-                    background-image: url('../media/productBenefitsMockup.png');
+                    background-image: url('../media/productBenefitsMockup1.png');
                     background-size: cover;
                     /* background-size: 100%; */
                     /* background-repeat: no-repeat; */
