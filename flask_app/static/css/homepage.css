@@ -182,10 +182,10 @@
         align-items: flex-end;
         background-image: url('../media/openPagePhoneBackground.png');
         background-size: cover;
-        background-size: 80%;
+        background-size: 70%;
         } .intro-visual-container > img {
-            width: 540px;
-            height: 380px;
+            width: 570px;
+            height: 410px;
             margin-left: -12%;
             margin-top: 10%;
 } .banner-small-container {
@@ -938,10 +938,11 @@
         align-items: center;
         height: 80%;
         width: 30%;
-        gap: 1.6vw;
+        gap: 1.3vw;
+        margin-left: -2.2%;
         } .logo-lotus {
             height: 52%;
-            width: 42px;
+            width: 62px;
         } .name-container {
             display: flex;
             flex-direction: column;
@@ -961,7 +962,7 @@
             } .name-container > h2 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.7em;
+                font-size: 0.9em;
                 font-weight: 100;
                 letter-spacing: 1.25px;
                 font-family: 'LTCushionLight';
@@ -986,7 +987,7 @@
     } .intro-text-container {
         margin-left: 7.5%;
         width: 47%;
-        height: 375px;
+        height: 400px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1004,11 +1005,11 @@
             line-height: 48px;
         } .intro-text-container > h4 {
             margin: 0;
-            width: 62%;
+            width: 66%;
             text-align: left;
             font-weight: 100;
             line-height: 33px;
-            font-size: 1.35em;
+            font-size: 1.45em;
             letter-spacing: 0.7px;
     } .join-button {
         margin: 0;
@@ -1025,8 +1026,8 @@
         background-size: cover;
         background-size: 80%;
         } .intro-visual-container > img {
-            width: 650px;
-            height: 490px;
+            width: 700px;
+            height: 510px;
             margin-left: -12%;
 } .banner-small-container {
     width: 100%;
@@ -1038,7 +1039,7 @@
     align-items: center;
     gap: 8vw;
     } .banner-small-container > p {
-        font-size: 1.3em;
+        font-size: 1.5em;
         color: white;
         letter-spacing: 3.75px;
         font-family: 'FreightSansMedium', sans-serif;
