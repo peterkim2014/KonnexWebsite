@@ -657,6 +657,7 @@
                 margin: 0;
                 line-height: 21px;
                 text-align: end;
+                margin-left: -6.5%;
                 /* background-color: red; */
 } .join-the-community {
     margin-top: 20%;
@@ -981,8 +982,8 @@
         margin-top: -5%;
         /* background-color: red; */
     } .footer-left-top > img {
-        width: 15px;
-        height: 55%;
+        width: 22px;
+        height: 22px;
         padding-top: 1%;
     } .footer-left-top > h5 {
                     /* background-color: red; */
@@ -1159,20 +1160,20 @@
         padding-top: 1.5%;
         /* background-color: blue; */
     } .logo-lotus {
-        height: 38px;
-        width: 24px;
+        height: 29px;
+        width: 29px;
     } .name-container {
         display: flex;
         /* flex-direction: column; */
         align-items: flex-end;
         justify-content: center;
-        width: 90%;
-        height: 44%;
+        width: 100%;
+        height: 37%;
         gap: 1vh;
         margin-top: 1%;
         /* background-color: red; */
     } .name-container > h1 {
-        font-size: 2.45em;
+        font-size: 2.1em;
         /* background-color: red; */
         height: fit-content;
         margin: 0;
@@ -1182,13 +1183,13 @@
         letter-spacing: 2px;
         font-weight: 900;
     } .home-name > h2 {
-        padding-top: 2.6%;
+        padding-top: 3%;
         text-align: center;
         margin: 0;
         width: 100%;
-        font-size: 0.65em;
+        font-size: 0.8em;
         font-weight: 100;
-        letter-spacing: 0.7px;
+        letter-spacing: 1px;
         font-family: 'LTCushionLight';
     } .home-routes {
         display: flex;
@@ -1418,7 +1419,7 @@
         } .polkadot-nameTag {
             width: 140px;
         } .lotus-nameTag-header {
-            width: 120px;
+            width: 150px;
         } .blockchain-header > hr {
             transform: rotate(180);
             height: 30%;
@@ -1642,7 +1643,7 @@
                 margin-left: -5%;
         } .referral-details {
             padding-top: 1.5%;
-            width: 60%;
+            width: 61.5%;
             height: 70%;
             display: flex;
             /* flex-direction: column; */
@@ -1676,7 +1677,7 @@
                         margin: 0;
                         text-align: center;
             } .referral-details > p {
-                width: 85%;
+                width: 88%;
                 height: 88%;
                 font-size: 0.9em;
                 color: white;
@@ -1996,25 +1997,26 @@
     gap: 2vh;
     } .footer-left {
         width: 100%;
-        height: 100px;
+        height: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: -10%;
+        margin-top: 2.5%;
+        /* background-color: red; */
         /* padding-left: 7%; */
         /* gap: 1.25vh; */
-        /* background-color: red; */
     } .footer-left-top {
-        width: 100%;
+        width: 105%;
         height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 5%;
+        margin-top: -5%;
+        /* background-color: red; */
     } .footer-left-top > img {
-        width: 19px;
-        height: 70%;
+        width: 22px;
+        height: 22px;
         padding-top: 1%;
     } .footer-left-top > h5 {
         /* background-color: red; */
