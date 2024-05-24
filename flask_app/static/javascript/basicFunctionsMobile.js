@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const targetSection = document.getElementById(targetId);
             
             // Calculate the distance to scroll
-            const offsetTop = targetSection.offsetTop;
+            const offsetTop = targetSection.offsetTop - 75;
             
             // Calculate the scroll position to reach
             const scrollPosition = offsetTop - window.pageYOffset;
