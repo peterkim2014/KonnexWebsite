@@ -124,7 +124,7 @@
 .home-header {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 5vh;
     justify-content: center;
     align-items: center;
     height: 130px;
@@ -139,63 +139,60 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 60%;
-        width: 50%;
-        /* gap: 3vw; */
-        padding-top: 1.5%;
+        height: 10%;
+        width: 100%;
+        /* gap: 1vh; */
+        padding-top: 3%;
         /* background-color: blue; */
     } .logo-lotus {
-        height: 38px;
-        width: 24px;
+        height: 37px;
+        width: 37px;
     } .name-container {
         display: flex;
         /* flex-direction: column; */
         align-items: flex-end;
         justify-content: center;
-        width: 90%;
-        height: 44%;
-        gap: 1.3vh;
+        width: 100%;
+        /* height: 100%; */
+        gap: 1vh;
         margin-top: 1%;
-        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
-        font-size: 2.45em;
+        font-size: 2.1em;
         /* background-color: red; */
-        height: fit-content;
+        /* height: fit-content; */
         margin: 0;
         /* background-color: red; */
-        height: 100%;
+        height: 85%;
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-        width: 35%;
-        text-align: center;
-        /* background-color: red; */
     } .home-name > h2 {
-        padding-top: 2.6%;
+        padding-top: 1%;
         text-align: center;
         margin: 0;
         width: 100%;
-        font-size: 0.65em;
+        /* height: 20%; */
+        font-size: 0.8em;
         font-weight: 100;
-        letter-spacing: 0.7px;
+        letter-spacing: 1px;
         font-family: 'LTCushionLight';
+        /* background-color: green; */
     } .home-routes {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 20%;
-        width: 62%;
-        margin-top: 2%;
+        width: 80%;
         /* padding-right: 1.5%; */
+        gap: 5vh;
+        margin-top: 2%;
         /* background-color: red; */
-        gap: 1vh;
-    } .route {
+        } .route {
             text-decoration: none;
             color: black;
             margin: 0;
             font-size: 0.85em;
-            /* width: 20%; */
             /* margin-top: -2%; */
     }  .customer-service-png {
         padding-top: 7%;
@@ -207,7 +204,7 @@
         width: 80%;
         } .contact-us {
             width: 100%;
-            height: 1300px;
+            height: 1425px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -227,7 +224,7 @@
             /* background-color: red; */
         }  .contact-us-form {
             width: 80%;
-            height: 400px;
+            height: 520px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -244,11 +241,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80%;
+            height: 95%;
             width: 100%;
             gap: 1.5vh;
             /* margin-top: 3%; */
-            /* background-color: red; */
+            /* background-color: green; */
         } .contact-form > label {
             display: flex;
             flex-direction: column;
@@ -273,11 +270,12 @@
                     margin-left: 2%;
                 } .contact-form> button { 
                     width: 72%;
-                    height: 13%;
+                    height: 125px;
                     /* margin-left: 2.5%; */
                     border: none;
                     background-color: #003F4A;
                     border-radius: 4px;
+                    font-size: 1em;
                     color: white;
                     margin-top: 3.8%;
                     /* display: flex; */
@@ -384,8 +382,8 @@
                 margin-top: -5%;
                 /* background-color: red; */
             } .footer-left-top > img {
-                width: 20px;
-                height: 68%;
+                width: 30px;
+                height: 30px;
                 /* padding-top: 1%; */
             } .footer-left-top > h5 {
                 /* background-color: red; */
@@ -557,7 +555,7 @@
 .home-header {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 5vh;
     justify-content: center;
     align-items: center;
     height: 130px;
@@ -572,180 +570,61 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 60%;
-        width: 50%;
-        /* gap: 3vw; */
-        padding-top: 1.5%;
+        height: 10%;
+        width: 100%;
+        /* gap: 1vh; */
+        padding-top: 3%;
         /* background-color: blue; */
     } .logo-lotus {
-        height: 38px;
-        width: 24px;
+        height: 37px;
+        width: 37px;
     } .name-container {
         display: flex;
         /* flex-direction: column; */
         align-items: flex-end;
         justify-content: center;
-        width: 90%;
-        height: 44%;
-        gap: 1.3vh;
+        width: 100%;
+        /* height: 100%; */
+        gap: 1vh;
         margin-top: 1%;
-        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
-        font-size: 2.45em;
+        font-size: 2.1em;
         /* background-color: red; */
-        height: fit-content;
+        /* height: fit-content; */
         margin: 0;
         /* background-color: red; */
-        height: 100%;
+        height: 85%;
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-        width: 35%;
-        text-align: center;
-        /* background-color: red; */
     } .home-name > h2 {
-        padding-top: 2.6%;
+        padding-top: 1%;
         text-align: center;
         margin: 0;
         width: 100%;
-        font-size: 0.65em;
+        /* height: 20%; */
+        font-size: 0.8em;
         font-weight: 100;
-        letter-spacing: 0.7px;
+        letter-spacing: 1px;
         font-family: 'LTCushionLight';
+        /* background-color: green; */
     } .home-routes {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 20%;
-        width: 62%;
-        margin-top: 2%;
+        width: 80%;
         /* padding-right: 1.5%; */
+        gap: 5vh;
+        margin-top: 2%;
         /* background-color: red; */
-        gap: 1vh;
-    } .route {
-        text-decoration: none;
-        color: black;
-        margin: 0;
-        font-size: 0.85em;
-        /* width: 20%; */
-        /* margin-top: -2%; */
-}  .customer-service-png {
-    padding-top: 7%;
-    width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-} .customer-service-image {
-    width: 80%;
-    } .contact-us {
-        width: 100%;
-        height: 2500px;
-        display: flex;
-        flex-direction: column;
-    } .contact-us > h4 {
-        font-size: 1.6em;
-        text-align: center;
-        font-family: 'FreightSansMedium', sans-serif;
-        letter-spacing: 1.5px;
-    } .contact-us-bottom {
-        height: 1500px;
-        width: 100%;
-        display: flex;
-        padding-top: 2%;
-        flex-direction: column;
-        align-items: center;
-        
-    }  .contact-us-form {
-        width: 60%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* padding-left: 5%; */
-    } .contact-us-form > h4 {
-        font-size: 1.2em;
-        margin: 0;
-        width: 98%;
-        text-align: center;
-    } .contact-form {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        height: 80%;
-        width: 100%;
-        gap: 2vh;
-        margin-top: 5%;
-
-    } .contact-form > label {
-        display: flex;
-        flex-direction: column;
-        padding-top: 1.5%;
-    
-        /* gap: 5vw; */
-        } .home-name {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 60%;
-            width: 50%;
-            /* gap: 3vw; */
-            padding-top: 1.5%;
-            /* background-color: blue; */
-        } .logo-lotus {
-            height: 38px;
-            width: 24px;
-        } .name-container {
-            display: flex;
-            /* flex-direction: column; */
-            align-items: flex-end;
-            justify-content: center;
-            width: 90%;
-            height: 50%;
-            gap: 1.3vh;
-            margin-top: 1%;
-            margin-left: 1.7%;
-            /* background-color: red; */
-        } .name-container > h1 {
-            font-size: 2.45em;
-            /* background-color: red; */
-            height: fit-content;
-            margin: 0;
-            /* background-color: red; */
-            height: 100%;
-            font-family: 'LTCushionLight';
-            letter-spacing: 2px;
-            font-weight: 900;
-            width: 28%;
-            text-align: center;
-            /* background-color: red; */
-            /* background-color: red; */
-        } .home-name > h2 {
-            padding-top: 1.5%;
-            text-align: center;
-            margin: 0;
-            width: 100%;
-            font-size: 0.65em;
-            font-weight: 100;
-            letter-spacing: 0.7px;
-            font-family: 'LTCushionLight';
-        } .home-routes {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 20%;
-            width: 42%;
-            margin-top: 2%;
-            /* padding-right: 1.5%; */
-            gap: 1vh;
         } .route {
-                text-decoration: none;
-                color: black;
-                margin: 0;
-                font-size: 0.85em;
-                /* width: 20%; */
-                /* margin-top: -2%; */
+            text-decoration: none;
+            color: black;
+            margin: 0;
+            font-size: 0.85em;
+            /* margin-top: -2%; */
         }  .customer-service-png {
             padding-top: 7%;
             width: 100%;
@@ -757,7 +636,7 @@
             height: 240px;
             } .contact-us {
                 width: 100%;
-                height: 1200px;
+                height: 1500px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -768,7 +647,7 @@
                 font-family: 'FreightSansMedium', sans-serif;
                 letter-spacing: 1.5px;
             } .contact-us-bottom {
-            height: 700px;
+            height: 900px;
             width: 100%;
             display: flex;
             padding-top: 2%;
@@ -777,12 +656,13 @@
             /* background-color: blue; */
         }  .contact-us-form {
             width: 80%;
-            height: 500px;
+            height: 650px;
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            /* gap: 5vh; */
             /* padding-left: 5%; */
+            /* background-color: red; */
         } .contact-us-form > h4 {
             font-size: 1.2em;
             margin: 0;
@@ -793,9 +673,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 65%;
+            height: 75%;
             width: 700px;
-            gap: 4vh;
+            gap: 2vh;
             margin-top: 1%;
             /* background-color: red; */
         } .contact-form > label {
@@ -805,7 +685,7 @@
             align-items: center;
             /* padding-left: 20%; */
             width: 100%;
-            height: 40%;
+            height: 45%;
             /* background-color: red; */
             /* margin-left: 5.5%; */
         } .contact-label > input {
@@ -820,9 +700,9 @@
                     width: 62%;
                     margin: 0;
                     margin-left: 2%;
-                } .contact-form> button { 
-                    width: 74%;
-                    height: 50px;
+                } #contactFormEmail > button { 
+                    width: 62%;
+                    height: 100px;
                     /* margin-left: 2.5%; */
                     border: none;
                     background-color: #003F4A;
@@ -980,8 +860,8 @@
                     margin-top: -2%;
                     /* background-color: red; */
                 } .footer-left-top > img {
-                    width: 20px;
-                    height: 68%;
+                    width: 30px;
+                    height: 30px;
                     /* padding-top: 1%; */
                 } .footer-left-top > h5 {
                     /* background-color: red; */
