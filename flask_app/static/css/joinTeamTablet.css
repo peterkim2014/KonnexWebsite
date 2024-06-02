@@ -116,7 +116,7 @@
 .home-header {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 5vh;
     justify-content: center;
     align-items: center;
     height: 130px;
@@ -131,63 +131,60 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 60%;
-        width: 50%;
-        /* gap: 3vw; */
-        padding-top: 1.5%;
+        height: 10%;
+        width: 100%;
+        /* gap: 1vh; */
+        padding-top: 3%;
         /* background-color: blue; */
     } .logo-lotus {
-        height: 38px;
-        width: 24px;
+        height: 37px;
+        width: 37px;
     } .name-container {
         display: flex;
         /* flex-direction: column; */
         align-items: flex-end;
         justify-content: center;
-        width: 90%;
-        height: 44%;
-        gap: 1.3vh;
+        width: 100%;
+        /* height: 100%; */
+        gap: 1vh;
         margin-top: 1%;
-        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
-        font-size: 2.45em;
+        font-size: 2.1em;
         /* background-color: red; */
-        height: fit-content;
+        /* height: fit-content; */
         margin: 0;
         /* background-color: red; */
-        height: 100%;
+        height: 85%;
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-        width: 35%;
-        text-align: center;
-        /* background-color: red; */
     } .home-name > h2 {
-        padding-top: 2.6%;
+        padding-top: 1%;
         text-align: center;
         margin: 0;
         width: 100%;
-        font-size: 0.65em;
+        /* height: 20%; */
+        font-size: 0.8em;
         font-weight: 100;
-        letter-spacing: 0.7px;
+        letter-spacing: 1px;
         font-family: 'LTCushionLight';
+        /* background-color: green; */
     } .home-routes {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 20%;
-        width: 62%;
-        margin-top: 2%;
+        width: 80%;
         /* padding-right: 1.5%; */
+        gap: 5vh;
+        margin-top: 2%;
         /* background-color: red; */
-        gap: 1vh;
-    } .route {
+        } .route {
             text-decoration: none;
             color: black;
             margin: 0;
             font-size: 0.85em;
-            /* width: 20%; */
             /* margin-top: -2%; */
     }  .join-intro-header {
             height: 300px;
@@ -544,6 +541,7 @@
                 /* padding-bottom: 20%; */
                 height: 27px;
                 width: 500px;
+                font-size: 1em;
 } .submit-button-tag > h7 {
     color: white;
     font-size: 1em;
@@ -579,8 +577,8 @@
         margin-top: -5%;
         /* background-color: red; */
     } .footer-left-top > img {
-        width: 20px;
-        height: 68%;
+        width: 30px;
+        height: 30px;
         /* padding-top: 1%; */
     } .footer-left-top > h5 {
         /* background-color: red; */
@@ -747,14 +745,14 @@
 .home-header {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    gap: 5vh;
     justify-content: center;
     align-items: center;
     height: 130px;
     width: 100%;
     /* background-color: red; */
     flex-direction: column;
-    padding-top: 1.5%;
+    padding-top: 3%;
 
     /* gap: 5vw; */
     } .home-name {
@@ -762,63 +760,60 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 60%;
-        width: 50%;
-        /* gap: 3vw; */
-        padding-top: 1.5%;
+        height: 10%;
+        width: 100%;
+        /* gap: 1vh; */
+        padding-top: 3%;
         /* background-color: blue; */
     } .logo-lotus {
-        height: 38px;
-        width: 24px;
+        height: 37px;
+        width: 37px;
     } .name-container {
         display: flex;
         /* flex-direction: column; */
         align-items: flex-end;
         justify-content: center;
-        width: 90%;
-        height: 50%;
-        gap: 1.3vh;
+        width: 100%;
+        /* height: 100%; */
+        gap: 1vh;
         margin-top: 1%;
-        margin-left: 1.7%;
         /* background-color: red; */
     } .name-container > h1 {
-        font-size: 2.45em;
+        font-size: 2.1em;
         /* background-color: red; */
-        height: fit-content;
+        /* height: fit-content; */
         margin: 0;
         /* background-color: red; */
-        height: 100%;
+        height: 85%;
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-        width: 28%;
-        text-align: center;
-        /* background-color: red; */
-        /* background-color: red; */
     } .home-name > h2 {
-        padding-top: 1.5%;
+        padding-top: 1%;
         text-align: center;
         margin: 0;
         width: 100%;
-        font-size: 0.65em;
+        /* height: 20%; */
+        font-size: 0.8em;
         font-weight: 100;
-        letter-spacing: 0.7px;
+        letter-spacing: 1px;
         font-family: 'LTCushionLight';
+        /* background-color: green; */
     } .home-routes {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         height: 20%;
-        width: 42%;
-        margin-top: 2%;
+        width: 80%;
         /* padding-right: 1.5%; */
-        gap: 1vh;
-    } .route {
+        gap: 5vh;
+        margin-top: 2%;
+        /* background-color: red; */
+        } .route {
             text-decoration: none;
             color: black;
             margin: 0;
             font-size: 0.85em;
-            /* width: 20%; */
             /* margin-top: -2%; */
     }  .join-intro-header {
             height: 300px;
@@ -1149,7 +1144,7 @@
                         text-align: left;
                         width: 100%;
                         margin-top: -3%;
-    } .check-consent {
+                } .check-consent {
                     /* background-color: red; */
                     display: flex;
                     justify-content: center;
@@ -1214,8 +1209,8 @@
         margin-top: -2%;
         /* background-color: red; */
     } .footer-left-top > img {
-        width: 20px;
-        height: 68%;
+        width: 30px;
+        height: 30px;
         /* padding-top: 1%; */
     } .footer-left-top > h5 {
         /* background-color: red; */
