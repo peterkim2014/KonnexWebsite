@@ -6,6 +6,7 @@ import re
 import requests
 import mailchimp_marketing as MailchimpMarketing
 from mailchimp_marketing.api_client import ApiClientError
+from flask_app.config.mailMarketing import API_KEY
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
@@ -70,6 +71,151 @@ def contact_form():
         'email': request.form['email'],
         'body': request.form['body'],
     }
+    headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "content-type": "application/json",
+        "Authorization": API_KEY
+    }
+    update_headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "Authorization": API_KEY
+    }
+
+
+    
+    createProfileURL = 'https://a.klaviyo.com/api/profiles/'
+    addProfileToWaitlist = 'https://a.klaviyo.com/api/lists/X3vCzT/relationships/profiles/'
+    addProfileToContact = 'https://a.klaviyo.com/api/lists/VtXY46/relationships/profiles/'
+
+    name = data["name"]
+    new_format = name.split(" ")
+    first_name = new_format[0]
+    last_name = new_format[1]
+
+    email = data["email"]
+    new_email_format = email.split("@")
+    email_name = new_email_format[0]
+    email_domain = new_email_format[1]
+    print(email, new_email_format)
+
+    findProfile_url = f'https://a.klaviyo.com/api/profiles/?fields[profile]=email&page[size]=20'
+    # print(findProfile_url)
+
+    response = requests.get(findProfile_url, headers=update_headers)
+    # print(response.text)
+    existingAccdata = []
+    existingAccdata.append(response.json())
+    print("This is data: ", existingAccdata[0]["data"])
+    accountsFormattedData = existingAccdata[0]["data"]
+
+        # Assuming 'data' is defined and contains the email you want to match
+    print("Email to match: ", data["email"])
+
+    email_found = False
+    for account in accountsFormattedData:
+        print("Checking account: ", account["attributes"]["email"])  # Debugging line
+        if account["attributes"]["email"] == data["email"]:
+            print("Exists")
+            payload = { "data": {
+            "type": "profile",
+            "id": account["id"],
+            "meta": { "patch_properties": {
+                    "append": { 
+                        "subject": data["subject"],
+                        "body": data["body"] 
+                    },
+                } 
+            }
+        }}
+            update_url = f'https://a.klaviyo.com/api/profiles/{account["id"]}/'
+            response = requests.patch(update_url, json=payload, headers=headers)
+            print("Response : ", response)
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": account["id"]
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToContact, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+            email_found = True
+            break
+
+    if not email_found:
+        profile_data = {   
+            "data": {
+                "type": "profile",
+                "attributes": {
+                    "email": data["email"],
+                    "first_name": first_name,
+                    "last_name": last_name,
+                    "properties": {
+                        "subject": data["subject"],
+                        "body": data["body"] 
+                    }
+                }
+            }
+        }
+
+        createProfileResponse = requests.post(createProfileURL, json=profile_data, headers=headers)
+        print("Create profile response: ", createProfileResponse.json())
+        
+        user_data_temp = createProfileResponse.json()
+        print("User temp data: ", user_data_temp)
+
+        if "errors" in user_data_temp:
+            print("Duplicate profile found")
+            duplicate_profile_id = user_data_temp["errors"][0]["meta"]["duplicate_profile_id"]
+            print("Duplicate profile ID: ", duplicate_profile_id)
+            
+            payload = { "data": {
+            "type": "profile",
+            "id": account["id"],
+            "meta": { "patch_properties": {
+                    "append": { 
+                        "subject": data["subject"],
+                        "body": data["body"] 
+                    },
+                } 
+            }}}
+            update_url = f'https://a.klaviyo.com/api/profiles/{duplicate_profile_id}/'
+            response = requests.patch(update_url, json=payload, headers=headers)
+            print("Response : ", response)
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": duplicate_profile_id
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToContact, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        else:
+            user_id = user_data_temp["data"]["id"]
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": user_id
+                    }
+                ] 
+            }
+            addProfileToTeamResponse = requests.post(addProfileToContact, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        user_data_temp.clear()
+
+
+
     
 
     errors = Contact.validate_inputs(data)
@@ -78,7 +224,7 @@ def contact_form():
         session['error_message'] = errors
         return redirect(url_for("contact_form_page", _anchor="contact_form"))
     else:
-        Contact.create(data)
+        # Contact.create(data)
         return redirect("/contact_form")
 
 
@@ -100,6 +246,172 @@ def join_form():
             "other": request.form["other"],
             "checkbox-consent": request.form.get("checkbox-consent")
         }
+    
+
+    headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "content-type": "application/json",
+        "Authorization": API_KEY
+    }
+    update_headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "Authorization": API_KEY
+    }
+
+
+    
+    createProfileURL = 'https://a.klaviyo.com/api/profiles/'
+    addProfileToTeam = 'https://a.klaviyo.com/api/lists/RphBSD/relationships/profiles/'
+
+
+    phone_number = data["phone_number"]
+    phone_number_format = phone_number.replace(" ","")
+
+
+    findProfile_url = f'https://a.klaviyo.com/api/profiles/?fields[profile]=email&page[size]=20'
+    # print(findProfile_url)
+
+    response = requests.get(findProfile_url, headers=update_headers)
+    # print(response.text)
+    existingAccdata = []
+    existingAccdata.append(response.json())
+    print("This is data: ", existingAccdata[0]["data"])
+    accountsFormattedData = existingAccdata[0]["data"]
+
+    # Assuming 'data' is defined and contains the email you want to match
+    print("Email to match: ", data["email"])
+
+    email_found = False
+    for account in accountsFormattedData:
+        print("Checking account: ", account["attributes"]["email"])  # Debugging line
+        if account["attributes"]["email"] == data["email"]:
+            print("Exists")
+            payload = { 
+                "data": {
+                    "type": "profile",
+                    "id": account["id"],
+                    "phone_number": "+1" + phone_number_format,
+                    "title": data["position"],
+                    "meta": { 
+                        "patch_properties": {
+                            "append": { 
+                                "years_of_experience": data["years_of_experience"],
+                                "reason_for_apply": data["reason_for_apply"],
+                                "website": data["website"],
+                                "github": data["github"],
+                                "behance": data["behance"],
+                                "other": data["other"]
+                            }
+                        } 
+                    }
+                }
+            }
+            update_url = f'https://a.klaviyo.com/api/profiles/{account["id"]}/'
+            response = requests.patch(update_url, json=payload, headers=headers)
+            print("Response : ", response)
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": account["id"]
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToTeam, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+            email_found = True
+            break
+
+    if not email_found:
+        profile_data = {   
+            "data": {
+                "type": "profile",
+                "attributes": {
+                    "email": data["email"],
+                    "first_name": data["first_name"],
+                    "last_name": data["last_name"],
+                    "phone_number": "+1" + phone_number_format,
+                    "title": data["position"],
+                    "properties": {
+                        "years_of_experience": data["years_of_experience"],
+                        "reason_for_apply": data["reason_for_apply"],
+                        "website": data["website"],
+                        "github": data["github"],
+                        "behance": data["behance"],
+                        "other": data["other"]
+                    }
+                }
+            }
+        }
+
+        createProfileResponse = requests.post(createProfileURL, json=profile_data, headers=headers)
+        print("Create profile response: ", createProfileResponse.json())
+        
+        user_data_temp = createProfileResponse.json()
+        print("User temp data: ", user_data_temp)
+
+        if "errors" in user_data_temp:
+            print("Duplicate profile found")
+            duplicate_profile_id = user_data_temp["errors"][0]["meta"]["duplicate_profile_id"]
+            print("Duplicate profile ID: ", duplicate_profile_id)
+            
+            payload = { 
+                "data": {
+                    "type": "profile",
+                    "id": duplicate_profile_id,
+                    "phone_number": "+1" + phone_number_format,
+                    "title": data["position"],
+                    "meta": { 
+                        "patch_properties": {
+                            "append": { 
+                                "years_of_experience": data["years_of_experience"],
+                                "reason_for_apply": data["reason_for_apply"],
+                                "website": data["website"],
+                                "github": data["github"],
+                                "behance": data["behance"],
+                                "other": data["other"]
+                            }
+                        } 
+                    }
+                }
+            }
+            update_url = f'https://a.klaviyo.com/api/profiles/{duplicate_profile_id}/'
+            response = requests.patch(update_url, json=payload, headers=headers)
+            print("Response : ", response)
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": duplicate_profile_id
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToTeam, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        else:
+            user_id = user_data_temp["data"]["id"]
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": user_id
+                    }
+                ] 
+            }
+            addProfileToTeamResponse = requests.post(addProfileToTeam, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        user_data_temp.clear()
+
+
+
+
 
 
     
@@ -109,79 +421,8 @@ def join_form():
         session['error_message'] = errors
         return redirect(url_for("join_team_page", _anchor="apply_form"))
     else:
-        Team.create(data)
+        # Team.create(data)
         return redirect("/join_the_team")
 
 
 
-@app.route('/contactUsEmail', methods=['POST'])
-def mailchimp_contactUs():
-    try:
-        # Extract email address from the request body
-        email_address = "peterkim2014@gmail.com"
-
-        # Construct the URL for triggering the customer journey
-        url = 'https://us22.api.mailchimp.com/3.0/customer-journeys/journeys/395/steps/1275/actions/trigger'
-
-        # Set the Mailchimp API key
-        api_key = 'Bearer 31156e977e144c2224ed14d96fe11889-us22'
-
-        # Set the headers
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': api_key
-        }
-
-        # Construct the request body
-        body = {
-            'email_address': email_address
-        }
-
-        # Make the POST request to trigger the customer journey
-        response = requests.post(url, headers=headers, json=body)
-
-        # Check the response status code
-        if response.status_code == 204:
-            return jsonify({"message": "Customer journey triggered successfully"}), 200
-        else:
-            return jsonify({"error": "Failed to trigger customer journey"}), response.status_code
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-
-
-@app.route('/joinTeamEmail', methods=['POST'])
-def mailchimp_joinTeam():
-    try:
-        # Extract email address from the request body
-        email_address = "peterkim2014@gmail.com"
-
-        # Construct the URL for triggering the customer journey
-        url = 'https://us22.api.mailchimp.com/3.0/customer-journeys/journeys/396/steps/1277/actions/trigger'
-
-        # Set the Mailchimp API key
-        api_key = 'Bearer 31156e977e144c2224ed14d96fe11889-us22'
-
-        # Set the headers
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': api_key
-        }
-
-        # Construct the request body
-        body = {
-            'email_address': email_address
-        }
-
-        # Make the POST request to trigger the customer journey
-        response = requests.post(url, headers=headers, json=body)
-
-        # Check the response status code
-        if response.status_code == 204:
-            return jsonify({"message": "Customer journey triggered successfully"}), 200
-        else:
-            return jsonify({"error": "Failed to trigger customer journey"}), response.status_code
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500

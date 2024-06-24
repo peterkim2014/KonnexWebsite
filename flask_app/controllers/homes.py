@@ -5,8 +5,7 @@ import os
 from flask_app.models.waitlist import Waitlist
 from flask_app.models.email import Email
 import requests
-import mailchimp_marketing as MailchimpMarketing
-from mailchimp_marketing.api_client import ApiClientError
+from flask_app.config.mailMarketing import API_KEY
 
 
 STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'static'))
@@ -59,7 +58,107 @@ def waitlist_form():
         "email": request.form["email"],
         'confirmed': 0
     }
-    # email_instance = Email()
+    headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "content-type": "application/json",
+        "Authorization": API_KEY
+    }
+    update_headers = {
+        "accept": "application/json",
+        "revision": "2024-06-15",
+        "Authorization": API_KEY
+    }
+    createProfileURL = 'https://a.klaviyo.com/api/profiles/'
+    addProfileToWaitlist = 'https://a.klaviyo.com/api/lists/X3vCzT/relationships/profiles/'
+
+    findProfile_url = f'https://a.klaviyo.com/api/profiles/?fields[profile]=email&page[size]=20'
+    # print(findProfile_url)
+
+    response = requests.get(findProfile_url, headers=update_headers)
+    # print(response.text)
+    existingAccdata = []
+    existingAccdata.append(response.json())
+    print("This is data: ", existingAccdata[0]["data"])
+    accountsFormattedData = existingAccdata[0]["data"]
+
+        # Assuming 'data' is defined and contains the email you want to match
+    print("Email to match: ", data["email"])
+
+    email_found = False
+    for account in accountsFormattedData:
+        print("Checking account: ", account["attributes"]["email"])  # Debugging line
+        if account["attributes"]["email"] == data["email"]:
+            print("Exists")
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": account["id"]
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToWaitlist, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+            email_found = True
+            break
+
+    if not email_found:
+        profile_data = {   
+            "data": {
+                "type": "profile",
+                "attributes": {
+                    "email": data["email"],
+                    "first_name": data["first_name"],
+                    "last_name": data["last_name"]
+                }    
+            } 
+        }
+
+        createProfileResponse = requests.post(createProfileURL, json=profile_data, headers=headers)
+        print("Create profile response: ", createProfileResponse.json())
+        
+        user_data_temp = createProfileResponse.json()
+        print("User temp data: ", user_data_temp)
+
+        if "errors" in user_data_temp:
+            print("Duplicate profile found")
+            duplicate_profile_id = user_data_temp["errors"][0]["meta"]["duplicate_profile_id"]
+            print("Duplicate profile ID: ", duplicate_profile_id)
+            
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": duplicate_profile_id
+                    }
+                ] 
+            }
+            print("Data input: ", addProfileToTeam_data)
+            addProfileToTeamResponse = requests.post(addProfileToWaitlist, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        else:
+            user_id = user_data_temp["data"]["id"]
+
+            addProfileToTeam_data = { 
+                "data": [
+                    {
+                        "type": "profile",
+                        "id": user_id
+                    }
+                ] 
+            }
+            addProfileToTeamResponse = requests.post(addProfileToWaitlist, json=addProfileToTeam_data, headers=headers)
+            print("Add profile to Team: ", addProfileToTeamResponse)
+        user_data_temp.clear()
+
+
+
+
+
+
 
     errors = Waitlist.validate_inputs(data)
     if errors:
@@ -67,7 +166,14 @@ def waitlist_form():
         session['error_message'] = errors
         return redirect(url_for("landing_page", _anchor="join_waitlist"))
     else:
-        Waitlist.create(data)
+        # MAKE SURE TO TURN THIS ON 
+        # Waitlist.create(data)
+
+
+
+
+
+
         # email_instance.send_email(data['email'])
         # Waitlist.email(data)
         session['error_message'] = 'Confirmation email has been sent!'
@@ -79,37 +185,3 @@ def serve_static(filename):
     return send_from_directory(STATIC_DIR, filename)
 
 
-@app.route('/mailchimp', methods=['POST'])
-def mailchimp_proxy():
-    try:
-        # Extract email address from the request body
-        email_address = "peterkim2014@gmail.com"
-
-        # Construct the URL for triggering the customer journey
-        url = 'https://us22.api.mailchimp.com/3.0/customer-journeys/journeys/394/steps/1273/actions/trigger'
-
-        # Set the Mailchimp API key
-        api_key = 'Bearer 31156e977e144c2224ed14d96fe11889-us22'
-
-        # Set the headers
-        headers = {
-            'Content-Type': 'application/json',
-            'Authorization': api_key
-        }
-
-        # Construct the request body
-        body = {
-            'email_address': email_address
-        }
-
-        # Make the POST request to trigger the customer journey
-        response = requests.post(url, headers=headers, json=body)
-
-        # Check the response status code
-        if response.status_code == 204:
-            return jsonify({"message": "Customer journey triggered successfully"}), 200
-        else:
-            return jsonify({"error": "Failed to trigger customer journey"}), response.status_code
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
