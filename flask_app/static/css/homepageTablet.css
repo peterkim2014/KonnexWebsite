@@ -185,8 +185,8 @@
         /* background-color: red; */
     } .intro-visual-container > img {
             /* margin: 0; */
-            width: 400px;
-            height: 300px;
+            width: 417px;
+            height: 340px;
             /* display: flex; */
 
             /* margin-left: 13%; */
@@ -353,8 +353,8 @@
             text-align: center;
             
     } .purpose-text-container > img {
-        width: 400px;
-        height: 350px;
+        width: 440px;
+        height: 380px;
         margin-top: 2%;
 } .blockchain-container {
     display: flex;
@@ -574,7 +574,7 @@
         }  .referral-details > img {
                 /* margin-bottom: -27%; */
                 margin-top: 30%;
-                width: 300px;
+                width: 320px;
                 height: 375px;
                 margin-left: -5%;
         } .referral-details {
@@ -598,7 +598,7 @@
                 /* gap: 0.5vh; */
                 /* background-color: red; */
                 } .referral-title > h5 {
-                    font-size: 1.4em;
+                    font-size: 1.6em;
                     color: white;
                     /* font-weight: 800; */
                     width: 90%;
@@ -1188,15 +1188,16 @@
         background-image: url('../media/openPagePhoneBackground.png');
         background-size: cover;
         background-size: 100%;
-        margin-top: 4%;
+        margin-top: 8.5%;
         justify-content: center;
         /* margin: 0; */
     } .intro-visual-container > img {
             /* margin: 0; */
-            width: 320px;
-            height: 240px;
+            width: 360px;
+            height: 290px;
+            padding-top: 3%;
             /* margin-left: 13%; */
-            margin-top: -8%;
+            /* margin-top: -8%; */
             /* align-items: center; */
         } .join-button {
             margin: 0;
@@ -1681,7 +1682,7 @@
     /* gap: 1vh; */
     } .join-the-community-perks {
         width: 95%;
-        height: 65%;
+        height: 55%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1689,7 +1690,7 @@
         justify-content: flex-start;
         /* margin-left: 10%; */
         /* background-color: green; */
-        margin-top: 4%;
+        margin-top: 2%;
         gap: 3vh;
         } .join-the-community-perks-headline {
             width: 90%;

@@ -401,7 +401,7 @@
         margin-top: 2%;
         /* background-color: red; */
         } .overview-background-image {
-            background-image: url('../media/konnexProductOverview.png');
+            background-image: url('../media/konnexProductOverview1.png');
             background-size: cover;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -604,7 +604,7 @@
                             height: 15%;
             } .product-features-descriptions > img {
                 width: 420px;
-                height: 450px;
+                height: 390px;
                 margin-bottom: -325px;
                 margin-top: 3%;
                 /* padding-right: 3%; */
@@ -1376,7 +1376,7 @@
                             height: 30%;
             } .product-features-descriptions > img {
                 width: 450px;
-                height: 500px;
+                height: 410px;
                 margin-bottom: -16%;
                 /* padding-right: 3%; */
             } .product-features-descriptions-long-text {
