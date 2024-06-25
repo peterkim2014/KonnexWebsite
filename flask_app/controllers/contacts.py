@@ -114,6 +114,7 @@ def contact_form():
     print("Email to match: ", data["email"])
 
     email_found = False
+    account_id = None
     for account in accountsFormattedData:
         print("Checking account: ", account["attributes"]["email"])  # Debugging line
         if account["attributes"]["email"] == data["email"]:
@@ -145,6 +146,7 @@ def contact_form():
             addProfileToTeamResponse = requests.post(addProfileToContact, json=addProfileToTeam_data, headers=headers)
             print("Add profile to Team: ", addProfileToTeamResponse)
             email_found = True
+            account_id = account["id"]
             break
 
     if not email_found:
@@ -224,7 +226,9 @@ def contact_form():
         session['error_message'] = errors
         return redirect(url_for("contact_form_page", _anchor="contact_form"))
     else:
-        Contact.create(data)
+        data["marketingID"] = account_id
+        if not Contact.get_by_email(data["email"]):
+            Contact.create(data)
         return redirect("/contact_form")
 
 
@@ -284,6 +288,7 @@ def join_form():
     print("Email to match: ", data["email"])
 
     email_found = False
+    account_id = None
     for account in accountsFormattedData:
         print("Checking account: ", account["attributes"]["email"])  # Debugging line
         if account["attributes"]["email"] == data["email"]:
@@ -324,6 +329,7 @@ def join_form():
             addProfileToTeamResponse = requests.post(addProfileToTeam, json=addProfileToTeam_data, headers=headers)
             print("Add profile to Team: ", addProfileToTeamResponse)
             email_found = True
+            account_id = account["id"]
             break
 
     if not email_found:
@@ -421,7 +427,9 @@ def join_form():
         session['error_message'] = errors
         return redirect(url_for("join_team_page", _anchor="apply_form"))
     else:
-        Team.create(data)
+        data["marketingID"] = account_id
+        if not Team.get_by_email(data["email"]):
+            Team.create(data)
         return redirect("/join_the_team")
 
 

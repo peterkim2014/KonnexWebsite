@@ -86,6 +86,7 @@ def waitlist_form():
     print("Email to match: ", data["email"])
 
     email_found = False
+    account_id = None
     for account in accountsFormattedData:
         print("Checking account: ", account["attributes"]["email"])  # Debugging line
         if account["attributes"]["email"] == data["email"]:
@@ -102,6 +103,7 @@ def waitlist_form():
             addProfileToTeamResponse = requests.post(addProfileToWaitlist, json=addProfileToTeam_data, headers=headers)
             print("Add profile to Team: ", addProfileToTeamResponse)
             email_found = True
+            account_id = account["id"]
             break
 
     if not email_found:
@@ -167,7 +169,10 @@ def waitlist_form():
         return redirect(url_for("landing_page", _anchor="join_waitlist"))
     else:
         # MAKE SURE TO TURN THIS ON 
-        Waitlist.create(data)
+        print("account_id", account_id)
+        data["marketingID"] = account_id
+        if not Waitlist.get_by_email(data["email"]):
+            Waitlist.create(data)
         session['error_message'] = 'Confirmation email has been sent!'
         return redirect(url_for("landing_page", _anchor="join_waitlist"))
     
