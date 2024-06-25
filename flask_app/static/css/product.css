@@ -128,7 +128,7 @@
     margin-top: 1%;
     height: 400px;
     width: 100%;
-    background-image: url('../media/productBackground3.png');
+    background-image: url('../media/productBackground5.png');
     background-size: contain;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -282,7 +282,7 @@
         margin-left: 3.25%;
         margin-top: 1.5%;
         } .overview-background-image {
-            background-image: url('../media/productDescriptionBackgroundImage6.png');
+            background-image: url('../media/productDescriptionBackgroundImage9.png');
             background-size: cover;
             /* background-size: 100%; */
             width: 100%;
@@ -444,10 +444,10 @@
                             width: 100%;
                             line-height: 20px;
             } .product-features-descriptions > img {
-                width: 540px;
-                height: 500px;
+                width: 480px;
+                height: 430px;
                 padding-right: 3%;
-                margin-top: -3%;
+                margin-top: 1%;
             } .product-features-descriptions > p {
                 width: 35%;
                 height: 200px;
@@ -460,6 +460,7 @@
     } .product-benefits {
         width: 100%;
         height: 660px;
+        padding-top: 4%;
         } .product-benefits-header {
             display: flex;
             width: 100%;
