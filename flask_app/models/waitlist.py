@@ -26,7 +26,7 @@ class Waitlist:
     @classmethod
     def save(cls, data):
         query = """
-            INSERT INTO waitlists (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);
+            INSERT INTO waitlists (first_name, last_name, email, marketingID) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(marketingID)s);
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
 

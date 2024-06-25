@@ -22,7 +22,7 @@ class Contact:
     @classmethod
     def save(cls, data):
         query = """
-            INSERT INTO contacts (name, subject, email, body) VALUES (%(name)s, %(subject)s, %(email)s, %(body)s);
+            INSERT INTO contacts (name, subject, email, body, marketingID) VALUES (%(name)s, %(subject)s, %(email)s, %(body)s, %(marketingID)s);
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
 
