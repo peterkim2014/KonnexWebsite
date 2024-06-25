@@ -167,15 +167,7 @@ def waitlist_form():
         return redirect(url_for("landing_page", _anchor="join_waitlist"))
     else:
         # MAKE SURE TO TURN THIS ON 
-        # Waitlist.create(data)
-
-
-
-
-
-
-        # email_instance.send_email(data['email'])
-        # Waitlist.email(data)
+        Waitlist.create(data)
         session['error_message'] = 'Confirmation email has been sent!'
         return redirect(url_for("landing_page", _anchor="join_waitlist"))
     

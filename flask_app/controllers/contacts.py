@@ -224,7 +224,7 @@ def contact_form():
         session['error_message'] = errors
         return redirect(url_for("contact_form_page", _anchor="contact_form"))
     else:
-        # Contact.create(data)
+        Contact.create(data)
         return redirect("/contact_form")
 
 
@@ -421,7 +421,7 @@ def join_form():
         session['error_message'] = errors
         return redirect(url_for("join_team_page", _anchor="apply_form"))
     else:
-        # Team.create(data)
+        Team.create(data)
         return redirect("/join_the_team")
 
 
