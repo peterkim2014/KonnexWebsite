@@ -145,22 +145,26 @@
     } .intro-text-container {
         margin-left: 7.5%;
         width: 47%;
-        height: 320px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        margin-top: 2%;
         /* gap: 3vh; */
         /* background-color: red; */
         } .intro-text-container > h3 {
             margin: 0;
             width: 77%;
-            font-size: 1.7em;
+            font-size: 2.1em;
             text-align: left;
-            font-weight: 400;
+            font-weight: 600;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 0.5px;
-            line-height: 42px;
+            line-height: 50px;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+    color: transparent;
         } .intro-text-container > h4 {
             margin: 0;
             width: 75%;
@@ -172,6 +176,7 @@
     } .join-button {
         margin: 0;
         width: 32%;
+        margin-top: 2%;
         } .join-button-icon {
             width: 100%;
             margin-left: -1.75%;
@@ -222,14 +227,21 @@
         height: 80%;
         width: 47%;
         margin-left: 10%;
-        margin-top: 5%;
+        margin-top: 6%;
         gap: 2.5vh;
         } .dependable-text-container > h4 {
-            font-size: 1.75em;
+            /* font-size: 1.75em; */
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
+            line-height: 42px;
             margin: 0;
+            font-size: 1.8em;
+            /* text-align: left; */
+            font-weight: 600;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            color: transparent;
         } .dependable-paragraph {
             display: flex;
             flex-direction: column;
@@ -239,7 +251,7 @@
             width: 86%;
             /* gap: 1.75; */
             } .dependable-paragraph > p {
-                font-size: 1.08em;
+                font-size: 1.0em;
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 0.5px;
                 line-height: 30px;
@@ -275,7 +287,7 @@
     } .purpose-banner > img {
         width: 560px;
         height: 490px;
-        margin-top: -2.5%;
+        /* margin-top: -2.5%; */
         margin-right: -2.5%;
 } .blockchain-container {
     display: flex;
@@ -284,7 +296,7 @@
     justify-content: space-evenly;
     height: 1015px;
     width: 100%;
-    margin-top: -2.5%;
+    /* margin-top: -2.5%; */
     } .blockchain-header-container {
         height: 130px;
         width: 550px;
@@ -667,7 +679,7 @@
                 letter-spacing: 1px;
             } .join-header > h5 {
                 margin: 0;
-                font-size: 1.82em;
+                font-size: 1.52em;
                 font-family: 'FreightSansBook', sans-serif;
                 letter-spacing: 1px;
 
