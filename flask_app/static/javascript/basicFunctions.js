@@ -24,6 +24,54 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// JavaScript to trigger animations when scrolling
+document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -200px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+});
+// JavaScript to trigger animations on scroll (repeated animation)
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.fade-slide-up');
+
+    const options = {
+        threshold: 0.05,  // Trigger when 20% of the element is visible
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');  // Add the animation class when visible
+            } else {
+                entry.target.classList.remove('visible');  // Remove the class when it's no longer visible
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);  // Observe each section
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     // Get all anchor links with href starting with '#'
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
