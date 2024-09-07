@@ -400,10 +400,6 @@
             margin: 0;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1.5px;
-        } .purpose-text-container > p {
-            width: 85%;
-            margin: 0;
-            line-height: 30px;
     } .purpose-banner > img {
         width: 560px;
         height: 490px;
@@ -419,30 +415,63 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: space-evenly;
-} .key-transaction-feature {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-} .key-transaction-feature > img {
-    width: 40px;
-    height: 40px;
-} .key-transaction-feature-text {
-    width: 100%;
-    height: 60px;
-    gap: 0.6vh;
-    display: flex;
-    flex-direction: column;
-    /* background-color: red; */
-} .key-transaction-feature-text > h2 {
-    margin: 0;
-    font-size: 1.1em;
-    font-weight: 700;
-    font-family: 'FreightSansMedium';
-} .key-transaction-feature-text > h6 {
-    margin: 0;
-    font-size: 0.85em;
+    } .key-transaction-feature {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        }.key-transaction-feature:hover {
+            background-color: rgba(255, 255, 255, 0.05); /* Slightly darker background */
+            transform: scale(1.02); /* Slight scale up */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to emphasize hover */
+        } .key-transaction-feature > img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }.key-transaction-feature:hover img {
+            transform: scale(1.1); /* Slight zoom in effect on hover */
+        } .key-transaction-feature-text {
+            width: 100%;
+            height: 60px;
+            gap: 0.6vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* background-color: red; */
+            } .key-transaction-feature-text > h2 {
+                margin: 0;
+                font-size: 1.1em;
+                font-weight: 700;
+                font-family: 'FreightSansMedium';
+            } .key-transaction-feature-text > h6 {
+                margin: 0;
+                font-size: 0.85em;
+                /* Initially hide the transaction description */
+            } .transaction-description {
+                    display: none;
+                    color: white;
+                    font-size: 1.1em;
+                } .transaction-description p {
+                    margin-bottom: 20px;
+                } .transaction-description.visible {
+                    display: block;
+                } .key-transaction-features.hidden {
+                    display: none;
+                } #back-btn {
+                    padding: 10px 20px;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                } #back-btn:hover {
+                    background-color: #45A049;
+
+
 }.blockchain-container {
     display: flex;
     flex-direction: column;

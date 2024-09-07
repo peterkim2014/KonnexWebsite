@@ -82,7 +82,7 @@
             <div class="purpose-text-container fade-slide-up">
                 <h4>Key Transaction Features</h4>
                 <div class="key-transaction-features">
-                    <div class="key-transaction-feature">
+                    <div class="key-transaction-feature" data-feature="retail">
                         <img src="{{ url_for('static', filename='media/quickPayIcon.png') }}"/>
                         <div class="key-transaction-feature-text">
                             <h2>
@@ -93,7 +93,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="key-transaction-feature">
+                    <div class="key-transaction-feature" data-feature="peer-to-peer">
                         <img src="{{ url_for('static', filename='media/transferIconFeature.png') }}"/>
                         <div class="key-transaction-feature-text">
                             <h2>
@@ -104,7 +104,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="key-transaction-feature">
+                    <div class="key-transaction-feature" data-feature="group">
                         <img src="{{ url_for('static', filename='media/groupIcon.png') }}"/>
                         <div class="key-transaction-feature-text">
                             <h2>
@@ -115,6 +115,10 @@
                             </h6>
                         </div>
                     </div>
+                </div>
+                <div id="transaction-description" class="transaction-description hidden">
+                    <p id="description-text">Description goes here...</p>
+                    <button id="back-btn">Go Back</button>
                 </div>
             </div>
             <img src="{{ url_for('static', filename='media/konnexIphoneMockup4.png') }}"/>

@@ -23,6 +23,43 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all the transaction features and the description area
+    const transactionFeatures = document.querySelectorAll('.key-transaction-feature');
+    const featuresContainer = document.querySelector('.key-transaction-features');
+    const descriptionContainer = document.getElementById('transaction-description');
+    const descriptionText = document.getElementById('description-text');
+    const backBtn = document.getElementById('back-btn');
+
+    // Define descriptions for each transaction type
+    const descriptions = {
+        retail: "Retail transactions allow effortless checkout using cryptocurrency, enabling you to pay for goods and services just as easily as using a credit card.",
+        "peer-to-peer": "Peer-to-peer transactions facilitate instant and seamless crypto transfers between users, ensuring a secure and fast connection.",
+        group: "Group transactions make it easy to handle payments for multiple users in a single transaction, ideal for collaborative purchases or shared expenses."
+    };
+
+    // Add click event listeners to all transaction features
+    transactionFeatures.forEach((feature) => {
+        feature.addEventListener('click', () => {
+            // Get the feature type from the data attribute
+            const featureType = feature.getAttribute('data-feature');
+
+            // Hide the features container and show the description container
+            featuresContainer.classList.add('hidden');
+            descriptionContainer.classList.add('visible');
+
+            // Set the description text based on the clicked feature
+            descriptionText.textContent = descriptions[featureType];
+        });
+    });
+
+    // Handle the 'Go Back' button click
+    backBtn.addEventListener('click', () => {
+        // Show the features container and hide the description container
+        featuresContainer.classList.remove('hidden');
+        descriptionContainer.classList.remove('visible');
+    });
+});
 
 // JavaScript to trigger animations when scrolling
 document.addEventListener("DOMContentLoaded", function() {
