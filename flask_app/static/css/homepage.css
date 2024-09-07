@@ -32,6 +32,123 @@
     src: url('/static/font/Garet-Book.ttf') format('truetype');
 }
 
+/* CSS Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+} .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+} /* Fade and slide in animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Initial state before animation */
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(5px);  /* Initial position */
+    transition: opacity 0.6s ease-out;
+}
+/* Animation triggered when visible */
+.fade-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Style for the join waitlist button */
+.join-waitlist-button {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #4CAF50; /* Initial background color */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px; /* Horizontal oval shape */
+    position: relative; /* For hover effect positioning */
+    overflow: hidden; /* Ensures hover effect stays inside the button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+/* Button hover state */
+.join-waitlist-button:hover {
+    background-color: #45A049; /* Darker green on hover */
+}
+
+/* Glossy effect on hover */
+.join-waitlist-button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -130%;
+    width: 360%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.4); /* Glossy white overlay */
+    transform: rotate(45deg); /* Diagonal angle */
+    transition: transform 0.5s ease;
+    z-index: 1; /* Ensure it stays above the button */
+}
+/* Activate the glossy shine effect on hover */
+.join-waitlist-button:hover::before {
+    transform: translateX(150%) rotate(45deg); /* Move gloss across the button */
+}
+/* Ensure text stays above the gloss */
+.join-waitlist-button span {
+    position: relative;
+    z-index: 2;
+}.join-form-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #4CAF50; /* Initial background color */
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px; /* Horizontal oval shape */
+    position: relative; /* For hover effect positioning */
+    overflow: hidden; /* Ensures hover effect stays inside the button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    border: none; /* Remove default button borders */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+/* Button hover state */
+.join-form-button:hover {
+    background-color: #45A049; /* Darker green on hover */
+}
+/* Glossy effect on hover */
+.join-form-button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.4); /* Glossy white overlay */
+    transform: rotate(45deg); /* Diagonal angle */
+    transition: transform 0.5s ease;
+    z-index: 1; /* Ensure it stays above the button */
+}
+/* Activate the glossy shine effect on hover */
+.join-form-button:hover::before {
+    transform: translateX(150%) rotate(45deg); /* Move gloss across the button */
+}
+/* Ensure text stays above the gloss */
+.join-form-button span {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -173,13 +290,13 @@
             line-height: 27px;
             font-size: 1.1em;
             letter-spacing: 0.7px;
-    } .join-button {
+    /* } .join-button {
         margin: 0;
         width: 32%;
         margin-top: 2%;
         } .join-button-icon {
             width: 100%;
-            margin-left: -1.75%;
+            margin-left: -1.75%; */
     } .intro-visual-container {
         width: 45%;
         height: 100%;
@@ -758,7 +875,7 @@
                             border: none;
                             background-color: #EEEEEE;
                             border-radius: 4px;
-                    } .join-form > button { 
+                    /* } .join-form > button { 
                         width: 102.5%;
                         height: 30px;
                         margin-left: 2.5%;
@@ -766,7 +883,7 @@
                         background-color: #003F4A;
                         border-radius: 4px;
                         color: white;
-                        margin-top: 3.8%;
+                        margin-top: 3.8%; */
                 } .join-form-container > p {
                     width: 56%;
                     margin-left: 1%;

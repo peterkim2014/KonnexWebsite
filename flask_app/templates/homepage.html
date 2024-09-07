@@ -20,7 +20,7 @@
     
     <div id="global">
 
-        <div class="home-header">
+        <div class="home-header fade-in">
             <div class="home-name">
                 <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                 <div class="name-container">
@@ -28,7 +28,7 @@
                     <h2>CRYPTOCURRENCY WALLET</h2>
                 </div>
             </div>
-            <div class="home-routes">
+            <div class="home-routes fade-in">
                 <a href="/" class="route-selected">Home</a>
                 <a href="/product" class="route">Product</a>
                 <a href="/about" class="route">About</a>
@@ -43,11 +43,12 @@
         </div>
 
         <div class="intro-container">
-            <div class="intro-text-container">
+            <div class="intro-text-container fade-slide-up">
                 <h3>"Turn Your Crypto into Everyday Currency with Konnex Wallet"</h3>
                 <h4>Join the waitlist and start using your digital assets effortlessly for transactions, anytime, anywhere
                 </h4>
-                <a href="#join_waitlist" class="join-button"><img src="{{ url_for('static', filename='media/joinButton.png') }}" class="join-button-icon"/></a>
+                <!-- <a href="#join_waitlist" class="join-button"><img src="{{ url_for('static', filename='media/joinButton.png') }}" class="join-button-icon"/></a> -->
+                <a href="#join_waitlist" class="join-waitlist-button">Join the Waitlist Now</a>
             </div>
 
             <div class="intro-visual-container">
@@ -66,7 +67,7 @@
 
         <div class="dependable-container">
             <img src="{{ url_for('static', filename='media/dependableImage3.png') }}"/>
-            <div class="dependable-text-container">
+            <div class="dependable-text-container fade-slide-up">
                 <h4>From Shopping Sprees to Daily Needs—<br>Pay Securely with Crypto</h4>
                 <div class="dependable-paragraph">
                     <p>Konnex Wallet is designed to make using your crypto as easy as spending cash. Whether it’s for a coffee or a big purchase, our platform allows you to turn your digital assets into currency for everyday transactions—securely and seamlessly.
@@ -78,7 +79,7 @@
 
 
         <div class="purpose-banner">
-            <div class="purpose-text-container">
+            <div class="purpose-text-container fade-slide-up">
                 <h4>Purpose</h4>
                 <p>To craft an immersive experience that weaves integrity into every interaction, enabling you to forge a life story of purpose and connection in the digital frontier.</p>
             </div>
@@ -97,28 +98,28 @@
             </div>
 
 
-            <div class="blockchain-info">
+            <div class="blockchain-info fade-slide-up">
                 <p>Polkadot is changing the game of digital connectivity. Imagine a world where different blockchains effortlessly communicate, creating a unified, seamless digital ecosystem. With Polkadot, this vision becomes reality—transactions are faster, fees are lower, and security is rock-solid, thanks to its cutting-edge architecture.
 
                 At the heart of it all is the Relay Chain, the powerhouse that connects and secures multiple blockchains. Meanwhile, Parachains—independent blockchains running in parallel—harness the full power of Polkadot's security and interoperability. Together, they form a dynamic, scalable network where messages and value flow smoothly, unlocking a truly connected blockchain universe.</p>
             </div>
 
             <div class="blockchain-features-list">
-                <div class="blockchain-feature">
+                <div class="blockchain-feature fade-slide-up">
                     <div class="blockchain-feature-images">
                         <img src="{{ url_for('static', filename='media/securityIcon.png') }}"/>
                     </div>
                     <h5>Secure Networking</h5>
                     <p>Availability and validity scheme allow chains to interact with each other in a meaningful way.</p>
                 </div>
-                <div class="blockchain-feature">
+                <div class="blockchain-feature fade-slide-up">
                     <div class="blockchain-feature-images-2">
                         <img src="{{ url_for('static', filename='media/interoperabilityIcon1.png') }}" class="interoperability-Icon-1"/>
                     </div>
                     <h5>Interoperability</h5>
                     <p>Polkadot enables cross-blockchain transfers of any type of data or asset, not just tokens.</p>
                 </div>
-                <div class="blockchain-feature-last">
+                <div class="blockchain-feature-last fade-slide-up">
                     <div class="blockchain-feature-last-images">
                         <img src="{{ url_for('static', filename='media/energyEfficiencyIcon.png') }}"/>
                     </div>
@@ -161,7 +162,7 @@
 
 
             <div class="join-the-community">
-                <div class="join-the-community-perks">
+                <div class="join-the-community-perks fade-slide-up">
                     <div class="join-the-community-perks-headline">
                         <h4>
                             Pioneers: Unlock Exclusive Early Access
@@ -202,7 +203,7 @@
                 </div>
 
                 <div id="join_waitlist" class="join-the-community-form">
-                    <div class="join-header">
+                    <div class="join-header fade-slide-up">
                         <h4>Join the Waitlist</h4>
                         <h5>Sign up for any early benefits</h5>
                     </div>
@@ -256,7 +257,9 @@
                                 Email
                                 <input name="email" />
                             </label>
-                            <button>Sign up</button>
+                            <button type="submit" class="join-form-button">
+                                <span>Join the Waitlist</span>
+                            </button>
                         </form>
                         <p>By signing up for the waitlist, you agree to allow Konnex to utilize the provided data for application development purposes. Your privacy and data security are of importance to us, and we adhere to strict legal and ethical standards in handling your information.</p>
                     </div>
@@ -265,7 +268,7 @@
 
         <div class="footer">
 
-            <div class="footer-left">
+            <div class="footer-left fade-slide-up">
                 <div class="footer-left-top">
                     <img src="{{ url_for('static', filename='media/KonnexLogoo.webp') }}"/>
                     <h5>
@@ -282,7 +285,7 @@
                 </div>
             </div>
 
-            <div class="footer-right">
+            <div class="footer-right fade-slide-up">
                 <div class="footer-routes">
                     <a href="/" class="footer-single-route">Home</a>
                     <hr/>
