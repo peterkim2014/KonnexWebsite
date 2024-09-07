@@ -275,7 +275,7 @@
             width: 77%;
             font-size: 2.1em;
             text-align: left;
-            font-weight: 600;
+            font-weight: 900;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 0.5px;
             line-height: 50px;
@@ -375,16 +375,17 @@
                 margin: 0;
 } .purpose-banner {
     background-image: url('../media/banner2.png');
-    background-size: contain;
+    background-size: cover;
+    /* padding-bottom: 10%; */
     width: 100%;
-    height: 240px;
+    height: 330px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2.5vw;
     } .purpose-text-container {
         width: 35%;
-        height: 60%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -392,6 +393,7 @@
         color: white;
         gap: 1vh;
         margin-left: 2.5%;
+        /* background-color: red; */
         } .purpose-text-container > h4 {
             font-size: 1.75em;
             margin: 0;
@@ -406,7 +408,38 @@
         height: 490px;
         /* margin-top: -2.5%; */
         margin-right: -2.5%;
-} .blockchain-container {
+} .key-transaction-features {
+    width: 80%;
+    height: 280px;
+    gap: 1vh;
+    margin-top: 5%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+} .key-transaction-feature {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+} .key-transaction-feature > img {
+    width: 40px;
+    height: 40px;
+} .key-transaction-feature-text {
+    width: 100%;
+    height: 50px;
+    gap: 1vh;
+    /* background-color: red; */
+} .key-transaction-feature-text > h5 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 700;
+} .key-transaction-feature-text > h6 {
+    margin: 0;
+    font-size: 0.9em;
+}.blockchain-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -572,10 +605,11 @@
                     line-height: 25px;
                     margin-top: -2%;
 } .referral-information {
-    background-image: url('../media/referralBanner.png');
+    background-image: url('../media/referralBackground.png');
     background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 410px;
+    height: 510px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -590,10 +624,10 @@
         align-items: center;
         gap: 16vw;
         margin-right: 11.5%;
-        }  .referral-step > h5 {
-                font-size: 2em;
+        }  .referral-steps > h5 {
+                font-size: 1.8em;
                 color: white;
-                opacity: .5;
+                /* opacity: .5; */
                 font-weight: 800;
                 margin: 0;
                 }.referral-steps > h6 {
@@ -675,7 +709,7 @@
                 line-height: 23px;
 } .join-the-community {
     width: 98%;
-    height: 730px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
