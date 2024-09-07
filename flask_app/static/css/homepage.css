@@ -425,10 +425,14 @@
         align-items: center;
         transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
+        padding-left: 5%;
         }.key-transaction-feature:hover {
             background-color: rgba(255, 255, 255, 0.05); /* Slightly darker background */
             transform: scale(1.02); /* Slight scale up */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to emphasize hover */
+            /* left: -50%; */
+            position: relative;
+            padding-left: 5%;
         } .key-transaction-feature > img {
             width: 40px;
             height: 40px;
