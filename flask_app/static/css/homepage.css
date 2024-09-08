@@ -1251,7 +1251,7 @@
     } .intro-text-container {
         margin-left: 7.5%;
         width: 47%;
-        height: 400px;
+        height: 340px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1260,13 +1260,13 @@
         /* background-color: red; */
         } .intro-text-container > h3 {
             margin: 0;
-            width: 75%;
-            font-size: 2.25em;
+            width: 85%;
+            font-size: 3.25em;
             text-align: left;
-            font-weight: 400;
+            font-weight: 600;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 0.75px;
-            line-height: 48px;
+            line-height: 75px;
         } .intro-text-container > h4 {
             margin: 0;
             width: 66%;
@@ -1275,6 +1275,7 @@
             line-height: 33px;
             font-size: 1.45em;
             letter-spacing: 0.7px;
+            margin-top: -2%;
     /* } .join-button {
         margin: 0;
         width: 25%;
@@ -1288,10 +1289,10 @@
         align-items: flex-end;
         background-image: url('../media/openPagePhoneBackground.png');
         background-size: cover;
-        background-size: 80%;
+        background-size: 100%;
         } .intro-visual-container > img {
             width: 700px;
-            height: 510px;
+            height: 580px;
             margin-left: -12%;
 } .banner-small-container {
     width: 100%;
@@ -1329,18 +1330,23 @@
         /* margin-left: 10%; */
         margin-top: 5%;
         gap: 2.5vh;
+        /* background-color: red; */
         } .dependable-text-container > h4 {
-            font-size: 2em;
+            font-size: 2.5em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
             margin: 0;
+            line-height: 60px;
+            height: 20%;
+            gap: 5vh;
+            background-color: red;
         } .dependable-paragraph {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            /* height: 42%; */
+            /* height: 32%; */
             height: auto;
             width: 80%;
             /* background-color: red; */
@@ -1353,9 +1359,10 @@
                 margin: 0;
 } .purpose-banner {
     background-image: url('../media/banner2.png');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 280px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1381,8 +1388,8 @@
             font-size: 1.25em;
             line-height: 30px;
     } .purpose-banner > img {
-        width: 680px;
-        height: 580px;
+        width: 730px;
+        height: 640px;
         margin-top: 1%;
         margin-right: -2.5%;
     } .key-transaction-features {
