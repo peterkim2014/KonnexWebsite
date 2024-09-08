@@ -86,21 +86,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (featureType === 'peer-to-peer') {
             const step1 = document.createElement('div');
-            step1.innerHTML = `<img class="feature-steps-img" src="${oneIconUrl}" alt="Step 1"> <h5 class="feature-step-text">Choose Crypto</h5>`;
+            step1.innerHTML = `<img class="feature-steps-img" src="${oneIconUrl}" alt="Step 1"> <h5 class="feature-step-text">Select a Friend</h5>`;
 
             const step2 = document.createElement('div');
-            step2.innerHTML = `<img class="feature-steps-img" src="${twoIconUrl}" alt="Step 2"> <h5 class="feature-step-text">Select a Friend</h5>`;
+            step2.innerHTML = `<img class="feature-steps-img" src="${twoIconUrl}" alt="Step 2"> <h5 class="feature-step-text">Type Amount</h5>`;
 
             const step3 = document.createElement('div');
-            step3.innerHTML = `<img class="feature-steps-img" src="${threeIconUrl}" alt="Step 3"> <h5 class="feature-step-text">Type Amount</h5>`;
-
-            const step4 = document.createElement('div');
-            step4.innerHTML = `<img class="feature-steps-img" src="${fourIconUrl}" alt="Step 4"> <h5 class="feature-step-text">Confirm Transaction</h5>`;
+            step3.innerHTML = `<img class="feature-steps-img" src="${threeIconUrl}" alt="Step 3"> <h5 class="feature-step-text">Confirm Transaction</h5>`;
 
             featureStepsContainer.appendChild(step1);
             featureStepsContainer.appendChild(step2);
             featureStepsContainer.appendChild(step3);
-            featureStepsContainer.appendChild(step4);
         }
         if (featureType === 'group') {
             const step1 = document.createElement('div');
