@@ -32,6 +32,37 @@
     src: url('/static/font/Garet-Book.ttf') format('truetype');
 }
 
+/* CSS Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+} .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+} /* Fade and slide in animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Initial state before animation */
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(5px);  /* Initial position */
+    transition: opacity 0.6s ease-out;
+}
+/* Animation triggered when visible */
+.fade-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 
 
@@ -44,9 +75,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 2px;
     padding-top: 0.6%;
-    top: 134px;
+    /* top: 134px; */
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -231,13 +262,16 @@
                 /* background-color: red; */
                 } .intro-text-container > h3 {
                     margin: 0;
-                    width: 93%;
-                    font-size: .97em;
+                    width: 85%;
+                    font-size: 1.5em;
                     text-align: center;
                     font-weight: 400;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 28px;
+                    background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+                    background-clip: text;
+                    color: transparent;
                 } .intro-text-container > h4 {
                     margin: 0;
                     width: 95%;
@@ -271,7 +305,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    height: 460px;
+    height: 500px;
     width: 100%;
     gap: 0.5vh;
     } .dependable-container > img {
@@ -286,7 +320,7 @@
         height: 80%;
         width: 100%;
         /* margin-left: 10%; */
-        margin-top: 5%;
+        margin-top: 12%;
         gap: 2.5vh;
         } .dependable-paragraph > h7 {
             font-size: 1.4em;
@@ -294,6 +328,10 @@
             letter-spacing: 1px;
             font-weight: 700;
             margin: 0;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            color: transparent;
+            text-align: center;
         } .dependable-paragraph {
             display: flex;
             flex-direction: column;
@@ -1068,9 +1106,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 200px;
+    right: 100px;
     padding-top: 0.6%;
-    top: 150px;
+    /* top: 150px; */
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;

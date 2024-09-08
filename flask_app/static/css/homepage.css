@@ -282,7 +282,7 @@
             line-height: 50px;
             background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
             background-clip: text;
-    color: transparent;
+            color: transparent;
         } .intro-text-container > h4 {
             margin: 0;
             width: 75%;
