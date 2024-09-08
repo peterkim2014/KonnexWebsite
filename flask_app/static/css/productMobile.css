@@ -27,6 +27,37 @@
     src: url('/static/font/LTCushion-Light.ttf') format('truetype');
 }
 
+/* CSS Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+} .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+} /* Fade and slide in animation */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Initial state before animation */
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(5px);  /* Initial position */
+    transition: opacity 0.6s ease-out;
+}
+/* Animation triggered when visible */
+.fade-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 @media (orientation: portrait){
 
@@ -38,9 +69,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 20px;
+    right: 2px;
     padding-top: 0.6%;
-    top: 134px;
+    /* top: 134px; */
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -783,9 +814,9 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 200px;
+    right: 100px;
     padding-top: 0.6%;
-    top: 150px;
+    /* top: 150px; */
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
