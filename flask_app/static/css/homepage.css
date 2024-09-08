@@ -108,7 +108,7 @@
     display: inline-block;
     margin-top: 5%;
     padding: 4px 123px;
-    background-color: #4CAF50; /* Initial background color */
+    background-color: #5AC3D5; /* Initial background color */
     color: white;
     font-size: 1rem;
     text-align: center;
@@ -697,7 +697,7 @@
                     line-height: 25px;
                     margin-top: -2%;
 } .referral-information {
-    background-image: url('../media/referralBackground.png');
+    background-image: url('../media/referralBackground1.webp');
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
