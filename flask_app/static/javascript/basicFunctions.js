@@ -24,42 +24,107 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all the transaction features and the description area
     const transactionFeatures = document.querySelectorAll('.key-transaction-feature');
     const featuresContainer = document.querySelector('.key-transaction-features');
     const descriptionContainer = document.getElementById('transaction-description');
     const descriptionText = document.getElementById('description-text');
-    const backBtn = document.getElementById('back-btn');
+    const header = document.querySelector('.purpose-text-container h4'); // Select the h4 header
+    const banner = document.querySelector('.purpose-banner');  // Select the banner containing the data attribute
 
-    // Define descriptions for each transaction type
+    // Get the back button image URL from the data attribute
+    const backBtnImageUrl = banner.getAttribute('data-back-btn-url');
+
+    // Create a new container div for button and title
+    const headerFlexContainer = document.createElement('div');
+    headerFlexContainer.classList.add('header-flex-container');
+    
+    // Move the h4 into this container
+    header.parentNode.insertBefore(headerFlexContainer, header);
+    headerFlexContainer.appendChild(header);
+
+    // Create a new back button dynamically (as an image)
+    const backBtn = document.createElement('img');
+    backBtn.id = 'back-btn';
+    backBtn.src = backBtnImageUrl;  // Use the image URL from the data attribute
+    backBtn.alt = 'Go Back';
+    backBtn.style.display = 'none';
+    backBtn.classList.add('back-btn-style');
+    headerFlexContainer.insertBefore(backBtn, header);
+
     const descriptions = {
         retail: "Retail transactions allow effortless checkout using cryptocurrency, enabling you to pay for goods and services just as easily as using a credit card.",
         "peer-to-peer": "Peer-to-peer transactions facilitate instant and seamless crypto transfers between users, ensuring a secure and fast connection.",
         group: "Group transactions make it easy to handle payments for multiple users in a single transaction, ideal for collaborative purchases or shared expenses."
     };
 
-    // Add click event listeners to all transaction features
+    // Store the original h4 text
+    const originalHeaderText = header.textContent;
+
     transactionFeatures.forEach((feature) => {
         feature.addEventListener('click', () => {
-            // Get the feature type from the data attribute
             const featureType = feature.getAttribute('data-feature');
+            const featureTitle = feature.querySelector('h2').textContent;
 
-            // Hide the features container and show the description container
-            featuresContainer.classList.add('hidden');
-            descriptionContainer.classList.add('visible');
+            // Replace h4 with h2 content and display the back button
+            header.textContent = featureTitle;
+            backBtn.style.display = 'inline-block'; // Show the back button (as an image)
 
-            // Set the description text based on the clicked feature
-            descriptionText.textContent = descriptions[featureType];
+            // Add animation class for the header swap
+            header.classList.add('swap-animation');
+
+            // Fade out the features container
+            featuresContainer.classList.add('fade-out-feature');
+
+            // Wait for fade-out to complete, then hide the features container and show the description
+            setTimeout(() => {
+                featuresContainer.classList.add('hidden');
+                featuresContainer.classList.remove('fade-out-feature'); // Reset fade-out class
+                descriptionText.textContent = descriptions[featureType];
+
+                // Fade in the description container
+                descriptionContainer.classList.add('fade-in-feature');
+                descriptionContainer.classList.add('visible');
+
+                // Remove fade-in after it completes
+                setTimeout(() => {
+                    descriptionContainer.classList.remove('fade-in-feature');
+                    header.classList.remove('swap-animation'); // Reset animation class
+                }, 300); // Match to CSS transition duration
+            }, 300); // Match to CSS transition duration
         });
     });
 
-    // Handle the 'Go Back' button click
     backBtn.addEventListener('click', () => {
-        // Show the features container and hide the description container
-        featuresContainer.classList.remove('hidden');
-        descriptionContainer.classList.remove('visible');
+        // Restore the original h4 content and hide the back button
+        header.textContent = originalHeaderText;
+        backBtn.style.display = 'none'; // Hide the back button
+        header.classList.add('swap-animation'); // Apply the swap animation
+
+        // Fade out the description container
+        descriptionContainer.classList.add('fade-out-feature');
+
+        // Wait for fade-out to complete, then hide the description container and show the features container
+        setTimeout(() => {
+            descriptionContainer.classList.remove('visible');
+            descriptionContainer.classList.remove('fade-out-feature'); // Reset fade-out class
+
+            // Fade in the features container
+            featuresContainer.classList.remove('hidden');
+            featuresContainer.classList.add('fade-in-feature');
+
+            // Remove fade-in after it completes
+            setTimeout(() => {
+                featuresContainer.classList.remove('fade-in-feature');
+                header.classList.remove('swap-animation'); // Reset animation class
+            }, 300); // Match to CSS transition duration
+        }, 300); // Match to CSS transition duration
     });
 });
+
+
+
+
+
 
 // JavaScript to trigger animations when scrolling
 document.addEventListener("DOMContentLoaded", function() {
