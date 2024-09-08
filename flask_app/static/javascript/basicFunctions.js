@@ -28,11 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const featuresContainer = document.querySelector('.key-transaction-features');
     const descriptionContainer = document.getElementById('transaction-description');
     const descriptionText = document.getElementById('description-text');
-    const header = document.querySelector('.purpose-text-container h4'); // Select the h4 header
-    const banner = document.querySelector('.purpose-banner');  // Select the banner containing the data attribute
+    const featureStepsContainer = document.getElementById('feature-steps'); // Container to display feature steps
+    const header = document.querySelector('.purpose-text-container h4');
+    const banner = document.querySelector('.purpose-banner');
 
     // Get the back button image URL from the data attribute
     const backBtnImageUrl = banner.getAttribute('data-back-btn-url');
+    const oneIconUrl = banner.getAttribute('data-one-icon-url');
+    const twoIconUrl = banner.getAttribute('data-two-icon-url');
+    const threeIconUrl = banner.getAttribute('data-three-icon-url');
+    const fourIconUrl = banner.getAttribute('data-four-icon-url');
 
     // Create a new container div for button and title
     const headerFlexContainer = document.createElement('div');
@@ -45,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create a new back button dynamically (as an image)
     const backBtn = document.createElement('img');
     backBtn.id = 'back-btn';
-    backBtn.src = backBtnImageUrl;  // Use the image URL from the data attribute
+    backBtn.src = backBtnImageUrl;
     backBtn.alt = 'Go Back';
     backBtn.style.display = 'none';
     backBtn.classList.add('back-btn-style');
@@ -60,6 +65,60 @@ document.addEventListener("DOMContentLoaded", function () {
     // Store the original h4 text
     const originalHeaderText = header.textContent;
 
+    // Function to add the steps for each feature
+    function addFeatureSteps(featureType) {
+        // Clear any previous steps
+        featureStepsContainer.innerHTML = '';
+
+        if (featureType === 'retail') {
+            const step1 = document.createElement('div');
+            step1.innerHTML = `<img class="feature-steps-img" src="${oneIconUrl}" alt="Step 1"> <h5 class="feature-step-text">Choose Crypto</h5>`;
+
+            const step2 = document.createElement('div');
+            step2.innerHTML = `<img class="feature-steps-img" src="${twoIconUrl}" alt="Step 2"> <h5 class="feature-step-text">Tap on Payment Processor</h5>`;
+
+            const step3 = document.createElement('div');
+            step3.innerHTML = `<img class="feature-steps-img" src="${threeIconUrl}" alt="Step 3"> <h5 class="feature-step-text">Confirm Transaction</h5>`;
+
+            featureStepsContainer.appendChild(step1);
+            featureStepsContainer.appendChild(step2);
+            featureStepsContainer.appendChild(step3);
+        }
+        if (featureType === 'peer-to-peer') {
+            const step1 = document.createElement('div');
+            step1.innerHTML = `<img class="feature-steps-img" src="${oneIconUrl}" alt="Step 1"> <h5 class="feature-step-text">Choose Crypto</h5>`;
+
+            const step2 = document.createElement('div');
+            step2.innerHTML = `<img class="feature-steps-img" src="${twoIconUrl}" alt="Step 2"> <h5 class="feature-step-text">Select a Friend</h5>`;
+
+            const step3 = document.createElement('div');
+            step3.innerHTML = `<img class="feature-steps-img" src="${threeIconUrl}" alt="Step 3"> <h5 class="feature-step-text">Type Amount</h5>`;
+
+            const step4 = document.createElement('div');
+            step4.innerHTML = `<img class="feature-steps-img" src="${fourIconUrl}" alt="Step 4"> <h5 class="feature-step-text">Confirm Transaction</h5>`;
+
+            featureStepsContainer.appendChild(step1);
+            featureStepsContainer.appendChild(step2);
+            featureStepsContainer.appendChild(step3);
+            featureStepsContainer.appendChild(step4);
+        }
+        if (featureType === 'group') {
+            const step1 = document.createElement('div');
+            step1.innerHTML = `<img class="feature-steps-img" src="${oneIconUrl}" alt="Step 1"> <h5 class="feature-step-text">Choose from Group List</h5>`;
+
+            const step2 = document.createElement('div');
+            step2.innerHTML = `<img class="feature-steps-img" src="${twoIconUrl}" alt="Step 2"> <h5 class="feature-step-text">Select Payment Method</h5>`;
+
+            const step3 = document.createElement('div');
+            step3.innerHTML = `<img class="feature-steps-img" src="${threeIconUrl}" alt="Step 3"> <h5 class="feature-step-text">Confirm Transaction</h5>`;
+
+            featureStepsContainer.appendChild(step1);
+            featureStepsContainer.appendChild(step2);
+            featureStepsContainer.appendChild(step3);
+        }
+        // You can add similar steps for 'peer-to-peer' and 'group' features here
+    }
+
     transactionFeatures.forEach((feature) => {
         feature.addEventListener('click', () => {
             const featureType = feature.getAttribute('data-feature');
@@ -71,6 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Add animation class for the header swap
             header.classList.add('swap-animation');
+
+            // Add the steps to the #feature-steps container
+            addFeatureSteps(featureType);
 
             // Fade out the features container
             featuresContainer.classList.add('fade-out-feature');

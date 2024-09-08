@@ -466,7 +466,7 @@
                     margin-bottom: 20px;
                     font-family: 'FreightSansLight';
                     margin: 0;
-                    font-size: 0.7em;
+                    font-size: 0.75em;
                     width: 75%;
                 } #back-btn {
                     padding: 8px 16px;
@@ -494,7 +494,7 @@
                     }
                     .transaction-description.visible {
                         display: flex;
-
+                        flex-direction: column;
                         opacity: 1;
                         /* background-color: red; */
                         width: 100%;
@@ -529,8 +529,21 @@
                             margin: 0;
                             font-family: 'FreightSansMedium', sans-serif;
                             letter-spacing: 1.5px;
-                    
-
+                    } .feature-steps {
+                        height: 70%;
+                        margin-top: 5%;
+                        } .feature-steps > div {
+                            display: flex;
+                            align-items: center;
+                            height: 28%;
+                            width: 100%;
+                            justify-content: flex-start;
+                            gap: 2vw;
+                            } .feature-steps-img {
+                                width: 30px;
+                                height: 30px;
+                            } .feature-step-text {
+                                font-size: 1.1em;
 }.blockchain-container {
     display: flex;
     flex-direction: column;

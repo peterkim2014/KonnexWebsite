@@ -78,7 +78,9 @@
         </div>
 
 
-        <div class="purpose-banner" data-back-btn-url="{{ url_for('static', filename='media/backArrowFeatures.png') }}">
+        <div class="purpose-banner" data-back-btn-url="{{ url_for('static', filename='media/backArrowFeatures.png') }}" data-one-icon-url="{{ url_for('static', filename='media/oneIcon.png') }}"
+        data-two-icon-url="{{ url_for('static', filename='media/twoIcon.png') }}"
+        data-three-icon-url="{{ url_for('static', filename='media/threeIcon.png') }}" data-four-icon-url="{{ url_for('static', filename='media/fourIcon.png') }}">
             <div class="purpose-text-container fade-slide-up">
                 <h4>Key Transaction Features</h4>
                 <div class="key-transaction-features">
@@ -119,6 +121,7 @@
                 <div id="transaction-description" class="transaction-description hidden">
                     <!-- <button id="back-btn">Go Back</button> -->
                     <p id="description-text">Description goes here...</p>
+                    <div id="feature-steps" class="feature-steps"></div>
                 </div>
             </div>
             <img src="{{ url_for('static', filename='media/konnexIphoneMockup4.png') }}"/>
