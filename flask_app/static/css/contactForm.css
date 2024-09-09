@@ -56,6 +56,48 @@
 .fade-slide-up.visible {
     opacity: 1;
     transform: translateY(0);
+} .contact-form-button {
+    display: inline-block;
+    margin-top: 5%;
+    padding: 4px 123px;
+    background-color: #5AC3D5; /* Initial background color */
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px; 
+    position: relative; /* For hover effect positioning */
+    overflow: hidden; /* Ensures hover effect stays inside the button */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    border: none; /* Remove default button borders */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+/* Button hover state */
+.contact-form-button:hover {
+    background-color: #003F4A; /* Darker green on hover */
+}
+/* Glossy effect on hover */
+.contact-form-button::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.4); /* Glossy white overlay */
+    transform: rotate(45deg); /* Diagonal angle */
+    transition: transform 0.5s ease;
+    z-index: 1; /* Ensure it stays above the button */
+}
+/* Activate the glossy shine effect on hover */
+.contact-form-button:hover::before {
+    transform: translateX(150%) rotate(45deg); /* Move gloss across the button */
+}
+/* Ensure text stays above the gloss */
+.contact-form-button span {
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -220,14 +262,14 @@
                     width: 70%;
                     margin: 0;
                 } .contact-form> button { 
-                    width: 71%;
+                    /* width: 71%;
                     height: 30px;
                     /* margin-left: 2.5%; */
-                    border: none;
-                    background-color: #003F4A;
-                    border-radius: 4px;
-                    color: white;
-                    margin-top: 3.8%;
+                    /* border: none; */
+                    /* background-color: #003F4A; */
+                    /* border-radius: 4px; */
+                    /* color: white; */
+                    /* margin-top: 3.8%; */ 
                     /* display: flex; */
                     /* text-align: center; */
             } .contact-body-label {
