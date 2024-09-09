@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konnex - Cryptocurrency Wallet</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/productTablet.css') }}">
     <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
     <script>
@@ -19,7 +20,7 @@
 
     <div id="global">
         <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="{{ url_for('static', filename='media/backToTopArrow.png') }}" class="scrollTopIcon"/></button>
-        <div class="home-header">
+        <div class="home-header fade-in">
             <div class="home-name">
                 <div class="name-container">
                     <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
@@ -27,7 +28,7 @@
                 </div>
                 <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
-            <div class="home-routes">
+            <div class="home-routes fade-in">
                 <a href="/" class="route">Home</a>
                 <a href="/product" class="route-selected">Product</a>
                 <a href="/about" class="route">About</a>
@@ -43,41 +44,41 @@
 
         <div class="product-intro">
             <img src="{{ url_for('static', filename='media/productBackgroundMobileKonnex1.png') }}" />
-            <div class="product-intro-text">
+            <div class="product-intro-text fade-slide-up">
                 <h3>"We are here to guide your every step of the way, ensuring that your experience is clear, straightforward, and supported from start to finish."</h3>
                 <h4>Committed to bridging people and blockchain, we bring clarity and drive toward an accessible and trusted journey</h4>
             </div>
         </div>
 
         <div class="product-intro-banner">
-            <p class="product-intro-banner-text">Polkadot stands out for users by enabling seamless interaction across diverse blockchain networks</p>
+            <p class="product-intro-banner-text fade-slide-up">Polkadot stands out for users by enabling seamless interaction across diverse blockchain networks</p>
         </div>
 
 
         <div class="product-description">
             <div class="product-side-descriptions">
                 <img src="{{ url_for('static', filename='media/productIntroVisual5.png') }}"/>
-                <p class="product-intro-descriptions">We are dedicated to guide users along with the benefits of Polkadot technology, standing by your side at every step to bring clarity to the practicality of the technology, so the users can approach financial opportunities and interactions with confidence.</p>
+                <p class="product-intro-descriptions fade-slide-up">We are dedicated to guide users along with the benefits of Polkadot technology, standing by your side at every step to bring clarity to the practicality of the technology, so the users can approach financial opportunities and interactions with confidence.</p>
             </div>
 
             <div class="product-description-paragraph">
                 <div class="product-description-point">
                     <img src="{{ url_for('static', filename='media/accessibleIcon.png') }}"/>
-                    <div class="description-text">
+                    <div class="description-text fade-slide-up">
                         <h5>Accessible</h5>
                         <p>Accessible to a wide range of users, fostering inclusivity and making financial opportunities available to all.</p>
                     </div>
                 </div>
                 <div class="product-description-point">
                     <img src="{{ url_for('static', filename='media/trustworthyIcon.png') }}"/>
-                    <div class="description-text">
+                    <div class="description-text fade-slide-up">
                         <h5>Trustworthy</h5>
                         <p>Maintains the highest standards of integrity and security in the crypto currency and blockchain space.</p>
                     </div>
                 </div>
                 <div class="product-description-point">
                     <img src="{{ url_for('static', filename='media/supportIcon.png') }}"/>
-                    <div class="description-text">
+                    <div class="description-text fade-slide-up">
                         <h5>Supportive</h5>
                         <p>Konnex stands by its users at every step of their journey, providing the assistance and clarity they need.</p>
                     </div>
@@ -87,7 +88,7 @@
 
 
         <div class="banner-points">
-            <div class="banner-points-container">
+            <div class="banner-points-container fade-slide-up">
                 <div class="single-point">
                     <img src="{{ url_for('static', filename='media/arrowIcon.png') }}"/>
                     <p>Foundation of Dependability</p>
@@ -105,7 +106,7 @@
 
         <div class="product-overview">
             <div class="overview-background-image"></div>
-            <div class="overview-text">
+            <div class="overview-text fade-slide-up">
                 <h4>
                     Product overview
                 </h4>
@@ -129,7 +130,7 @@
         <div class="product-features">
 
             <div class="product-features-header">
-                <div class="product-features-title">
+                <div class="product-features-title fade-slide-up">
                     <h5>
                         Product features
                     </h5>
@@ -139,9 +140,9 @@
 
             <div class="product-features-descriptions">
 
-                <p class="product-features-descriptions-long-text">Each feature is meticulously crafted not only to meet but to anticipate the needs of our users, providing a comprehensive suite of tools designed to enhance, simplify, and secure the digital lifestyle. These features embody the essence and utility of harnessing the digital realm, offering convenient accessibility at every turn.</p>
+                <p class="product-features-descriptions-long-text fade-slide-up">Each feature is meticulously crafted not only to meet but to anticipate the needs of our users, providing a comprehensive suite of tools designed to enhance, simplify, and secure the digital lifestyle. These features embody the essence and utility of harnessing the digital realm, offering convenient accessibility at every turn.</p>
 
-                <div class="product-features-points">
+                <div class="product-features-points fade-slide-up">
                     <div class="product-features-points-text">
                         <h5>
                             Quick Pay
@@ -175,7 +176,7 @@
         </div>
 
             <div class="product-benefits">
-                <div class="product-benefits-header">
+                <div class="product-benefits-header fade-slide-up">
                     <h4>
                         Product Benefits
                     </h4>
@@ -187,7 +188,7 @@
                 <div class="product-benefits-bottom">
                     <img src="{{ url_for('static', filename='media/productBenefitsMockupMobile2.png') }}" class="product-benefits-background "/>
                     <div class="product-benefits-bottom-descriptions">
-                        <div class="product-benefits-bottom-descriptions-text">
+                        <div class="product-benefits-bottom-descriptions-text fade-slide-up">
                             <h4>
                                 Flexibility
                             </h4>
@@ -195,7 +196,7 @@
                                 Provides users with the autonomy to dictate their financial and community interactions, free from centralized control, which empowers users to make decisions that best suit their needs and preferences.
                             </p>
                         </div>
-                        <div class="product-benefits-bottom-descriptions-text">
+                        <div class="product-benefits-bottom-descriptions-text fade-slide-up">
                             <h4>
                                 Accessibility
                             </h4>
@@ -203,7 +204,7 @@
                                 Enables users to engage in financial transactions and community activities regardless of geographic boundaries, fostering a truly global marketplace and community space.
                             </p>
                         </div>
-                        <div class="product-benefits-bottom-descriptions-text">
+                        <div class="product-benefits-bottom-descriptions-text fade-slide-up">
                             <h4>
                                 Security
                             </h4>
@@ -216,7 +217,7 @@
             </div>
 
             <div class="footer">
-                <div class="footer-left">
+                <div class="footer-left fade-slide-up">
                     <div class="footer-left-top">
                         <img src="{{ url_for('static', filename='media/konnexLogoo.webp') }}"/>
                         <h5>
@@ -224,7 +225,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="footer-right">
+                <div class="footer-right fade-slide-up">
                     <div class="footer-routes">
                         <a href="/" class="footer-single-route">
                             <h7>

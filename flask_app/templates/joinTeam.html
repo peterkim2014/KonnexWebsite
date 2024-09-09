@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konnex - Cryptocurrency Wallet</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/joinTeam.css') }}">
     <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
     <script>
