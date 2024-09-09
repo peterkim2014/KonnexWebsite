@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konnex - Cryptocurrency Wallet</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/aboutTablet.css') }}">
     <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
     <script>
@@ -19,7 +20,7 @@
 
     <div id="global">
         <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="{{ url_for('static', filename='media/backToTopArrow.png') }}" class="scrollTopIcon"/></button>
-        <div class="home-header">
+        <div class="home-header fade-in">
             <div class="home-name">
                 <div class="name-container">
                     <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
@@ -27,7 +28,7 @@
                 </div>
                 <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
-            <div class="home-routes">
+            <div class="home-routes fade-in">
                 <a href="/" class="route">Home</a>
                 <a href="/product" class="route">Product</a>
                 <a href="/about" class="route-selected">About</a>
@@ -44,7 +45,7 @@
         
         <div class="about-intro">
             <img src="{{ url_for('static', filename='media/aboutIntroVisualMobile.png') }}" class="about-Intro-Visual"/>
-            <div class="about-intro-banner">
+            <div class="about-intro-banner fade-slide-up">
                 <div class="about-intro-point-container">
                     <h4>Integrity</h4>
                     <p>Anchored in transparency</p>
@@ -62,7 +63,7 @@
 
         <div class="about-brand-manifesto">
             <h3>Konnex's Journey with you</h3>
-            <div class="brand-manifesto-text">
+            <div class="brand-manifesto-text fade-slide-up">
                 <p>Step into the crypto realm where your action speaks with confidence. Create your story with Konnex, where every step becomes a purposeful stride toward a future driven with purpose and connection.</p>
                 <p>This is more than a digital narrative; its your life story, woven with moments of purpose and connection. Your journey is a nurtured legacy, and each moment is a purposeful step toward the fulfillment of your aspirations. With Konnex, your crypto wallet becomes the vessel for crafting a legacy: a digital pioneer of the new era.</p>
             </div>
@@ -70,14 +71,14 @@
 
         <div class="about-story">
             <img src="{{ url_for('static', filename='media/aboutIntroBackground.png') }}" class="about-story-visual"/>
-            <div class="about-story-text">
+            <div class="about-story-text fade-slide-up">
                 <h4>About us</h4>
                 <p>Konnex stands as a beacon in the digital realm, leading with dependability and a streamlined user experience. It redefines digital navigation, offering a seamless and intuitive platform that simplifies the crypto journey, making it accessible and enjoyable for users of all levels.</p> 
                 <p>At its heart, Konnex is built on a foundation of reliability and transparency, ensuring that every interaction is secure, fair, and clear. With Konnex, your digital experience is not just facilitated; it's enriched, enabling you to focus on what truly matters—achieving your goals in a digital landscape.</p>
             </div>
         </div>
 
-        <div class="statement-banner">
+        <div class="statement-banner fade-slide-up">
             <h4>Statement</h4>
             <p>We are Konnex. We help navigate your journey, in allowing financial engagements to be more trustworthy, protecting your interactions through Polkadot technology to ensure a smooth and confident process.</p>
         </div>
@@ -85,27 +86,27 @@
         <div class="create-story">
             <div class="create-story-upper">
                 <img src="{{ url_for('static', filename='media/storyImage.png') }}" class="create-story-visual"/>
-                <div class="create-story-text">
+                <div class="create-story-text fade-slide-up">
                     <h4>Create your story</h4>
                     <p>Imagine a world where each step you take not only connects you to the blockchain but also grants you protection and freedom, transforming everyday moments into safe, boundless explorations in a digital universe. This is the essence of creating your story with Konnex, a platform that brings the revolutionary promise of blockchain into the palm of your hand. It's an invitation to experience the future of interactions, where the digital and the physical realms converge, and your story unfolds on the most innovative canvas yet.</p>
                 </div>
             </div>
             <div class="create-story-banner">
-                <div class="create-story-point-container">
+                <div class="create-story-point-container fade-slide-up">
                     <div class="create-story-point-container-title-first">
                         <img src="{{ url_for('static', filename='media/freedomIcon.png') }}"/>
                         <h4>Securing Freedom</h4>
                     </div>
                     <p>Explore within the digital universe with the confidence that their data remains their own, free from the oversight of centralized entities</p>
                 </div>
-                <div class="create-story-point-container">
+                <div class="create-story-point-container fade-slide-up">
                     <div class="create-story-point-container-title-second">
                         <img src="{{ url_for('static', filename='media/connectivityIcon.png') }}"/>
                         <h4>Global Connectivity</h4>
                     </div>
                     <p>Access opportunities and collaborations worldwide, making the digital world a more inclusive and diverse space</p>
                 </div>
-                <div class="create-story-point-container">
+                <div class="create-story-point-container fade-slide-up">
                     <div class="create-story-point-container-title">
                         <img src="{{ url_for('static', filename='media/empowermentIcon2.png') }}"/>
                         <h4>Personal Empowerment</h4>
@@ -116,7 +117,7 @@
 
         </div>
 
-        <div class="our-promise">
+        <div class="our-promise fade-slide-up">
             <h4>
                 Our promise
             </h4>
@@ -127,7 +128,7 @@
 
         <div class="brand-identity">
 
-            <div class="brand-statement">
+            <div class="brand-statement fade-slide-up">
                 <h4>
                     Konnex Brand Identity
                 </h4>
@@ -139,7 +140,7 @@
             <div class="brand-statement-points">
                 <div class="brand-statement-points-first">
                     <img src="{{ url_for('static', filename='media/confidenceIcon.png') }}"/>
-                    <div class="brand-statement-points-text">
+                    <div class="brand-statement-points-text fade-slide-up">
                         <h4>
                             Confidence
                         </h4>
@@ -151,7 +152,7 @@
                 </div>
                 <div class="brand-statement-points-second">
                     <img src="{{ url_for('static', filename='media/secureIcon2.png') }}"/>
-                    <div class="brand-statement-points-text">
+                    <div class="brand-statement-points-text fade-slide-up">
                         <h4>
                             Secure
                         </h4>
@@ -162,7 +163,7 @@
                 </div>
                 <div class="brand-statement-points-third">
                     <img src="{{ url_for('static', filename='media/accessibleIcon2.png') }}"/>
-                    <div class="brand-statement-points-text">
+                    <div class="brand-statement-points-text fade-slide-up">
                         <h4>
                             Accessible
                         </h4>
@@ -176,7 +177,7 @@
         </div>
 
         <div class="footer">
-            <div class="footer-left">
+            <div class="footer-left fade-slide-up">
                 <div class="footer-left-top">
                     <img src="{{ url_for('static', filename='media/konnexLogoo.webp') }}"/>
                     <h5>
@@ -184,7 +185,7 @@
                     </h5>
                 </div>
             </div>
-            <div class="footer-right">
+            <div class="footer-right fade-slide-up">
                 <div class="footer-routes">
                     <a href="/" class="footer-single-route">
                         <h7>
