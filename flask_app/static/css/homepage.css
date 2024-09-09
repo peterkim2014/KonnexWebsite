@@ -540,8 +540,8 @@
                             justify-content: flex-start;
                             gap: 2vw;
                             } .feature-steps-img {
-                                width: 30px;
-                                height: 30px;
+                                width: 23px;
+                                height: 23px;
                             } .feature-step-text {
                                 font-size: 1.1em;
 }.blockchain-container {
@@ -920,7 +920,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        height: 85%;
+        height: 75%;
         width: 55%;
         /* margin-top: 3.5%; */
         } .join-header {
@@ -1031,7 +1031,7 @@
                     text-align: center;
                     font-size: 0.78em;
                     line-height: 15px;
-                    /* margin-top: 2.5%; */
+                    margin-top: 3.5%;
     } .footer {
         width: 100%;
         height: 150px;
@@ -1262,7 +1262,7 @@
         } .intro-text-container > h3 {
             margin: 0;
             width: 85%;
-            font-size: 3.25em;
+            font-size: 3em;
             text-align: left;
             font-weight: 600;
             font-family: 'FreightSansMedium', sans-serif;
@@ -1270,7 +1270,7 @@
             line-height: 75px;
         } .intro-text-container > h4 {
             margin: 0;
-            width: 66%;
+            width: 60%;
             text-align: left;
             font-weight: 100;
             line-height: 33px;
@@ -1792,11 +1792,12 @@
         margin-top: 6.6%;
     } .join-the-community-perks-headline {
         width: 94%;
-        height: 180px;
+        height: 250px;
         margin: 0;
         /* background-color: green; */
         } .join-the-community-perks-headline > h4 {
             font-size: 2em;
+            line-height: 40px;
             /* color: white; */
             /* font-weight: 800; */
             width: 100%;
