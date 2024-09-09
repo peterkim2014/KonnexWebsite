@@ -843,9 +843,11 @@
             margin: 0;
             font-weight: 600;
             font-family: 'FreightSansMedium', sans-serif;
-            line-height: 50px;
-
-            /* background-color: red; */
+            line-height: 45px;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
         .join-the-community-perks-headline > h4 {
             font-size: 1.6em;
