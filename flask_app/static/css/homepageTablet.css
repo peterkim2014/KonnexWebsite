@@ -235,35 +235,39 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            height: 640px;
+            height: 675px;
         } .intro-text-container {
                 width: 100%;
                 height: 260px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 7%;
+                /* padding-top: 2%; */
+                margin-top: -10%;
+                gap: 2vh;
+                /* background-color: red; */
                 } .intro-text-container > h3 {
                     margin: 0;
-                    width: 85%;
-                    font-size: 1.5em;
+                    width: 65%;
+                    font-size: 2em;
                     text-align: center;
-                    font-weight: 400;
+                    font-weight: 500;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
-                    line-height: 28px;
+                    line-height: 40px;
                     height: 30%;
+                    margin-top: -5%;
                     background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
                     background-clip: text;
                     color: transparent;
                     -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
-                    width: 60%;
+                    width: 50%;
                     text-align: center;
                     font-weight: 100;
                     line-height: 27px;
-                    font-size: 0.9em;
+                    font-size: 1em;
                     letter-spacing: 0.7px;
     } .banner-small-container {
         width: 100%;
@@ -342,7 +346,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px;
+    height: 860px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -380,19 +384,64 @@
             line-height: 30px;
             text-align: center;
             
-    } .purpose-text-container > img {
-        width: 440px;
-        height: 380px;
-        margin-top: 2%;
+    } .purpose-banner > img {
+        width: 480px;
+        height: 420px;
+        margin-top: 10%;
+} .key-transaction-features {
+    width: 80%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28%;
+    /* background-color: red; */
+} .key-transaction-features > h3 {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 700;
+    font-family: 'FreightSansMedium', sans-serif;
+    text-align: center;
+    margin: 0;
+}.key-transaction-feature {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 1vh;
+    /* background-color: red; */
+} .key-transaction-feature > img {
+    width: 35px;
+    height: 32px;
+} .key-transaction-feature-text {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+} .key-transaction-feature-text > h2 {
+    font-size: 1.05em;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'FreightSansMedium', sans-serif;
+} .key-transaction-feature-text > h6 {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    margin: 0;
 } .blockchain-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     /* gap: 4.5vh; */
-    height: 1130px;
+    height: 1290px;
     width: 100%;
-    margin-top: 14%;
+    margin-top: 10%;
     } .blockchain-header-container {
         height: 75px;
         width: 780px;
@@ -400,7 +449,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        margin-top: 9%;
+        margin-top: 22%;
         /* background-color: red; */
         } .blockchain-header-container > h4 {
             margin: 0;
@@ -561,11 +610,11 @@
                     line-height: 25px;
                     margin-top: -1%;
 } .referral-information {
-    background-image: url('../media/referralBanner.png');
+    background-image: url('../media/referralBanner5.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -573,21 +622,21 @@
     padding-top: 8%;
     gap: 1vh;
     } .referral-steps {
-        width: 80%;
+        width: 85%;
         height: 30%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         /* gap: 5vh; */
         /* background-color: red; */
             } .referral-steps > h6 {
-                    font-size: 1.15em;
+                    font-size: 1.4em;
                     color: white;
-                    opacity: .5;
+                    /* opacity: .5; */
                     margin: 0;
                     width: 90%;
-                    text-align: center;
+                    text-align: end;
         } .referral-explanation {
         width: 100%;
         height: 400px;
@@ -607,26 +656,27 @@
                 margin-left: -5%;
         } .referral-details {
             /* background-color: red; */
-            padding-top: 1.5%;
-            width: 75%;
+            /* padding-top: 1.5%; */
+            width: 77%;
             height: 70%;
             display: flex;
             /* flex-direction: column; */
-            justify-content: center;
-            align-items: center;
-            padding-right: 5%;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-top: 2%;
+            /* padding-right: 10%; */
             } .referral-title {
-                width: 85%;
+                width: 90%;
                 height: 20%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-bottom: 2%;
-                /* justify-content: space-between; */
+                /* padding-bottom: 2%; */
+                justify-content: flex-end;
                 /* gap: 0.5vh; */
                 /* background-color: red; */
                 } .referral-title > h5 {
-                    font-size: 1.6em;
+                    font-size: 1.5em;
                     color: white;
                     /* font-weight: 800; */
                     width: 90%;
@@ -644,7 +694,7 @@
                         margin: 0;
                         text-align: center;
             } .referral-details > p {
-                width: 50%;
+                width: 60%;
                 height: 65%;
                 font-size: 0.88em;
                 color: white;
@@ -653,9 +703,9 @@
                 text-align: end;
                 /* background-color: red; */
 } .join-the-community {
-    margin-top: 30%;
+    margin-top: 18%;
     width: 100%;
-    height: 850px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -670,7 +720,7 @@
         gap: 2vh;
         } .join-the-community-perks-headline {
             width: 90%;
-            height: 180px;
+            height: 300px;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -678,11 +728,12 @@
             justify-content: center;
             text-align: center;
         } .join-the-community-perks-headline > h3 {
-            font-size: 1.5em;
+            font-size: 2.2em;
             margin: 0;
             font-weight: 600;
+            width: 70%;
             font-family: 'FreightSansMedium', sans-serif;
-            line-height: 25px;
+            line-height: 34px;
             background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
             background-clip: text;
             -webkit-background-clip: text;
@@ -692,6 +743,7 @@
             margin: 0;
             width: 80%;
             font-family: 'FreightSansMedium';
+            margin-top: 5%;
         } .join-the-community-perks-headline > p {
             font-size: 0.91em;
             margin: 0;
@@ -1151,7 +1203,7 @@
     height: 130px;
     width: 100%;
     /* background-color: red; */
-    padding-top: 3%;
+    /* padding-top: 3%; */
 
     /* gap: 5vw; */
     } .home-name {
@@ -1227,7 +1279,7 @@
             /* margin: 0; */
             width: 360px;
             height: 290px;
-            padding-top: 3%;
+            /* padding-top: 3%; */
             /* margin-left: 13%; */
             /* margin-top: -8%; */
             /* align-items: center; */
@@ -1240,30 +1292,30 @@
                 margin-top: 1.2%;
                 /* margin-left: -1.75%; */
         } .intro-container {
-            margin-top: 5.5%;
+            margin-top: 2.5%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            height: 500px;
+            height: 530px;
             } .intro-text-container {
                 /* margin-left: 7.5%; */
                 width: 100%;
-                height: 280px;
+                height: 320px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 3%;
+                padding-top: 4%;
                 /* gap: 10vh; */
                 /* justify-content: center; */
-                /* gap: 3vh; */
+                gap: 1.5vh;
                 } .intro-text-container > h3 {
                     margin: 0;
                     width: 85%;
-                    font-size: 1.5em;
+                    font-size: 1.6em;
                     text-align: center;
-                    font-weight: 400;
+                    font-weight: 700;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 28px;
@@ -1273,13 +1325,13 @@
                     -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
-                    width: 50%;
+                    width: 70%;
                     text-align: center;
                     font-weight: 100;
                     line-height: 27px;
-                    font-size: 0.9em;
+                    font-size: 1em;
                     letter-spacing: 0.7px;
-                    margin-top: 1.2%;
+                    /* margin-top: 1.2%; */
     } .banner-small-container {
         width: 100%;
         height: 90px;
@@ -1322,7 +1374,7 @@
         margin-top: 3.5%;
         /* gap: 5vh; */
         } .dependable-paragraph > h7 {
-            font-size: 1.4em;
+            font-size: 1.6em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
@@ -1356,7 +1408,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 350px;
+    height: 890px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1391,20 +1443,62 @@
             font-size: 0.88em;
             line-height: 26px;
             text-align: center;
-    } .purpose-text-container > img {
-        /* width: 430px; */
-        /* height: 380px; */
-        width: 50%;
-        /* margin-top: 2.5%; */
-        /* margin-right: -2.5%; */
-        margin-top: 3%;
+    } .purpose-banner > img {
+        width: 520px;
+        height: 460px;
+        margin-top: 14%;
+} .key-transaction-features {
+    width: 80%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+    /* background-color: red; */
+} .key-transaction-features > h3 {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 700;
+    font-family: 'FreightSansMedium', sans-serif;
+    text-align: center;
+    margin: 0;
+}.key-transaction-feature {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 1vh;
+    /* background-color: red; */
+} .key-transaction-feature > img {
+    width: 35px;
+    height: 32px;
+} .key-transaction-feature-text {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+} .key-transaction-feature-text > h2 {
+    font-size: 1.05em;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'FreightSansMedium', sans-serif;
+} .key-transaction-feature-text > h6 {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    margin: 0;
 } .blockchain-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     /* gap: 2.5vh; */
-    height: 1020px;
+    height: 1120px;
     width: 100%;
     margin-top: 22%;
     } .blockchain-header-container {
@@ -1414,7 +1508,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        margin-top: 1%;
+        margin-top: 4%;
         /* gap: 5vh; */
         /* background-color: red; */
         } .blockchain-header-container > h4 {
@@ -1576,11 +1670,11 @@
                     line-height: 25px;
                     margin-top: -2%;
 } .referral-information {
-    background-image: url('../media/referralBanner.png');
+    background-image: url('../media/referralBanner5.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 360px;
+    height: 560px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1603,7 +1697,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         gap: 5vh;
         /* background-color: red; */
             } .referral-step > h5 {
@@ -1616,12 +1710,13 @@
                 font-family: 'FreightSansMedium';
 
                 }.referral-steps > h6 {
-                    font-size: 1.2em;
+                    font-size: 1.6em;
                     color: white;
-                    opacity: .5;
+                    /* opacity: .5; */
                     margin: 0;
-                    width: 90%;
-                    text-align: center;
+                    width: 100%;
+                    text-align: end;
+                    /* background-color: red; */
         } .referral-step-last {
             width: 100%;
             height: 51px;
@@ -1667,12 +1762,12 @@
         } .referral-details {
             /* background-color: red; */
             padding-top: 1.5%;
-            width: 75%;
+            width: 77%;
             height: 70%;
             display: flex;
             /* flex-direction: column; */
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
+            align-items: flex-start;
             padding-right: 5%;
             } .referral-title {
                 width: 85%;
@@ -1683,9 +1778,10 @@
                 /* justify-content: space-between; */
                 gap: 2vh;
                 } .referral-title > h5 {
-                    font-size: 1.4em;
+                    font-size: 1.8em;
                     color: white;
                     /* font-weight: 800; */
+                    /* background-color: red; */
                     width: 90%;
                     height: 40%;
                     margin: 0;
@@ -1710,9 +1806,9 @@
                 text-align: end;
                 /* background-color: red; */
 } .join-the-community {
-    margin-top: 20%;
+    margin-top: 12%;
     width: 100%;
-    height: 850px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1732,33 +1828,36 @@
         gap: 2.5vh;
         } .join-the-community-perks-headline {
             width: 90%;
-            height: 180px;
+            height: 250px;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            /* background-color: red; */
         } .join-the-community-perks-headline > h3 {
-            font-size: 1.5em;
+            font-size: 2.2em;
             margin: 0;
             font-weight: 600;
             font-family: 'FreightSansMedium', sans-serif;
-            line-height: 25px;
+            line-height: 34px;
             background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
+            width: 60%;
         } .join-the-community-perks-headline > h4 {
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin: 0;
             width: 80%;
             font-family: 'FreightSansMedium';
+            margin-top: 4%;
         } .join-the-community-perks-headline > p {
             font-size: 0.91em;
             margin: 0;
             padding-top: 3%;
-            width: 68%;
+            width: 60%;
             line-height: 24px;
         } .join-the-community-perks-description {
             width: 85%;
@@ -1899,7 +1998,7 @@
         height: 40%;
         width: 80%;
         gap: 4vh;
-        margin-bottom: 20%;
+        margin-bottom: 17%;
     } .join-header {
             display: flex;
             flex-direction: column;
@@ -1975,14 +2074,14 @@
             /* justify-content: flex-start */
             height: 325px;
             width: 350px;
-
+            margin-top: 3%;
             } .join-form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
                 height: 70%;
-                width: 88%;
+                width: 95%;
                 /* background-color: red; */
                 } .join-label {
                     display: flex;
@@ -2012,7 +2111,7 @@
                     color: white;
                     margin-top: 6%;
             } .join-form-container > p {
-                width: 85%;
+                width: 90%;
                 margin-left: 1%;
                 text-align: center;
                 font-size: 0.78em;
