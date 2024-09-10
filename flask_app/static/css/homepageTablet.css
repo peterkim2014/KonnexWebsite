@@ -74,9 +74,8 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 23.75vw;
+    right: 5px;
     padding-top: 0.6%;
-    /* top: 17vh; */
 } .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -238,29 +237,26 @@
             width: 100%;
             height: 640px;
         } .intro-text-container {
-                /* background-color: red; */
-                /* margin-left: 7.5%; */
                 width: 100%;
                 height: 260px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding-top: 7%;
-                /* gap: 2vh; */
-                /* justify-content: center; */
-                /* gap: 3vh; */
-                /* background-color: red; */
                 } .intro-text-container > h3 {
                     margin: 0;
-                    width: 69%;
-                    font-size: .97em;
+                    width: 85%;
+                    font-size: 1.5em;
                     text-align: center;
                     font-weight: 400;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 28px;
                     height: 30%;
-                    /* background-color: red; */
+                    background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
                     width: 60%;
@@ -294,7 +290,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    height: 600px;
+    height: 625px;
     width: 100%;
     gap: 0.5vh;
     } .dependable-container > img {
@@ -306,18 +302,22 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 300px;
+        height: 350px;
         width: 100%;
-        /* margin-left: 10%; */
         margin-top: 5%;
-        gap: 2.5vh;
+        gap: 5vh;
         } .dependable-paragraph > h7 {
             font-size: 1.4em;
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 1px;
             font-weight: 700;
             margin: 0;
-            height: 20%;
+            height: 30%;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
         } .dependable-paragraph {
             /* background-color: red; */
             display: flex;
@@ -326,10 +326,8 @@
             justify-content: center;
             height: 72%;
             width: 86%;
-            /* gap: 2vh; */
-            /* background-color: red; */
             } .dependable-paragraph > p {
-                height: 50%;
+                height: 40%;
                 font-size: 0.92em;
                 font-family: 'FreightSansBook', sans-serif;
                 /* letter-spacing: 0.2px; */
@@ -337,7 +335,7 @@
                 margin: 0;
                 width: 81%;
                 text-align: center;
-                /* background-color: red; */
+                margin-top: 2.5%;
                 
 } .purpose-banner {
     background-image: url('../media/banner2.png');
@@ -655,26 +653,21 @@
                 text-align: end;
                 /* background-color: red; */
 } .join-the-community {
-    margin-top: 20%;
+    margin-top: 30%;
     width: 100%;
-    height: 1400px;
+    height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap: 1vh; */
     } .join-the-community-perks {
         width: 100%;
         height: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: space-between; */
         justify-content: flex-start;
-        /* margin-left: 10%; */
-        /* background-color: green; */
-        /* margin-top: 8.6%; */
-        /* gap: 3vh; */
+        gap: 2vh;
         } .join-the-community-perks-headline {
             width: 90%;
             height: 180px;
@@ -684,6 +677,16 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+        } .join-the-community-perks-headline > h3 {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 600;
+            font-family: 'FreightSansMedium', sans-serif;
+            line-height: 25px;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         } .join-the-community-perks-headline > h4 {
             font-size: 1.5em;
             margin: 0;
@@ -835,8 +838,8 @@
         justify-content: flex-start;
         height: 600px;
         width: 80%;
-        /* background-color: red; */
-        /* margin-top: -20%; */
+        gap: 3vh;
+        margin-bottom: 10%;
     } .join-header {
             display: flex;
             flex-direction: column;
@@ -1076,9 +1079,8 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 31.5vw;
+    right: 5px;
     padding-top: 0.6%;
-    top: 22vh;
     } .dropdown-content a {
         color: black;
         padding: 12px 16px;
@@ -1258,14 +1260,17 @@
                 /* gap: 3vh; */
                 } .intro-text-container > h3 {
                     margin: 0;
-                    width: 51%;
-                    font-size: .97em;
+                    width: 85%;
+                    font-size: 1.5em;
                     text-align: center;
                     font-weight: 400;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 28px;
-
+                    background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
                     width: 50%;
@@ -1300,12 +1305,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: space-between;
-    height: 750px;
+    height: 825px;
     width: 100%;
     /* gap: 0.5vh; */
     } .dependable-container > img {
-        /* width: 1023.8px; */
-        /* height: 380px; */
         width: 100%;
         margin: 0;
     } .dependable-text-container {
@@ -1324,7 +1327,12 @@
             letter-spacing: 1px;
             font-weight: 700;
             margin: 0;
-            height: 20%;
+            height: 40%;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
         } .dependable-paragraph {
             display: flex;
             flex-direction: column;
@@ -1704,7 +1712,7 @@
 } .join-the-community {
     margin-top: 20%;
     width: 100%;
-    height: 1470px;
+    height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1721,7 +1729,7 @@
         /* margin-left: 10%; */
         /* background-color: green; */
         margin-top: 2%;
-        gap: 3vh;
+        gap: 2.5vh;
         } .join-the-community-perks-headline {
             width: 90%;
             height: 180px;
@@ -1731,6 +1739,16 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+        } .join-the-community-perks-headline > h3 {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 600;
+            font-family: 'FreightSansMedium', sans-serif;
+            line-height: 25px;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         } .join-the-community-perks-headline > h4 {
             font-size: 1.5em;
             margin: 0;
@@ -1880,8 +1898,8 @@
         justify-content: flex-start;
         height: 40%;
         width: 80%;
-        /* background-color: red; */
-        margin-top: -8%;
+        gap: 4vh;
+        margin-bottom: 20%;
     } .join-header {
             display: flex;
             flex-direction: column;
