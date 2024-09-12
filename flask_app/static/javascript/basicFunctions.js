@@ -199,22 +199,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// JavaScript to trigger animations when scrolling
-document.addEventListener("DOMContentLoaded", function() {
+// Function to initialize fade-in and fade-slide-up animations
+function initializeAnimations() {
+    // Initialize fade-in animations
     const faders = document.querySelectorAll('.fade-in');
-
     const appearOptions = {
         threshold: 0,
-        rootMargin: "0px 0px -200px 0px"
+        rootMargin: "0px 0px -25px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Stop observing after it's visible
             }
         });
     }, appearOptions);
@@ -222,30 +220,60 @@ document.addEventListener("DOMContentLoaded", function() {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
-});
-// JavaScript to trigger animations on scroll (repeated animation)
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll('.fade-slide-up');
 
-    const options = {
-        threshold: 0.05,  // Trigger when 20% of the element is visible
-        rootMargin: "0px 0px -50px 0px"
+    // Initialize fade-slide-up animations
+    const sliders = document.querySelectorAll('.fade-slide-up');
+    const slideOptions = {
+        threshold: 0.05,
+        rootMargin: "0px 0px -25px 0px"
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const slideObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');  // Add the animation class when visible
+                entry.target.classList.add('visible');
             } else {
-                entry.target.classList.remove('visible');  // Remove the class when it's no longer visible
+                entry.target.classList.remove('visible');
             }
         });
-    }, options);
+    }, slideOptions);
 
-    sections.forEach(section => {
-        observer.observe(section);  // Observe each section
+    sliders.forEach(slider => {
+        slideObserver.observe(slider);
     });
+}
+
+// Initialize animations when the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    initializeAnimations();
 });
+
+// For Single Page Applications or dynamic content loading
+if (window.history.pushState) {
+    // Listen for navigation events and reinitialize animations
+    window.addEventListener('popstate', function() {
+        initializeAnimations();
+    });
+
+    // If using a framework or router (like React or Vue), listen to routing changes
+    document.addEventListener('page:change', function() {
+        initializeAnimations();
+    });
+}
+
+// MutationObserver to detect content changes (if content is loaded dynamically)
+const observerConfig = { childList: true, subtree: true };
+const domObserver = new MutationObserver((mutationsList, observer) => {
+    for (const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            initializeAnimations(); // Reinitialize animations when new elements are added
+        }
+    }
+});
+
+// Start observing the body for changes
+domObserver.observe(document.body, observerConfig);
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get all anchor links with href starting with '#'
