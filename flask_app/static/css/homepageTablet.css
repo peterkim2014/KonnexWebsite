@@ -236,22 +236,25 @@
             align-items: center;
             width: 100%;
             height: 675px;
+            /* background-color: red; */
         } .intro-text-container {
                 width: 100%;
-                height: 260px;
+                /* height: 260px; */
+                height: 50%;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 /* padding-top: 2%; */
-                margin-top: -10%;
-                gap: 2vh;
+                /* margin-top: -2%; */
+                gap: 2%;
                 /* background-color: red; */
                 } .intro-text-container > h3 {
                     margin: 0;
                     width: 65%;
                     font-size: 2em;
                     text-align: center;
-                    font-weight: 500;
+                    font-weight: 700;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 40px;
@@ -316,20 +319,21 @@
             letter-spacing: 1px;
             font-weight: 700;
             margin: 0;
-            height: 30%;
+            height: 31%;
             background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             text-align: center;
-        } .dependable-paragraph {
             /* background-color: red; */
+        } .dependable-paragraph {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 72%;
             width: 86%;
+            
             } .dependable-paragraph > p {
                 height: 40%;
                 font-size: 0.92em;
@@ -346,13 +350,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 860px;
+    height: 880px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 3vw;
-    /* padding-top: 8%; */
+    padding-top: 4%;
 } .purpose-text-container {
         /* background-color: red; */
         width: 88%;
@@ -385,16 +389,21 @@
             text-align: center;
             
     } .purpose-banner > img {
-        width: 480px;
-        height: 420px;
-        margin-top: 10%;
+        width: 500px;
+        height: 470px;
+        margin-top: 5%;
+        margin-bottom: -19%;
 } .key-transaction-features {
     width: 80%;
-    height: 360px;
+    /* height: 860px; */
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    gap: 1vh;
     align-items: center;
-    margin-top: 28%;
+    padding-top: 5%;
+    /* margin-top: 28%; */
     /* background-color: red; */
 } .key-transaction-features > h3 {
     font-size: 1.8em;
@@ -405,7 +414,8 @@
     margin: 0;
 }.key-transaction-feature {
     width: 100%;
-    height: 120px;
+    /* height: 120px; */
+    height: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,6 +432,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
+    /* background-color: green; */
 } .key-transaction-feature-text > h2 {
     font-size: 1.05em;
     color: white;
@@ -720,7 +731,7 @@
         gap: 2vh;
         } .join-the-community-perks-headline {
             width: 90%;
-            height: 300px;
+            height: 310px;
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -906,7 +917,7 @@
             letter-spacing: 1px;
         } .join-header > h5 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
         } .perks-visual {
@@ -967,7 +978,8 @@
             /* justify-content: flex-start */
             height: 325px;
             width: 100%;
-
+            margin-top: 5%;
+            /* background-color: red; */
             } .join-form {
                 display: flex;
                 flex-direction: column;
@@ -1272,16 +1284,18 @@
         background-image: url('../media/openPagePhoneBackground.png');
         background-size: cover;
         background-size: 100%;
-        margin-top: 8.5%;
+        /* margin-top: 8.5%; */
         justify-content: center;
         /* margin: 0; */
+        margin-top: 12%;
+        /* background-color: red; */
     } .intro-visual-container > img {
             /* margin: 0; */
             width: 360px;
             height: 290px;
             /* padding-top: 3%; */
             /* margin-left: 13%; */
-            /* margin-top: -8%; */
+            /* margin-top: 8%; */
             /* align-items: center; */
         } .join-button {
             margin: 0;
@@ -1292,40 +1306,49 @@
                 margin-top: 1.2%;
                 /* margin-left: -1.75%; */
         } .intro-container {
-            margin-top: 2.5%;
+            /* margin-top: 2.5%; */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            height: 530px;
+            height: 50%;
+            /* height: 530px; */
+            /* background-color: red; */
             } .intro-text-container {
                 /* margin-left: 7.5%; */
                 width: 100%;
-                height: 320px;
+                /* height: 60%; */
+                height: 300px;
+                /* height: 320px; */
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding-top: 4%;
+                /* padding-top: 4%; */
+                /* background-color: red; */
                 /* gap: 10vh; */
-                /* justify-content: center; */
-                gap: 1.5vh;
+                justify-content: center;
+                gap: 3vh;
                 } .intro-text-container > h3 {
                     margin: 0;
-                    width: 85%;
+                    height: 22%;
+                    width: 45%;
                     font-size: 1.6em;
                     text-align: center;
                     font-weight: 700;
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
-                    line-height: 28px;
+                    line-height: 32px;
                     background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
                     background-clip: text;
                     color: transparent;
                     -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
-                    width: 70%;
+                    /* background-color: red; */
+                    padding-top: 1%;
+                    width: 35%;
+                    height: 20%;
                     text-align: center;
                     font-weight: 100;
                     line-height: 27px;
@@ -1408,13 +1431,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 890px;
+    height: 850px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     /* gap: 3vw; */
-    padding-top: 3%;
+    padding-top: 6%;
 } .purpose-text-container {
         /* background-color: red; */
         width: 88%;
@@ -1446,14 +1469,19 @@
     } .purpose-banner > img {
         width: 520px;
         height: 460px;
-        margin-top: 14%;
+        margin-bottom: -15%;
+        margin-top: 8%;
 } .key-transaction-features {
     width: 80%;
-    height: 360px;
+    height: 50%;
+    /* height: 360px; */
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    gap: 1vh;
     align-items: center;
-    margin-top: 20%;
+    padding-top: 4%;
+    /* margin-top: 20%; */
     /* background-color: red; */
 } .key-transaction-features > h3 {
     font-size: 1.8em;
@@ -1464,14 +1492,15 @@
     margin: 0;
 }.key-transaction-feature {
     width: 100%;
-    height: 120px;
+    height: 100%;
+    /* height: 120px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
     gap: 1vh;
-    /* background-color: red; */
+    /* background-color: green; */
 } .key-transaction-feature > img {
     width: 35px;
     height: 32px;
@@ -1481,6 +1510,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
+    /* background-color: blue; */
 } .key-transaction-feature-text > h2 {
     font-size: 1.05em;
     color: white;
@@ -1806,7 +1836,7 @@
                 text-align: end;
                 /* background-color: red; */
 } .join-the-community {
-    margin-top: 12%;
+    margin-top: 10%;
     width: 100%;
     height: 900px;
     display: flex;
@@ -1824,7 +1854,8 @@
         justify-content: flex-start;
         /* margin-left: 10%; */
         /* background-color: green; */
-        margin-top: 2%;
+        margin-top: 1%;
+        /* padding-bottom: 5%; */
         gap: 2.5vh;
         } .join-the-community-perks-headline {
             width: 90%;
@@ -1994,11 +2025,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        height: 40%;
+        justify-content: flex-end;
+        height: 60%;
         width: 80%;
-        gap: 4vh;
-        margin-bottom: 17%;
+        gap: 3vh;
+        margin-bottom: 10%;
+        padding-top: 2%;
     } .join-header {
             display: flex;
             flex-direction: column;
@@ -2013,7 +2045,7 @@
             letter-spacing: 1px;
         } .join-header > h5 {
             margin: 0;
-            font-size: 1.35em;
+            font-size: 1.15em;
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
         } .perks-visual {
@@ -2047,12 +2079,12 @@
                 margin-top: 1.5%;
                 width: 50%;
             } .perks-list-visual-text > h7 {
-        /* background-color: blue; */
-        margin: 0;
-        width: 40%;
-        font-size: 1.1em;
-        margin-top: -0.2%;
-        /* padding-left: 1%; */
+                /* background-color: blue; */
+                margin: 0;
+                width: 40%;
+                font-size: 1.1em;
+                margin-top: -0.2%;
+                /* padding-left: 1%; */
             } .perks-list-visual-text-third {
                 display: flex;
                 width: 30%;
@@ -2070,26 +2102,32 @@
     } .join-form-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            /* justify-content: flex-start */
-            height: 325px;
+            align-items: flex-start;
+            /* justify-content: flex-start; */
+            /* height: 325px; */
+            height: 100%;
+            /* gap: 5vh; */
+            /* background-color: red; */
             width: 350px;
             margin-top: 3%;
+            gap: 1vh;
             } .join-form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
-                height: 70%;
+                justify-content: space-around;
+                height: 100%;
+                gap: 2vh;
                 width: 95%;
                 /* background-color: red; */
                 } .join-label {
-                    display: flex;
+                    /* display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
-                    align-items: flex-start;
+                    align-items: flex-start; */
                     width: 100%;
-                    height: 30%;
+                    /* gap: 1vh; */
+                    /* height: 100%; */
                     /* background-color: green; */
                     } .join-label > input {
                         width: 96%;
