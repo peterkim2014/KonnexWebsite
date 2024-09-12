@@ -87,6 +87,21 @@ def waitlist_form():
 
     email_found = False
     account_id = None
+    # Get the reCAPTCHA response token
+    recaptcha_response = request.form['g-recaptcha-response']
+    
+    # Secret key from reCAPTCHA registration
+    secret_key = "6LfSykAqAAAAABnrm7mJDY0S0KTlzHH1JWXeyBaL"
+
+    # Verify the response with Google
+    verification_url = "https://www.google.com/recaptcha/api/siteverify"
+    payload = {
+        'secret': secret_key,
+        'response': recaptcha_response
+    }
+    response = requests.post(verification_url, data=payload)
+    result = response.json()
+
     for account in accountsFormattedData:
         print("Checking account: ", account["attributes"]["email"])  # Debugging line
         if account["attributes"]["email"] == data["email"]:

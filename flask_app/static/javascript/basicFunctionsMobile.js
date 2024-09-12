@@ -1,3 +1,19 @@
+// Function called when reCAPTCHA is successfully completed
+function onRecaptchaSuccess(token) {
+    document.getElementById('submit-button').disabled = false; // Enable the button
+}
+// Function called when reCAPTCHA expires
+function onRecaptchaExpired() {
+    document.getElementById('submit-button').disabled = true; // Disable the button
+}
+// Function called when there is an error with reCAPTCHA
+function onRecaptchaError() {
+    document.getElementById('submit-button').disabled = true; // Disable the button
+}
+// Disable the button initially
+document.getElementById('submit-button').disabled = true;
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var myScreenOrientation = window.screen.orientation;
     // alert(`The orientation of the screen is: ${myScreenOrientation.type}`);
