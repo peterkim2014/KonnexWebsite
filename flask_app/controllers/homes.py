@@ -91,7 +91,7 @@ def waitlist_form():
     recaptcha_response = request.form['g-recaptcha-response']
     
     # Secret key from reCAPTCHA registration
-    secret_key = "6LfSykAqAAAAABnrm7mJDY0S0KTlzHH1JWXeyBaL"
+    secret_key = "6LfRykAqAAAAAOEaNGdX6HrUQ7g_CUkd-oqwt4jB"
 
     # Verify the response with Google
     verification_url = "https://www.google.com/recaptcha/api/siteverify"
