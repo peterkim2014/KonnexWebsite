@@ -1,3 +1,18 @@
+// Function called when reCAPTCHA is successfully completed
+function onRecaptchaSuccess(token) {
+    document.getElementById('submit-button').disabled = false; // Enable the button
+}
+// Function called when reCAPTCHA expires
+function onRecaptchaExpired() {
+    document.getElementById('submit-button').disabled = true; // Disable the button
+}
+// Function called when there is an error with reCAPTCHA
+function onRecaptchaError() {
+    document.getElementById('submit-button').disabled = true; // Disable the button
+}
+// Disable the button initially
+document.getElementById('submit-button').disabled = true;
+
 // JavaScript for dropdown functionality
 document.addEventListener("DOMContentLoaded", function() {
     const contactLink = document.querySelector(".contact");
