@@ -280,6 +280,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding-top: 3%;
+    padding-bottom: 5%;
     } .label {
         display: flex;
         flex-direction: column;
@@ -480,8 +481,8 @@
                 margin-top: -2%;
             } .submit-button-tag {
                 display: inline-block;
-                margin-top: 5%;
-                padding: 4px 123px;
+                /* margin-top: 5%; */
+                padding: 3px 340px;
                 background-color: #5AC3D5; /* Initial background color */
                 color: white;
                 font-size: 1rem;
@@ -1024,7 +1025,49 @@
                     width: 100%;
                     /* margin-top: -2%; */
                     padding-bottom: 15%;
-    } .footer {
+                    } .submit-button-tag {
+                        display: inline-block;
+                        /* margin-top: 5%; */
+                        padding: 3px 340px;
+                        background-color: #5AC3D5; /* Initial background color */
+                        color: white;
+                        font-size: 1rem;
+                        text-align: center;
+                        text-decoration: none;
+                        border-radius: 8px; 
+                        position: relative; /* For hover effect positioning */
+                        overflow: hidden; /* Ensures hover effect stays inside the button */
+                        transition: background-color 0.3s ease; /* Smooth color transition */
+                        border: none; /* Remove default button borders */
+                        cursor: pointer; /* Change cursor to pointer on hover */
+                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+                    }
+                    /* Button hover state */
+                    .submit-button-tag:hover {
+                        background-color: #003F4A; /* Darker green on hover */
+                    }
+                    /* Glossy effect on hover */
+                    .submit-button-tag::before {
+                        content: '';
+                        position: absolute;
+                        top: -100%;
+                        left: -100%;
+                        width: 300%;
+                        height: 300%;
+                        background: rgba(255, 255, 255, 0.4); /* Glossy white overlay */
+                        transform: rotate(45deg); /* Diagonal angle */
+                        transition: transform 0.5s ease;
+                        z-index: 1; /* Ensure it stays above the button */
+                    }
+                    /* Activate the glossy shine effect on hover */
+                    .submit-button-tag:hover::before {
+                        transform: translateX(150%) rotate(45deg); /* Move gloss across the button */
+                    }
+                    /* Ensure text stays above the gloss */
+                    .submit-button-tag span {
+                        position: relative;
+                        z-index: 2; 
+    }.footer {
         width: 100%;
         height: 150px;
         background-image: url('../media/websiteFooterBackground.png');
@@ -1102,6 +1145,6 @@
                         height: 60px;
                         font-size: 0.7em;
                         padding-top: 1%;
-                        }
+                        } 
     
 }
