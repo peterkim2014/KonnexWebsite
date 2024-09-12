@@ -2131,7 +2131,8 @@
             height: 325px;
             width: 100%;
             /* background-color: red; */
-            /* margin-top: -5%; */
+            /* margin-top: 2%; */
+            /* padding-top: 10%; */
             } .join-form {
                 display: flex;
                 flex-direction: column;
