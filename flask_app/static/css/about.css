@@ -573,11 +573,9 @@
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         border: none;
-        top: 115px;
-        right: 120px;
-        /* right: 50px; */
+        top: 90px;
+        right: 30px;
         padding-top: 0.6%;
-        /* top: 85px; */
     } .dropdown-content a {
         color: black;
         padding: 12px 16px;
