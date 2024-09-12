@@ -58,11 +58,12 @@
  .contact-form-button {
     display: inline-block;
     margin-top: 5%;
-    padding: 4px 123px;
+    padding: 4px 170px;
     background-color: #5AC3D5; /* Initial background color */
     color: white;
     font-size: 1rem;
     text-align: center;
+    padding-bottom: 2%;
     text-decoration: none;
     border-radius: 8px; 
     position: relative; /* For hover effect positioning */
