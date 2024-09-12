@@ -954,7 +954,6 @@
             font-family: 'FreightSansBook', sans-serif;
             letter-spacing: 1px;
         } .perks-visual {
-            /* background-color: red; */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -962,7 +961,6 @@
             height: 105px;
             justify-content: center;
             } .perks-timeline-visual {
-                /* padding-top: 3%; */
                 width: 235px;
                 height: 22px;
                 margin-left: 3%;
@@ -1011,7 +1009,7 @@
             flex-direction: column;
             align-items: center;
             /* justify-content: flex-start */
-            height: 325px;
+            height: 450px;
             width: 100%;
             margin-top: 5%;
             } .join-form {
@@ -1365,6 +1363,10 @@
                     font-family: 'FreightSansMedium', sans-serif;
                     letter-spacing: 0.1px;
                     line-height: 40px;
+                    background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+                    background-clip: text;
+                    color: transparent;
+                    -webkit-background-clip: text;
                 } .intro-text-container > h4 {
                     margin: 0;
                     width: 55%;
@@ -1422,6 +1424,10 @@
             font-weight: 700;
             margin: 0;
             text-align: center;
+            background-image: linear-gradient(to right, #003F4A, #474C9E, violet);
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
         } .dependable-paragraph {
             display: flex;
             flex-direction: column;
@@ -1878,6 +1884,7 @@
             color: transparent;
             width: 80%;
             gap: 2.5vh;
+            height: 21.25%;
         } .join-the-community-perks-headline > h4 {
             font-size: 1.5em;
             margin: 0;
@@ -2101,7 +2108,7 @@
             flex-direction: column;
             align-items: center;
             /* justify-content: flex-start */
-            height: 325px;
+            height: 450px;
             width: 350px;
             margin-top: 5%;
             } .join-form {
