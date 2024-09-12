@@ -152,10 +152,11 @@
     z-index: 2;
 }.join-form-button {
     display: inline-block;
-    margin-top: 5%;
-    padding: 4px 123px;
+    margin-top: 11%;
+    padding: 8px 123px;
     background-color: #5AC3D5; /* Initial background color */
     color: white;
+    padding-top: 3px;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
@@ -192,6 +193,12 @@
 .join-form-button span {
     position: relative;
     z-index: 2;
+    margin: 0;
+    /* display: flex;
+    justify-content: center; */
+    /* margin-bottom: 5%; */
+    /* padding-bottom: ; */
+    /* margin-top: 4%; */
 }
 
 
@@ -859,7 +866,7 @@
                 /* background-color: red; */
 } .join-the-community {
     width: 98%;
-    height: 550px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1057,7 +1064,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
-                height: 325px;
+                height: 375px;
                 width: 100%;
                 padding-top: 10%;
                 } .join-form {
@@ -1065,7 +1072,7 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-between;
-                    height: 70%;
+                    height: 90%;
                     width: 55%;
                     } .join-label {
                         display: flex;
@@ -1097,7 +1104,11 @@
                     font-size: 0.78em;
                     line-height: 15px;
                     margin-top: 3.5%;
-    } .footer {
+    } .g-recaptcha {
+        /* width: 0%; */
+        height: 20%;
+        padding-top: 2%;
+    }.footer {
         width: 100%;
         height: 150px;
         background-image: url('../media/websiteFooterBackground.png');
@@ -1279,10 +1290,11 @@
     z-index: 2;
 }.join-form-button {
     display: inline-block;
-    margin-top: 5%;
-    padding: 7px 173px;
+    margin-top: 8%;
+    padding: 8px 173px;
     background-color: #5AC3D5; /* Initial background color */
     color: white;
+    padding-bottom: 2.5%;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
@@ -2062,6 +2074,7 @@
             justify-content: flex-start;
             height: 30px;
             width: 100%;
+            margin-top: -5%;
             } .join-header > h4 {
                 margin: 0;
                 font-size: 3.2em;
@@ -2128,7 +2141,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            height: 325px;
+            height: 405px;
             width: 100%;
             /* background-color: red; */
             /* margin-top: 2%; */
