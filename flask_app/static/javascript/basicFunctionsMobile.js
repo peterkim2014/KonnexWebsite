@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const appearOptions = {
         threshold: 0,
-        rootMargin: "0px 0px -100px 0px"
+        rootMargin: "0px 0px -10px 0px"
     };
 
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.fade-slide-up');
 
     const options = {
-        threshold: 0.02,  // Trigger when 20% of the element is visible
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.005,  // Trigger when 20% of the element is visible
+        rootMargin: "0px 0px -10px 0px"
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -264,107 +264,13 @@ imgElements.forEach(img => {
 
 
 
-
-
-
-
-// Attach event listener to the form submission
-// document.getElementById('join-form-function').addEventListener('submit', handleFormSubmit);
-
-// Function to handle form submission
-function handleFormSubmit(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Retrieve form data
-    const formData = event.target;
-    console.log("Form data: ", formData)
-
-
-    fetch('http://localhost:5000/mailchimp', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error signaling Mailchimp API:', error);
-    });
-}
-
-
-// Attach event listener to the form submission
-// document.getElementById('submit-join').addEventListener('submit', handleFormSubmit);
-
-// Function to handle form submission
-function handleFormSubmit(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Retrieve form data
-    const formData = event.target;
-    console.log("Form data: ", formData)
-
-
-    fetch('http://localhost:5000/joinTeamEmail', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error signaling Mailchimp API:', error);
-    });
-}
-
-
-// Attach event listener to the form submission
-// document.getElementById('contactFormEmail').addEventListener('submit', handleFormSubmit);
-
-// Function to handle form submission
-function handleFormSubmit(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Retrieve form data
-    const formData = event.target;
-    console.log("Form data: ", formData)
-
-
-    fetch('http://localhost:5000/contactUsEmail', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error signaling Mailchimp API:', error);
-    });
-}
-
-// Function called when reCAPTCHA is successfully completed
 function onRecaptchaSuccess(token) {
-    document.getElementById('submit-button').disabled = false; // Enable the button
+    document.getElementById('submit-button').disabled = false; 
 }
-// Function called when reCAPTCHA expires
 function onRecaptchaExpired() {
-    document.getElementById('submit-button').disabled = true; // Disable the button
+    document.getElementById('submit-button').disabled = true;
 }
-// Function called when there is an error with reCAPTCHA
 function onRecaptchaError() {
-    document.getElementById('submit-button').disabled = true; // Disable the button
+    document.getElementById('submit-button').disabled = true;
 }
-// Disable the button initially
 document.getElementById('submit-button').disabled = true;
