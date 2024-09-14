@@ -46,8 +46,9 @@
             </div>
         </div>
 
-        <div class="blog-main-container">
 
+        <div class="blog-main-container">
+            {% if not selected_blog %}
             <div class="blog-header">
                 <h4>
                     Konnex Blog
@@ -57,7 +58,6 @@
                         <button>
                             Categories
                         </button>
-
                     </div>
                     <div class="sort-button">
                         <h4>
@@ -71,8 +71,28 @@
             </div>
 
             <div class="blog-containers">
-
+                <h3>Browse Blogs</h3>
+                <ul>
+                    {% for blog in blogs %}
+                    <li>
+                        <a href="{{ url_for('blogs_home', blog_id=blog.id) }}">
+                            {{ blog.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
+            {% endif %}
+
+            {% if selected_blog %}
+                <div class="blog-selected">
+                    <h2>{{ selected_blog.title }}</h2>
+                    <p>{{ selected_blog.content }}</p>
+
+                    <!-- Back button to go back to browsing all blogs -->
+                    <button onclick=window.location.href="{{ url_for('blogs_home') }}">Back to all blogs</button>
+                </div>
+            {% endif %}
 
         </div>
 
@@ -87,11 +107,6 @@
                 <h6>
                     Est 2024
                 </h6>
-                <!-- <div class="footer-left-socials">
-                    <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
-                    <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
-                    <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
-                </div> -->
             </div>
             <div class="footer-right fade-slide-up">
                 <div class="footer-routes">
