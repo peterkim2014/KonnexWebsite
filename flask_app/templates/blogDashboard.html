@@ -6,7 +6,7 @@
     <title>Konnex - Cryptocurrency Wallet</title>
     <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blogLogin.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blogAdmin.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/image-compressor@2/dist/image-compressor.min.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -22,7 +22,21 @@
 </head>
 <body>
 
-
+    <div class="blog-dashboard">
+        <div class="side-nav">
+            <div class="home-name">
+                <img src="{{ url_for('static', filename='media/KonnexLogoInverted.png') }}" class="logo-lotus"/>
+                <div class="name-container">
+                    <h1>KONNEX</h1>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
+                </div>
+            </div>
+            <h2>
+                Thumbnail Section
+            </h2>
+        
+        </div>
+    </div>
     <ul>
         <li><a href="{{ url_for('blogs_adminDashboard', feature='thumbnail') }}">Thumbnail</a></li>
         <li><a href="{{ url_for('blogs_adminDashboard', feature='content') }}">Content</a></li>
