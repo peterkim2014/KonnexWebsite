@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konnex - Cryptocurrency Wallet</title>
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
+    <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blogLogin.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/image-compressor@2/dist/image-compressor.min.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://p.usestyle.ai" defer></script>
+    <meta name="google-site-verification" content="7s8i6Cai8gnVc6T4zt-t5-c9fIcB-lXHdwNuqHhAIFI" />
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VCBZXC9R3T');
+    </script>
+</head>
+<body>
+
+
+    <ul>
+        <li><a href="{{ url_for('blogs_adminDashboard', feature='thumbnail') }}">Thumbnail</a></li>
+        <li><a href="{{ url_for('blogs_adminDashboard', feature='content') }}">Content</a></li>
+        <li><a href="{{ url_for('blogs_adminDashboard', feature='preview') }}">Preview</a></li>
+        <li><a href="{{ url_for('blogs_adminDashboard', feature='schedule') }}">Schedule</a></li>
+    </ul>
+
+
+    <!-- Dynamic Content Section -->
+    <div class="content-section">
+        <!-- {% block blogContent %} -->
+            {% if feature == 'thumbnail' %}
+                {% include 'admin/blogThumbnail.html' %}
+            {% elif feature == 'content' %}
+                {% include 'admin/blogContent.html' %}
+            {% elif feature == 'preview' %}
+                {% include 'admin/blogPreview.html' %}
+            {% elif feature == 'schedule' %}
+                {% include 'admin/blogSchedule.html' %}
+            {% else %}
+                <h2>Select a feature to view its details</h2>
+            {% endif %}
+        <!-- {% endblock %} -->
+    </div>
+
+
+    
+</body>
+</html>
