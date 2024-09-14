@@ -4,9 +4,6 @@ from flask_app.models.team import Team
 from flask_app.models.contact import Contact
 import re
 import requests
-import mailchimp_marketing as MailchimpMarketing
-from mailchimp_marketing.api_client import ApiClientError
-from flask_app.config.mailMarketing import API_KEY
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
