@@ -46,15 +46,15 @@
             </div>
         </div>
 
-        <div class="blog-main-container">
-            {% if not selected_blog %}
-            <div class="blog-header">
+        <div class="article-main-container">
+            {% if not selected_article %}
+            <div class="article-header">
                 <h4>
                     Konnex Articles
                 </h4>
-                <!-- <div class="blog-header-options"> -->
-                    <!-- <div class="blog-categories">
-                        <button class="blog-categories-button">
+                <!-- <div class="article-header-options"> -->
+                    <!-- <div class="article-categories">
+                        <button class="article-categories-button">
                             
                                 Categories
                             
@@ -71,26 +71,26 @@
                     </div> -->
                 <!-- </div> -->
             </div>
-            <div class="vignette-background-blogs"></div>
-            <div class="blog-containers">
-                <!-- <h3>Browse Blogs</h3> -->
-                <ul class="single-blog-container" id="blog-list">
-                    {% for blog in blogs %}
-                    <li class="blog-container">
-                        <a href="{{ url_for('blogs_home', blog_id=blog.id) }}">
-                            {{ blog.title }}
+            <div class="vignette-background-articles"></div>
+            <div class="article-containers">
+                <!-- <h3>Browse articles</h3> -->
+                <ul class="single-article-container" id="article-list">
+                    {% for article in articles %}
+                    <li class="article-container">
+                        <a href="{{ url_for('articles_home', article_id=article.id) }}">
+                            {{ article.title }}
                         </a>
-                        <div class="blog-container-information">
-                            <div class="blog-container-information-image">
-                                <img class="previewBlogImage" src="{{ url_for('static', filename='uploads/' + blog.thumbnail) }}" alt="{{ blog.title }}">
+                        <div class="article-container-information">
+                            <div class="article-container-information-image">
+                                <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="{{ article.title }}">
                             </div>
                             <p>
-                                {{ blog.body[:200] }}{% if blog.body|length > 200 %}...{% endif %}
+                                {{ article.body[:200] }}{% if article.body|length > 200 %}...{% endif %}
                             </p>
                         </div>
                     </li>
-                    <div id="blog-data" style="display: none;">
-                    {{ blogs | tojson }}
+                    <div id="article-data" style="display: none;">
+                    {{ articles | tojson }}
                     </div>
                     {% endfor %}
                 </ul>
@@ -98,27 +98,27 @@
             </div>
             {% endif %}
 
-            {% if selected_blog %}
-            <div class="blog-selected">
-                <div class="back-to-blog">
-                    <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
+            {% if selected_article %}
+            <div class="article-selected">
+                <div class="back-to-article">
+                    <button class="button-back" onclick=window.location.href="{{ url_for('articles_home') }}"><img src="{{ url_for('static', filename='media/articleBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
                 </div>
-                <div class="blog-intro">
-                    <div class="blog-selected-image">
+                <div class="article-intro">
+                    <div class="article-selected-image">
                         <div class="vignette-background"></div>
-                        <img class="selectedBlogImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_blog.title }}">
+                        <img class="selectedArticleImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_article.title }}">
                     </div>
-                    <div class="blog-intro-text">
-                        <!-- <div class="blog-intro-text-top"> -->
-                        <h2 class="blog-intro-text-top">{{ selected_blog.title }}</h2>
+                    <div class="article-intro-text">
+                        <!-- <div class="article-intro-text-top"> -->
+                        <h2 class="article-intro-text-top">{{ selected_article.title }}</h2>
                         <!-- </div> -->
-                        <div class="blog-intro-text-bottom">
+                        <div class="article-intro-text-bottom">
                             <div class="tags">
                                 <h5>
                                     Tags:
                                 </h5>
                                 <h6>
-                                    {% for tag in selected_blog.tags | process_tags %}
+                                    {% for tag in selected_article.tags | process_tags %}
                                         <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
                                     {% endfor %}
                                 </h6>
@@ -132,11 +132,11 @@
                                 </h7>
                             </div>
                         </div>
-                        <!-- Back button to go back to browsing all blogs -->
+                        <!-- Back button to go back to browsing all articles -->
                     </div>
                 </div>
                 <p class="selectedBodyParagraph">
-                    {{ selected_blog.body }} 
+                    {{ selected_article.body }} 
                 </p>
             </div>
                 
