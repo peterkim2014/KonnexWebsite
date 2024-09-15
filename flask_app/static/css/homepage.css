@@ -262,7 +262,7 @@
     height: 155px;
     width: 100%;
     /* background-color: red; */
-    gap: 25vw;
+    gap: 20vw;
     } .home-name {
         display: flex;
         justify-content: space-between;
