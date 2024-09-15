@@ -11,18 +11,17 @@ class Blog:
 
     def __init__(self, data):
         self.id = data['id']
-        self.name = data['name']
-        self.subject = data['subject']
-        self.email = data['email']
+        self.title = data['title']
+        self.header = data['header']
         self.body = data['body']
+        self.thumbnail = data['thumbnail']
+        self.tags = data['tags']
         
-
-
 
     @classmethod
     def save(cls, data):
         query = """
-            INSERT INTO contacts (name, subject, email, body, marketingID) VALUES (%(name)s, %(subject)s, %(email)s, %(body)s, %(marketingID)s);
+            INSERT INTO blogs (title, header, body, thumbnail, tags) VALUES (%(title)s, %(header)s, %(body)s, %(thumbnail)s, %(tags)s);
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
 
@@ -34,7 +33,7 @@ class Blog:
     @classmethod
     def get_all(cls):
         query = """
-            SELECT * FROM contacts;
+            SELECT * FROM blogs;
         """
         result = MySQLConnection(cls.dB).query_db(query)
         return result
@@ -42,19 +41,19 @@ class Blog:
     @classmethod
     def get_by_id(cls, id):
         query = """
-            SELECT * FROM contacts WHERE id = %(id)s;
+            SELECT * FROM blogs WHERE id = %(id)s;
         """
         result = MySQLConnection(cls.dB).query_db(query, {"id": id})
         print(cls(result[0]) if result else None)
         return cls(result[0]) if result else None
 
     @classmethod
-    def get_by_email(cls, email):
+    def update(cls, data):
         query = """
-            SELECT * FROM contacts WHERE email = %(email)s;
+            UPDATE blogs SET title = %(title)s, header = %(header)s, body = %(body)s, thumbnail = %(thumbnail)s, tags = %(tags)s
+            WHERE id = %(id)s;
         """
-        result = MySQLConnection(cls.dB).query_db(query, {"email": email})
-        print(cls(result[0]) if result else None)
-        return cls(result[0]) if result else None
+        result = MySQLConnection(cls.dB).query_db(query, data)
+        return result
     
 

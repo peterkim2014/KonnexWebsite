@@ -1,6 +1,7 @@
 from flask import render_template, redirect, request, flash, session
 from flask_app import app
 import re
+from flask_app.models.blogs import Blog
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
@@ -23,17 +24,13 @@ def blogs_home():
     device_type = detect_device(user_agent)
     error_message = session.pop('error_message', None)
 
+    # Fetch all blogs from the database using the class method get_all
+    blogs = Blog.get_all()
+
     # Detect if a blog is selected from the query parameter
     selected_blog_id = request.args.get('blog_id')
 
-    # Sample blog data for demonstration purposes
-    blogs = [
-        {'id': 1, 'title': 'Introduction to Konnex', 'content': 'Welcome to the Konnex Blog!'},
-        {'id': 2, 'title': 'The Future of Cryptocurrency', 'content': 'What does the future hold for crypto?'},
-        {'id': 3, 'title': 'Blockchain Basics', 'content': 'Understanding the basics of blockchain.'}
-    ]
-
-    # If a blog_id is provided, select the appropriate blog
+    # If a blog_id is provided, select the appropriate blog from the database
     selected_blog = None
     if selected_blog_id:
         selected_blog = next((blog for blog in blogs if blog['id'] == int(selected_blog_id)), None)

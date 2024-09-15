@@ -1,6 +1,26 @@
-{% extends 'blogDashboard.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin/blogSchedule.css') }}">
+    <script src="{{url_for('static', filename='javascript/blogSchedule.js')}}" defer></script>
+</head>
+<body>
+    <div class="calendar-container">
 
+        {% if not selected_day %}
+            <div class="calendar-header">
+                <select id="month-selector" onchange="generateCalendar()">
+                </select>
+                <select id="year-selector" onchange="generateCalendar()">
+                </select>
+            </div>
+            <div class="calendar" id="calendar"></div>
+        {% else %}
+            <div class="day-content"></div>
+        {% endif %}
 
-{% block blogContent %}
-
-{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 from flask import render_template, redirect, request, flash, session, url_for
 from flask_app import app
 import re
+from flask_app.models.blogs import Blog
+import os
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
@@ -46,4 +48,42 @@ def blogs_login():
 @app.route('/admin/blog/dashboard')
 def blogs_adminDashboard():
     feature = request.args.get('feature', 'thumbnail')  # Default to 'thumbnail'
-    return render_template('blogDashboard.html', feature=feature)
+    # Fetch all blogs if the feature is 'blogsList'
+    blogs = []
+    if feature == 'blogsList':
+        blogs = Blog.get_all()
+    return render_template('blogDashboard.html', feature=feature, blogs=blogs)
+
+
+@app.route('/admin/blog/content', methods=['GET', 'POST'])
+def save_blog():
+    if request.method == 'POST':
+        # Retrieve form data
+        title = request.form['title']
+        header = request.form['header']
+        body = request.form['body']
+        tags = request.form['tags']
+
+        # Handle the thumbnail upload
+        thumbnail = request.files['thumbnail']
+        thumbnail_filename = None
+        # if thumbnail:
+        #     # Save the uploaded thumbnail file
+        #     thumbnail_filename = thumbnail.filename
+        #     thumbnail.save(os.path.join('static/uploads', thumbnail_filename))
+
+        # Prepare data for saving to the database
+        blog_data = {
+            "title": title,
+            "header": header,
+            "body": body,
+            "thumbnail": thumbnail,
+            "tags": tags
+        }
+
+        # Save the blog post
+        Blog.save(blog_data)
+        flash('Blog saved successfully', 'success')
+        return redirect(url_for('save_blog'))
+
+    return render_template('blogDashboard.html')
