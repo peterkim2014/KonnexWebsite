@@ -354,6 +354,8 @@
     display: flex;
     gap: 2vw;
     padding-bottom: 1.5%;
+    width: 100%;
+    justify-content: center;
 } .tags > h5 {
     padding-right: 1%;
     /* margin: 0; */
@@ -408,6 +410,7 @@
             justify-content: space-around;
             align-items: space-between;
             padding-top: 3.5%;
+            width: 100%;
         } .article-intro-text-top {
             height: 100%;
             display: flex;
@@ -419,6 +422,7 @@
             font-family: 'FreightSansMedium', sans-serif;
             flex-wrap: wrap;
             padding-bottom: 2.5%;
+            text-align: center;
             } .article-intro-text > p {
                 font-size: 0.9em;
                 margin: 0;

@@ -985,6 +985,7 @@
             justify-content: space-around;
             align-items: space-between;
             padding-top: 3.5%;
+            width: 100%;
         } .article-intro-text-top {
             height: 100%;
             display: flex;
@@ -996,6 +997,7 @@
             font-family: 'FreightSansMedium', sans-serif;
             flex-wrap: wrap;
             padding-bottom: 4%;
+            text-align: center;
             } .article-intro-text > p {
                 font-size: 0.9em;
                 margin: 0;
