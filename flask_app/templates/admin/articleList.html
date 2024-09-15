@@ -1,0 +1,14 @@
+{% if articles %}
+    <ul>
+        {% for article in articles %}
+            <li>
+                <h2>{{ article.title }}</h2>
+                <p><strong>Header:</strong> {{ article.header }}</p>
+                <p><strong>Body:</strong> {{ article.body }}</p>
+                <p><strong>Tags:</strong> {{ article.tags }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No articles available.</p>
+{% endif %}

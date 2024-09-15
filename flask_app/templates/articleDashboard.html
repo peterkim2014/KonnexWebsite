@@ -6,8 +6,8 @@
     <title>Konnex - Cryptocurrency Wallet</title>
     <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin/blogAdmin.css') }}">
-    <script src="{{url_for('static', filename='javascript/blogs.js')}}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin/articleAdmin.css') }}">
+    <script src="{{url_for('static', filename='javascript/articles.js')}}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/image-compressor@2/dist/image-compressor.min.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -29,7 +29,7 @@
         <div class="portal-container">
 
         
-            <div class="blog-dashboard">
+            <div class="article-dashboard">
                 <div class="side-nav">
                     <div class="home-name">
                         <img src="{{ url_for('static', filename='media/KonnexLogoInverted.png') }}" class="logo-lotus"/>
@@ -38,7 +38,7 @@
                             <h2>CRYPTOCURRENCY WALLET</h2>
                         </div>
                     </div>
-                    <h2>Blog Portal</h2>
+                    <h2>Article Portal</h2>
                 </div>
                 <div class="header-tools">
                     <div class="tools-list">
@@ -59,30 +59,30 @@
             <div class="body-portal">
                 <div class="features-body">
                     <div class="features-list">
-                        <a href="{{ url_for('blogs_adminDashboard', feature='thumbnail') }}">Thumbnail</a>
-                        <a href="{{ url_for('blogs_adminDashboard', feature='content') }}">Content</a>
-                        <a href="{{ url_for('blogs_adminDashboard', feature='preview') }}">Preview</a>
-                        <a href="{{ url_for('blogs_adminDashboard', feature='schedule') }}">Schedule</a>
-                        <a href="{{ url_for('blogs_adminDashboard', feature='blogsList') }}">List</a>
+                        <a href="{{ url_for('articles_adminDashboard', feature='thumbnail') }}">Thumbnail</a>
+                        <a href="{{ url_for('articles_adminDashboard', feature='content') }}">Content</a>
+                        <a href="{{ url_for('articles_adminDashboard', feature='preview') }}">Preview</a>
+                        <a href="{{ url_for('articles_adminDashboard', feature='schedule') }}">Schedule</a>
+                        <a href="{{ url_for('articles_adminDashboard', feature='articlesList') }}">List</a>
                         <a href="#">Submit</a>
                     </div>
-                    <a href="/admin/blog">Logout</a>
+                    <a href="/admin/article">Logout</a>
                 </div>
 
 
                 <!-- Dynamic Content Section -->
                 <div class="content-section">
-                    <!-- {% block blogContent %} -->
+                    <!-- {% block articleContent %} -->
                         {% if feature == 'thumbnail' %}
-                            {% include 'admin/blogThumbnail.html' %}
+                            {% include 'admin/articleThumbnail.html' %}
                         {% elif feature == 'content' %}
-                            {% include 'admin/blogContent.html' %}
+                            {% include 'admin/articleContent.html' %}
                         {% elif feature == 'preview' %}
-                            {% include 'admin/blogPreview.html' %}
+                            {% include 'admin/articlePreview.html' %}
                         {% elif feature == 'schedule' %}
-                            {% include 'admin/blogSchedule.html' %}
-                        {% elif feature == 'blogsList' %}
-                            {% include 'admin/blogsList.html' %}
+                            {% include 'admin/articleSchedule.html' %}
+                        {% elif feature == 'articlesList' %}
+                            {% include 'admin/articlesList.html' %}
                         {% else %}
                             <h2>Select a feature to view its details</h2>
                         {% endif %}

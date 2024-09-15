@@ -9,6 +9,7 @@ pymysql = "*"
 flask-mail = "*"
 mailchimp-marketing = "*"
 flask-cors = "*"
+flask-wtf = "*"
 
 [dev-packages]
 
