@@ -23,13 +23,14 @@
     
     <div id="global">
 
+        <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="{{ url_for('static', filename='media/backToTopArrow.png') }}" class="scrollTopIcon"/></button>
         <div class="home-header fade-in">
             <div class="home-name">
-                <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                 <div class="name-container">
+                    <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                     <h1>KONNEX</h1>
-                    <h2>CRYPTOCURRENCY WALLET</h2>
                 </div>
+                <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
             <div class="home-routes fade-in">
                 <a href="/" class="route">Home</a>
@@ -37,7 +38,7 @@
                 <a href="/about" class="route">About</a>
                 <a href="/articles" class="route-selected">Articles</a>
                 <div class="dropdown">
-                    <a href="#contact" class="route contact">Contact</a>
+                    <p class="route contact">Contact</p>
                     <div class="dropdown-content">
                         <a href="/contact_form">Contact Form</a>
                         <a href="/join_the_team">Join the team</a>

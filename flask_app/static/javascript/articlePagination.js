@@ -1,6 +1,6 @@
 // Function to get article data from the hidden element
 function getArticlesData() {
-    const blogDataElement = document.getElementById('article-data');
+    const articleDataElement = document.getElementById('article-data');
     return JSON.parse(articleDataElement.textContent || articleDataElement.innerText);
 }
 
@@ -17,8 +17,8 @@ function displayArticles(page) {
     articleList.innerHTML = '';
 
     // Calculate start and end indexes for the current page
-    const start = (page - 1) * blogsPerPage;
-    const end = start + blogsPerPage;
+    const start = (page - 1) * articlesPerPage;
+    const end = start + articlesPerPage;
 
     const articlesToDisplay = articles.slice(start, end);
     
