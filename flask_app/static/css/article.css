@@ -207,10 +207,6 @@
     width: 92%;
     display: flex;
     justify-content: flex-start;
-
-    /* justify-content: center; */
-    /* display: flex; */
-    /* background-color: red; */
 } .article-categories-button {
     width: 130px;
     height: 24px;
@@ -273,7 +269,6 @@
     padding-top: 1.5%;
     /* background-color: red; */
 }
-
 .single-article-container {
     list-style: none; 
     padding: 0;
@@ -285,7 +280,6 @@
     gap: 10px;
     /* background-color: red; */
 }
-
 .article-container {
     width: 48.5%; 
     height: 250px;
@@ -375,10 +369,10 @@
     /* top: 10; */
     left: 0;
     width: 100%;
-    height: 253px; /* Adjust height as necessary */
+    height: 220px; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
-    /* margin-top: 16%; */
+    margin-top: -3%;
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */
@@ -399,7 +393,7 @@
     justify-content: center;
     align-items: center;
 } .article-selected > p {
-    margin-top: 5%;
+    margin-top: 7%;
     font-size: 0.9em;
     line-height: 30px;
     width: 90%;
@@ -416,8 +410,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* background-color: red; */
     height: 100%;
     gap: 4rem;
 } .article-intro-text-top {
@@ -425,7 +417,6 @@
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    /* background-color: red; */
 }.article-intro-text-top > h2 {
     margin: 0;
     font-size: 2em;
@@ -433,14 +424,12 @@
     font-weight: 800;
     font-family: 'FreightSansMedium', sans-serif;
     flex-wrap: wrap;
-    /* background-color: red; */
 } .article-intro-text > p {
     font-size: 0.9em;
     margin: 0;
     /* width: 80%; */
 } .article-intro-text-top > h3 {
     height: 20%;
-    /* background-color: red; */
     font-size: 1em;
     margin: 0;
 } .article-intro-text-bottom {
@@ -448,10 +437,7 @@
     flex-direction: column;
     height: 50px;
     gap: 1rem;
-    /* justify-content: center; */
-    /* background-color: blue; */
 }.article-intro-text-bottom > h5 {
-    /* background-color: red; */
     font-size: 1em;
     height: 10%;
     margin: 0;
@@ -471,7 +457,6 @@
     gap: 2vh;
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-
 
 } .previewArticleImage {
     height: 100%;
@@ -691,12 +676,10 @@
     padding-bottom: 5%;
     margin-top: 2.5%;
     } .article-header {
-        /* background-color: red; */
         width: 85%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* align-items: center; */
         } .article-header > h4 {
             font-size: 2em;
             font-family: 'FreightSansMedium', sans-serif;
@@ -705,35 +688,23 @@
                 width: 100%;
                 display: flex;
                 height: 50px;
-                /* background-color: red; */
-                /* justify-content: center; */
                 align-items: center;
 } .article-categories {
     width: 92%;
     display: flex;
     justify-content: flex-start;
-
-    /* justify-content: center; */
-    /* display: flex; */
-    /* background-color: red; */
 } .article-categories-button {
     width: 130px;
     height: 24px;
     border: none;
     outline: none;
     background-color: white;
-    /* padding: 10px;  */
     margin: 0; 
-    /* gap: 1vw; */
-    /* display: flex; */
-    /* flex-direction: row; */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     border-radius: 15px; 
     display: inline-block;
     font-size: 14px;
-    /* gap: 3vw; */
-    /* font-weight: bold;  */
     text-align: center;
 } .article-categories-button > img {
     width: 18px;
@@ -776,9 +747,7 @@
     justify-content: center;
     margin: 0;
     padding-top: 1%;
-    /* background-color: red; */
 }
-
 .single-article-container {
     list-style: none; 
     padding: 0;
@@ -788,7 +757,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
-    /* background-color: red; */
 }
 
 .article-container {
@@ -824,8 +792,6 @@
     width: 45%;
     height: 90%;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
 } .article-container-information > p {
     width: 45%;
     height: 90%;
@@ -914,7 +880,6 @@
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    /* background-color: red; */
 }.article-intro-text-top > h2 {
     margin: 0;
     font-size: 2.8em;
@@ -922,14 +887,11 @@
     font-weight: 800;
     font-family: 'FreightSansMedium', sans-serif;
     flex-wrap: wrap;
-    /* background-color: red; */
 } .article-intro-text > p {
     font-size: 0.9em;
     margin: 0;
-    /* width: 80%; */
 } .article-intro-text-top > h3 {
     height: 20%;
-    /* background-color: red; */
     font-size: 1em;
     margin: 0;
 } .article-intro-text-bottom {
@@ -937,9 +899,7 @@
     flex-direction: column;
     height: 30%;
     gap: 2vh;
-    /* background-color: blue; */
 }.article-intro-text-bottom > h5 {
-    /* background-color: red; */
     font-size: 1.4em;
     height: 10%;
     margin: 0;
@@ -960,7 +920,6 @@
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
-
 } .previewArticleImage {
     height: 100%;
     width: 100%;
@@ -974,7 +933,6 @@
     height: 32%; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
-    /* margin-top: 16%; */
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */
