@@ -1,0 +1,146 @@
+body, html {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    font-family: 'FreightSansLight', sans-serif;
+    letter-spacing: 0.7px;
+} 
+
+
+/* CALENDER */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: none;
+    height: 90%;
+    width: 90%;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 80%;
+    gap: 2vw;
+}
+
+.calendar-header select {
+    padding: 5px;
+    font-size: 16px;
+}
+#calender {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    height: 80%;
+    width: 80%;
+}
+
+.day {
+    text-align: center;
+    padding: 30px;  /* Increase padding to make each day box larger */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;  /* Increase height */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Smaller day names */
+.day-name {
+    text-align: center;
+    padding: 10px; /* Smaller padding for day names */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Smaller height for day names */
+    font-weight: bold;
+}
+
+
+.day:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.selected {
+    background-color: #28a745;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.day-content {
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    gap: 3vw;
+    margin-top: 5%;
+}
+#month-selector {
+    border: none;
+    background-color: transparent;
+} #year-selector {
+    border: none;
+    background-color: transparent;
+}
+
+
+.selectedDay-button {
+    width: 10%; 
+    height: 45%; 
+    background-color: transparent;
+    background-repeat: no-repeat;
+} .selected-leftSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+    gap: 5vh;
+} .selected-date {
+    font-size: 1.1em;
+} .selected-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+} .selected-rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 50%;
+    gap: 4vh;
+    margin-top: 7.5%;
+    } .selected-rightSide > h3 {
+        margin: 0;
+    } .scheduleForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        /* gap: 2.5vh; */
+        } .scheduleForm > input {
+            width: 80%;
+            height: 12%;
+        }

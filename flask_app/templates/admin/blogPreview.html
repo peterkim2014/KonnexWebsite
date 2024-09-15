@@ -1,6 +1,35 @@
-{% extends 'blogDashboard.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin/blogPreview.css') }}">
+    <script src="{{url_for('static', filename='javascript/blogPreview.js')}}" defer></script>
+</head>
+<body>
 
+    <div class="home-header-preview">
+        <div class="home-name-preview">
+            <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
+            <div class="name-container-preview">
+                <h1>KONNEX</h1>
+                <h2>CRYPTOCURRENCY WALLET</h2>
+            </div>
+        </div>
+        <div class="home-routes-preview">
+            <a href="/" class="route">Home</a>
+            <a class="route">Product</a>
+            <a class="route">About</a>
+            <a class="route-selected">Blog</a>
+            <div class="dropdown">
+                <a href="#contact" class="route contact">Contact us</a>
+            </div>
+        </div>
+    </div>
 
-{% block blogContent %}
+    <div class="preview-body">
 
-{% endblock %}
+    </div>
+
+</body>
+</html>
