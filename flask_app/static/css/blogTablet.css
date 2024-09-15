@@ -208,7 +208,7 @@
     /* justify-content: center; */
     align-items: center;
     padding-bottom: 5%;
-    margin-top: 2.5%;
+    margin-top: 8%;
     } .blog-header {
         /* background-color: red; */
         width: 85%;
@@ -217,7 +217,7 @@
         justify-content: center;
         /* align-items: center; */
         } .blog-header > h4 {
-            font-size: 1.4em;
+            font-size: 1.6em;
             font-family: 'FreightSansMedium', sans-serif;
             margin: 0;
             } .blog-header-options {
@@ -294,7 +294,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    padding-top: 1%;
+    padding-top: 3%;
     /* background-color: red; */
 }
 
@@ -311,22 +311,22 @@
 }
 
 .blog-container {
-    width: 48.5%; 
-    height: 250px;
+    width: 100%; 
+    height: 280px;
     background-color: white;
     padding: 20px;
     box-sizing: border-box; 
     margin-bottom: 20px;
     border-radius: 10px;
     display: flex;
-    gap: 2vh;
+    /* gap: 1vh; */
     flex-direction: column;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 } .blog-container > a {
-    font-size: 1.4em;
+    font-size: 1.6em;
     text-decoration: none;
     font-family: 'FreightSansMedium', sans-serif;
-    font-weight: 700;
+    /* font-weight: 700; */
     text-align: start;
 } .blog-container-information {
     width: 100%;
@@ -481,7 +481,25 @@
 }
 
 
-
+.vignette-background {
+    position: absolute; /* Ensure it's positioned relative to its container */
+    /* top: 10; */
+    left: 0;
+    width: 100%;
+    height: 20%; /* Adjust height as necessary */
+    z-index: -1; /* Lower than .blog-intro to place it behind */
+    background-color: #EEEEEE;
+    margin-top: 2%;
+} .vignette-background-blogs {
+    position: absolute; /* Ensure it's positioned relative to its container */
+    /* top: 10; */
+    left: 0;
+    width: 100%;
+    height: 70%; /* Adjust height as necessary */
+    z-index: -1; /* Lower than .blog-intro to place it behind */
+    background-color: #EEEEEE;
+    margin-top: 10.5%;
+}
 
 
 
@@ -775,7 +793,7 @@
                 /* justify-content: center; */
                 align-items: center;
                 padding-bottom: 5%;
-                margin-top: 2.5%;
+                margin-top: 7.5%;
                 } .blog-header {
                     /* background-color: red; */
                     width: 85%;
@@ -914,6 +932,7 @@
                 font-size: 0.9em;
                 padding-left: 5%;
                 line-height: 18px;
+                /* margin-top: 2%; */
             } .back-to-blog {
                 width: 100%;
                 align-items: flex-start;
@@ -1049,8 +1068,33 @@
             } .selectedBlogImage {
                 height: 100%;
             }
-
-
+            .vignette-background {
+                position: absolute; /* Ensure it's positioned relative to its container */
+                /* top: 10; */
+                left: 0;
+                width: 100%;
+                height: 30%; /* Adjust height as necessary */
+                z-index: -1; /* Lower than .blog-intro to place it behind */
+                background-color: #EEEEEE;
+                margin-top: 2%;
+            } .vignette-background-blogs {
+                position: absolute; /* Ensure it's positioned relative to its container */
+                /* top: 10; */
+                left: 0;
+                width: 100%;
+                height: 70%; /* Adjust height as necessary */
+                z-index: -1; /* Lower than .blog-intro to place it behind */
+                background-color: #EEEEEE;
+                margin-top: 7.5%;
+            }
+            .selectedBodyParagraph {
+                /* margin-top: 15%; */
+                padding-top: 2%;
+                /* background-color: red; */
+                font-size: 1em;
+                line-height: 30px;
+                width: 90%;
+            }
 
 
 
