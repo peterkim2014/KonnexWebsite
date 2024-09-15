@@ -72,7 +72,7 @@
                     </div> -->
                 <!-- </div> -->
             </div>
-
+            <div class="vignette-background-blogs"></div>
             <div class="blog-containers">
                 <!-- <h3>Browse Blogs</h3> -->
                 <ul class="single-blog-container">
@@ -97,40 +97,48 @@
 
             {% if selected_blog %}
                 <div class="blog-selected">
+                    
                     <div class="back-to-blog">
                         <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all blogs</button>
                     </div>
+                    <div class="vignette-background"></div>
                     <div class="blog-intro">
-                        <div class="blog-selected-image">
-                            <img class="selectedBlogImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_blog.title }}">
-                        </div>
-                        <div class="blog-intro-text">
-                            <div class="blog-intro-text-top">
-                                <h2>{{ selected_blog.title }}</h2>
-                                
+
+
+                            <div class="blog-selected-image">
+                                <img class="selectedBlogImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_blog.title }}">
                             </div>
-                            <div class="blog-intro-text-bottom">
-                                <div class="tags">
-                                    <h5>
-                                        Tags:
-                                    </h5>
-                                    <h6>
-                                        {% for tag in selected_blog.tags | process_tags %}
-                                            <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
-                                        {% endfor %}
-                                    </h6>
+
+                            <div class="blog-intro-text">
+                                <div class="blog-intro-text-top">
+                                    <h2>{{ selected_blog.title }}</h2>
+                                    
                                 </div>
-                                <div class="sources">
-                                    <h6>
-                                        Sources: 
-                                    </h6>
-                                    <h7>
-                                        https://www.konnexwallet.io
-                                    </h7>
+                                <div class="blog-intro-text-bottom">
+                                    <div class="tags">
+                                        <h5>
+                                            Tags:
+                                        </h5>
+                                        <h6>
+                                            {% for tag in selected_blog.tags | process_tags %}
+                                                <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </h6>
+                                    </div>
+                                    <div class="sources">
+                                        <h6>
+                                            Sources: 
+                                        </h6>
+                                        <h7>
+                                            https://www.konnexwallet.io
+                                        </h7>
+                                    </div>
                                 </div>
                             </div>
+
                             <!-- Back button to go back to browsing all blogs -->
-                        </div>
+                        
+
                     </div>
                     <p>
                         {{ selected_blog.body }} 
