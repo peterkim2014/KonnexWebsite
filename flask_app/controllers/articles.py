@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request, flash, session
 from flask_app import app
 import re
-from flask_app.models.blogs import Blog
+from flask_app.models.articles import Article
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings
@@ -18,14 +18,14 @@ def detect_device(user_agent):
 
 
 @app.route('/articles')
-def blogs_home():
+def articles_home():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
     device_type = detect_device(user_agent)
     error_message = session.pop('error_message', None)
 
 
-    blogs = [
+    articles = [
         {
             'id': 1,
             'title': 'Introduction to Konnex',
@@ -174,30 +174,30 @@ def blogs_home():
 
 
 
-    # Fetch all blogs from the database using the class method get_all
-    # blogs = Blog.get_all()
-    # for blog in blogs:
-    #     if isinstance(blog['thumbnail'], bytes):
-    #         blog['thumbnail'] = blog['thumbnail'].decode('utf-8')  # Decode from bytes to string
-    #     print(f"Thumbnail: {blog['thumbnail']}")
+    # Fetch all articles from the database using the class method get_all
+    # articles = Article.get_all()
+    # for article in articles:
+    #     if isinstance(article['thumbnail'], bytes):
+    #         article['thumbnail'] = article['thumbnail'].decode('utf-8')  # Decode from bytes to string
+    #     print(f"Thumbnail: {article['thumbnail']}")
 
-    # # Detect if a blog is selected from the query parameter
-    selected_blog_id = request.args.get('blog_id')
+    # # Detect if a article is selected from the query parameter
+    selected_article_id = request.args.get('article_id')
 
-    # # If a blog_id is provided, select the appropriate blog from the database
-    selected_blog = None
-    if selected_blog_id:
-        selected_blog = next((blog for blog in blogs if blog['id'] == int(selected_blog_id)), None)
+    # # If a article_id is provided, select the appropriate article from the database
+    selected_article = None
+    if selected_article_id:
+        selected_article = next((article for article in articles if article['id'] == int(selected_article_id)), None)
 
 
     # Return the appropriate template based on device type
     if device_type:
         if "ipad" in user_agent:
             print("iPad detected")
-            return render_template("blogTablet.html", selected_blog=selected_blog, blogs=blogs, error_message=error_message)
+            return render_template("articleTablet.html", selected_article=selected_article, articles=articles, error_message=error_message)
         else:
             print("Mobile device detected")
-            return render_template("blogMobile.html", selected_blog=selected_blog, blogs=blogs, error_message=error_message)
+            return render_template("articleMobile.html", selected_article=selected_article, articles=articles, error_message=error_message)
     else:
         print("Desktop detected")
-        return render_template("blog.html", selected_blog=selected_blog, blogs=blogs, error_message=error_message)
+        return render_template("article.html", selected_article=selected_article, articles=articles, error_message=error_message)
