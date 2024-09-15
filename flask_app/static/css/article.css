@@ -372,7 +372,7 @@
     height: 220px; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
-    margin-top: -3%;
+    margin-bottom: 12%;
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */
@@ -933,6 +933,7 @@
     height: 32%; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
+    margin-top: 6.5%;
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */

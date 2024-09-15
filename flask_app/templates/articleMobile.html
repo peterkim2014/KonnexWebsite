@@ -101,12 +101,12 @@
             {% if selected_article %}
             <div class="article-selected">
                 <div class="back-to-article">
-                    <button class="button-back" onclick=window.location.href="{{ url_for('articles_home') }}"><img src="{{ url_for('static', filename='media/articleBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
+                    <button class="button-back" onclick=window.location.href="{{ url_for('articles_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
                 </div>
                 <div class="article-intro">
                     <div class="article-selected-image">
                         <div class="vignette-background"></div>
-                        <img class="selectedArticleImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_article.title }}">
+                        <img class="selectedArticleImage" src="{{ url_for('static', filename='uploads/' + selected_article.thumbnail) }}" alt="{{ selected_article.title }}">
                     </div>
                     <div class="article-intro-text">
                         <!-- <div class="article-intro-text-top"> -->
@@ -137,6 +137,9 @@
                 </div>
                 <p class="selectedBodyParagraph">
                     {{ selected_article.body }} 
+                </p>
+                <p>
+                    {{ selected_article.sources }}
                 </p>
             </div>
                 
