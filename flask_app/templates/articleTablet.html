@@ -6,10 +6,9 @@
     <title>Konnex - Cryptocurrency Wallet</title>
     <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog.css') }}">
-    <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
-    <script src="{{url_for('static', filename='javascript/blogs.js')}}" defer></script>
-    <script src="{{url_for('static', filename='javascript/blogPagination.js')}}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articleTablet.css') }}">
+    <script src="{{url_for('static', filename='javascript/articles.js')}}" defer></script>
+    <script src="{{url_for('static', filename='javascript/articlePagination.js')}}" defer></script>
     <script src="https://p.usestyle.ai" defer></script>
     <meta name="google-site-verification" content="7s8i6Cai8gnVc6T4zt-t5-c9fIcB-lXHdwNuqHhAIFI" />
     <script>
@@ -24,13 +23,14 @@
     
     <div id="global">
 
+        <button id="scrollToTopBtn" onclick="scrollToTop()"><img src="{{ url_for('static', filename='media/backToTopArrow.png') }}" class="scrollTopIcon"/></button>
         <div class="home-header fade-in">
             <div class="home-name">
-                <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                 <div class="name-container">
+                    <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                     <h1>KONNEX</h1>
-                    <h2>CRYPTOCURRENCY WALLET</h2>
                 </div>
+                <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
             <div class="home-routes fade-in">
                 <a href="/" class="route">Home</a>
@@ -48,15 +48,15 @@
         </div>
 
 
-        <div class="blog-main-container">
-            {% if not selected_blog %}
-            <div class="blog-header">
+        <div class="article-main-container">
+            {% if not selected_article %}
+            <div class="article-header">
                 <h4>
                     Konnex Articles
                 </h4>
-                <!-- <div class="blog-header-options"> -->
-                    <!-- <div class="blog-categories">
-                        <button class="blog-categories-button">
+                <!-- <div class="article-header-options"> -->
+                    <!-- <div class="article-categories">
+                        <button class="article-categories-button">
                             
                                 Categories
                             
@@ -73,91 +73,87 @@
                     </div> -->
                 <!-- </div> -->
             </div>
-            <div class="vignette-background-blogs"></div>
-            <div class="blog-containers">
-                <!-- <h3>Browse Blogs</h3> -->
-                <ul class="single-blog-container" id="blog-list">
-                    {% for blog in blogs %}
-                    <li class="blog-container">
-                        <a href="{{ url_for('blogs_home', blog_id=blog.id) }}">
-                            {{ blog.title }}
+            <div class="vignette-background-articles"></div>
+            <div class="article-containers">
+                <!-- <h3>Browse articles</h3> -->
+                <ul class="single-article-container" id="article-list">
+                    {% for article in articles %}
+                    <li class="article-container">
+                        <a href="{{ url_for('articles_home', article_id=article.id) }}">
+                            {{ article.title }}
                         </a>
-                        <div class="blog-container-information">
-                            <div class="blog-container-information-image">
-                                <img class="previewBlogImage" src="{{ url_for('static', filename='uploads/' + blog.thumbnail) }}" alt="{{ blog.title }}">
+                        <div class="article-container-information">
+                            <div class="article-container-information-image">
+                                <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="{{ article.title }}">
                             </div>
                             <p>
-                                {{ blog.body[:200] }}{% if blog.body|length > 200 %}...{% endif %}
+                                {{ article.body[:200] }}{% if article.body|length > 200 %}...{% endif %}
                             </p>
                         </div>
                     </li>
-                    <div id="blog-data" style="display: none;">
-                        {{ blogs | tojson }}
+                    <div id="article-data" style="display: none;">
+                    {{ articles | tojson }}
                     </div>
                     {% endfor %}
                 </ul>
+                
             </div>
             {% endif %}
 
-            {% if selected_blog %}
-                <div class="blog-selected">
-                    
-                    <div class="back-to-blog">
-                        <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
-                    </div>
-                    <div class="vignette-background"></div>
-                    <div class="blog-intro">
-
-
-                            <div class="blog-selected-image">
-                                <img class="selectedBlogImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_blog.title }}">
-                            </div>
-
-                            <div class="blog-intro-text">
-                                <div class="blog-intro-text-top">
-                                    <h2>{{ selected_blog.title }}</h2>
-                                    
-                                </div>
-                                <div class="blog-intro-text-bottom">
-                                    <div class="tags">
-                                        <h5>
-                                            Tags:
-                                        </h5>
-                                        <h6>
-                                            {% for tag in selected_blog.tags | process_tags %}
-                                                <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
-                                            {% endfor %}
-                                        </h6>
-                                    </div>
-                                    <div class="sources">
-                                        <h6>
-                                            Sources: 
-                                        </h6>
-                                        <h7>
-                                            https://www.konnexwallet.io
-                                        </h7>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Back button to go back to browsing all blogs -->
-                        
-
-                    </div>
-                    <p>
-                        {{ selected_blog.body }} 
-                    </p>
+            {% if selected_article %}
+            <div class="article-selected">
+                <div class="back-to-article">
+                    <button class="button-back" onclick=window.location.href="{{ url_for('articles_home') }}"><img src="{{ url_for('static', filename='media/articleBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
                 </div>
+                <div class="article-intro">
+                    <div class="article-selected-image">
+                        <div class="vignette-background"></div>
+                        <img class="selectedArticleImage" src="{{ url_for('static', filename='uploads/' + selected_article.thumbnail) }}" alt="{{ selected_article.title }}">
+                    </div>
+                    <div class="article-intro-text">
+                        <!-- <div class="article-intro-text-top"> -->
+                        <h2 class="article-intro-text-top">{{ selected_article.title }}</h2>
+                        <!-- </div> -->
+                        <div class="article-intro-text-bottom">
+                            <div class="tags">
+                                <h5>
+                                    Tags:
+                                </h5>
+                                <h6>
+                                    {% for tag in selected_article.tags | process_tags %}
+                                        <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                </h6>
+                            </div>
+                            <div class="sources">
+                                <h6>
+                                    Sources: 
+                                </h6>
+                                <h7>
+                                    https://www.konnexwallet.io
+                                </h7>
+                            </div>
+                        </div>
+                        <!-- Back button to go back to browsing all articles -->
+                    </div>
+                </div>
+                <p class="selectedBodyParagraph">
+                    {{ selected_article.body }} 
+                </p>
+            </div>
+                
             {% endif %}
 
         </div>
 
         <div class="pagination" id="pagination-controls"></div>
 
+        
+
         <div class="footer">
             <div class="footer-left fade-slide-up">
                 <div class="footer-left-top">
-                    <img src="{{ url_for('static', filename='media/konnexLogoo.webp') }}"/>
+                    <img src="{{ url_for('static', filename='media/konnexLogoo.svg') }}"/>
                     <h5>
                         Konnex Cryptocurrency Wallet
                     </h5>
@@ -165,6 +161,11 @@
                 <h6>
                     Est 2024
                 </h6>
+                <!-- <div class="footer-left-socials">
+                    <img src="{{ url_for('static', filename='media/linkedInLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/instagramLogo.png') }}"/>
+                    <img src="{{ url_for('static', filename='media/twitterLogo.png') }}"/>
+                </div> -->
             </div>
             <div class="footer-right fade-slide-up">
                 <div class="footer-routes">

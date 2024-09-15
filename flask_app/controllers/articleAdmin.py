@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request, flash, session, url_for
 from flask_app import app
 import re
-from flask_app.models.blogs import Blog
+from flask_app.models.articles import Article
 import os
 
 def detect_device(user_agent):
@@ -18,8 +18,8 @@ def detect_device(user_agent):
     return False
 
 
-@app.route('/admin/blog')
-def blogs_adminHome():
+@app.route('/admin/article')
+def articles_adminHome():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
     device_type = detect_device(user_agent)
@@ -29,34 +29,34 @@ def blogs_adminHome():
     if device_type == True:
         if "ipad" in user_agent:
             print("Ipad")
-            # return render_template("blogTablet.html", error_message=error_message)
+            # return render_template("articleTablet.html", error_message=error_message)
         else:
             print("Iphone")
-            # return render_template("blogMobile.html", error_message=error_message)
+            # return render_template("articleMobile.html", error_message=error_message)
     else:
         print("Desktop")
-        return render_template("admin/blogLogin.html", error_message=error_message)
+        return render_template("admin/articleLogin.html", error_message=error_message)
     
 
-@app.route('/admin/blog/login', methods=['POST'])
-def blogs_login():
+@app.route('/admin/article/login', methods=['POST'])
+def articles_login():
     # Perform login logic
     # If successful, redirect to dashboard
     # Assuming login is successful here for demonstration purposes
-    return redirect(url_for('blogs_adminDashboard'))
+    return redirect(url_for('articles_adminDashboard'))
 
-@app.route('/admin/blog/dashboard')
-def blogs_adminDashboard():
+@app.route('/admin/article/dashboard')
+def articles_adminDashboard():
     feature = request.args.get('feature', 'thumbnail')  # Default to 'thumbnail'
-    # Fetch all blogs if the feature is 'blogsList'
-    blogs = []
-    if feature == 'blogsList':
-        blogs = Blog.get_all()
-    return render_template('blogDashboard.html', feature=feature, blogs=blogs)
+    # Fetch all articles if the feature is 'articlesList'
+    articles = []
+    if feature == 'articlesList':
+        articles = Article.get_all()
+    return render_template('articleDashboard.html', feature=feature, articles=articles)
 
 
-@app.route('/admin/blog/content', methods=['GET', 'POST'])
-def save_blog():
+@app.route('/admin/article/content', methods=['GET', 'POST'])
+def save_article():
     if request.method == 'POST':
         # Retrieve form data
         title = request.form['title']
@@ -73,7 +73,7 @@ def save_blog():
             thumbnail.save(os.path.join('flask_app/static/uploads', thumbnail_filename))
 
         # Prepare data for saving to the database
-        blog_data = {
+        article_data = {
             "title": title,
             "header": header,
             "body": body,
@@ -82,11 +82,11 @@ def save_blog():
         }
 
         # Save the blog post
-        Blog.save(blog_data)
-        flash('Blog saved successfully', 'success')
-        return redirect(url_for('save_blog'))
+        Article.save(article_data)
+        flash('Article saved successfully', 'success')
+        return redirect(url_for('save_article'))
 
-    return render_template('blogDashboard.html')
+    return render_template('articleDashboard.html')
 
 
 @app.template_filter('process_tags')
