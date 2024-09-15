@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog.css') }}">
     <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
     <script src="{{url_for('static', filename='javascript/blogs.js')}}" defer></script>
+    <script src="{{url_for('static', filename='javascript/blogPagination.js')}}" defer></script>
     <script src="https://p.usestyle.ai" defer></script>
     <meta name="google-site-verification" content="7s8i6Cai8gnVc6T4zt-t5-c9fIcB-lXHdwNuqHhAIFI" />
     <script>
@@ -75,7 +76,7 @@
 
             <div class="blog-containers">
                 <!-- <h3>Browse Blogs</h3> -->
-                <ul class="single-blog-container">
+                <ul class="single-blog-container" id="blog-list">
                     {% for blog in blogs %}
                     <li class="blog-container">
                         <a href="{{ url_for('blogs_home', blog_id=blog.id) }}">
@@ -90,6 +91,9 @@
                             </p>
                         </div>
                     </li>
+                    <div id="blog-data" style="display: none;">
+                        {{ blogs | tojson }}
+                    </div>
                     {% endfor %}
                 </ul>
             </div>
@@ -139,6 +143,8 @@
             {% endif %}
 
         </div>
+
+        <div class="pagination" id="pagination-controls"></div>
 
         <div class="footer">
             <div class="footer-left fade-slide-up">
