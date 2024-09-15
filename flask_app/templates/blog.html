@@ -51,33 +51,43 @@
             {% if not selected_blog %}
             <div class="blog-header">
                 <h4>
-                    Konnex Blog
+                    Konnex Blogs
                 </h4>
                 <div class="blog-header-options">
                     <div class="blog-categories">
-                        <button>
-                            Categories
+                        <button class="blog-categories-button">
+                            
+                                Categories
+                            
+                            <img src="{{ url_for('static', filename='media/downArrow.png') }}"/>
                         </button>
                     </div>
                     <div class="sort-button">
                         <h4>
                             Sort by
                         </h4>
-                        <button >
-                            <img src="{{ url_for('static', filename='media/filterButton.png') }}" class="sort-categories"/>
+                        <button class="sort-categories">
+                            <img src="{{ url_for('static', filename='media/filterButton.png') }}" class="sort-button-img" />
                         </button>
                     </div>
                 </div>
             </div>
 
             <div class="blog-containers">
-                <h3>Browse Blogs</h3>
-                <ul>
+                <!-- <h3>Browse Blogs</h3> -->
+                <ul class="single-blog-container">
                     {% for blog in blogs %}
-                    <li>
+                    <li class="blog-container">
                         <a href="{{ url_for('blogs_home', blog_id=blog.id) }}">
                             {{ blog.title }}
                         </a>
+                        <div class="blog-container-information">
+                            <div class="blog-container-information-image">
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
+                            </p>
+                        </div>
                     </li>
                     {% endfor %}
                 </ul>
@@ -86,11 +96,44 @@
 
             {% if selected_blog %}
                 <div class="blog-selected">
-                    <h2>{{ selected_blog.title }}</h2>
-                    <p>{{ selected_blog.content }}</p>
+                    <div class="back-to-blog">
+                        <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all blogs</button>
+                    </div>
+                    <div class="blog-intro">
+                        <div class="blog-selected-image">
+                            <!-- hello -->
+                        </div>
+                        <div class="blog-intro-text">
+                            <div class="blog-intro-text-top">
+                                <h2>{{ selected_blog.title }}</h2>
+                                <!-- <p>{{ selected_blog.content }}</p> -->
 
-                    <!-- Back button to go back to browsing all blogs -->
-                    <button onclick=window.location.href="{{ url_for('blogs_home') }}">Back to all blogs</button>
+                                <h3>Posted on September 14, 2024</h3>
+                            </div>
+                            <div class="blog-intro-text-bottom">
+                                <div class="tags">
+                                    <h5>
+                                        Tags:
+                                    </h5>
+                                    <h6>
+                                        Cryptocurrency  Bitcoin  Transaction
+                                    </h6>
+                                </div>
+                                <div class="sources">
+                                    <h6>
+                                        Sources: 
+                                    </h6>
+                                    <h7>
+                                        https://www.konnexwallet.io
+                                    </h7>
+                                </div>
+                            </div>
+                            <!-- Back button to go back to browsing all blogs -->
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation <br><br>ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
+                    </p>
                 </div>
             {% endif %}
 
