@@ -17,7 +17,7 @@ def detect_device(user_agent):
     return False
 
 
-@app.route('/blogs')
+@app.route('/articles')
 def blogs_home():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()

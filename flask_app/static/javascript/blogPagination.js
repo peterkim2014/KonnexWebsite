@@ -5,7 +5,7 @@ function getBlogsData() {
 }
 
 // Constants
-const blogsPerPage = 8;
+const blogsPerPage = 6;
 let currentPage = 1;
 
 // Get the blogs data
@@ -28,7 +28,7 @@ function displayBlogs(page) {
         blogItem.classList.add('blog-container');
 
         blogItem.innerHTML = `
-            <a href="/blogs?blog_id=${blog.id}">
+            <a href="/articles?blog_id=${blog.id}">
                 ${blog.title}
             </a>
             <div class="blog-container-information">
@@ -39,6 +39,14 @@ function displayBlogs(page) {
             </div>
         `;
         blogList.appendChild(blogItem);
+    });
+
+    // Adjust the vignette background height after displaying blogs
+    adjustVignetteBackgroundHeight();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Adds a smooth scrolling effect
     });
 }
 
@@ -75,3 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
     displayBlogs(currentPage);
     createPaginationControls();
 });
+
+// Function to dynamically adjust the height of the vignette background
+function adjustVignetteBackgroundHeight() {
+    // Get the blog list element
+    const blogList = document.getElementById('blog-list');
+    
+    // Get the number of blog posts (children of blog-list)
+    const numberOfBlogs = blogList.getElementsByTagName('li').length;
+    
+    // Define the fixed height for each blog post
+    const heightPerBlog = 120; // Adjust this value based on your design (in pixels)
+    
+    // Calculate the total height needed for the vignette background
+    const totalHeight = numberOfBlogs * heightPerBlog;
+    
+    // Get the vignette background element
+    const vignetteBackground = document.querySelector('.vignette-background-blogs');
+    
+    // Set the calculated height
+    vignetteBackground.style.height = `${totalHeight}px`;
+}

@@ -36,7 +36,7 @@
                 <a href="/" class="route">Home</a>
                 <a href="/product" class="route">Product</a>
                 <a href="/about" class="route">About</a>
-                <a href="/blogs" class="route-selected">Blog</a>
+                <a href="/articles" class="route-selected">Articles</a>
                 <div class="dropdown">
                     <a href="#contact" class="route contact">Contact</a>
                     <div class="dropdown-content">
@@ -52,7 +52,7 @@
             {% if not selected_blog %}
             <div class="blog-header">
                 <h4>
-                    Konnex Blogs
+                    Konnex Articles
                 </h4>
                 <!-- <div class="blog-header-options"> -->
                     <!-- <div class="blog-categories">
@@ -103,7 +103,7 @@
             {% if selected_blog %}
             <div class="blog-selected">
                 <div class="back-to-blog">
-                    <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all blogs</button>
+                    <button class="button-back" onclick=window.location.href="{{ url_for('blogs_home') }}"><img src="{{ url_for('static', filename='media/blogBackArrow.png') }}" class="back-button-img" />Back to all articles</button>
                 </div>
                 <div class="blog-intro">
                     <div class="blog-selected-image">
