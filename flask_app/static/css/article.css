@@ -366,13 +366,13 @@
     margin: 0;
 } .vignette-background {
     position: absolute; /* Ensure it's positioned relative to its container */
-    /* top: 10; */
+    top: 15.5rem;
     left: 0;
     width: 100%;
-    height: 220px; /* Adjust height as necessary */
+    height: 15rem; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
-    margin-bottom: 12%;
+    /* margin-bottom: 13.5%; */
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */
@@ -927,13 +927,13 @@
     height: 100%;
 } .vignette-background {
     position: absolute; /* Ensure it's positioned relative to its container */
-    /* top: 10; */
+    top: 25rem;
     left: 0;
     width: 100%;
     height: 32%; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
-    margin-top: 6.5%;
+    /* margin-top: 6.5%; */
 } .vignette-background-articles {
     position: absolute; /* Ensure it's positioned relative to its container */
     /* top: 10; */
