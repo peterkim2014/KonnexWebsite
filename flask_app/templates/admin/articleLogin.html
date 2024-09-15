@@ -6,7 +6,7 @@
     <title>Konnex - Cryptocurrency Wallet</title>
     <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blogLogin.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articleLogin.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/image-compressor@2/dist/image-compressor.min.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -28,7 +28,8 @@
         {% if error_message %}
         <p class="error-message">{{ error_message }}</p>
         {% endif %}
-        <form action="/admin/blog/login" method="POST">
+        <form action="/admin/article/login" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <button type="submit">Sign In</button>

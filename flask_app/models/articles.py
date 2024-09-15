@@ -5,7 +5,7 @@ from datetime import datetime
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9,+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
-class Blog:
+class Article:
 
 
     dB = "lotus_website"
@@ -16,6 +16,7 @@ class Blog:
         self.header = data['header']
         self.body = data['body']
         self.thumbnail = data['thumbnail'].decode('utf-8') if isinstance(data['thumbnail'], bytes) else data['thumbnail']
+        self.sources = [source.strip() for source in data['sources'].split(',')] if data['sources'] else []
         self.tags = [tag.strip() for tag in data['tags'].split(',')] if data['tags'] else []
         self.createdAt = datetime.strptime(data['createdAt'], '%Y-%m-%d %H:%M:%S') if 'createdAt' in data else None
         self.updatedAt = data['updatedAt']
@@ -24,7 +25,7 @@ class Blog:
     @classmethod
     def save(cls, data):
         query = """
-            INSERT INTO blogs (title, header, body, thumbnail, tags) VALUES (%(title)s, %(header)s, %(body)s, %(thumbnail)s, %(tags)s);
+            INSERT INTO articles (title, header, body, thumbnail, sources, tags) VALUES (%(title)s, %(header)s, %(body)s, %(thumbnail)s, %(sources)s,%(tags)s);
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
 
@@ -36,7 +37,7 @@ class Blog:
     @classmethod
     def get_all(cls):
         query = """
-            SELECT * FROM blogs;
+            SELECT * FROM articles;
         """
         result = MySQLConnection(cls.dB).query_db(query)
         return result
@@ -44,7 +45,7 @@ class Blog:
     @classmethod
     def get_by_id(cls, id):
         query = """
-            SELECT * FROM blogs WHERE id = %(id)s;
+            SELECT * FROM articles WHERE id = %(id)s;
         """
         result = MySQLConnection(cls.dB).query_db(query, {"id": id})
         print(cls(result[0]) if result else None)
@@ -53,7 +54,7 @@ class Blog:
     @classmethod
     def update(cls, data):
         query = """
-            UPDATE blogs SET title = %(title)s, header = %(header)s, body = %(body)s, thumbnail = %(thumbnail)s, tags = %(tags)s
+            UPDATE articles SET title = %(title)s, header = %(header)s, body = %(body)s, thumbnail = %(thumbnail)s, sources = %(sources)s, tags = %(tags)s
             WHERE id = %(id)s;
         """
         result = MySQLConnection(cls.dB).query_db(query, data)
