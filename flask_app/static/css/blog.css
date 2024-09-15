@@ -106,7 +106,7 @@
     height: 155px;
     width: 100%;
     /* background-color: red; */
-    gap: 25vw;
+    gap: 20vw;
     } .home-name {
         display: flex;
         justify-content: space-between;
@@ -572,21 +572,19 @@
 
 .home-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 155px;
-    width: 90%;
-    padding-top: 1.5%;
+    width: 100%;
     /* background-color: red; */
-    /* gap: 20vw; */
+    gap: 20vw;
     } .home-name {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 80%;
         width: 30%;
-        gap: 1.3vw;
-        margin-left: -2.2%;
+        gap: 1.2vw;
         } .logo-lotus {
             height: 52%;
             width: 62px;
