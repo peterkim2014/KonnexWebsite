@@ -375,7 +375,7 @@
     /* top: 10; */
     left: 0;
     width: 100%;
-    height: 32%; /* Adjust height as necessary */
+    height: 253px; /* Adjust height as necessary */
     z-index: -1; /* Lower than .blog-intro to place it behind */
     background-color: #EEEEEE;
     /* margin-top: 16%; */
@@ -419,7 +419,7 @@
     /* align-items: center; */
     /* background-color: red; */
     height: 100%;
-    gap: 8vh;
+    gap: 4rem;
 } .blog-intro-text-top {
     height: 60%;
     display: flex;
@@ -446,8 +446,8 @@
 } .blog-intro-text-bottom {
     display: flex;
     flex-direction: column;
-    height: 30%;
-    gap: 2vh;
+    height: 50px;
+    gap: 1rem;
     /* justify-content: center; */
     /* background-color: blue; */
 }.blog-intro-text-bottom > h5 {
