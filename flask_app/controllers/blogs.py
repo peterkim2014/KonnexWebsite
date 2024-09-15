@@ -26,7 +26,10 @@ def blogs_home():
 
     # Fetch all blogs from the database using the class method get_all
     blogs = Blog.get_all()
-
+    for blog in blogs:
+        if isinstance(blog['thumbnail'], bytes):
+            blog['thumbnail'] = blog['thumbnail'].decode('utf-8')  # Decode from bytes to string
+        print(f"Thumbnail: {blog['thumbnail']}")
     # Detect if a blog is selected from the query parameter
     selected_blog_id = request.args.get('blog_id')
 

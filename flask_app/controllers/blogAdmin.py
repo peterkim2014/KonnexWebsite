@@ -67,17 +67,17 @@ def save_blog():
         # Handle the thumbnail upload
         thumbnail = request.files['thumbnail']
         thumbnail_filename = None
-        # if thumbnail:
-        #     # Save the uploaded thumbnail file
-        #     thumbnail_filename = thumbnail.filename
-        #     thumbnail.save(os.path.join('static/uploads', thumbnail_filename))
+        if thumbnail:
+            # Save the uploaded thumbnail file
+            thumbnail_filename = thumbnail.filename
+            thumbnail.save(os.path.join('flask_app/static/uploads', thumbnail_filename))
 
         # Prepare data for saving to the database
         blog_data = {
             "title": title,
             "header": header,
             "body": body,
-            "thumbnail": thumbnail,
+            "thumbnail": thumbnail_filename,
             "tags": tags
         }
 
@@ -87,3 +87,14 @@ def save_blog():
         return redirect(url_for('save_blog'))
 
     return render_template('blogDashboard.html')
+
+
+@app.template_filter('process_tags')
+def process_tags(tags_string):
+    if not tags_string:
+        return []
+    # Split the tags string by commas, strip extra spaces, and return a list
+    return [tag.strip() for tag in tags_string.split(',')]
+
+# Register the filter in your Flask app
+app.jinja_env.filters['process_tags'] = process_tags

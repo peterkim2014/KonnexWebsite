@@ -1,6 +1,7 @@
 import re
 from flask_app.config.mysqlconnection import MySQLConnection
 from flask import flash
+from datetime import datetime
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9,+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
@@ -14,8 +15,10 @@ class Blog:
         self.title = data['title']
         self.header = data['header']
         self.body = data['body']
-        self.thumbnail = data['thumbnail']
-        self.tags = data['tags']
+        self.thumbnail = data['thumbnail'].decode('utf-8') if isinstance(data['thumbnail'], bytes) else data['thumbnail']
+        self.tags = [tag.strip() for tag in data['tags'].split(',')] if data['tags'] else []
+        self.createdAt = datetime.strptime(data['createdAt'], '%Y-%m-%d %H:%M:%S') if 'createdAt' in data else None
+        self.updatedAt = data['updatedAt']
         
 
     @classmethod
