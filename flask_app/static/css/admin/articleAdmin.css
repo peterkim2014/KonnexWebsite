@@ -25,7 +25,7 @@ body, html {
     height: 70%;
     width: 90%;
     padding: 2%;
-    } .blog-dashboard {
+    } .article-dashboard {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
