@@ -53,8 +53,8 @@
                 <h4>
                     Konnex Blogs
                 </h4>
-                <div class="blog-header-options">
-                    <div class="blog-categories">
+                <!-- <div class="blog-header-options"> -->
+                    <!-- <div class="blog-categories">
                         <button class="blog-categories-button">
                             
                                 Categories
@@ -69,8 +69,8 @@
                         <button class="sort-categories">
                             <img src="{{ url_for('static', filename='media/filterButton.png') }}" class="sort-button-img" />
                         </button>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
 
             <div class="blog-containers">
@@ -83,9 +83,10 @@
                         </a>
                         <div class="blog-container-information">
                             <div class="blog-container-information-image">
+                                <img class="previewBlogImage" src="{{ url_for('static', filename='uploads/' + blog.thumbnail) }}" alt="{{ blog.title }}">
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
+                                {{ blog.body[:200] }}{% if blog.body|length > 200 %}...{% endif %}
                             </p>
                         </div>
                     </li>
@@ -101,14 +102,14 @@
                     </div>
                     <div class="blog-intro">
                         <div class="blog-selected-image">
-                            <!-- hello -->
+                            <img class="selectedBlogImage" src="{{ url_for('static', filename='uploads/' + selected_blog.thumbnail) }}" alt="{{ selected_blog.title }}">
                         </div>
                         <div class="blog-intro-text">
                             <div class="blog-intro-text-top">
                                 <h2>{{ selected_blog.title }}</h2>
                                 <!-- <p>{{ selected_blog.content }}</p> -->
 
-                                <h3>Posted on September 14, 2024</h3>
+                                <h3>{{ selected_blog.createdAt.strftime('%B %d, %Y') }}</h3>
                             </div>
                             <div class="blog-intro-text-bottom">
                                 <div class="tags">
@@ -116,7 +117,9 @@
                                         Tags:
                                     </h5>
                                     <h6>
-                                        Cryptocurrency  Bitcoin  Transaction
+                                        {% for tag in selected_blog.tags | process_tags %}
+                                            <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                        {% endfor %}
                                     </h6>
                                 </div>
                                 <div class="sources">
@@ -132,7 +135,7 @@
                         </div>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <br><br>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation <br><br>ullamcorper suscipit lobortis nisl ut aliquip ex Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex 
+                        {{ selected_blog.body }} 
                     </p>
                 </div>
             {% endif %}
