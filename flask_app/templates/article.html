@@ -69,7 +69,7 @@
                                 <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="">
                             </div>
                             <div class="article-preview-text">
-                                {{ previewText[:100] | safe }}{% if previewText|length > 100 %}...{% endif %}
+                                {{ previewText[:150] | safe }}{% if previewText|length > 150 %}...{% endif %}
                             </d>
                         </div>
                     </li>
