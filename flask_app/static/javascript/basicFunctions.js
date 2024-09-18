@@ -472,33 +472,7 @@ function handleFormSubmitJoin(event) {
 }
 
 
-// Attach event listener to the form submission
-// document.getElementById('contactFormEmail').addEventListener('submit', handleFormSubmitContact);
 
-// Function to handle form submission
-function handleFormSubmitContact(event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    // Retrieve form data
-    const formData = event.target;
-    console.log("Form data: ", formData)
-
-
-    fetch('http://localhost:5000/contactUsEmail', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
-        console.error('Error signaling Mailchimp API:', error);
-    });
-}
 
 
 
