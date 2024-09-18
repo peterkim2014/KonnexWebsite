@@ -28,7 +28,7 @@
 }
 a, button {
     color: black;
-}
+} 
 
 /* CSS Animations */
 .fade-in {
@@ -505,7 +505,36 @@ a, button {
     margin-top: 10.5%;
 }
 
+.selected-sources-list {
+    width: 80%;
+    margin-top: 5rem;
+}
+.selected-source-links {
+    list-style-type: none;
+    padding: 0%;
+} .source-list {
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 1.5rem;
+}.selected-body-text {
+    margin: 0;
+    margin-top: 2.5rem;
+    width: 80%; /* Keep percentage for width */
+    height: auto; /* Let height be dynamic */
+}
 
+.selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
+    margin: 0;
+    margin-top: 3.5rem;
+    font-size: 1.15rem;
+}
+
+
+.selected-body-text > h1, h2, h3, h4, h5, h6 {
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
 
 
 
@@ -646,6 +675,42 @@ a, button {
 
 
 @media (orientation: landscape) { 
+    .selected-sources-list {
+        width: 80%;
+        margin-top: 5rem;
+    }
+    .selected-source-links {
+        list-style-type: none;
+        padding: 0%;
+    } .source-list {
+        font-size: 0.9rem;
+        margin: 0;
+        margin-top: 1.5rem;
+    } .selected-body-text {
+        margin: 0;
+        margin-top: 2.5rem;
+        width: 80%; /* Keep percentage for width */
+        height: auto; /* Let height be dynamic */
+    } .selected-body-text > p {
+        margin: 0;
+        margin-top: 0.75rem;
+        font-size: 1.35rem;
+        width: 80%;
+    }
+    
+    .selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
+        margin: 0;
+        margin-top: 3.5rem;
+        font-size: 1.15rem;
+    }
+    
+    
+    .selected-body-text > h1, h2, h3, h4, h5, h6 {
+        margin-top: 3.5rem;
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    }
+
 
 .dropdown-content {
     display: none;
@@ -891,7 +956,7 @@ a, button {
                 margin-bottom: 20px;
                 border-radius: 10px;
                 display: flex;
-                gap: 0.5rem; /* Adjust gap between image and text */
+                gap: 1rem; /* Adjust gap between image and text */
                 flex-direction: column;
                 align-items: center;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -921,7 +986,7 @@ a, button {
                 background-color: rgba(128, 128, 128, 0.396);
                 flex-shrink: 0; /* Prevents image from shrinking */
                 width: 45%; /* Adjust width for the image */
-                height: 100%; /* Set the height to 100% to fill the container */
+                height: 90%; /* Set the height to 100% to fill the container */
                 display: flex;
                 justify-content: center;
                 align-items: center;
