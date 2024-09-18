@@ -7,11 +7,33 @@ from flask_wtf.csrf import CSRFProtect
 from werkzeug.security import check_password_hash
 from flask_app.config.authorized import AUTHORIZED_USERNAME, AUTHORIZED_PASSWORD
 from flask_wtf.csrf import generate_csrf
+import bleach
 
 csrf = CSRFProtect(app)
 
 AUTHORIZED_USERNAME = AUTHORIZED_USERNAME
 AUTHORIZED_PASSWORD = AUTHORIZED_PASSWORD
+
+# Allow the tags that TinyMCE might generate
+ALLOWED_TAGS = ['p', 'b', 'i', 'em', 'strong', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'br', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'blockquote', 'pre', 'code']
+
+# Allow attributes for links, images, and headers
+ALLOWED_ATTRIBUTES = {
+    'a': ['href', 'title'],
+    'img': ['src', 'alt', 'width', 'height'],
+    'p': ['style'],    # Allow inline styles (for size, alignment, etc.)
+    'h1': ['style'],   # Allow inline styles for headers
+    'h2': ['style'],   # Inline styles for other headers too
+    'h3': ['style'],
+    'h4': ['style'],
+    'h5': ['style'],
+    'h6': ['style'],
+    'pre': ['class'],  # Allow class for code blocks
+    'code': ['class'], # Allow class for inline code styling
+    'table': ['border', 'style'],
+    'th': ['colspan', 'rowspan'],
+    'td': ['colspan', 'rowspan']
+}
 
 
 def detect_device(user_agent):
@@ -88,17 +110,17 @@ def save_article():
         # Retrieve form data
         title = request.form['title']
         header = request.form['header']
-        body = request.form['body']
+        body = request.form['body']  # This is the raw HTML content
         sources = request.form['sources']
         tags = request.form['tags']
 
-        
+        # Sanitize the body content using Bleach
+        sanitized_body = bleach.clean(body, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRIBUTES, strip=False)
 
         # Handle the thumbnail upload
         thumbnail = request.files['thumbnail']
         thumbnail_filename = None
         if thumbnail:
-            # Save the uploaded thumbnail file
             thumbnail_filename = thumbnail.filename
             thumbnail.save(os.path.join('flask_app/static/uploads', thumbnail_filename))
 
@@ -106,13 +128,13 @@ def save_article():
         article_data = {
             "title": title,
             "header": header,
-            "body": body,
+            "body": sanitized_body,  # Store the sanitized content
             "thumbnail": thumbnail_filename,
             "sources": sources,
             "tags": tags
         }
-
-        # Save the blog post
+        print(sanitized_body)
+        # Save the article
         Article.save(article_data)
         flash('Article saved successfully', 'success')
         return redirect(url_for('save_article'))

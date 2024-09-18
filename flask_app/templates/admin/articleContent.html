@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin/articleContent.css') }}">
-    <script src="{{url_for('static', filename='javascript/articleContent.js')}}" defer></script>
+    <script src="https://cdn.tiny.cloud/1/g66dnmo5d8zu8hxj7vicszg9ssyz8p48wf4n7uyupqzg581j/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea',
+        plugins: [
+        // Core editing features
+        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+        // Your account includes a free trial of TinyMCE premium features
+        // Try the most popular premium features until Sep 29, 2024:
+        'checklist', 'mediaembed', 'casechange', 'export', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown', 'code'
+        ],
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+        ],
+        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+    });
+    </script>
 </head>
 <body>
 
@@ -25,7 +45,7 @@
 
             <div class="form-group">
                 <label for="body">Article Body:</label>
-                <textarea id="body" name="body" rows="10" required>{{ article.body if article else '' }}</textarea>
+                <textarea id="body" name="body" rows="10">{{ article.body if article else '' }}</textarea>
             </div>
 
             <div class="form-group">
@@ -34,7 +54,7 @@
             </div>
 
             <div class="form-group">
-                <label for="source">Sources (Comma-separated):</label>
+                <label for="sources">Sources (Comma-separated):</label>
                 <input type="text" id="sources" name="sources" value="{{ article.sources if article else '' }}">
             </div>
 
