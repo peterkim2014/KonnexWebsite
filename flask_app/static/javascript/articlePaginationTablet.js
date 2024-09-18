@@ -79,8 +79,52 @@ function createPaginationControls() {
 document.addEventListener('DOMContentLoaded', () => {
     displayArticles(currentPage);
     createPaginationControls();
+    // Adjust vignette height once articles are displayed
+    adjustVignetteBackgroundHeight();
 
+    // Attach resize listener
+    window.addEventListener('resize', adjustVignetteBackgroundHeight);
 });
 
 
 
+// Function to dynamically adjust the height of the vignette background
+function adjustVignetteBackgroundHeight() {
+    console.log("Running adjustVignetteBackgroundHeight");
+
+    // Select the relevant elements
+    const articleMainContainer = document.querySelector('.article-main-container');
+    const vignetteBackground = document.querySelector('.vignette-background-articles');
+
+    // Check if elements exist and log them for debugging
+    if (!articleMainContainer) {
+        console.error("article-main-container not found");
+        return; // Exit if the element is not found
+    } else {
+        console.log("article-main-container found:", articleMainContainer);
+    }
+
+    if (!vignetteBackground) {
+        console.error("vignette-background-articles not found");
+        return; // Exit if the element is not found
+    } else {
+        console.log("vignette-background-articles found:", vignetteBackground);
+    }
+
+    // Get the height of the article-main-container
+    const articleMainContainerHeight = articleMainContainer.offsetHeight;
+
+    // Log the container height for debugging
+    console.log("Article Main Container Height:", articleMainContainerHeight);
+
+    // Calculate 80% of the article-main-container height for the vignette
+    const vignetteHeight = articleMainContainerHeight * 0.8;
+
+    // Log the calculated vignette height
+    console.log("Calculated Vignette Height:", vignetteHeight);
+
+    // Set the min-height of the vignette background and apply a visible background color for debugging
+    vignetteBackground.style.minHeight = `${vignetteHeight}px`;
+    // Log the final min-height of the vignette background
+    console.log("Vignette Background Min-Height Set:", vignetteBackground.style.minHeight);
+}
