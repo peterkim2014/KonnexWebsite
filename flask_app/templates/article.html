@@ -70,7 +70,7 @@
                             </div>
                             <div class="article-container-information-text">
                                 <!-- <p> -->
-                                    {{ previewText[:175] | safe }}{% if article.body|length > 175 %}...{% endif %}
+                                    {{ previewText[:175] | safe }}{% if previewText|length > 175 %}...{% endif %}
                                 <!-- </p> -->
                             </div>
                         </div>

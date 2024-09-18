@@ -597,6 +597,7 @@
 } .back-button-img {
     width: 12px;
     height: 12px;
+    margin-bottom: 1rem;
 } .button-back {
     display: flex;
     gap: 1vw;
@@ -640,7 +641,7 @@
     margin: 0;
 } .vignette-background {
     position: absolute; /* Ensure it's positioned relative to its container */
-    top: 15.5rem;
+    top: 16.5rem;
     left: 0;
     width: 100%;
     
@@ -792,7 +793,7 @@
 } .source-list {
     font-size: 1.15rem;
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 /* Responsive Adjustments for Smaller Screens */

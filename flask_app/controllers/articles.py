@@ -63,10 +63,10 @@ def articles_home():
     if device_type:
         if "ipad" in user_agent:
             print("iPad detected")
-            return render_template("articleTablet.html", selected_article=selected_article, articles=articles, error_message=error_message)
+            return render_template("articleTablet.html", selected_article=selected_article, articles=articles, error_message=error_message, previewText=previewText)
         else:
             print("Mobile device detected")
-            return render_template("articleMobile.html", selected_article=selected_article, articles=articles, error_message=error_message)
+            return render_template("articleMobile.html", selected_article=selected_article, articles=articles, error_message=error_message, previewText=previewText)
     else:
         print("Desktop detected")
         return render_template("article.html", selected_article=selected_article, articles=articles, error_message=error_message, previewText=previewText)
