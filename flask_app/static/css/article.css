@@ -26,6 +26,9 @@
     font-family: 'LTCushionLight';
     src: url('/static/font/LTCushion-Light.ttf') format('truetype');
 }
+a, button {
+    color: black;
+}
 /* CSS Animations */
 .fade-in {
     opacity: 0;
