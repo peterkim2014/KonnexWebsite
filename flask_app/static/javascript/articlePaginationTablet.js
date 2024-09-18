@@ -35,7 +35,7 @@ function displayArticles(page) {
                 <div class="article-container-information-image">
                     <img class="previewArticleImage" src="/static/uploads/${article.thumbnail}" alt="${article.title}">
                 </div>
-                <p>${article.previewText.substring(0, 100)}${article.previewText.length > 100 ? '...' : ''}</p>
+                <p class="article-container-information-text">${article.previewText.substring(0, 200)}${article.previewText.length > 200 ? '...' : ''}</p>
             </div>
         `;
         articleList.appendChild(articleItem);

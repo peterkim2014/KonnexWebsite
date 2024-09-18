@@ -68,18 +68,11 @@
                             <div class="article-container-information-image">
                                 <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="">
                             </div>
-                            <div class="article-container-information-text">
-                                <!-- <p> -->
-                                    {{ previewText[:175] | safe }}{% if previewText|length > 175 %}...{% endif %}
-                                <!-- </p> -->
+                            <div id="article-data" style="display: none;">
+                                {{ articles | tojson }}
                             </div>
                         </div>
                     </li>
-                    {% if not selected_blog %}
-                        <div id="blog-data" style="display: none;">
-                            {{ blogs }}
-                        </div>
-                    {% endif %}
                     {% endfor %}
                 </ul>
             </div>

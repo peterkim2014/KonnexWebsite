@@ -26,7 +26,9 @@
     font-family: 'LTCushionLight';
     src: url('/static/font/LTCushion-Light.ttf') format('truetype');
 }
-
+a, button {
+    color: black;
+}
 /* CSS Animations */
 .fade-in {
     opacity: 0;
@@ -424,36 +426,38 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .article-container-information-image {
-    flex: 1;
-    max-width: 40%; /* Prevents the image from becoming too wide */
-    height: auto;
+    /* flex: 2; */
+    min-width: 50%; 
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .previewArticleImage {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures image doesn't stretch */
+    height: initial;
+    object-fit: contain; 
     border-radius: 0.5rem;
 }
 
-.article-container-information-text {
+/* .article-container-information-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
+} */
 
-.article-container-information-text > p {
+.article-container-information-text {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 20px;
-    width: 85%;
+    /* width: 85%; */
 }
 
 /* Responsive Adjustments */
@@ -502,30 +506,31 @@
         display: flex;
         flex-direction: column; /* Keep the image and text side-by-side */
         align-items: center;
-        gap: 1rem; /* Maintain gap between image and text */
+        gap: 0rem;
+        /* height: 17rem; */
     }
 
     .article-container-information-image {
-        flex: 1;
-        max-width: 45%; /* Keep the image width reasonable on smaller screens */
-        height: 200px; /* Adjusted height for tablets */
+        /* flex: 1; */
+        min-width: 55%; /* Keep the image width reasonable on smaller screens */
+        /* height: 200px; */
     }
 
     .previewArticleImage {
-        width: 100%;
+        width: 90%;
         height: auto; /* Maintains aspect ratio */
-        object-fit: cover;
+        object-fit: contain;
     }
 
-    .article-container-information-text {
+    /* .article-container-information-text {
         flex: 2;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-    }
+    } */
 
-    .article-container-information-text > p {
+    .article-container-information > p {
         font-size: 1rem;
         text-align: center;
         margin: 0;
@@ -557,14 +562,14 @@
     .article-container-information {
         flex-direction: column; /* Side-by-side layout for mobile */
         width: 100%;
-        gap: 1rem;
+        gap: 0rem;
         align-items: center;
     }
 
     .article-container-information-image {
-        flex: 1;
-        max-width: 40%; /* Keep the image width smaller on mobile */
-        height: 150px; /* Adjusted height for mobile */
+        /* flex: 1; */
+        min-width: 80%; /* Keep the image width smaller on mobile */
+        /* height: 150px;  */
     }
 
     .previewArticleImage {
@@ -684,44 +689,13 @@
     width: 90%; /* Keep percentage for width */
     height: auto; /* Set height to auto for flexibility */
     gap: 5rem; /* Use rem for gap */
-}
-
-.selected-body-text {
-    margin: 0;
-    margin-top: 2.5rem;
-    width: 80%; /* Keep percentage for width */
-    height: auto; /* Let height be dynamic */
-}
-
-.selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
-    margin: 0;
-    margin-top: 3.5rem;
-    font-size: 1.15rem;
-}
-.selected-body-text > p {
-    margin: 0;
-    margin-top: 1.5rem;
-    font-size: 1.15rem;
-}
-
-.selected-body-text > h1, h2, h3, h4, h5, h6 {
-    margin-top: 3.5rem;
-    font-size: 1.6rem;
-    margin-bottom: 0;
-}
-
-.selected-sources-list {
-    width: 80%;
-    margin-top: 5rem;
-}
-
-.article-intro-text {
+} .article-intro-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
     gap: 3rem; /* Use rem for gap */
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
 }
 
 .article-intro-text-top {
@@ -767,6 +741,7 @@
 }
 
 .article-selected-image {
+    position: relative;
     width: 48%; 
     height: auto; /* Allow the height to adjust dynamically */
     background-color: white;
@@ -778,14 +753,48 @@
     box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
 }
 
+.selectedArticleImage {
+    height: auto;
+    object-fit: cover;
+}
+
+
+.selected-body-text {
+    margin: 0;
+    margin-top: 2.5rem;
+    width: 80%; /* Keep percentage for width */
+    height: auto; /* Let height be dynamic */
+}
+
+.selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
+    margin: 0;
+    margin-top: 3.5rem;
+    font-size: 1.15rem;
+}
+.selected-body-text > p {
+    margin: 0;
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+}
+
+.selected-body-text > h1, h2, h3, h4, h5, h6 {
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.selected-sources-list {
+    width: 80%;
+    margin-top: 5rem;
+}
+
+
+
 .previewArticleImage {
     height: 90%;
     /* width: 55%; */
 }
 
-.selectedArticleImage {
-    height: 100%;
-}
 
 .selected-source-links {
     list-style-type: none;

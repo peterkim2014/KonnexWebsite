@@ -1,23 +1,23 @@
 // Function to handle scroll-to-top button click
-document.getElementById("scrollToTopBtn").addEventListener("touchstart", function() {
-    scrollAnimation();
-});
+// document.getElementById("scrollToTopBtn").addEventListener("touchstart", function() {
+//     scrollAnimation();
+// });
 
 // Function to scroll back to the top of the page with smooth animation
-function scrollAnimation() {
-    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+// function scrollAnimation() {
+//     var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if (currentScroll > 0) {
-        // Calculate scroll speed (quadratic function for a smooth transition)
-        var scrollSpeed = Math.sqrt(currentScroll);
+//     if (currentScroll > 0) {
+//         // Calculate scroll speed (quadratic function for a smooth transition)
+//         var scrollSpeed = Math.sqrt(currentScroll);
 
-        // Scroll the page up by a certain amount with smooth behavior
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-}
+//         // Scroll the page up by a certain amount with smooth behavior
+//         window.scrollTo({
+//             top: 0,
+//             behavior: "smooth"
+//         });
+//     }
+// }
 
 document.addEventListener("DOMContentLoaded", function() {
     var myScreenOrientation = window.screen.orientation;

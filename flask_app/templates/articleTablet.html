@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articleTablet.css') }}">
     <script src="{{url_for('static', filename='javascript/articles.js')}}" defer></script>
-    <script src="{{url_for('static', filename='javascript/articlePagination.js')}}" defer></script>
+    <script src="{{url_for('static', filename='javascript/articlePaginationTablet.js')}}" defer></script>
     <script src="https://p.usestyle.ai" defer></script>
     <meta name="google-site-verification" content="7s8i6Cai8gnVc6T4zt-t5-c9fIcB-lXHdwNuqHhAIFI" />
     <script>
@@ -72,7 +72,7 @@
                     </div> -->
                 <!-- </div> -->
             </div>
-            <div class="vignette-background-articles"></div>
+            <!-- <div class="vignette-background-articles"></div> -->
             <div class="article-containers">
                 <!-- <h3>Browse articles</h3> -->
                 <ul class="single-article-container" id="article-list">
@@ -85,8 +85,8 @@
                             <div class="article-container-information-image">
                                 <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="{{ article.title }}">
                             </div>
-                            <p>
-                                {{ article.body[:200] }}{% if article.body|length > 200 %}...{% endif %}
+                            <p class="article-preview-text">
+                                {{ previewText[:100] | safe }}{% if previewText|length > 100 %}...{% endif %}
                             </p>
                         </div>
                     </li>
@@ -139,9 +139,16 @@
                 <p class="selectedBodyParagraph">
                     {{ selected_article.body | safe }} 
                 </p>
-                <p>
-                    {{ selected_article.sources }}
-                </p>
+                <div class="selected-sources-list">
+                    <h5>Sources:</h5>
+                    <ul class="selected-source-links">
+                        {% for source in selected_article.sources.split(',') %}
+                        <li class="source-list">
+                            <a href="{{ source.strip() }}" target="_blank">{{ source.strip() }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
                 
             {% endif %}

@@ -48,7 +48,8 @@ def articles_home():
 
         # Process the article body to strip headers and keep only paragraphs
         previewText = strip_headers_only_paragraphs(article['body'])
-        print(f"Processed Article Body: {article['body']}")
+        article['previewText'] = strip_headers_only_paragraphs(article['body'])[:200]  # Only keep the first 200 characters
+        print(f"Processed Article Body: {previewText}")
 
     # # Detect if a article is selected from the query parameter
     selected_article_id = request.args.get('article_id')
