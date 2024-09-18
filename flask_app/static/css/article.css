@@ -1189,6 +1189,117 @@ a, button {
             text-decoration: none;
             color: black;
             font-size: 1.25em;
+}
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 1024px) {
+    .home-header {
+        gap: 10rem; /* Reduce the gap on smaller screens */
+        margin-top: 2.5%;
+    }
+
+    .home-name {
+        width: 40%; /* Adjust width */
+    }
+
+    .name-container > h1 {
+        font-size: 1.8rem; /* Adjusted for smaller screens */
+    }
+
+    .name-container > h2 {
+        font-size: 1rem; /* Adjusted for readability */
+    }
+
+    .home-routes {
+        width: 45%; /* Adjust width of navigation */
+    }
+    .dropdown-content {
+        top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-header {
+        flex-direction: column; /* Stack the header vertically */
+        align-items: center;
+        justify-content: center;
+        height: auto; 
+        gap: 2rem; 
+        margin-top: 5%;
+    }
+
+    .home-name {
+        width: 40%; /* Adjust width on smaller screens */
+    }
+
+    .logo-lotus {
+        height: 3rem; /* Adjust logo size */
+        width: 3rem;
+    }
+    .name-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name-container > h1 {
+        font-size: 2.1rem; /* Smaller font-size for better fit */
+        width: fit-content;
+    }
+
+    .name-container > h2 {
+        font-size: 0.6rem; /* Smaller font-size for readability */
+        width: fit-content;
+    }
+
+    .home-routes {
+        width: 80%; /* Navigation takes up more space on smaller screens */
+        justify-content: space-around; /* Space out evenly */
+    }
+
+    .route {
+        font-size: 0.9rem; /* Adjust font-size of routes */
+    }
+    .back-to-article {
+        padding-top: 5%;
+    }
+    .article-selected-image {
+        margin-top: -7.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 5%;
+    }
+
+    .home-name {
+        width: 80%; /* Full width for smaller screens */
+    }
+
+    .name-container > h1 {
+        font-size: 1.4rem;
+    }
+
+    .name-container > h2 {
+        font-size: 0.8rem;
+    }
+
+    .home-routes {
+        width: 100%; /* Navigation takes full width */
+        justify-content: center; /* Center the routes */
+        gap: 1rem;
+    }
+
+    .route {
+        font-size: 0.85rem; /* Further reduce font-size for better readability */
+    }
+
+
+
+
+
 } .article-main-container {
     width: 100%;
     display: flex;
@@ -1273,6 +1384,7 @@ a, button {
     margin: 0;
     padding-top: 1%;
 }
+
 .single-article-container {
     list-style: none; 
     padding: 0;
@@ -1286,43 +1398,64 @@ a, button {
 
 .article-container {
     width: 48.5%; 
-    height: 330px;
+    height: auto;
     background-color: white;
     padding: 20px;
     box-sizing: border-box; 
     margin-bottom: 20px;
     border-radius: 10px;
     display: flex;
-    gap: 1.2vh;
-    justify-content: center;
-    flex-direction: column;
+    gap: 1.5rem;
+    flex-direction: column; /* Ensure image and text are side by side */
+    align-items: center; /* Align items in the center */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-} .article-container > a {
+}
+
+.article-container > a {
     font-size: 1.8em;
     text-decoration: none;
     font-family: 'FreightSansMedium', sans-serif;
     font-weight: 700;
     margin: 0;
-    /* background-color: red; */
-    height: 10%;
-    text-align: start;
-} .article-container-information {
     width: 100%;
-    height: 100%;
+    text-align: start;
+}
+
+.article-container-information {
     display: flex;
-    /* justify-content: center; */
+    justify-content: flex-start;
     align-items: center;
-} .article-container-information-image {
+    /* width: 100%; */
+    gap: 0.7rem; /* Gap between the image and the text */
+}
+
+.article-container-information-image {
     background-color: rgba(128, 128, 128, 0.396);
-    width: 45%;
-    height: 90%;
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 25%; /* Adjust the width of the image container */
+    /* height: auto;  */
     display: flex;
-} .article-container-information > p {
-    width: 45%;
-    height: 90%;
-    font-size: 1.2em;
-    padding-left: 5%;
-    line-height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewArticleImage {
+    width: 60%; /* Full width of the container */
+    /* height: auto;  */
+    /* object-fit: cover; */
+    border-radius: 5px;
+}
+
+.article-container-information > p {
+    height: 100%;
+    flex-grow: 1;
+    font-size: 1em;
+    line-height: 1.6em;
+    text-align: left; /* Align text to the left */
+    margin: 0;
+    padding-left: 0.5rem; /* Add a little padding to separate from the image */
+    text-overflow: ellipsis; /* Handle long text overflow */
+    overflow: hidden;
 } .back-to-article {
     width: 100%;
     align-items: flex-start;
@@ -1394,18 +1527,19 @@ a, button {
     gap: 5vw;
     } .selected-body-text {
         margin: 0;
-        margin-top: 10.5%;
+        margin-top: 3rem;
         width: 80%;
         height: 100%;
-        background-color: green;
         } .selected-body-text > p, b, i, em, strong, h1, h2, h3, h4, h5, h6, a, ul, ol, li, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
             /* margin: 0; */
             margin-top: 2.5%;
         } .selected-body-text > h1, h2, h3, h4, h5 ,h6 {
             text-align: left;
+            margin-top: 5rem;
     } .selected-sources-list {
         display: flex;
-
+        flex-direction: column;
+        align-items: flex-start;
 } .article-intro-text {
     display: flex;
     flex-direction: column;
@@ -1466,10 +1600,10 @@ a, button {
     height: 100%;
 } .vignette-background {
     position: absolute; /* Ensure it's positioned relative to its container */
-    top: 25rem;
+    top: 24rem;
     left: 0;
     width: 100%;
-    min-height: 30rem;
+    min-height: 20rem;
     height: 32%; /* Adjust height as necessary */
     z-index: -1; /* Lower than .article-intro to place it behind */
     background-color: #EEEEEE;
@@ -1566,6 +1700,146 @@ a, button {
                     padding-top: 1%;
                     }
 
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .footer {
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2.3%;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 90%;
+        padding-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-left {
+        height: 4rem;
+    }
+
+    .footer-left-top {
+        justify-content: center;
+        gap: 0.5rem;
+        
+    }
+
+    .footer-left-top > img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer-left-top > h5 {
+        font-size: 1.3rem;
+        width: fit-content;
+    }
+
+    .footer-left > h6 {
+        font-size: 0.9rem;
+        padding: 0%;
+        margin: 0;
+    }
+
+    .footer-routes {
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-single-route {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .footer-right > p {
+        text-align: center;
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        gap: 1rem;
+    }
+
+    .footer-left {
+        width: 100%;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .footer-right {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-routes {
+        /* flex-direction: column; */
+        gap: 1rem;
+        
+    }
+
+    .footer-single-route {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .footer-left-top > img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .footer-left-top > h5 {
+        font-size: 1.2rem;
+    }
+
+    .footer-right > p {
+        font-size: 0.9rem;
+        text-align: center;
+        width: 80%;
+    } .footer-links {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        
+    }
+
+    .footer-left-top > img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .footer-left-top > h5 {
+        font-size: 1rem;
+    }
+
+    .footer-left > h6 {
+        font-size: 0.8rem;
+    }
+
+    .footer-single-route {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .footer-right > p {
+        font-size: 0.8rem;
+    }
+}
 
 
 }
