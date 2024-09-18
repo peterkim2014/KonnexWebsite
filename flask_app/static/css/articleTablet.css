@@ -292,45 +292,68 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
-    /* background-color: red; */
 }
+
 .article-container {
-    width: 100%; 
-    height: 280px;
+    width: 100%;
+    height: auto;
     background-color: white;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-bottom: 20px;
     border-radius: 10px;
     display: flex;
-    /* gap: 1vh; */
-    flex-direction: column;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-} .article-container > a {
-    font-size: 1.6em;
-    text-decoration: none;
-    font-family: 'FreightSansMedium', sans-serif;
-    /* font-weight: 700; */
-    text-align: start;
-} .article-container-information {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    /* justify-content: center; */
+    gap: 1.5rem;
+    flex-direction: column; /* Image and text side by side */
     align-items: center;
-} .article-container-information-image {
-    background-color: rgba(128, 128, 128, 0.396);
-    width: 45%;
-    height: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.article-container > a {
+    font-size: 1.1em;
+    text-decoration: none;
+    width: 100%;
+    font-family: 'FreightSansMedium', sans-serif;
+    text-align: start;
+}
+
+.article-container-information {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-} .article-container-information > p {
-    width: 45%;
-    height: 90%;
-    font-size: 0.9em;
-    padding-left: 5%;
-    line-height: 18px;
+    justify-content: flex-start; /* Aligns items side by side */
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.article-container-information-image {
+    background-color: rgba(128, 128, 128, 0.396);
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 150px; /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewArticleImage {
+    width: 100%; /* Full width of the container */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.article-container-information-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 170px); /* Remaining width for text */
+}
+
+.article-container-information > p {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.4;
+    text-align: left;
 } .back-to-article {
     width: 100%;
     align-items: flex-start;
