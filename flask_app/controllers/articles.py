@@ -26,9 +26,20 @@ def strip_headers_only_paragraphs(html_content):
         header.decompose()
 
     # Return only the paragraph content
-    paragraphs = soup.find_all('p')
-    return ''.join(str(p) for p in paragraphs)
+    # paragraphs = soup.find_all('p')
+    return ''.join(str(tag) for tag in soup.find_all(['p', 'a']))
 
+def process_links_and_content(html_content):
+    soup = BeautifulSoup(html_content, "html.parser")
+    
+    # Ensure that all a tags are processed correctly
+    for a_tag in soup.find_all('a'):
+        href = a_tag.get('href', '')
+        a_tag['href'] = href  # Set the href attribute correctly
+        a_tag.string = a_tag.get_text()  # Keep the visible text for the link
+    
+    # Return the HTML content with all tags preserved
+    return str(soup)
 
 @app.route('/articles')
 def articles_home():
@@ -44,12 +55,13 @@ def articles_home():
     for article in articles:
         if isinstance(article['thumbnail'], bytes):
             article['thumbnail'] = article['thumbnail'].decode('utf-8')  # Decode from bytes to string
-        print(f"Thumbnail: {article['thumbnail']}")
+        # print(f"Thumbnail: {article['thumbnail']}")
 
         # Process the article body to strip headers and keep only paragraphs
         previewText = strip_headers_only_paragraphs(article['body'])
         article['previewText'] = strip_headers_only_paragraphs(article['body'])[:200]  # Only keep the first 200 characters
-        print(f"Processed Article Body: {previewText}")
+        # print(f"Processed Article Body: {previewText}")
+        article['processedBody'] = process_links_and_content(article['body'])
 
     # # Detect if a article is selected from the query parameter
     selected_article_id = request.args.get('article_id')
