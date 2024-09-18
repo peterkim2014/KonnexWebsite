@@ -119,7 +119,7 @@ function adjustVignetteBackgroundHeight() {
     console.log("Article Main Container Height:", articleMainContainerHeight);
 
     // Calculate 80% of the article-main-container height for the vignette
-    const vignetteHeight = articleMainContainerHeight * 0.8;
+    const vignetteHeight = articleMainContainerHeight * 0.7;
 
     // Log the calculated vignette height
     console.log("Calculated Vignette Height:", vignetteHeight);
