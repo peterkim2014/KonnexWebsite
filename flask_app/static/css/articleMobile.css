@@ -29,12 +29,7 @@
 a, button {
     color: black;
 }
-.selected-body-text {
-    margin: 0;
-    margin-top: 2.5rem;
-    width: 80%; /* Keep percentage for width */
-    height: auto; /* Let height be dynamic */
-}
+
 
 .selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
     margin: 0;
@@ -43,26 +38,14 @@ a, button {
 }
 
 
-.selected-body-text > h1, h2, h3, h4, h5, h6 {
+/* .selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
     margin-top: 3.5rem;
     font-size: 1.6rem;
     margin-bottom: 0;
-}
+    text-align: center;
+} */
 
-.selected-sources-list {
-    width: 90%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-.selected-source-links {
-    list-style-type: none;
-    padding: 0%;
-} .source-list {
-    font-size: 0.9rem;
-    margin: 0;
-    margin-top: 1.5rem;
 
-}
 
 /* CSS Animations */
 .fade-in {
@@ -96,16 +79,41 @@ a, button {
 
 
 @media (orientation: portrait) {
+.selected-body-text {
+    margin: 0;
+    margin-top: 2.5rem;
+    width: 90%; /* Keep percentage for width */
+    height: auto; /* Let height be dynamic */
+}
+.selected-sources-list {
+    width: 80%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.selected-sources-list > h5 {
+    margin: 0;
+    text-align: left;
+}
+.selected-source-links {
+    list-style-type: none;
+    padding: 0%;
+} .source-list {
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 1.5rem;
+
+}
 .selected-body-text > p {
     margin: 0;
     margin-top: 1.5rem;
     font-size: 1.15rem;
-    width: 80%;
+    width: 100%;
 }
-.selected-body-text > h1, h2, h3, h4, h5, h6 {
+.selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
     margin-top: 3.5rem;
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 .dropdown-content {
     display: none;
@@ -433,15 +441,18 @@ a, button {
     cursor: pointer; 
 } .tags {
     display: flex;
-    gap: 2vw;
+    width: fit-content;
+    /* gap: 1vw; */
+    /* background-color: red; */
     padding-bottom: 1.5%;
+    width: 85%;
 } .tags > h5 {
     padding-right: 1%;
     /* margin: 0; */
     font-size: 0.9em;
     height: 10%;
     margin: 0;
-} .tags > h6 {
+} .tags-list {
     /* margin: 0; */
     font-size: 0.9em;
     height: 10%;
@@ -482,7 +493,7 @@ a, button {
         align-items: center;
         justify-content: center;
         margin-top: 15%;
-        width: 95%;
+        width: 100%;
         height: 50%;
         } .article-intro-text {
             display: flex;
@@ -492,14 +503,14 @@ a, button {
             /* padding-top: 3.5%; */
             margin-top: -20%;
             gap: 2vh;
-            /* background-color: red; */
+            width: 100%;
         } .article-intro-text-top {
             height: 100%;
             display: flex;
             flex-direction: column;
             gap: 1vh;
             margin: 0;
-            font-size: 1.3em;
+            font-size: 1.7em;
             text-align: center;
             font-weight: 800;
             font-family: 'FreightSansMedium', sans-serif;
@@ -682,6 +693,46 @@ a, button {
 
 
 @media (orientation: landscape) {
+    .selected-body-text > p {
+        margin: 0;
+        margin-top: 1.5rem;
+        font-size: 0.6rem;
+        width: 100%;
+    }
+    .selected-body-text > a {
+        font-size: 1rem;
+    }
+    .selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
+        margin-top: 3.5rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .selected-body-text {
+        margin: 0;
+        margin-top: 2.5rem;
+        width: 90%; /* Keep percentage for width */
+        height: auto; /* Let height be dynamic */
+    }
+    .selected-sources-list {
+        width: 80%;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .selected-sources-list > h5 {
+        margin: 0;
+        text-align: left;
+    }
+    .selected-source-links {
+        list-style-type: none;
+        padding: 0%;
+    } .source-list {
+        font-size: 0.9rem;
+        margin: 0;
+        margin-top: 1.5rem;
+    
+    }
 
 .dropdown-content {
     display: none;
@@ -990,7 +1041,7 @@ a, button {
 
 .article-container-information-text > p {
     margin: 0;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     line-height: 1.5;
     text-align: left;
 } .back-to-article {
@@ -1024,9 +1075,9 @@ a, button {
     font-size: 1em;
     height: 10%;
     margin: 0;
-} .tags > h6 {
+} .tags-list {
     /* margin: 0; */
-    font-size: 1em;
+    font-size: 0.9em;
     height: 10%;
     margin: 0;
     color: blue;
@@ -1057,7 +1108,7 @@ a, button {
     align-items: center;
     } .selectedBodyParagraph {
         margin-top: 10%;
-        font-size: 0.9em;
+        /* font-size: 0.9em; */
         line-height: 30px;
         width: 90%;
     }.article-intro {
@@ -1081,7 +1132,7 @@ a, button {
             flex-direction: column;
             gap: 1vh;
             margin: 0;
-            font-size: 1.2em;
+            font-size: 1.6em;
             font-weight: 800;
             font-family: 'FreightSansMedium', sans-serif;
             flex-wrap: wrap;

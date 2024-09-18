@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" media="(prefers-color-scheme: dark)" href="{{url_for('static', filename='media/konnexLogoInverted.png')}}">
     <link rel="icon" type="image/png" media="(prefers-color-scheme: light)" href="{{url_for('static', filename='media/KonnexLogoo.png')}}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/articleMobile.css') }}">
-    <script src="{{url_for('static', filename='javascript/basicFunctions.js')}}" defer></script>
+    <script src="{{url_for('static', filename='javascript/basicFunctionsMobile.js')}}" defer></script>
     <script src="{{url_for('static', filename='javascript/articles.js')}}" defer></script>
     <script src="https://p.usestyle.ai" defer></script>
     <meta name="google-site-verification" content="7s8i6Cai8gnVc6T4zt-t5-c9fIcB-lXHdwNuqHhAIFI" />
@@ -117,7 +117,7 @@
                                 <h5>
                                     Tags:
                                 </h5>
-                                <h6>
+                                <h6 class="tags-list">
                                     {% for tag in selected_article.tags | process_tags %}
                                         <span>{{ tag }}</span>{% if not loop.last %}, {% endif %}
                                     {% endfor %}
@@ -135,9 +135,9 @@
                         <!-- Back button to go back to browsing all articles -->
                     </div>
                 </div>
-                <p class="selected-body-text">
+                <div class="selected-body-text">
                     {{ selected_article.body | safe }} 
-                </p>
+                </d>
                 <div class="selected-sources-list">
                     <h5>Sources:</h5>
                     <ul class="selected-source-links">
@@ -159,7 +159,7 @@
         <div class="footer">
             <div class="footer-left fade-slide-up">
                 <div class="footer-left-top">
-                    <img src="{{ url_for('static', filename='media/konnexLogoo.webp') }}"/>
+                    <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}"/>
                     <h5>
                         Konnex Cryptocurrency Wallet
                     </h5>

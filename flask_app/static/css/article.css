@@ -663,7 +663,7 @@ a, button {
     position: absolute;
     left: 0;
     width: 100%;
-    min-height: 15rem;
+    height: 5rem;
     z-index: -1;
     background-color: #EEEEEE;
     margin-top: 6.5%;

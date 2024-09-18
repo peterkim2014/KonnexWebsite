@@ -523,17 +523,18 @@ a, button {
     height: auto; /* Let height be dynamic */
 }
 
-.selected-body-text > b, i, em, strong, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
+.selected-body-text > b, i, ul, ol, br, table, thead, tbody, tr, th, td, blockquote, pre, code {
     margin: 0;
     margin-top: 3.5rem;
     font-size: 1.15rem;
 }
 
 
-.selected-body-text > h1, h2, h3, h4, h5, h6 {
+.selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
     margin-top: 3.5rem;
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 
@@ -585,6 +586,7 @@ a, button {
                     /* font-weight: 800; */
         } .footer-left > h6 {
             margin: 0;
+            font-size: 1rem;
             /* padding-right: 5%; */
             width: 14%;
             /* background-color: red; */
@@ -1038,6 +1040,7 @@ a, button {
                 cursor: pointer; 
             } .tags {
                 display: flex;
+                gap: 1rem;
                 width: 100%;
             } .tags > h5 {
                 /* margin: 0; */
@@ -1221,8 +1224,9 @@ a, button {
                     /* font-weight: 800; */
         } .footer-left > h6 {
             margin: 0;
+            font-size: 1rem;
             /* padding-right: 5%; */
-            width: 14%;
+            width: fit-content;
             /* background-color: red; */
             } .footer-left-socials {
                 width: 27%;
