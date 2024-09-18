@@ -426,7 +426,9 @@ a, button {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 0.8rem;
+    font-size: 0.85em;
+    line-height: 21px;
 }
 
 .article-container-information-image {
@@ -458,7 +460,10 @@ a, button {
     font-size: 0.8rem;
     line-height: 20px;
     /* width: 85%; */
+} .article-preview-text {
+    font-size: 0.9rem;
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
@@ -587,7 +592,7 @@ a, button {
     }
 
     .article-container-information-text > p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         line-height: 1.4;
         margin: 0;
         width: 100%;
