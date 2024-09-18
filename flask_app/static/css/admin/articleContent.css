@@ -1,8 +1,79 @@
-body, html {
-    margin: 0 auto;
-    height: auto;
+/* Ensure the container takes up the full viewport height and allows scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for the page */
     width: 100%;
+    overflow: auto; /* Allow scrolling if content exceeds viewport height */
     font-family: 'FreightSansLight', sans-serif;
     letter-spacing: 0.7px;
 }
 
+/* Style for the form container */
+.container {
+    max-width: 120%;
+    margin: 20px auto; /* Center the container */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allow content inside to scroll if it overflows */
+}
+
+/* Ensure form inputs are full width and responsive */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group button {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Style for the button */
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+/* Ensure textarea takes up more space and can scroll */
+textarea {
+    min-height: 200px;
+    width: 120%;
+    resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-group input, .form-group textarea, .form-group button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .form-group button {
+        padding: 0.5rem 1rem;
+    }
+}
