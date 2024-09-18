@@ -76,6 +76,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const articleContainers = document.querySelectorAll('.article-container-information');
+
+    articleContainers.forEach(container => {
+        const articleBody = container.querySelector('p');
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(articleBody.innerHTML, 'text/html');
+        
+        // Extract only <p> tags, ignoring headers
+        const paragraphs = doc.querySelectorAll('p');
+        let paragraphText = '';
+        paragraphs.forEach(p => {
+            paragraphText += p.outerHTML; // Keep the outerHTML to retain <p> tags
+        });
+
+        // Set the filtered content back to the article's paragraph element
+        articleBody.innerHTML = paragraphText;
+    });
+});
 
 
 document.addEventListener("DOMContentLoaded", function() {

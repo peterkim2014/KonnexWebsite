@@ -41,9 +41,6 @@ function displayArticles(page) {
         articleList.appendChild(articleItem);
     });
 
-    // Adjust the vignette background height after displaying articles
-    adjustVignetteBackgroundHeight();
-
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Adds a smooth scrolling effect
@@ -82,25 +79,8 @@ function createPaginationControls() {
 document.addEventListener('DOMContentLoaded', () => {
     displayArticles(currentPage);
     createPaginationControls();
+
 });
 
-// Function to dynamically adjust the height of the vignette background
-function adjustVignetteBackgroundHeight() {
-    // Get the article list element
-    const articleList = document.getElementById('article-list');
-    
-    // Get the number of article posts (children of article-list)
-    const numberOfArticles = articleList.getElementsByTagName('li').length;
-    
-    // Define the fixed height for each article post
-    const heightPerArticle = 120; // Adjust this value based on your design (in pixels)
-    
-    // Calculate the total height needed for the vignette background
-    const totalHeight = numberOfArticles * heightPerArticle;
-    
-    // Get the vignette background element
-    const vignetteBackground = document.querySelector('.vignette-background-articles');
-    
-    // Set the calculated height
-    vignetteBackground.style.height = `${totalHeight}px`;
-}
+
+

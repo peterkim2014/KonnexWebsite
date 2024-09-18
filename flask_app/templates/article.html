@@ -40,8 +40,8 @@
                 <div class="dropdown">
                     <a href="#contact" class="route contact">Contact</a>
                     <div class="dropdown-content">
-                        <a href="/contact_form">Contact Form</a>
-                        <a href="/join_the_team">Join the team</a>
+                        <a class="contact-links" href="/contact_form">Contact Form</a>
+                        <a class="contact-links" href="/join_the_team">Join the team</a>
                     </div>
                 </div>
             </div>
@@ -55,46 +55,31 @@
                 <h4>
                     Konnex Articles
                 </h4>
-                <!-- <div class="article-header-options"> -->
-                    <!-- <div class="article-categories">
-                        <button class="article-categories-button">
-                            
-                                Categories
-                            
-                            <img src="{{ url_for('static', filename='media/downArrow.png') }}"/>
-                        </button>
-                    </div>
-                    <div class="sort-button">
-                        <h4>
-                            Sort by
-                        </h4>
-                        <button class="sort-categories">
-                            <img src="{{ url_for('static', filename='media/filterButton.png') }}" class="sort-button-img" />
-                        </button>
-                    </div> -->
-                <!-- </div> -->
             </div>
-            <div class="vignette-background-articles"></div>
+            <!-- <div class="vignette-background-articles" id="vignette-list-background"></div> -->
             <div class="article-containers">
-                <!-- <h3>Browse articles</h3> -->
                 <ul class="single-article-container" id="article-list">
                     {% for article in articles %}
                     <li class="article-container">
-                        <a href="{{ url_for('articles_home', article_id=article.id) }}">
+                        <a class="article-container-title-link" href="{{ url_for('articles_home', article_id=article.id) }}">
                             {{ article.title }}
                         </a>
                         <div class="article-container-information">
                             <div class="article-container-information-image">
-                                <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="{{ article.title }}">
+                                <img class="previewArticleImage" src="{{ url_for('static', filename='uploads/' + article.thumbnail) }}" alt="">
                             </div>
-                            <p>
-                                {{ article.body[:200] }}{% if article.body|length > 200 %}...{% endif %}
-                            </p>
+                            <div class="article-container-information-text">
+                                <!-- <p> -->
+                                    {{ previewText[:175] | safe }}{% if article.body|length > 175 %}...{% endif %}
+                                <!-- </p> -->
+                            </div>
                         </div>
                     </li>
-                    <div id="article-data" style="display: none;">
-                        {{ articles | tojson }}
-                    </div>
+                    {% if not selected_blog %}
+                        <div id="blog-data" style="display: none;">
+                            {{ blogs }}
+                        </div>
+                    {% endif %}
                     {% endfor %}
                 </ul>
             </div>
@@ -144,12 +129,19 @@
                         
 
                     </div>
-                    <p>
-                        {{ selected_article.body }} 
-                    </p>
-                    <p>
-                        {{ selected_article.sources }}
-                    </p>
+                    <div class="selected-body-text">
+                        {{ selected_article.body | safe }} 
+                    </div>
+                    <div class="selected-sources-list">
+                        <h5>Sources:</h5>
+                        <ul class="selected-source-links">
+                            {% for source in selected_article.sources.split(',') %}
+                            <li class="source-list">
+                                <a href="{{ source.strip() }}" target="_blank">{{ source.strip() }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             {% endif %}
 
@@ -181,9 +173,9 @@
                 </div>
                 <p>
                     All content on this website is the property of Konnex, unless otherwise noted. Any unauthorized use, reproduction, or distribution of content is strictly prohibited. By accessing this website, you agree to our 
-                    <a href="https://app.termly.io/policy-viewer/policy.html?policyUUID=6603c3ef-1dcf-47c1-83a8-6f74bb743b0c" target="_blank">Terms and Conditions</a>
+                    <a class="footer-links" href="https://app.termly.io/policy-viewer/policy.html?policyUUID=6603c3ef-1dcf-47c1-83a8-6f74bb743b0c" target="_blank">Terms and Conditions</a>
                     and
-                    <a href="https://app.termly.io/policy-viewer/policy.html?policyUUID=48e4ca19-bdbf-4ce1-af30-52a06ed706da" target="_blank">Privacy policy</a>
+                    <a class="footer-links" href="https://app.termly.io/policy-viewer/policy.html?policyUUID=48e4ca19-bdbf-4ce1-af30-52a06ed706da" target="_blank">Privacy policy</a>
                 </p>
             </div>
         </div>

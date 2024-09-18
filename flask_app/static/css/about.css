@@ -150,7 +150,94 @@
         } .route {
             text-decoration: none;
             color: black;
-} .about-intro {
+} @media (max-width: 768px) {
+    .home-header {
+        flex-direction: column; /* Stack the header vertically */
+        align-items: center;
+        justify-content: center;
+        height: auto; 
+        gap: 2rem; 
+        margin-top: 5%;
+    }
+
+    .home-name {
+        width: 40%; /* Adjust width on smaller screens */
+    }
+
+    .logo-lotus {
+        height: 3rem; /* Adjust logo size */
+        width: 3rem;
+    }
+    .name-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name-container > h1 {
+        font-size: 2.1rem; /* Smaller font-size for better fit */
+        width: fit-content;
+    }
+
+    .name-container > h2 {
+        font-size: 0.6rem; /* Smaller font-size for readability */
+        width: fit-content;
+    }
+
+    .home-routes {
+        width: 80%; /* Navigation takes up more space on smaller screens */
+        justify-content: space-around; /* Space out evenly */
+    }
+
+    .route {
+        font-size: 0.9rem; /* Adjust font-size of routes */
+    }
+    .back-to-article {
+        padding-top: 5%;
+    }
+    .article-selected-image {
+        margin-top: -7.5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 5%;
+    }
+
+    .home-name {
+        width: 80%; /* Full width for smaller screens */
+    }
+
+    .name-container > h1 {
+        font-size: 1.4rem;
+    }
+
+    .name-container > h2 {
+        font-size: 0.8rem;
+    }
+
+    .home-routes {
+        width: 100%; /* Navigation takes full width */
+        justify-content: center; /* Center the routes */
+        gap: 1rem;
+    }
+
+    .route {
+        font-size: 0.85rem; /* Further reduce font-size for better readability */
+    }
+}
+
+
+
+
+
+
+
+
+.about-intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -553,6 +640,144 @@
                                 height: 60px;
                                 font-size: 0.7em;
                                 padding-top: 1%;
+                                } /* Responsive adjustments */
+                                @media (max-width: 1024px) {
+                                    .footer {
+                                        height: auto;
+                                        flex-direction: column;
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding-top: 2.3%;
+                                        align-items: center;
+                                    }
+                                
+                                    .footer-left,
+                                    .footer-right {
+                                        width: 90%;
+                                        padding-left: 0%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                    .footer-left {
+                                        height: 4rem;
+                                    }
+                                
+                                    .footer-left-top {
+                                        justify-content: center;
+                                        gap: 0.5rem;
+                                        
+                                    }
+                                
+                                    .footer-left-top > img {
+                                        width: 2rem;
+                                        height: 2rem;
+                                    }
+                                
+                                    .footer-left-top > h5 {
+                                        font-size: 1.3rem;
+                                        width: fit-content;
+                                    }
+                                
+                                    .footer-left > h6 {
+                                        font-size: 0.9rem;
+                                        padding: 0%;
+                                        margin: 0;
+                                    }
+                                
+                                    .footer-routes {
+                                        gap: 1rem;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                
+                                    .footer-single-route {
+                                        font-size: 1rem;
+                                        margin: 0;
+                                    }
+                                
+                                    .footer-right > p {
+                                        text-align: center;
+                                        margin-bottom: 15%;
+                                    }
+                                }
+                                
+                                @media (max-width: 768px) {
+                                    .footer {
+                                        height: auto;
+                                        gap: 1rem;
+                                    }
+                                
+                                    .footer-left {
+                                        width: 100%;
+                                        align-items: center;
+                                        margin-top: 2rem;
+                                    }
+                                
+                                    .footer-right {
+                                        width: 100%;
+                                        align-items: center;
+                                        text-align: center;
+                                        gap: 2rem;
+                                        margin-bottom: 2rem;
+                                    }
+                                
+                                    .footer-routes {
+                                        /* flex-direction: column; */
+                                        gap: 1rem;
+                                        
+                                    }
+                                
+                                    .footer-single-route {
+                                        font-size: 1rem;
+                                        margin: 0;
+                                    }
+                                
+                                    .footer-left-top > img {
+                                        width: 2rem;
+                                        height: 2rem;
+                                    }
+                                
+                                    .footer-left-top > h5 {
+                                        font-size: 1.2rem;
+                                    }
+                                
+                                    .footer-right > p {
+                                        font-size: 0.9rem;
+                                        text-align: center;
+                                        width: 80%;
+                                    } .footer-links {
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                                
+                                @media (max-width: 480px) {
+                                    .footer {
+                                        
+                                    }
+                                
+                                    .footer-left-top > img {
+                                        width: 1.8rem;
+                                        height: 1.8rem;
+                                    }
+                                
+                                    .footer-left-top > h5 {
+                                        font-size: 1rem;
+                                    }
+                                
+                                    .footer-left > h6 {
+                                        font-size: 0.8rem;
+                                    }
+                                
+                                    .footer-single-route {
+                                        font-size: 0.9rem;
+                                        margin: 0;
+                                    }
+                                
+                                    .footer-right > p {
+                                        font-size: 0.8rem;
+                                    }
                                 }
 
 
