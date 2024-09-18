@@ -782,7 +782,7 @@ a, button {
     font-size: 1.15rem;
 }
 
-.selected-body-text > h1, h2, h3, h4, h5, h6 {
+.selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
     margin-top: 3.5rem;
     font-size: 1.6rem;
     margin-bottom: 0;

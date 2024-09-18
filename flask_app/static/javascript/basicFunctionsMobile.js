@@ -262,6 +262,37 @@ imgElements.forEach(img => {
 });
 
 
+function loadKonnexLogo() {
+    const logoElement = document.querySelector('.footer-left-top img');
+    const logoSources = [
+        "{{ url_for('static', filename='media/KonnexLogoo.webp') }}",  // WebP version
+        "{{ url_for('static', filename='media/KonnexLogoo.png') }}",   // PNG version
+        "{{ url_for('static', filename='media/KonnexLogoo.svg') }}"    // SVG version
+    ];
+
+    let currentSourceIndex = 0;
+
+    function tryNextImage() {
+        if (currentSourceIndex < logoSources.length) {
+            // Try the next image source
+            logoElement.src = logoSources[currentSourceIndex];
+            logoElement.onerror = function() {
+                // If the image fails to load, try the next one
+                currentSourceIndex++;
+                tryNextImage();
+            };
+        } else {
+            // If all images fail, log the error
+            console.error('Failed to load the logo image.');
+        }
+    }
+
+    tryNextImage(); // Start the loading process
+}
+
+// Run the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', loadKonnexLogo);
+
 
 
 function onRecaptchaSuccess(token) {
