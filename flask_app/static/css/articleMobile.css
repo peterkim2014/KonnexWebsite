@@ -123,7 +123,7 @@ a, button {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 40px;
+    right: -50px;
     padding-top: 0.6%;
 } .dropdown-content a {
     color: black;
@@ -777,7 +777,7 @@ a, button {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border: none;
-    right: 120px;
+    right: 20px;
     padding-top: 0.6%;
 } .dropdown-content a {
     color: black;
