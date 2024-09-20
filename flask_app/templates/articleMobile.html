@@ -128,8 +128,8 @@
                                 <h6>
                                     Posted on
                                 </h6>
-                                <h7>
-                                    https://www.konnexwallet.io
+                                <h7 style="color: black;">
+                                    {{ selected_article.createdAt.strftime('%m-%d-%Y') }}
                                 </h7>
                             </div>
                         </div>
@@ -144,7 +144,9 @@
                     <ul class="selected-source-links">
                         {% for source in selected_article.sources.split(',') %}
                         <li class="source-list">
-                            <a href="{{ source.strip() }}" target="_blank">{{ source.strip() }}</a>
+                            <a href="{{ source.strip() }}" target="_blank" rel="noopener noreferrer">
+                                {{ source.strip() }}
+                            </a>
                         </li>
                         {% endfor %}
                     </ul>

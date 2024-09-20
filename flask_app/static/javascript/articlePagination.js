@@ -29,13 +29,20 @@ function displayArticles(page) {
 
         articleItem.innerHTML = `
             <a href="/articles?article_id=${article.id}">
-                ${article.title}
+            ${article.title}
             </a>
             <div class="article-container-information">
                 <div class="article-container-information-image">
                     <img class="previewArticleImage" src="/static/uploads/${article.thumbnail}" alt="${article.title}">
                 </div>
-                <p>${article.previewText.substring(0, 100)}${article.previewText.length > 100 ? '...' : ''}</p>
+                <div class="article-container-information-content">
+                    <div class="article-content-text">
+                    ${article.previewText.substring(0, 100)}${article.previewText.length > 100 ? '...' : ''}
+                    </div>
+                    <a class="article-preview-link" href="/articles?article_id=${article.id}">
+                        Read more...
+                    </a>
+                </div>
             </div>
         `;
         articleList.appendChild(articleItem);
