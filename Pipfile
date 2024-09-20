@@ -11,6 +11,7 @@ flask-cors = "*"
 flask-wtf = "*"
 bleach = "*"
 bs4 = "*"
+datetime = "*"
 
 [dev-packages]
 

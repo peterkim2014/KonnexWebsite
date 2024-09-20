@@ -28,14 +28,21 @@ function displayArticles(page) {
         articleItem.classList.add('article-container');
 
         articleItem.innerHTML = `
-            <a class="list-article-title" href="/articles?article_id=${article.id}">
-                ${article.title}
+            <a href="/articles?article_id=${article.id}">
+            ${article.title}
             </a>
             <div class="article-container-information">
                 <div class="article-container-information-image">
                     <img class="previewArticleImage" src="/static/uploads/${article.thumbnail}" alt="${article.title}">
                 </div>
-                <p class="article-preview-text">${article.previewText.substring(0, 100)}${article.previewText.length > 100 ? '...' : ''}</p>
+                <div class="article-container-information-content">
+                    <div class="article-content-text">
+                    ${article.previewText.substring(0, 100)}${article.previewText.length > 100 ? '...' : ''}
+                    </div>
+                    <a class="article-preview-link" href="/articles?article_id=${article.id}">
+                        Read more...
+                    </a>
+                </div>
             </div>
         `;
         articleList.appendChild(articleItem);

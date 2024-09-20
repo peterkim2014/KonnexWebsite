@@ -3,6 +3,8 @@ from flask_app import app
 import re
 from flask_app.models.articles import Article
 from bs4 import BeautifulSoup
+from datetime import datetime
+
 
 def detect_device(user_agent):
     # Regular expressions for common mobile and tablet device strings

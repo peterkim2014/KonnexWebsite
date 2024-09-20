@@ -83,30 +83,51 @@ a, button {
     margin-top: 2.5rem;
     width: 90%; /* Keep percentage for width */
     height: auto; /* Let height be dynamic */
+    flex-wrap: wrap;
 }
 .selected-sources-list {
     width: 80%;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    word-wrap: break-word;
 }
+
+/* Title styling */
 .selected-sources-list > h5 {
     margin: 0;
     text-align: left;
 }
+
+/* Styling for the unordered list */
 .selected-source-links {
     list-style-type: none;
-    padding: 0%;
-    width: 80%;
-} .source-list {
+    padding: 0;
+    width: 100%; 
+}
+
+/* Individual list items */
+.source-list {
     font-size: 0.9rem;
     margin: 0;
     margin-top: 1.5rem;
+    word-wrap: break-word; 
+    color: black;
+}
+
+/* Anchor tag styling for links */
+.source-list a {
+    color: #0066cc;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%; /* Ensures links don't extend beyond the list item's width */
+    overflow-wrap: break-word; /* Breaks long URLs to prevent overflow */
 }
 .selected-body-text > p {
     margin: 0;
     margin-top: 1.5rem;
     font-size: 1.02rem;
     width: 100%;
+    flex-wrap: wrap;
 }
 .selected-body-text > h1, h2, h3, h4, h5, h6, em, strong {
     margin-top: 3.5rem;
@@ -385,42 +406,53 @@ a, button {
 
 .article-container-information {
     display: flex;
-    justify-content: flex-start; /* Aligns items side by side */
-    align-items: center;
+    justify-content: flex-start; /* Aligns image and text side by side */
+    align-items: stretch; /* Stretches both the image and text containers to match height */
     width: 100%;
+    height: auto; /* Allow container height to grow with content */
     gap: 1rem;
 }
 
+/* Image container */
 .article-container-information-image {
     background-color: rgba(128, 128, 128, 0.396);
     flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 150px; /* Fixed width for the image */
-    height: 100px; /* Fixed height for the image */
+    width: 50%; /* Image takes up 50% of the width */
+    height: auto; /* Container height grows with content */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
+/* Image styling */
 .previewArticleImage {
-    width: 100%; /* Full width of the container */
-    height: auto;
-    object-fit: cover;
+    width: 100%; /* Full width of the image container */
+    height: 100%; /* Image matches the height of its container */
+    object-fit: cover; /* Ensures the image scales and covers the container without distortion */
     border-radius: 5px;
 }
 
+/* Text container next to the image */
 .article-container-information-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% - 170px); /* Remaining width for text */
+    width: calc(100% - 50%); /* Remaining width for text (adjustable) */
+    height: auto; /* Text container grows/shrinks with content */
 }
 
+/* Preview text inside the text container */
 .article-container-information > p {
     margin: 0;
-    font-size: 0.7em;
+    font-size: 0.9rem;
     line-height: 1.4;
     text-align: left;
-} .back-to-article {
+    flex-grow: 1; /* Ensures the text takes up available space */
+}
+
+
+.back-to-article {
     width: 100%;
     align-items: flex-start;
 } .back-button-img {
@@ -561,6 +593,33 @@ a, button {
 } .selectedArticleImage {
     /* height: 60%; */
     width: 100%;
+} .article-content-text {
+    margin: 0;
+}
+.article-preview-link {
+    margin:0;
+    text-align: right;
+    /* padding-bottom: 1rem; */
+    font-size: 0.8rem;
+    width: fit-content;
+} .article-container-information-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: auto;
+    width: 100%;
+}
+
+.article-content-text {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+} .article-content-text > p {
+    margin: 0;
 }
 
 
@@ -1039,21 +1098,23 @@ a, button {
 .article-container-information {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch; /* Ensure both image and content stretch to the same height */
     width: 100%;
     gap: 1rem;
 }
 
+/* Image container */
 .article-container-information-image {
     background-color: rgba(128, 128, 128, 0.396);
     flex-shrink: 0; /* Prevents the image from shrinking */
     width: 40%; /* Flexible width */
-    height: 160px; /* Fixed height */
+    height: 160px; /* Fixed height for the image */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Image styling */
 .previewArticleImage {
     width: 100%;
     height: auto;
@@ -1061,20 +1122,49 @@ a, button {
     border-radius: 5px;
 }
 
-.article-container-information-text {
+/* Text container next to the image */
+.article-container-information-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: calc(100% - 45%); /* Text takes up the remaining space */
+    justify-content: space-between; /* Ensure the content fills the space between text and link */
+    /* width: calc(100% - 45%);  */
+    height: auto;
+    align-items: flex-end;
+    width: 100%;
 }
 
-.article-container-information > p {
-    margin: 0;
-    height: 100%;
-    line-height: 1.5;
+/* Article title styling */
+.article-container > a {
     text-align: left;
-    font-size: 0.8em;
-} .back-to-article {
+    text-decoration: none; /* Removes the underline */
+    font-size: 0.86rem;
+    font-weight: bold;
+    color: #000; /* Customize the color */
+    width: 100%;
+}
+
+/* Text content inside the article content section */
+.article-content-text {
+    /* flex-grow: 1;  */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+    height: fit-content;
+} .article-content-text > p {
+    margin: 0;
+}
+
+/* Read more link */
+.article-preview-link {
+    font-size: 0.9rem;
+    color: #0066cc;
+    text-decoration: none;
+    margin-top: auto; /* Pushes the link to the bottom of the container */
+    width: fit-content;
+}
+
+.back-to-article {
     width: 100%;
     align-items: flex-start;
 } .back-button-img {
