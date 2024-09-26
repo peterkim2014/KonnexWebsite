@@ -5,11 +5,12 @@ import os
 from flask_app.models.waitlist import Waitlist
 from flask_app.models.email import Email
 import requests
+from flask_wtf.csrf import CSRFProtect
 
 
 STATIC_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'static'))
 
-
+csrf = CSRFProtect(app)
 
 
 def detect_device(user_agent):
