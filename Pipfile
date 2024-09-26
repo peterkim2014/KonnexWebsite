@@ -8,10 +8,10 @@ flask = "*"
 pymysql = "*"
 mailchimp-marketing = "*"
 flask-cors = "*"
-flask-wtf = "*"
 bleach = "*"
 bs4 = "*"
 datetime = "*"
+flask-wtf = "*"
 
 [dev-packages]
 
