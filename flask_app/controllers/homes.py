@@ -25,7 +25,17 @@ def detect_device(user_agent):
     print(f"Not a mobile or tablet device: {user_agent}")
     return False
 
-
+@app.route('/screen-size', methods=['POST'])
+def screen_size():
+    screen_data = request.get_json()
+    width = screen_data.get('width')
+    height = screen_data.get('height')
+    
+    if width == 1440 and height == 900:
+        print("13-inch MacBook Air")
+    elif width == 1680 and height == 1050:
+        print("15-inch MacBook Air")
+    return '', 204
 
 
 @app.route('/')
@@ -61,12 +71,12 @@ def waitlist_form():
         "accept": "application/json",
         "revision": "2024-06-15",
         "content-type": "application/json",
-        "Authorization": API_KEY
+        # "Authorization": API_KEY
     }
     update_headers = {
         "accept": "application/json",
         "revision": "2024-06-15",
-        "Authorization": API_KEY
+        # "Authorization": API_KEY
     }
     createProfileURL = 'https://a.klaviyo.com/api/profiles/'
     addProfileToWaitlist = 'https://a.klaviyo.com/api/lists/X3vCzT/relationships/profiles/'

@@ -234,6 +234,7 @@
                 {% endif %} -->
                 <div class="join-form-container">
                     <form id="join-form-function" class="join-form" action="/waitlist_form" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
                         <label class="join-label">
                             <h7>
                                 First Name
