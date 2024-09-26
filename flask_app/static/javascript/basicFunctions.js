@@ -476,17 +476,13 @@ function handleFormSubmitJoin(event) {
 
 
 
-// Function called when reCAPTCHA is successfully completed
 function onRecaptchaSuccess(token) {
-    document.getElementById('submit-button').disabled = false; // Enable the button
+    document.getElementById('submit-button').disabled = false; 
 }
-// Function called when reCAPTCHA expires
 function onRecaptchaExpired() {
-    document.getElementById('submit-button').disabled = true; // Disable the button
+    document.getElementById('submit-button').disabled = true; 
 }
-// Function called when there is an error with reCAPTCHA
 function onRecaptchaError() {
-    document.getElementById('submit-button').disabled = true; // Disable the button
+    document.getElementById('submit-button').disabled = true;
 }
-// Disable the button initially
 document.getElementById('submit-button').disabled = true;
