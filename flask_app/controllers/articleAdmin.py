@@ -8,6 +8,7 @@ from werkzeug.security import check_password_hash
 from flask_app.config.authorized import AUTHORIZED_USERNAME, AUTHORIZED_PASSWORD
 from flask_wtf.csrf import generate_csrf
 import bleach
+from datetime import datetime
 
 csrf = CSRFProtect(app)
 
@@ -108,11 +109,20 @@ def articles_adminDashboard():
 def save_article():
     if request.method == 'POST':
         # Retrieve form data
+        article_id = request.args.get('article_id')  # Get article_id if available
         title = request.form['title']
         header = request.form['header']
         body = request.form['body']  # This is the raw HTML content
         sources = request.form['sources']
         tags = request.form['tags']
+        created_at = request.form['createdAt']  # Get the createdAt date
+
+        # Convert createdAt from string to datetime format (for saving in database)
+        try:
+            created_at = datetime.strptime(created_at, '%m-%d-%Y')
+        except ValueError:
+            flash('Invalid date format for Created At. Please use mm-dd-yyyy.', 'danger')
+            return redirect(request.url)
 
         # Sanitize the body content using Bleach
         sanitized_body = bleach.clean(body, tags=ALLOWED_TAGS, attributes=ALLOWED_ATTRIBUTES, strip=False)
@@ -131,15 +141,24 @@ def save_article():
             "body": sanitized_body,  # Store the sanitized content
             "thumbnail": thumbnail_filename,
             "sources": sources,
-            "tags": tags
+            "tags": tags,
+            "created_at": created_at  # Add created_at to the data
         }
-        print(sanitized_body)
-        # Save the article
-        Article.save(article_data)
-        flash('Article saved successfully', 'success')
-        return redirect(url_for('save_article'))
 
+        # If article_id is provided, update the existing article
+        if article_id:
+            article_data['id'] = article_id
+            Article.update(article_data)
+            flash('Article updated successfully', 'success')
+        else:
+            # Save new article
+            Article.save(article_data)
+            flash('Article saved successfully', 'success')
+
+        return redirect(url_for('articles_adminDashboard', feature='articlesList'))
+    
     return render_template('articleDashboard.html')
+
 
 
 @app.template_filter('process_tags')
@@ -151,3 +170,35 @@ def process_tags(tags_string):
 
 # Register the filter in your Flask app
 app.jinja_env.filters['process_tags'] = process_tags
+
+
+@app.route('/admin/article/delete/<int:article_id>', methods=['POST'])
+def delete_article(article_id):
+    if 'user_id' not in session or session['user_id'] != AUTHORIZED_USERNAME:
+        flash('You must be logged in to delete articles', 'danger')
+        return redirect(url_for('articles_adminHome'))
+    
+    # Fetch the article by ID and delete it
+    article = Article.get_by_id(article_id)
+    if article:
+        Article.delete(article_id)
+        flash('Article deleted successfully', 'success')
+    else:
+        flash('Article not found', 'danger')
+
+    return redirect(url_for('articles_adminDashboard', feature='articlesList'))
+
+@app.route('/admin/article/edit/<int:article_id>', methods=['GET'])
+def edit_article(article_id):
+    if 'user_id' not in session or session['user_id'] != AUTHORIZED_USERNAME:
+        flash('You must be logged in to edit articles', 'danger')
+        return redirect(url_for('articles_adminHome'))
+
+    # Fetch the article by ID
+    article = Article.get_by_id(article_id)
+    if article:
+        csrf_token = generate_csrf()  # Generate a CSRF token for the form
+        return render_template('admin/articleContent.html', article=article, csrf_token=csrf_token)
+    else:
+        flash('Article not found', 'danger')
+        return redirect(url_for('articles_adminDashboard', feature='articlesList'))
