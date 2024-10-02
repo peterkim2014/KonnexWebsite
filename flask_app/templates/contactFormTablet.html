@@ -25,22 +25,22 @@
     <div id="global">
         <div class="home-header fade-in">
             <div class="home-name">
+                <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" alt="Konnex Wallet logo - Blockchain and Crypto Wallet" class="logo-lotus"/>
                 <div class="name-container">
-                    <img src="{{ url_for('static', filename='media/KonnexLogoo.png') }}" class="logo-lotus"/>
                     <h1>KONNEX</h1>
+                    <h2>CRYPTOCURRENCY WALLET</h2>
                 </div>
-                <h2>CRYPTOCURRENCY WALLET</h2>
             </div>
             <div class="home-routes fade-in">
-                <a href="/" class="route">Home</a>
-                <a href="/product" class="route">Product</a>
-                <a href="/about" class="route">About</a>
+                <a href="/" class="route-selected">Home</a>
+                <a href="/crypto-wallet-features" class="route">Product</a>
+                <a href="/about-konnex" class="route">About</a>
                 <a href="/articles" class="route">Articles</a>
                 <div class="dropdown">
-                    <a href="#contact" class="route-selected contact">Contact</a>
+                    <a href="#contact" class="route contact">Contact</a>
                     <div class="dropdown-content">
-                        <a href="/contact_form">Contact Form</a>
-                        <a href="/join_the_team">Join the team</a>
+                        <a href="/contact-form">Contact Form</a>
+                        <a href="/join-the-team">Join the team</a>
                     </div>
                 </div>
             </div>
