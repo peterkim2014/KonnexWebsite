@@ -160,7 +160,7 @@ a, button {
         /* gap: 1vw; */
         margin-top: 1%;
         /* background-color: red; */
-    } .name-container > h1 {
+    } .header-title {
         font-size: 2.1em;
         margin: 0;
         height: 75%;
@@ -169,7 +169,7 @@ a, button {
         letter-spacing: 2px;
         font-weight: 900;
         /* background-color: blue; */
-    } .home-name > h2 {
+    } .header-subtitle {
         padding-top: 2%;
         text-align: center;
         margin: 0;
@@ -813,7 +813,7 @@ a, button {
         /* gap: 1vw; */
         margin-top: 1%;
         /* background-color: red; */
-    } .name-container > h1 {
+    } .header-title {
         font-size: 2.1em;
         margin: 0;
         height: 75%;
@@ -822,7 +822,7 @@ a, button {
         letter-spacing: 2px;
         font-weight: 900;
         /* background-color: blue; */
-    } .home-name > h2 {
+    } .header-subtitle {
         padding-top: 2%;
         text-align: center;
         margin: 0;
