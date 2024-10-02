@@ -239,14 +239,14 @@
             height: 100%;
             gap: 0.2vh;
             margin-top: 1%;
-            } .name-container > h1 {
+            } .header-title {
                 font-size: 2.2em;
                 height: fit-content;
                 margin: 0;
                 font-family: 'LTCushionLight';
                 letter-spacing: 2px;
                 font-weight: 900;
-            } .name-container > h2 {
+            } .header-subtitle {
                 margin: 0;
                 width: 100%;
                 font-size: 0.73em;
@@ -287,12 +287,12 @@
                     justify-content: center;
                 }
             
-                .name-container > h1 {
+                .header-title {
                     font-size: 2.1rem; /* Smaller font-size for better fit */
                     width: fit-content;
                 }
             
-                .name-container > h2 {
+                .header-subtitle {
                     font-size: 0.6rem; /* Smaller font-size for readability */
                     width: fit-content;
                 }
@@ -325,11 +325,11 @@
                     width: 80%; /* Full width for smaller screens */
                 }
             
-                .name-container > h1 {
+                .header-title {
                     font-size: 1.4rem;
                 }
             
-                .name-container > h2 {
+                .header-subtitle {
                     font-size: 0.8rem;
                 }
             
@@ -364,7 +364,7 @@
         margin-top: 2%;
         /* gap: 3vh; */
         /* background-color: red; */
-        } .intro-text-container > h3 {
+        } .intro-text-container > h1 {
             margin: 0;
             width: 77%;
             font-size: 2.1em;
@@ -377,7 +377,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-        } .intro-text-container > h4 {
+        } .intro-text-container > h2 {
             margin: 0;
             width: 75%;
             text-align: left;
@@ -1529,14 +1529,14 @@
             height: 100%;
             gap: 0.5vh;
             margin-top: 1%;
-            } .name-container > h1 {
+            } .header-title {
                 font-size: 3em;
                 height: fit-content;
                 margin: 0;
                 font-family: 'LTCushionLight';
                 letter-spacing: 2px;
                 font-weight: 900;
-            } .name-container > h2 {
+            } .header-subtitle {
                 margin: 0;
                 width: 100%;
                 font-size: 0.9em;
@@ -1572,7 +1572,7 @@
         margin-top: 3%;
         /* gap: 3vh; */
         /* background-color: red; */
-        } .intro-text-container > h3 {
+        } .intro-text-container > h1 {
             margin: 0;
             width: 85%;
             font-size: 3em;
@@ -1581,7 +1581,7 @@
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 0.75px;
             line-height: 75px;
-        } .intro-text-container > h4 {
+        } .intro-text-container > h2 {
             margin: 0;
             width: 60%;
             text-align: left;

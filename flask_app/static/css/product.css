@@ -130,7 +130,7 @@
             height: 100%;
             gap: 0.2vh;
             margin-top: 1%;
-            } .name-container > h1 {
+            } .header-title {
                 font-size: 2.2em;
                 height: fit-content;
                 margin: 0;
@@ -138,7 +138,7 @@
                 /* font-family: 'TimesSanSerifMediumBold'; */
                 letter-spacing: 2px;
                 /* font-weight: 900; */
-            } .name-container > h2 {
+            } .header-subtitle {
                 margin: 0;
                 width: 100%;
                 font-size: 0.73em;
@@ -178,12 +178,12 @@
         justify-content: center;
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 2.1rem; /* Smaller font-size for better fit */
         width: fit-content;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.6rem; /* Smaller font-size for readability */
         width: fit-content;
     }
@@ -216,11 +216,11 @@
         width: 80%; /* Full width for smaller screens */
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 1.4rem;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.8rem;
     }
 
@@ -258,7 +258,7 @@
         height: 100%;
         margin-left: 7.5%;
         gap: 4vh;
-        } .product-intro-text > h3 {
+        } .product-intro-text > h1 {
             margin: 0;
             width: 100%;
             font-size: 1.7em;
@@ -267,7 +267,7 @@
             font-family: 'FreightSansMedium', sans-serif;
             letter-spacing: 0.5px;
             line-height: 42px;
-        } .product-intro-text > h4 {
+        } .product-intro-text > h2 {
             margin: 0;
             width: 100%;
             text-align: left;
@@ -937,14 +937,14 @@
                 height: 100%;
                 gap: 0.5vh;
                 margin-top: 1%;
-                } .name-container > h1 {
+                } .header-title {
                     font-size: 3em;
                     height: fit-content;
                     margin: 0;
                     font-family: 'LTCushionLight';
                     letter-spacing: 2px;
                     font-weight: 900;
-                } .name-container > h2 {
+                } .header-subtitle {
                     margin: 0;
                     width: 100%;
                     font-size: 0.9em;
@@ -979,7 +979,7 @@
             height: 100%;
             margin-left: 7.5%;
             gap: 4vh;
-            } .product-intro-text > h3 {
+            } .product-intro-text > h1 {
                 margin: 0;
                 width: 100%;
                 font-size: 2.25em;
@@ -988,7 +988,7 @@
                 font-family: 'FreightSansMedium', sans-serif;
                 letter-spacing: 0.5px;
                 line-height: 48px;
-            } .product-intro-text > h4 {
+            } .product-intro-text > h2 {
                 margin: 0;
                 width: 100%;
                 text-align: left;

@@ -16,7 +16,7 @@ def detect_device(user_agent):
     return False
 
 
-@app.route('/product')
+@app.route('/crypto-wallet-features')
 def product_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
