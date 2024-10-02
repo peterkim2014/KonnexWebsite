@@ -235,7 +235,7 @@ a, button {
         gap: 1vh;
         margin-top: 1%;
         /* background-color: red; */
-    } .name-container > h1 {
+    } .header-title {
         font-size: 2.1em;
         /* background-color: red; */
         height: fit-content;
@@ -245,7 +245,7 @@ a, button {
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-    } .home-name > h2 {
+    } .header-subtitle {
         padding-top: 3%;
         text-align: center;
         margin: 0;
@@ -925,7 +925,7 @@ a, button {
         gap: 1vh;
         margin-top: 1%;
         /* background-color: red; */
-    } .name-container > h1 {
+    } .header-title {
         font-size: 2.1em;
         /* background-color: red; */
         height: fit-content;
@@ -935,7 +935,7 @@ a, button {
         font-family: 'LTCushionLight';
         letter-spacing: 2px;
         font-weight: 900;
-    } .home-name > h2 {
+    } .header-subtitle {
         padding-top: 3%;
         text-align: center;
         margin: 0;

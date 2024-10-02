@@ -168,7 +168,7 @@ a, button {
     margin-top: 1%;
 }
 
-.name-container > h1 {
+.header-title {
     font-size: 2.2rem; /* Adjusted to rem */
     margin: 0;
     font-family: 'LTCushionLight';
@@ -176,7 +176,7 @@ a, button {
     font-weight: 900;
 }
 
-.name-container > h2 {
+.header-subtitle {
     margin: 0;
     width: 100%;
     font-size: 0.8rem; /* Increased font-size for better scaling */
@@ -211,11 +211,11 @@ a, button {
         width: 40%; /* Adjust width */
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 1.8rem; /* Adjusted for smaller screens */
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 1rem; /* Adjusted for readability */
     }
 
@@ -250,12 +250,12 @@ a, button {
         justify-content: center;
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 2.1rem; /* Smaller font-size for better fit */
         width: fit-content;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.6rem; /* Smaller font-size for readability */
         width: fit-content;
     }
@@ -288,11 +288,11 @@ a, button {
         width: 80%; /* Full width for smaller screens */
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 1.4rem;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.8rem;
     }
 
@@ -1231,14 +1231,14 @@ a, button {
             height: 100%;
             gap: 0.5vh;
             margin-top: 1%;
-            } .name-container > h1 {
+            } .header-title {
                 font-size: 3em;
                 height: fit-content;
                 margin: 0;
                 font-family: 'LTCushionLight';
                 letter-spacing: 2px;
                 font-weight: 900;
-            } .name-container > h2 {
+            } .header-subtitle {
                 margin: 0;
                 width: 100%;
                 font-size: 0.9em;
@@ -1268,11 +1268,11 @@ a, button {
         width: 40%; /* Adjust width */
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 1.8rem; /* Adjusted for smaller screens */
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 1rem; /* Adjusted for readability */
     }
 
@@ -1307,12 +1307,12 @@ a, button {
         justify-content: center;
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 2.1rem; /* Smaller font-size for better fit */
         width: fit-content;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.6rem; /* Smaller font-size for readability */
         width: fit-content;
     }
@@ -1345,11 +1345,11 @@ a, button {
         width: 80%; /* Full width for smaller screens */
     }
 
-    .name-container > h1 {
+    .header-title {
         font-size: 1.4rem;
     }
 
-    .name-container > h2 {
+    .header-subtitle {
         font-size: 0.8rem;
     }
 

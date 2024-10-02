@@ -20,7 +20,7 @@ def detect_device(user_agent):
 
 
 
-@app.route('/contact_form')
+@app.route('/contact-form')
 def contact_form_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
@@ -40,7 +40,7 @@ def contact_form_page():
         return render_template("contactForm.html", error_message=error_message)
     
 
-@app.route('/join_the_team')
+@app.route('/join-the-team')
 def join_team_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()

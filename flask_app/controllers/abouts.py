@@ -16,7 +16,7 @@ def detect_device(user_agent):
     return False
 
 
-@app.route('/about')
+@app.route('/about-konnex')
 def about_page():
     user_agent = request.headers.get('User-Agent')
     user_agent = user_agent.lower()
